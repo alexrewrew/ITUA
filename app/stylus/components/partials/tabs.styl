@@ -1,0 +1,37 @@
+@import '../../utilities/vars'
+@import '../../utilities/mixins'
+
+.tabs
+  df(row)
+  margin-bottom $s16
+
+.tabs li
+  a
+    cursor: pointer;
+    padding $s12 $s15 $s13
+    color $black
+    display block
+    trans()
+
+    &:hover
+      color $white
+      background lightblue
+  a.active
+    color $white
+    background blue
+
+
+.tabs-content
+  display: none;
+  padding: $s10 $s15
+  animation: fadeEffect 1s;
+
+.tabs-content.active
+  display block
+
+@keyframes fadeEffect
+  from 
+    opacity: 0;
+  to 
+    opacity: 1;
+  

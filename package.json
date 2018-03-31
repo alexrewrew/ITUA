@@ -1,0 +1,42 @@
+{
+  "name": "yarn-template",
+  "version": "1.0.0",
+  "description": "Yarn template with gulp4",
+  "main": "index.js",
+  "author": "alexrewrew",
+  "license": "MIT",
+  "dependencies": {
+    "browser-sync": "^2.23.6",
+    "del": "^3.0.0",
+    "eslint": "latest",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "latest",
+    "gulp-clean-css": "latest",
+    "gulp-concat": "^2.6.1",
+    "gulp-csscomb": "^3.0.8",
+    "gulp-htmlmin": "^4.0.0",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-pug": "^3.3.0",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-strip-comments": "^2.5.2",
+    "gulp-stylus": "^2.7.0",
+    "gulp-uglify": "^3.0.0"
+  },
+  "devDependencies": {
+    "@fancyapps/fancybox": "latest",
+    "aos": "^2.2.0",
+    "bootstrap": "^4.0.0",
+    "bowser": "^1.9.2",
+    "chosen-js": "^1.8.3",
+    "color-thief-browser": "^2.0.2",
+    "flatpickr": "^4.3.2",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.3.1",
+    "jquery.maskedinput": "^1.4.1",
+    "nouislider": "^11.0.3",
+    "select2": "^4.0.6-rc.1",
+    "slick-carousel": "^1.8.1",
+    "wnumb": "^1.1.0"
+  }
+}

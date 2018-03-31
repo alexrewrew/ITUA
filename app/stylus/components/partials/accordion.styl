@@ -1,0 +1,35 @@
+@import '../../utilities/vars'
+@import '../../utilities/mixins'
+
+.accordion
+  &--heading
+    background $white
+    color $black
+    cursor pointer
+    padding $s12 $s15 $s13
+    font-size $f16
+    margin 0
+    position relative
+    trans()
+    &:focus
+      outline none
+    &:hover
+      background lightblue
+      color $white
+    &:after
+      triangle($black, down, 4px)
+      top calc(50% - 2px)
+      right 15px
+      trans()
+  &--heading.active
+    background blue
+    color $white
+    &:after
+      transform rotate(180deg)
+
+  &--panel
+    display none
+    padding $s12 $s15 $s13
+
+
+
