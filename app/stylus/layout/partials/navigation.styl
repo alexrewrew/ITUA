@@ -3,16 +3,16 @@
 
 nav
   background $white
-  padding $s10 0
+  padding $r10 0
   trans()
 
 .menu
-  df(row)
+  flex(row)
   justify-content flex-end
   align-items center
   height 100%
   li
-    margin 0 $s15
+    margin 0 $r15
     &:last-child
       margin-right 0
     a
@@ -25,14 +25,14 @@ nav
 
 .nav-mobile
   display none
-  +mobile()
+  +mob()
     display block
 
 .nav-icon
   width 30px
   height 22px
   position relative
-  margin $s14 0
+  margin $r14 0
   cursor pointer
   trans()
   transform rotate(0deg)

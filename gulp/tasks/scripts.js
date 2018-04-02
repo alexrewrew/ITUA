@@ -13,6 +13,7 @@ module.exports = function () {
             // 'node_modules/aos/dist/aos.js',
             // 'node_modules/bootstrap/dist/js/bootstrap.bundle.js',
             // 'app/source/fontawesome-free-5.0.6/svg-with-js/js/fontawesome-all.js',
+
             // 'node_modules/nouislider/distribute/nouislider.js',
             // 'node_modules/wnumb/wNumb.js',
 

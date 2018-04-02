@@ -10,6 +10,19 @@
         //     $('html, body').toggleClass('open');
         // });
 
+        // ========== COLOR THIEF ==========
+        
+        // $('.slide img').click(function () {
+        //     var imgSrc = $(this).attr('src');
+        //     var imgObj = new Image();
+        //     imgObj.src = imgSrc;
+        //
+        //     var colorThief = new ColorThief();
+        //     var color = colorThief.getColor(imgObj);
+        //
+        //     $('.box').css('background-color', 'rgb(' + color +')')
+        // })
+
         // ========== SELECT ==========
 
         // ----- CHOSEN -----
@@ -18,26 +31,12 @@
         //     no_results_text: "Нічого не знайдено"
         // });
 
-        $('.slide img').click(function () {
-            var imgSrc = $(this).attr('src');
-            var imgObj = new Image();
-            imgObj.src = imgSrc;
-
-            var colorThief = new ColorThief();
-            var color = colorThief.getColor(imgObj);
-
-            $('.box').css('background-color', 'rgb(' + color +')')
-        })
-        
-
-        //
-
         // ----- SELECT2 -----
         // $('.select2-select').select2({
         //     placeholder: "Choose...",
         //     allowClear: true
-        // dropdownParent: $('.select-select2-container'),
-        // minimumResultsForSearch: Infinity
+        //     // dropdownParent: $('.select-select2-container'),
+        //     // minimumResultsForSearch: Infinity
         // });
 
         // ========== SLIDER ==========
@@ -71,7 +70,7 @@
         //         }
         //     ]
         // });
-        //
+
         // $(".slider-three").slick({
         //     dots: true,
         //     slidesToShow: 3,
