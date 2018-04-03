@@ -13,13 +13,54 @@ button
   max-width 320px
   width 100%
   text-align center
-  background blue
+  background $blue
   color $white
-  padding $r12 $r15 $r13
-  margin-bottom $r15
-  &:hover
-    color $white
-    background lightblue
+  letter-spacing: 1px;
+  font-family $a-font, sans-serif
+  font-weight 700
+  padding $r19 0 $r21
+  position relative
+  z-index 40
+  &:after
+    pseudo(block, absolute)
+    bottom -17px
+    left 6px
+    right 6px
+    height: 34px;
+    opacity: 0.7;
+    filter: blur(12px);
+    background-color: $blue2
+    z-index -1
+  &:hover {}
 
 .btn-center
   mcen()
+
+.btn-more
+  display inline-block
+  width 100%
+  max-width 115px
+  position relative
+  align-items center
+  letter-spacing: 0.5px;
+  font-family $a-font, sans-serif
+  color $blue
+  font-size $e16
+  font-weight 700
+  padding: $r13 0 $r15
+  trans()
+  svg
+    position absolute
+    top 15px
+    right 30px
+    opacity 0
+    height 12px
+    width 20px
+    trans()
+  &:hover
+    background $blue
+    color $white
+    max-width 100%
+    pl($r30)
+    svg
+      opacity 1

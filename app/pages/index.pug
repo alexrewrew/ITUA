@@ -4,9 +4,148 @@ extend layouts/_layout.pug
 block title
     | Главная страница
 
+block navigation
+    include partials/navigations/_navigation
+
 block content
+
+    include partials/headers/_header-index
+
+    section
+        .container
+            .row
+                .col-9
+                    h2 Переваги членства
+                .col-3
+                    a(href='' title='').link-detail
+                        | Перейти до всіх переваг
+                        include svgs/angle-right.svg
+                .col-8
+                    .row
+                        .col-6
+                            include partials/blog/_blog-item-advantage
+                        .col-6
+                            include partials/blog/_blog-item-advantage
+                        .col-6
+                            include partials/blog/_blog-item-advantage
+                        .col-6
+                            include partials/blog/_blog-item-advantage
+
+
+                aside.col-3.offset-1
+                    include partials/items/_join-item
+
+    section.back-blue-light
+        .container
+            .row
+                .col-2
+                    h2 Публікації
+                .col-8
+                    ul
+                        li
+                            a(href='' title='') Закордонні змі про нас
+                        li
+                            a(href='' title='') Новини Асоціації
+                        li
+                            a(href='' title='') Новини Галузі
+                        li
+                            a(href='' title='') Авторські статті
+                .col-2
+                    a(href='' title='').link-detail
+                        | Усі публікації
+                        include svgs/angle-right.svg
+            .row
+                .col-3
+                    include partials/blog/_blog-item
+                .col-3
+                    include partials/blog/_blog-item
+                .col-3
+                    include partials/blog/_blog-item
+                .col-3
+                    include partials/blog/_blog-item
+
+    section
+        .container
+            .row
+                .col-10
+                    h2 Найближчі Події
+                .col-2
+                    a(href='' title='').link-detail
+                        | Усі події
+                        include svgs/angle-right.svg
+                .col-12
+                    .slider.slider-four
+                        div
+                            include partials/calendar/_calendar-item-month
+                        div
+                            include partials/calendar/_calendar-item-event
+                        div
+                            include partials/calendar/_calendar-item
+                        div
+                            include partials/calendar/_calendar-item-event-month
+                        div
+                            include partials/calendar/_calendar-item
+                        div
+                            include partials/calendar/_calendar-item
+
+    section
+        .container
+            .row
+                .col-10
+                    h2 Відгуки
+                .col-2
+                    a(href='' title='').link-detail
+                        | Усі події
+                        include svgs/angle-right.svg
+                .col-6
+                    include partials/items/_comment-item
+                .col-6
+                    include partials/items/_comment-item
 
     section
         .container
             .row
                 .col-12
+                    h2 Члени асоціації
+        .container.container-1300
+            .row
+                .col-12
+                    .slider.slider-rows
+                        include partials/items/_member-item
+                        include partials/items/_member-item
+                        include partials/items/_member-item
+                        include partials/items/_member-item
+                        include partials/items/_member-item
+                        include partials/items/_member-item
+                        include partials/items/_member-item
+                        include partials/items/_member-item
+                        include partials/items/_member-item
+                        include partials/items/_member-item
+                        include partials/items/_member-item
+                        include partials/items/_member-item
+                        include partials/items/_member-item
+                        include partials/items/_member-item
+                        include partials/items/_member-item
+                        include partials/items/_member-item
+                        include partials/items/_member-item
+                        include partials/items/_member-item
+                        include partials/items/_member-item
+                        include partials/items/_member-item
+                    .slider.slider-rows-sync
+                    a(href='' title='').btn
+                        | Всі члени Асоціації
+                        include svgs/arrow-right.svg
+
+    section
+        .container
+            .row
+                .col-12
+                    h2 Члени асоціації
+                .col-12
+                    .slider
+                        div
+                            include partials/items/_member-item
+                    a(href='' title='').btn
+                        | Всі партнери
+                        include svgs/arrow-right.svg
+

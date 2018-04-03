@@ -1,0 +1,112 @@
+.calendar
+  display block
+  position relative
+  margin $r15 $r15 0
+  &--mark
+    display flex
+    &-text
+      position relative
+      font-family $a-font, sans-serif
+      font-weight: 700;
+      padding-bottom $r28
+      color $blue-light4
+      &:after
+        pseudo(block, absolute)
+        width: 50px;
+        height: 7px;
+        background $blue
+        bottom 0px
+        left 0
+    &-event
+      line-height: 1.86;
+      fs($e14)
+      &:after
+        width: 15px;
+        height: 7px;
+        bottom 1px
+    &-month
+      fs($e22)
+      line-height: 1.18;
+      margin-right $r30
+
+
+  &--block
+    box-shadow: 0 10px 30px 0 rgba(94, 107, 126, 0.3);
+    border 6px solid $white
+    padding: $r32 $r21 $r32 $r23
+    height 230px
+    position relative
+    z-index 40
+    margin-bottom $r26
+    trans()
+    &:after
+      pseudo(block, absolute)
+      top 9px
+      bottom 9px
+      left 9px
+      right 9px
+      background $blue
+      opacity 0
+      trans()
+      z-index -1
+    h3
+      trans()
+    &-date
+      display flex
+      align-items center
+      justify-content space-between
+      margin-bottom $r31
+      &--date
+        font-size: $e34
+        font-weight: bold;
+        color: $blue
+        font-family $a-font, sans-serif
+        trans()
+      &--text
+        font-size: 14px;
+        line-height: 1.43;
+        color: $blue-light4
+        trans()
+    &-button
+      position absolute
+      left 24px
+      bottom 35px
+      font-family: $a-font, sans-serif
+      font-size: $e16
+      font-weight: 700
+      letter-spacing: 0.5px;
+      display block
+      right 20%
+      opacity 0
+      color $white
+      trans()
+      svg
+        position absolute
+        right 0
+        top 1px
+        height: 12px;
+        width: 20px
+        g
+          fill $white
+
+    &:hover
+      box-shadow: 0 3px 8px 0 rgba(94, 107, 126, 0.3);
+      &:after
+        opacity 1
+      .calendar--block-button
+        opacity 1
+      .calendar--block-date--date
+        color $white
+      .calendar--block-date--text
+        opacity 0
+      .calendar--block-button
+        right 23px
+      h3
+        opacity 0
+
+.calendar.calendar-event
+  .calendar--block
+    border-color $blue
+
+  //.calendar--block-button
+  //  left 24px

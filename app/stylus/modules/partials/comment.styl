@@ -1,0 +1,31 @@
+.comment
+  display flex
+  box-shadow: 0 10px 30px 0 rgba(94, 107, 126, 0.3);
+  height 285px
+  mt($r35)
+  mb($r0)
+  &--left
+    max-width 150px
+    flex 1 1 150px
+    position relative
+    &-date
+      position absolute
+      font-size: $e14
+      font-weight: bold;
+      color: $blue-light;
+      right 0
+      bottom 15px
+      font-family $a-font, sans-serif
+  &--right
+    pt($r42)
+    pr($r15)
+    ml($r44)
+    position relative
+    h3
+      fs($e28)
+      mb($r0)
+    p
+      fs($e14)
+    .btn-more
+      position absolute
+      bottom 0
