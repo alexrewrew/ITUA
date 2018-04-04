@@ -1,0 +1,34 @@
++mob()
+  .menu li a
+    color: $white60
+    &:hover
+      color $blue-dark4
+
+  .ul-lang li a
+    color: $white30;
+    &.active, &:hover
+      color $white
+  .form-search
+    .input-group
+      input
+        background $white15
+        color $white
+        +placeholder()
+          color $white
+      span
+        svg g
+          fill $white
+  .ul-login
+    &:before
+      background $white30
+    li a
+      color $white
+      svg g
+        fill $white
+      &:hover
+        color: $white30;
+        svg g
+          fill: $white30;
+  .menu li.dropdown
+    ul
+      background $blue-light6

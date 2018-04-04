@@ -58,10 +58,14 @@
   </head>
   <body>
     <!--include ../partials/_preloader-->
-    <nav>
-      <div class="container">
-        <div class="row">
-          <div class="col-6 col-md-2"><a class="link-logo" href="./" title=""><svg width="136px" height="29px" viewBox="0 0 136 29" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!--block navigation-->
+    <main>
+      <header class="header-index">
+        <nav class="nav-index unscrolled">
+          <div class="nav-top">
+            <div class="container">
+              <div class="row" id="nav-menu">
+                <div class="col-9 col-xl-5 col-lg-4 col-md-3" id="nav-logo"><a class="link-logo" href="./" title=""><svg width="136px" height="29px" viewBox="0 0 136 29" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <defs>
         <polygon id="path-1" points="0 30 135.85113 30 135.85113 1.25331325 0 1.25331325"></polygon>
     </defs>
@@ -101,21 +105,27 @@
         </g>
     </g>
 </svg></a></div>
-          <div class="col-md-10">
-            <div class="input-group"><span><svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <div class="col-md-4" id="nav-search">
+                  <form class="form-search">
+                    <div class="input-group"><span><svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="Pre-fin-Copy-2" transform="translate(-582.000000, -28.000000)" fill="#FFFFFF" fill-rule="nonzero">
             <path d="M594.882674,39.437466 L598,42.5547916 L596.554792,44 L593.437466,40.8826743 C592.243274,41.7770678 590.760212,42.3068331 589.153417,42.3068331 C585.202694,42.3068331 582,39.1041394 582,35.1534165 C582,31.2026937 585.202694,28 589.153417,28 C593.104139,28 596.306833,31.2026937 596.306833,35.1534165 C596.306833,36.7602119 595.777068,38.2432741 594.882674,39.437466 Z M589.153417,40.2629998 C591.975361,40.2629998 594.263,37.9753614 594.263,35.1534165 C594.263,32.3314716 591.975361,30.0438333 589.153417,30.0438333 C586.331472,30.0438333 584.043833,32.3314716 584.043833,35.1534165 C584.043833,37.9753614 586.331472,40.2629998 589.153417,40.2629998 Z" id="Combined-Shape"></path>
         </g>
     </g>
 </svg></span>
-              <input type="text" placeholder="що ви шукаєте ?">
-            </div>
-            <ul>
-              <li><a href="" title="">укр</a></li>
-              <li><a href="" title="">eng</a></li>
-            </ul><a href="" title="">
-              <svg width="19px" height="19px" viewBox="0 0 19 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                      <input type="text" placeholder="що ви шукаєте ?">
+                    </div>
+                  </form>
+                </div>
+                <div class="col-9 col-xl-3 col-lg-4 col-md-5" id="nav-list">
+                  <ul class="ul-lang">
+                    <li><a class="active" href="" title="">укр</a></li>
+                    <li><a href="" title="">eng</a></li>
+                  </ul>
+                  <ul class="ul-login">
+                    <li><a href="" title="">
+                        <svg width="19px" height="19px" viewBox="0 0 19 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="Pre-fin-Copy-2" transform="translate(-1152.000000, -25.000000)" fill="#FFFFFF" fill-rule="nonzero">
             <g id="noun_46890_cc" transform="translate(1152.000000, 25.000000)">
@@ -123,53 +133,123 @@
             </g>
         </g>
     </g>
-</svg>Вхід</a>
+</svg>Вхід</a></li>
+                  </ul>
+                </div>
+                <div class="col-3 nav-mobile">
+                  <div class="nav-icon" id="menu-trigger"><span></span><span></span><span></span><span></span></div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="col-6 nav-mobile">
-            <div class="nav-icon" id="menu-trigger"><span></span><span></span><span></span><span></span></div>
+          <div class="nav-bottom">
+            <div class="container">
+              <div class="row" id="nav-panel">
+                <div class="col-md-12">
+                  <ul class="menu">
+                    <li class="dropdown"><a class="dropdown-link" href="" title="">Про асоціацію</a>
+                      <ul>
+                        <li class="dropdown-back"><a href="" title="">Назад</a></li>
+                        <li><a href="" title="">Про нас1</a></li>
+                        <li><a href="" title="">Переваги членства</a></li>
+                        <li><a href="" title="">Річні звіти</a></li>
+                        <li><a href="" title="">Бізнес про нас</a></li>
+                        <li><a href="" title="">Контакти</a></li>
+                      </ul>
+                    </li>
+                    <li class="dropdown"><a class="dropdown-link" href="" title="">Адвокація та лобіювання</a>
+                      <ul>
+                        <li class="dropdown-back"><a href="" title="">Назад</a></li>
+                        <li><a href="" title="">Про нас2</a></li>
+                        <li><a href="" title="">Переваги членства</a></li>
+                        <li><a href="" title="">Річні звіти</a></li>
+                        <li><a href="" title="">Бізнес про нас</a></li>
+                        <li><a href="" title="">Контакти</a></li>
+                      </ul>
+                    </li>
+                    <li class="dropdown"><a class="dropdown-link" href="" title="">Події та нетворкінг</a>
+                      <ul>
+                        <li class="dropdown-back"><a href="" title="">Назад</a></li>
+                        <li><a href="" title="">Про нас3</a></li>
+                        <li><a href="" title="">Переваги членства</a></li>
+                        <li><a href="" title="">Річні звіти</a></li>
+                        <li><a href="" title="">Бізнес про нас</a></li>
+                        <li><a href="" title="">Контакти</a></li>
+                      </ul>
+                    </li>
+                    <li class="dropdown"><a class="dropdown-link" href="" title="">Освіта</a>
+                      <ul>
+                        <li class="dropdown-back"><a href="" title="">Назад</a></li>
+                        <li><a href="" title="">Про нас4</a></li>
+                        <li><a href="" title="">Переваги членства</a></li>
+                        <li><a href="" title="">Річні звіти</a></li>
+                        <li><a href="" title="">Бізнес про нас</a></li>
+                        <li><a href="" title="">Контакти</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="" title="">Приєднуйтесь до спільноти</a></li>
+                    <li class="dropdown"><a class="dropdown-link" href="" title="">Учасники</a>
+                      <ul>
+                        <li class="dropdown-back"><a href="" title="">Назад</a></li>
+                        <li><a href="" title="">Про нас5</a></li>
+                        <li><a href="" title="">Переваги членства</a></li>
+                        <li><a href="" title="">Річні звіти</a></li>
+                        <li><a href="" title="">Бізнес про нас</a></li>
+                        <li><a href="" title="">Контакти</a></li>
+                      </ul>
+                    </li>
+                    <li class="dropdown"><a class="dropdown-link" href="" title="">Міжнародна промоція</a>
+                      <ul>
+                        <li class="dropdown-back"><a href="" title="">Назад</a></li>
+                        <li><a href="" title="">Про нас6</a></li>
+                        <li><a href="" title="">Переваги членства</a></li>
+                        <li><a href="" title="">Річні звіти</a></li>
+                        <li><a href="" title="">Бізнес про нас</a></li>
+                        <li><a href="" title="">Контакти</a></li>
+                      </ul>
+                    </li>
+                    <li class="dropdown"><a class="dropdown-link" href="" title="">Медіа та публікації</a>
+                      <ul>
+                        <li class="dropdown-back"><a href="" title="">Назад</a></li>
+                        <li><a href="" title="">Про нас7</a></li>
+                        <li><a href="" title="">Переваги членства</a></li>
+                        <li><a href="" title="">Річні звіти</a></li>
+                        <li><a href="" title="">Бізнес про нас</a></li>
+                        <li><a href="" title="">Контакти</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="col-md-12">
-            <ul class="menu">
-              <li><a class="active" href="" title="">Про асоціацію</a></li>
-              <li><a href="" title="">Адвокація та лобіювання</a></li>
-              <li><a href="" title="">Події та нетворкінг</a></li>
-              <li><a href="" title="">Освіта</a></li>
-              <li><a href="" title="">Приєднуйтесь до спільноти</a></li>
-              <li><a href="" title="">Учасники</a></li>
-              <li><a href="" title="">Міжнародна промоція</a></li>
-              <li><a href="" title="">Медіа та публікації</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </nav>
-    <main>
-      <header>
+        </nav>
         <div class="container">
           <div class="slider">
-            <div><a class="container" href="" title="">
-                <div class="row justify-content-center">
-                  <div class="offset-4 col-6">
-                    <h2>Інфографіка. Українська IT-індустрія</h2>
-                  </div>
-                  <div class="col-6">
-                    <div><img src="" title="" alt=""></div>
-                  </div>
-                  <div class="offset-1 col-3">
-                    <p>Цього року вітчизняна ІТ-галузь здобула численні перемоги на міжнародній арені, а її внесок в економічний розвиток України важко недооцінювати…</p>
-                    <ul>
-                      <li>21.02.18</li>
-                      <li><a href="" title="">Новини Асоціації</a></li>
-                    </ul><a class="link-detail" href="" title="">
-                      Детальніше<svg width="10px" height="16px" viewBox="0 0 10 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <div>
+              <div class="row justify-content-center">
+                <div class="offset-4 col-6">
+                  <h2><a href="" title="">Інфографіка. Українська IT-індустрія</a></h2>
+                </div>
+                <div class="col-6">
+                  <div><a href="" title=""><img src="img/illus/slider.png" title="" alt=""></a></div>
+                </div>
+                <div class="offset-1 col-3">
+                  <p>Цього року вітчизняна ІТ-галузь здобула численні перемоги на міжнародній арені, а її внесок в економічний розвиток України важко недооцінювати…</p>
+                  <ul>
+                    <li>21.02.18</li>
+                    <li><a href="" title="">Новини Асоціації</a></li>
+                  </ul><a class="link-detail" href="" title="">
+                    Детальніше<svg width="10px" height="16px" viewBox="0 0 10 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="Pre-fin-Copy-2" transform="translate(-1210.000000, -942.000000)" fill="#186FF0" fill-rule="nonzero">
             <polygon id="Shape-Copy-2" points="1210 956.053313 1216.08939 950.022664 1210 943.946687 1211.84106 942 1220 950 1211.84106 958"></polygon>
         </g>
     </g>
 </svg></a>
-                  </div>
-                </div></a></div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </header>
@@ -860,7 +940,7 @@
         </g>
     </g>
 </svg></span></a></div>
-              <div class="slider slider-rows-sync"></div><a class="btn" href="" title="">
+              <div class="slider slider-rows-sync"></div><a class="btn btn-arrow btn-arrow-slider" href="" title="">
                 Всі члени Асоціації<svg width="27px" height="17px" viewBox="0 0 27 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="Pre-fin-Copy-2" transform="translate(-680.000000, -720.000000)" fill="#FFFFFF" fill-rule="nonzero">

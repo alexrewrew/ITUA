@@ -1,46 +1,145 @@
-nav
-    .container
-        .row
-            .col-6.col-md-2
-                a(href='./' title='').link-logo
-                    include ../../svgs/logo.svg
+nav.nav-index.unscrolled
+    .nav-top
+        .container
+            .row#nav-menu
+                .col-9.col-xl-5.col-lg-4.col-md-3#nav-logo
+                    a(href='./' title='').link-logo
+                        include ../../svgs/logo.svg
 
-            .col-md-10
-                .input-group
-                    span
-                        include ../../svgs/search.svg
-                    input(type='text' placeholder='що ви шукаєте ?')
-                ul
-                    li
-                        a(href='' title='') укр
-                    li
-                        a(href='' title='') eng
-                a(href='' title='')
-                    include ../../svgs/login.svg
-                    | Вхід
+                .col-md-4#nav-search
+                    form.form-search
+                        .input-group
+                            span
+                                include ../../svgs/search.svg
+                            input(type='text' placeholder='що ви шукаєте ?')
 
-            .col-6.nav-mobile
-                .nav-icon#menu-trigger
-                    span
-                    span
-                    span
-                    span
+                .col-9.col-xl-3.col-lg-4.col-md-5#nav-list
+                        ul.ul-lang
+                            li
+                                a(href='' title='').active укр
+                            li
+                                a(href='' title='') eng
+                        ul.ul-login
+                            li
+                                a(href='' title='')
+                                    include ../../svgs/login.svg
+                                    | Вхід
 
-            .col-md-12
-                ul.menu
-                    li
-                        a(href='' title='').active Про асоціацію
-                    li
-                        a(href='' title='') Адвокація та лобіювання
-                    li
-                        a(href='' title='') Події та нетворкінг
-                    li
-                        a(href='' title='') Освіта
-                    li
-                        a(href='' title='') Приєднуйтесь до спільноти
-                    li
-                        a(href='' title='') Учасники
-                    li
-                        a(href='' title='') Міжнародна промоція
-                    li
-                        a(href='' title='') Медіа та публікації
+                .col-3.nav-mobile
+                    .nav-icon#menu-trigger
+                        span
+                        span
+                        span
+                        span
+    .nav-bottom
+        .container
+            .row#nav-panel
+                .col-md-12
+                    ul.menu
+                        li.dropdown
+                            a(href='' title='').dropdown-link Про асоціацію
+                            ul
+                                li.dropdown-back
+                                    a(href='' title='') Назад
+                                li
+                                    a(href='' title='') Про нас1
+                                li
+                                    a(href='' title='') Переваги членства
+                                li
+                                    a(href='' title='') Річні звіти
+                                li
+                                    a(href='' title='') Бізнес про нас
+                                li
+                                    a(href='' title='') Контакти
+                        li.dropdown
+                            a(href='' title='').dropdown-link Адвокація та лобіювання
+                            ul
+                                li.dropdown-back
+                                    a(href='' title='') Назад
+                                li
+                                    a(href='' title='') Про нас2
+                                li
+                                    a(href='' title='') Переваги членства
+                                li
+                                    a(href='' title='') Річні звіти
+                                li
+                                    a(href='' title='') Бізнес про нас
+                                li
+                                    a(href='' title='') Контакти
+                        li.dropdown
+                            a(href='' title='').dropdown-link Події та нетворкінг
+                            ul
+                                li.dropdown-back
+                                    a(href='' title='') Назад
+                                li
+                                    a(href='' title='') Про нас3
+                                li
+                                    a(href='' title='') Переваги членства
+                                li
+                                    a(href='' title='') Річні звіти
+                                li
+                                    a(href='' title='') Бізнес про нас
+                                li
+                                    a(href='' title='') Контакти
+                        li.dropdown
+                            a(href='' title='').dropdown-link Освіта
+                            ul
+                                li.dropdown-back
+                                    a(href='' title='') Назад
+                                li
+                                    a(href='' title='') Про нас4
+                                li
+                                    a(href='' title='') Переваги членства
+                                li
+                                    a(href='' title='') Річні звіти
+                                li
+                                    a(href='' title='') Бізнес про нас
+                                li
+                                    a(href='' title='') Контакти
+                        li
+                            a(href='' title='') Приєднуйтесь до спільноти
+                        li.dropdown
+                            a(href='' title='').dropdown-link Учасники
+                            ul
+                                li.dropdown-back
+                                    a(href='' title='') Назад
+                                li
+                                    a(href='' title='') Про нас5
+                                li
+                                    a(href='' title='') Переваги членства
+                                li
+                                    a(href='' title='') Річні звіти
+                                li
+                                    a(href='' title='') Бізнес про нас
+                                li
+                                    a(href='' title='') Контакти
+                        li.dropdown
+                            a(href='' title='').dropdown-link Міжнародна промоція
+                            ul
+                                li.dropdown-back
+                                    a(href='' title='') Назад
+                                li
+                                    a(href='' title='') Про нас6
+                                li
+                                    a(href='' title='') Переваги членства
+                                li
+                                    a(href='' title='') Річні звіти
+                                li
+                                    a(href='' title='') Бізнес про нас
+                                li
+                                    a(href='' title='') Контакти
+                        li.dropdown
+                            a(href='' title='').dropdown-link Медіа та публікації
+                            ul
+                                li.dropdown-back
+                                    a(href='' title='') Назад
+                                li
+                                    a(href='' title='') Про нас7
+                                li
+                                    a(href='' title='') Переваги членства
+                                li
+                                    a(href='' title='') Річні звіти
+                                li
+                                    a(href='' title='') Бізнес про нас
+                                li
+                                    a(href='' title='') Контакти

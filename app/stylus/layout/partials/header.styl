@@ -1,4 +1,31 @@
 @import '../../utilities/vars'
 @import '../../utilities/mixins'
 
-header {}
+.header-index
+  background $blue-light4
+  padding-top 121px
+  height 100vh
+  +mob()
+    padding-top $r59
+  h2
+    max-width: 93%;
+    margin-bottom $r52
+    a
+      font-size: $r44
+      display inline-block
+      line-height: 1.11;
+      letter-spacing: 1.3px;
+      color: $white
+  p
+    line-height normal
+    color $white
+    letter-spacing normal
+    font-size $e14
+  //.container
+  //  position relative
+  //  height 100%
+  //  .slider
+  //    position absolute
+  //    bottom 0
+  //    left 0
+  //    right 0

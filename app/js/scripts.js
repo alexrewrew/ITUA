@@ -5,10 +5,11 @@
 
         // ========== MENU ==========
 
-        // $('#menu-trigger').click(function (e) {
-        //     e.preventDefault();
-        //     $('html, body').toggleClass('open');
-        // });
+        $('#menu-trigger').click(function (e) {
+            e.preventDefault();
+            $('html, body').toggleClass('open');
+        });
+
 
         // ========== COLOR THIEF ==========
 
@@ -155,14 +156,14 @@
         // ========== SCROLLSPY ==========
 
         // ----- SCROLLING CLASS CHANGE -----
-        // $(window).scroll(function () {
-        //     if ($(this).scrollTop() > 200) {
-        //         $(".link-up").addClass("visible");
-        //     }
-        //     else {
-        //         $(".link-up").removeClass("visible");
-        //     }
-        // });
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 50) {
+                $("nav.nav-index").removeClass("unscrolled");
+            }
+            else {
+                $("nav.nav-index").addClass("unscrolled");
+            }
+        });
 
         // ----- ANCHOR LINKS SCROLLING -----
         // $(".smooth").click(function (e) {
@@ -177,13 +178,34 @@
 
 // ========== !!! RESPONSIVE SCRIPTS !!! ===========
 
-    // $(window).on('load resize', function () {
-    //     if (window.matchMedia("(max-width: 767px)").matches) {
-    //
-    //     } else if (window.matchMedia("(min-width: 768px)").matches) {
-    //
-    //     }
-    // });
+    $(window).on('load resize', function () {
+        if (window.matchMedia("(max-width: 767px)").matches) {
+            $('#nav-search').prependTo('#nav-panel');
+
+
+            $('.dropdown-link').click(function (e) {
+                e.preventDefault();
+                $('.dropdown ul').removeClass('active');
+                $(this).siblings('ul').addClass('active')
+            });
+
+            $('.dropdown-back a').click(function (e) {
+                e.preventDefault();
+                $(this).parent().parent().removeClass('active');
+            })
+
+        } else if (window.matchMedia("(min-width: 768px)").matches) {
+            $('#nav-search').insertAfter('#nav-logo');
+
+            $('.dropdown-link').click(function (e) {
+                e.preventDefault();
+            });
+
+            $('.dropdown').hover(function () {
+                $(this).children('ul').toggleClass('active')
+            });
+        }
+    });
 
 })();
 

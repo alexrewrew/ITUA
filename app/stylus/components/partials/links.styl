@@ -6,6 +6,8 @@ a
   font-family $m-font, sans-serif
   color blue
   trans()
+  svg g
+    trans()
   &:hover
     text-decoration none
     //color lightblue
@@ -13,11 +15,14 @@ a
     text-decoration none
     outline none
 
+
 .link-logo
   display block
-  max-width 50px
-  img
+  max-width 136px
+  svg
     width 100%
+  &:hover
+    opacity .6
 
 .link-detail
   display inline-flex

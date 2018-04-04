@@ -3,25 +3,174 @@
 
 nav
   background $white
-  padding $r10 0
+  position fixed
+  top 0
+  left 0
+  right 0
+  z-index 8999
   trans()
+  +port()
+    .container
+      max-width 100%
+  +mob()
+    height 59px
+
+nav.nav-index.unscrolled
+  background $trans
+  .link-logo
+    svg
+      g, path, polygon
+        fill $white
+  .nav-top
+    border-bottom-color $white30
+
+  +cmin(768px)
+    .menu li a
+      color: $white60
+      &:hover
+        color $blue-dark4
+
+    .ul-lang li a
+      color: $white30;
+      &.active, &:hover
+        color $white
+    .form-search
+      .input-group
+        input
+          background $white15
+          color $white
+          +placeholder()
+            color $white
+        span
+          svg g
+            fill $white
+    .ul-login
+      &:before
+        background $white30
+      li a
+        color $white
+        svg g
+          fill $white
+        &:hover
+          color: $white30;
+          svg g
+            fill: $white30;
+    .menu li.dropdown
+      ul
+        background $blue-light6
+
+.nav-top
+  padding $r22 0 $r12
+  border-bottom 1px solid rgba(95, 128, 165, .15)
+  +mob()
+    padding $r14 0 $r8
+    height 59px
+
+.nav-bottom
+  padding-top $r15
+  trans()
+  +mob()
+    bg($blue-light6)
+    padding-top $r20
+    //min-height calc(100vh - 59px)
+    transform translate3d(0, -110vh, 0)
 
 .menu
   flex(row)
-  justify-content flex-end
+  justify-content space-between
   align-items center
   height 100%
+  +mob()
+    flex-wrap wrap
+    padding-left $r19
+    padding-top $r39
   li
-    margin 0 $r15
-    &:last-child
-      margin-right 0
+    position relative
+    +mob()
+      width 100%
     a
       display block
-      color lightblue
+      font-size: $e13
+      pb($r16)
+      color $blue-dark5
+      +port()
+        font-size: $e11
+      +mob()
+        font-size $e17
       &:hover
-        color blue
-    .active
-      color blue
+        color $blue-light-back4
+    &.dropdown
+      +mob()
+        position static
+      .dropdown-link
+        +mob()
+          position relative
+          &:before, &:after
+            pseudo(block, absolute)
+            height 2px
+            width 7px
+            background $blue-light-back4
+            right 12px
+            top 13px
+          &:before
+            transform rotate(45deg)
+            top 9px
+          &:after
+            transform rotate(-45deg)
+      //&:hover
+      //  &:before, &:after
+      //    color $blue-light-back4
+
+      ul
+        position absolute
+        margin 0
+        padding: $r23 $r14 $r19
+        background $blue-light-back3
+
+        width 180px
+        left: -14px;
+        top: 35px;
+        trans()
+        visibility hidden
+        opacity 0
+        z-index -1
+        +mob()
+          width 100vw
+          left 0
+          right 0
+          bottom 0
+          transform translate3d(100vw, 0, 0)
+          padding-left $r34
+          padding-right $r34
+        li
+          mb($r15)
+          a
+            pb(0)
+          &.dropdown-back
+            display none
+            +mob()
+              display block
+              a
+                position relative
+                color $blue-dark4
+                &:before, &:after
+                  pseudo(block, absolute)
+                  height 2px
+                  width 7px
+                  background $blue-dark4
+                  left -19px
+                  top 13px
+                &:before
+                  transform rotate(-45deg)
+                  top 9px
+                &:after
+                  transform rotate(45deg)
+        &.active
+          z-index 7999
+          visibility visible
+          opacity 1
+          +mob()
+            transform none
 
 .nav-mobile
   display none
@@ -29,10 +178,10 @@ nav
     display block
 
 .nav-icon
-  width 30px
-  height 22px
+  width 26px
+  height 23px
   position relative
-  margin $r14 0
+  margin $r3 $r11
   cursor pointer
   trans()
   transform rotate(0deg)
@@ -42,7 +191,7 @@ nav
     position absolute
     height 3px
     width 100%
-    background $black
+    background $white
     border-radius 2px
     opacity 1
     left 0
@@ -51,10 +200,43 @@ nav
     &:nth-child(1)
       top 0
     &:nth-child(2), &:nth-child(3)
-      top 9px
+      top 10px
     &:nth-child(4)
-      top 18px
-
+      top 20px
+  &:before
+    pseudo(block, absolute)
+    width 1px
+    height 58px
+    background rgba(255, 255, 255, .3)
+    left: -27px;
+    top: -17px;
 
 //@import "../../../source/rew-ui-kit/rew-navigation/nav-right-left.styl"
 //@import "../../../source/rew-ui-kit/rew-navigation/nav-top-bottom.styl"
+
+#nav-list
+  display flex
+  justify-content space-between
+  padding-right: $r20
+  padding-left: $r47
+  +port()
+    padding-right $r15
+    padding-left $r35
+  +mob()
+    display none
+    padding 0 $r15
+    align-items center
+
+#nav-logo
+  animation: ds-none .2s both;
+
+//#nav-panel
+//  +mob()
+//    bg($blue-light6)
+
+@keyframes ds-none {
+  0% {
+    opacity: 0;
+  }
+}
+

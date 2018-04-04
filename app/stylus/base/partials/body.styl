@@ -10,7 +10,7 @@ html, body
 body
   font($r16, 400, normal)
   color $black
-  font-family $m-font,  sans-serif
+  font-family $m-font, sans-serif
   background $white
 
 +dis()
@@ -18,3 +18,42 @@ body
     max-width 1170px
   .container.container-1300
     max-width 1300px
+
+html.open
+  overflow hidden !important
+  height 100vh
+
+body.open
+  overflow hidden !important
+  .nav-icon
+    span
+      &:nth-child(1)
+        top 20px
+        width 0
+        left 50%
+      &:nth-child(2)
+        transform rotate(45deg)
+      &:nth-child(3)
+        transform rotate(-45deg)
+      &:nth-child(4)
+        top 20px
+        width 0
+        left 50%
+
+  #nav-logo
+    display none
+
+  #nav-list
+    display flex
+    animation: ds-none .2s both;
+
+  .nav-top
+    background $blue-light6
+
+  .nav-bottom
+    transform none
+
+  nav
+    height 100%
+    overflow scroll !important
+    background-color $blue-light6 !important

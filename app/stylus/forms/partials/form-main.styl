@@ -1,1 +1,24 @@
-form {}
+.form-search
+  .input-group
+    margin-bottom 0
+    +mob()
+      span
+        left auto
+        right 0
+    input
+      background rgba(95,128,165,0.08)
+      width: calc(100% + 15px);
+      border none
+      border-radius: 3px;
+      fs($e14)
+      padding $r4 $r15 $r4 $r45
+      +placeholder()
+        color rgba(38,74,117,.5)
+      +mob()
+        width 100%
+        padding $r9 $r20 $r11
+
+    span
+      svg g
+        fill $blue-dark3
+

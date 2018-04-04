@@ -4,8 +4,6 @@ extend layouts/_layout.pug
 block title
     | Главная страница
 
-block navigation
-    include partials/navigations/_navigation
 
 block content
 
@@ -131,8 +129,9 @@ block content
                         include partials/items/_member-item
                         include partials/items/_member-item
                         include partials/items/_member-item
+
                     .slider.slider-rows-sync
-                    a(href='' title='').btn
+                    a(href='' title='').btn.btn-arrow.btn-arrow-slider
                         | Всі члени Асоціації
                         include svgs/arrow-right.svg
 
