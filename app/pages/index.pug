@@ -66,7 +66,8 @@ block content
                 .col-3
                     include partials/blog/_blog-item
 
-    section
+
+    section.back-blue-light2
         .container
             .row
                 .col-10
@@ -75,8 +76,22 @@ block content
                     a(href='' title='').link-detail
                         | Усі події
                         include svgs/angle-right.svg
+        .container.container-slider
+            .row
                 .col-12
-                    .slider.slider-four
+                    .slider.slider-calendar.slider-with-line
+                        div
+                            include partials/calendar/_calendar-item-month
+                        div
+                            include partials/calendar/_calendar-item-event
+                        div
+                            include partials/calendar/_calendar-item
+                        div
+                            include partials/calendar/_calendar-item-event-month
+                        div
+                            include partials/calendar/_calendar-item
+                        div
+                            include partials/calendar/_calendar-item
                         div
                             include partials/calendar/_calendar-item-month
                         div
@@ -97,7 +112,7 @@ block content
                     h2 Відгуки
                 .col-2
                     a(href='' title='').link-detail
-                        | Усі події
+                        | Усі відгуки
                         include svgs/angle-right.svg
                 .col-6
                     include partials/items/_comment-item
@@ -109,32 +124,28 @@ block content
             .row
                 .col-12
                     h2 Члени асоціації
-        .container.container-1300
+        .container.container-slider
             .row
                 .col-12
-                    .slider.slider-rows
-                        include partials/items/_member-item
-                        include partials/items/_member-item
-                        include partials/items/_member-item
-                        include partials/items/_member-item
-                        include partials/items/_member-item
-                        include partials/items/_member-item
-                        include partials/items/_member-item
-                        include partials/items/_member-item
-                        include partials/items/_member-item
-                        include partials/items/_member-item
-                        include partials/items/_member-item
-                        include partials/items/_member-item
-                        include partials/items/_member-item
-                        include partials/items/_member-item
-                        include partials/items/_member-item
-                        include partials/items/_member-item
-                        include partials/items/_member-item
-                        include partials/items/_member-item
-                        include partials/items/_member-item
-                        include partials/items/_member-item
+                    .slider.slider-member.slider-with-line.slider-with-line-sync
+                        include partials/member/_member-item
+                        include partials/member/_member-item
+                        include partials/member/_member-item
+                        include partials/member/_member-item
+                        include partials/member/_member-item
+                        include partials/member/_member-item
+                        include partials/member/_member-item
+                        include partials/member/_member-item
+                        include partials/member/_member-item
+                        include partials/member/_member-item
+                        include partials/member/_member-item
+                        include partials/member/_member-item
+                        include partials/member/_member-item
+                        include partials/member/_member-item
+                        include partials/member/_member-item
+                        include partials/member/_member-item
 
-                    .slider.slider-rows-sync
+                    .slider.slider-member-sync.slider-sync
                     a(href='' title='').btn.btn-arrow.btn-arrow-slider
                         | Всі члени Асоціації
                         include svgs/arrow-right.svg
@@ -143,12 +154,25 @@ block content
         .container
             .row
                 .col-12
-                    h2 Члени асоціації
+                    h2 Партнери
+        .container.container-slider
+            .row
                 .col-12
-                    .slider
-                        div
-                            include partials/items/_member-item
-                    a(href='' title='').btn
-                        | Всі партнери
+                    .slider.slider-partners.slider-with-line.slider-with-line-sync
+                        include partials/member/_member-item-partner
+                        include partials/member/_member-item-partner
+                        include partials/member/_member-item-partner
+                        include partials/member/_member-item-partner
+                        include partials/member/_member-item-partner
+                        include partials/member/_member-item-partner
+                        include partials/member/_member-item-partner
+                        include partials/member/_member-item-partner
+                        include partials/member/_member-item-partner
+                        include partials/member/_member-item-partner
+
+                    .slider.slider-partners-sync.slider-sync
+                    a(href='' title='').btn.btn-arrow.btn-arrow-slider
+                        | Всі партенри
                         include svgs/arrow-right.svg
+
 

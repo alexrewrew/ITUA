@@ -30,7 +30,7 @@
         fill $blue
         trans()
     &:hover
-      background #D8D8D8
+      background $blue-light6
       svg g
         fill $white
   .arrow.left
@@ -93,67 +93,5 @@
 //    margin 0 $r15
 //    overflow hidden
 
-.slider-four
-  margin 0 -.938rem
-  padding-top $r20
-  position relative
-  padding-bottom $r57
-  &:after
-    pseudo(block, absolute)
-    width 150vw
-    background $blue
-    height 1px
-    bottom 61px
-    left -50vw
 
-.slider-rows
-  position relative
-  padding-bottom $r97
-  &:after
-    pseudo(block, absolute)
-    width 150vw
-    background $blue
-    height 1px
-    bottom 61px
-    left -50vw
-  .slick-list
-    &:after, &:before
-      pseudo(block, absolute)
-      top 0
-      bottom 0
-      width 60px
-      z-index 300
-      background: rgba(255, 255, 255, 1);
-    &:before
-      left 0
-      background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
-    &:after
-      right 0
-      background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
-  .slick-track
-    padding-top $r25
-    padding-bottom: $r30
-  .arrow.left
-    left calc(1286px - 50%)
-  .arrow.right
-    left calc(1286px - 50% + 82px)
 
-.slider-rows-sync
-  position: absolute;
-  bottom: 51px;
-  left: 23px;
-  width 49%
-  .slick-track
-    position relative
-    left: 26.5%;
-
-.slider-progress
-  height: 7px;
-  position relative
-  &:after
-    pseudo(block, absolute)
-    left 0
-    top 0
-    bottom 0
-    width 180px
-    background $blue

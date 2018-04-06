@@ -1,4 +1,42 @@
 @import "../../utilities/vars"
 @import "../../utilities/mixins"
 
-footer {}
+footer
+  bg($black-back)
+  mt(6.938rem)
+  pt($r47)
+
+  h6
+    font-size: $e28
+    font-weight: 700
+    line-height: 1.75;
+    color: $gray-text
+    font-family $a-font,sans-serif
+    mb($r14)
+  p
+    line-height: 1.43;
+    mb($r10)
+    a
+      display block
+      color $white
+      &:hover
+        color $blue
+
+.footer-bottom
+  position relative
+  display flex
+  align-items center
+  height 46px
+  &:after
+    pseudo(block, absolute)
+    left 0
+    right 0
+    height 1px
+    bg($white20)
+    top 0
+
+.footer-copyright
+  font-size: $e12
+  line-height: 1.83;
+  letter-spacing: normal;
+  color: $black-text2

@@ -22,3 +22,39 @@
       svg g
         fill $blue-dark3
 
+.form-footer
+  display flex
+  .btn
+    max-width 196px
+    font-size: $r14
+    letter-spacing: 2.3px;
+    pt($r19)
+    pb($r17)
+  input
+    mb($r0)
+    border: none
+    background $black-back2
+    height 100%
+    pl($r31)
+    fs($e16)
+    color $white
+    +placeholder()
+      color $white
+    &:focus
+      bg(#36393F)
+
+  .input-shadow
+    position relative
+    z-index 40
+    width 100%
+    &:after
+      pseudo(block, absolute)
+      z-index -1
+      left 6px
+      right 6px
+      bottom -17px
+      height: 34px;
+      filter: blur(12px);
+      background-color: #26292e;
+
+

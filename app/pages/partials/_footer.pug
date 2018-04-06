@@ -1,11 +1,13 @@
 footer
     .container
         .row.justify-content-center
-            .col-8
-                form
-                    input(type='email' placeholder='Введіть ваш e-mail')
+            .col-7
+                h5 Підпишіться на наші оновлення
+                form.form-footer
+                    .input-shadow
+                        input(type='email' placeholder='Введіть ваш e-mail')
                     button.btn ПІДПИСАТИСЬ
-            .col-2
+            .offset-1.col-2
                 h6 Контакти
                 p Адреса:  01001, м. Київ, вул. Хрещатик, 10 (IHub)
                 p Телефони:
@@ -13,12 +15,12 @@ footer
                     a(href='' title='') +38 044 591 10 24
                 p E-mail:
                     a(href='' title='') office@itukraine.org.ua
-                ul
+                ul.ul-social
                     li
                         a(href='' title='')
                             include ../svgs/facebook.svg
                             | Facebook
-    div
+    .footer-bottom
         .container
             .row
                 .col-6
