@@ -3,6 +3,9 @@
   &--block
     position relative
     margin-bottom $r20
+    +port()
+      height 479px
+      overflow hidden
     &-image
       width 100%
     p
@@ -13,3 +16,7 @@
       right 0
       padding $r37 $r20
       margin-bottom 0
+      +tab()
+        padding $r32 $r15
+      +port()
+        padding $r25 $r15

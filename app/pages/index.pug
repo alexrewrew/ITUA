@@ -11,7 +11,7 @@ block content
 
     section
         .container
-            .row
+            .row.justify-content-center
                 .col-9
                     .heading-h1-h2
                         h2 Переваги членства в
@@ -20,27 +20,27 @@ block content
                     a(href='' title='').link-detail
                         | Перейти до всіх переваг
                         include svgs/angle-right.svg
-                .col-8
+                .col-xl-8.col-lg-9.col-12
                     .row
-                        .col-6
+                        .col-sm-6
                             include partials/blog/_blog-item-advantage
-                        .col-6
+                        .col-sm-6
                             include partials/blog/_blog-item-advantage
-                        .col-6
+                        .col-sm-6
                             include partials/blog/_blog-item-advantage
-                        .col-6
+                        .col-sm-6
                             include partials/blog/_blog-item-advantage
 
 
-                aside.col-3.offset-1
+                aside.col-lg-3.offset-xl-1.col-md-6
                     include partials/items/_join-item
 
     section.back-blue-light
         .container
             .row
-                .col-2
+                .col-xl-2.col-lg-3.col-md-9
                     h2 Публікації
-                .col-8
+                .col-xl-8.col-lg-7.col-md-12.order-md-2
                     .tabs-publication
                         ul.tabs-publication--ul
                             li
@@ -52,18 +52,18 @@ block content
                             li
                                 a(href='' title='') Авторські статті
                     span.tabs-publication--line
-                .col-2
+                .col-lg-2.col-md-3
                     a(href='' title='').link-detail
                         | Усі публікації
                         include svgs/angle-right.svg
-            .row
-                .col-3
+            .row.row-publications
+                .col-xl-3.col-lg-4.col-md-6
                     include partials/blog/_blog-item
-                .col-3
+                .col-xl-3.col-lg-4.col-md-6
                     include partials/blog/_blog-item
-                .col-3
+                .col-xl-3.col-lg-4.col-md-6
                     include partials/blog/_blog-item
-                .col-3
+                .col-xl-3.col-lg-4.col-md-6
                     include partials/blog/_blog-item
 
 

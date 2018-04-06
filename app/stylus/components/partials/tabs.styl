@@ -1,37 +1,88 @@
 @import '../../utilities/vars'
 @import '../../utilities/mixins'
 
-.tabs
-  flex(row)
-  margin-bottom $r16
+//.tabs
+//  flex(row)
+//  margin-bottom $r16
+//
+//.tabs li
+//  a
+//    cursor: pointer;
+//    padding $r12 $r15 $r13
+//    color $black
+//    display block
+//    trans()
+//
+//    &:hover
+//      color $white
+//      background lightblue
+//  a.active
+//    color $white
+//    background blue
+//
+//
+//.tabs-content
+//  display: none;
+//  padding: $r10 $r15
+//  animation: fadeEffect 1s;
+//
+//.tabs-content.active
+//  display block
+//
+//@keyframes fadeEffect
+//  from
+//    opacity: 0;
+//  to
+//    opacity: 1;
 
-.tabs li
-  a
-    cursor: pointer;
-    padding $r12 $r15 $r13
-    color $black
-    display block
+
+.tabs-publication
+  position relative
+  pb($r37)
+  mb($r43)
+  +tab()
+    ml(-1.876rem)
+    mr(-.938rem)
+  +port()
+    pb($r17)
+  &:after
+    pseudo(block, absolute)
+    width 1170px
+    left -210px
+    bottom 0
+    height 1px
+    background $blue-light3
+  &--ul
+    display flex
+    padding-top $r19
+    padding-bottom $r19
+    li
+      margin-right $r28
+      +tab()
+        mr($r15)
+      a
+        display block
+        font-family $a-font, sans-serif
+        font-size: $e16
+        font-weight: 700
+        letter-spacing: 0.5px
+        color: $blue-light
+        +tab()
+          fs($e14)
+        &.active
+          color $blue
+          &:hover
+            color $blue
+        &:hover
+          color $blue-dark3
+  &--line
+    width: 183px;
+    height: 3px;
+    background-color: $blue-light3
+    position absolute
+    bottom 42px
+    left 22px
     trans()
-
-    &:hover
-      color $white
-      background lightblue
-  a.active
-    color $white
-    background blue
-
-
-.tabs-content
-  display: none;
-  padding: $r10 $r15
-  animation: fadeEffect 1s;
-
-.tabs-content.active
-  display block
-
-@keyframes fadeEffect
-  from 
-    opacity: 0;
-  to 
-    opacity: 1;
+    +tab()
+      left -10px
   

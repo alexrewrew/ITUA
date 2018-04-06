@@ -1,13 +1,18 @@
 .comment
   display flex
   box-shadow: 0 10px 30px 0 rgba(94, 107, 126, 0.3);
-  height 285px
+  min-height 285px
   mt($r35)
   mb(0)
+  +port()
+    flex-wrap wrap
   &--left
     max-width 150px
     flex 1 1 150px
     position relative
+    +port()
+      width 100%
+      max-width 100%
     &-date
       position absolute
       font-size: $e14
@@ -16,14 +21,26 @@
       right 0
       bottom 15px
       font-family $a-font, sans-serif
+      +port()
+        right 25px
   &--right
-    pt($r42)
-    pr($r15)
+    padding $r42 $r15 $r44 $r0
     ml($r44)
     position relative
+    +tab()
+      ml($r34)
+    +port()
+      width 100%
+      padding-left $r25
+      padding-right $r25
+      ml(0)
     h3
       fs($e28)
       mb($r0)
     .btn-more
       position absolute
       bottom 0
+      +port()
+        left 0
+        pl($r25)
+        min-width 50%

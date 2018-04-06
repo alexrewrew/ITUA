@@ -1,7 +1,7 @@
 .slider-with-line
   position relative
 
-  padding-bottom $r57
+  pb($r57)
   pt($r0)
   mb($r0)
 
@@ -29,8 +29,17 @@
       right 0
   .arrow.left
     left calc(1426px - 50%)
+    +tab()
+      left calc(946px - 50%)
+    +port()
+      left: calc(706px - 50%);
+
   .arrow.right
     left calc(1426px - 50% + 82px)
+    +tab()
+      left calc(946px - 50% + 82px)
+    +port()
+      left: calc(706px - 50% + 82px);
 
 .slider-with-line.slider-with-line-sync
   padding-bottom $r97

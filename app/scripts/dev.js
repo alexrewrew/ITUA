@@ -79,12 +79,22 @@
             prevArrow: DOMs.sliderArrowLeft,
             nextArrow: DOMs.sliderArrowRight,
             dots: false,
+            slidesToShow: 4,
             slidesToScroll: 1,
             infinite: true,
 
             initialSlide: 2,
             centerMode: true,
-            variableWidth: true
+            variableWidth: true,
+            responsive: [
+                {
+                    breakpoint: 1199,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
         });
 
         // SLIDER OF EVENTS
@@ -114,7 +124,16 @@
             initialSlide: 2,
             centerMode: true,
             asNavFor: DOMs.sliderMemberSync,
-            variableWidth: true
+            variableWidth: true,
+            responsive: [
+                {
+                    breakpoint: 1199,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
         });
 
         DOMs.sliderMemberSync.slick({
@@ -157,7 +176,16 @@
             initialSlide: 2,
             centerMode: true,
             asNavFor: DOMs.sliderPartnersSync,
-            variableWidth: true
+            variableWidth: true,
+            responsive: [
+                {
+                    breakpoint: 1199,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
         });
 
         DOMs.sliderPartnersSync.slick({

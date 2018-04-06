@@ -5,6 +5,8 @@
   overflow hidden
   height 48vh
   margin-top $r8
+  +port()
+    flex-direction column
   .img-color
     display inline-block
     height 100%
@@ -34,10 +36,14 @@
     +xxl()
       fs($e56)
       mb($r92)
+    +port()
+      fs($e66)
     &:hover
       color $white
   p
     color $white
+    +port()
+      font-size ($e16)
   .link-detail
     float left
   &--date
@@ -66,12 +72,16 @@
     left: calc(1057px - 50%);
     +tab()
       left: calc(790px - 50%);
+    +port()
+      left: calc(570px - 50%);
 
 
   .arrow.right
     left: calc(1057px - 50% + 82px);
     +tab()
       left: calc(790px - 50% + 82px);
+    +port()
+      left: calc(570px - 50% + 82px);
 
   .slick-slide.slick-current.slick-active
     .slider-color--col
