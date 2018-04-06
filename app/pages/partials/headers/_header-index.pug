@@ -1,24 +1,16 @@
-header.header-index
+extend ../../layouts/_layout-header-index.pug
 
-    include ../navigations/_navigation
+block navigation
+    include ../navigations/_navigation-index
 
-    .container
-        .slider
+block content
+    .container.container-big
+        .slider.slider-color
             div
-                .row.justify-content-center
-                    .offset-4.col-6
-                        h2
-                            a(href='' title='') Інфографіка. Українська IT-індустрія
-                    .col-6
-                        div
-                            a(href='' title='')
-                                img(src='img/illus/slider.png' title='' alt='')
-                    .offset-1.col-3
-                        p Цього року вітчизняна ІТ-галузь здобула численні перемоги на міжнародній арені, а її внесок в економічний розвиток України важко недооцінювати…
-                        ul
-                            li 21.02.18
-                            li
-                                a(href='' title='') Новини Асоціації
-                        a(href='' title='').link-detail
-                            | Детальніше
-                            include ../../svgs/angle-right.svg
+                include ../slider-color/_slider-item-index
+            div
+                include ../slider-color/_slider-item-index2
+            div
+                include ../slider-color/_slider-item-index
+            div
+                include ../slider-color/_slider-item-index2

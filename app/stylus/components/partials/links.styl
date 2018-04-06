@@ -33,9 +33,15 @@ a
   color $blue
   font-weight 700
   float right
-  padding: $r19 0;
+  padding: $r15 0;
   svg
     margin-left 18px
+    trans()
     g
       fill $blue
+  &:hover
+    color $blue
+    svg
+      transform translate3d(15px,0,0)
+
 

@@ -55,7 +55,7 @@ ol
     pseudo(block, absolute)
     width 1px
     height 70px
-    background rgba(95,128,165,.15)
+    background rgba(95, 128, 165, .15)
     left -29px
     top -22px
     +mob()
@@ -74,3 +74,42 @@ ol
         co($blue-light-back4)
         svg g
           fill $blue-light-back4
+
+.tabs-publication
+  position relative
+  pb($r37)
+  mb($r43)
+  &:after
+    pseudo(block, absolute)
+    width 1170px
+    left -210px
+    bottom 0
+    height 1px
+    background $blue-light3
+  &--ul
+    display flex
+    padding-top $r19
+    padding-bottom $r19
+    li
+      margin-right $r28
+      a
+        display block
+        font-family $a-font, sans-serif
+        font-size: $e16
+        font-weight: 700
+        letter-spacing: 0.5px
+        color: $blue-light
+        &.active
+          color $blue
+          &:hover
+            color $blue
+        &:hover
+          color $blue-dark3
+  &--line
+    width: 183px;
+    height: 3px;
+    background-color: $blue-light3
+    position absolute
+    bottom 42px
+    left 22px
+    trans()

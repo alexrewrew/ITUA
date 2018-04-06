@@ -13,7 +13,9 @@ block content
         .container
             .row
                 .col-9
-                    h2 Переваги членства
+                    .heading-h1-h2
+                        h2 Переваги членства в
+                        h1 IT Ukraine Association
                 .col-3
                     a(href='' title='').link-detail
                         | Перейти до всіх переваг
@@ -39,15 +41,17 @@ block content
                 .col-2
                     h2 Публікації
                 .col-8
-                    ul
-                        li
-                            a(href='' title='') Закордонні змі про нас
-                        li
-                            a(href='' title='') Новини Асоціації
-                        li
-                            a(href='' title='') Новини Галузі
-                        li
-                            a(href='' title='') Авторські статті
+                    .tabs-publication
+                        ul.tabs-publication--ul
+                            li
+                                a(href='' title='').active Закордонні змі про нас
+                            li
+                                a(href='' title='') Новини Асоціації
+                            li
+                                a(href='' title='') Новини Галузі
+                            li
+                                a(href='' title='') Авторські статті
+                    span.tabs-publication--line
                 .col-2
                     a(href='' title='').link-detail
                         | Усі публікації

@@ -15,9 +15,15 @@ body
 
 +dis()
   .container
-    max-width 1170px
+    max-width 1170px !important
   .container.container-1300
     max-width 1300px
+
++xxl()
+  .container.container-big
+    max-width 1500px !important
+
+
 
 html.open
   overflow hidden !important
@@ -26,7 +32,10 @@ html.open
 body.open
   overflow hidden !important
   .nav-icon
+    &:before
+      bg(rgba(255, 255, 255, .3))
     span
+      bg($white)
       &:nth-child(1)
         top 20px
         width 0
@@ -49,9 +58,11 @@ body.open
 
   .nav-top
     background $blue-light6
+    border-bottom-color: rgba(255, 255, 255, .3);
 
   .nav-bottom
     transform none
+    overflow-x: hidden;
 
   nav
     height 100%

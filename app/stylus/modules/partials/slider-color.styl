@@ -1,0 +1,76 @@
+.link-color-img
+  display flex
+  align-items center
+  justify-content center
+  overflow hidden
+  height 48vh
+  margin-top $r8
+  .img-color
+    display inline-block
+    height 100%
+    width auto
+
+.slider-color--col
+  &:before
+    pseudo(block, absolute)
+    top 0
+    width 100%
+    right 0
+    bottom 0
+    background $blue-light4
+    transition .6s all ease
+
+.slider-color
+  pb($r62)
+  &--heading
+    font-family $a-font, sans-serif
+    font-size $e44
+    font-weight 700
+    line-height 1.14
+    letter-spacing 1px
+    color $white
+    display inline-block
+    margin-bottom $r52
+    +xxl()
+      fs($e56)
+      mb($r92)
+    &:hover
+      color $white
+  p
+    color $white
+  .link-detail
+    float left
+  &--date
+    flex(row)
+    mt($r30)
+    mb($r57)
+    li
+      color $white
+      fs($e14)
+      letter-spacing: 1px;
+      mr($r40)
+      fw(700)
+      &:last-child
+        mr(0)
+      a
+        co($white)
+        text-decoration underline
+
+  .arrow
+    border-color $white30
+    svg
+      g
+        fill $white
+    &:hover
+      background $blue-light6
+
+  .arrow.left
+    left: calc(1057px - 50%);
+
+  .arrow.right
+    left: calc(1057px - 50% + 82px);
+
+  .slick-slide.slick-current.slick-active
+    .slider-color--col
+      &:before
+        width 0%

@@ -31,7 +31,12 @@ button
     filter: blur(12px);
     background-color: $blue2
     z-index -1
-  &:hover {}
+    trans()
+  &:hover
+    color $blue-light8
+    bg($blue3)
+    &:after
+      background-color: $blue
 
 .btn-center
   mcen()
