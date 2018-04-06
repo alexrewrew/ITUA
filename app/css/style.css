@@ -333,8 +333,10 @@ hr {
 	    flex-wrap: wrap;
 	margin-bottom: 1.938rem;
 }
-.heading-h1-h2 + mob {
-	margin-bottom: 1.5rem;
+@media (max-width: 767px) {
+	.heading-h1-h2 {
+		margin-bottom: 1.5rem;
+	}
 }
 .heading-h1-h2 h2 {
 	margin-right: .813rem;
@@ -362,7 +364,6 @@ section {
 @media (max-width: 767px) {
 	section {
 		padding-top: 2.188rem;
-		padding-top: 3.75rem;
 	}
 }
 nav {
