@@ -310,6 +310,8 @@ hr {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
 }
 .heading-h1-h2 h2 {
 	margin-right: .813rem;
@@ -700,6 +702,11 @@ nav.nav-index.unscrolled .nav-icon span {
 @media (max-width: 767px) {
 	.header-index {
 		padding-top: 3.688rem;
+	}
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+	.header-index {
+		min-height: unset;
 	}
 }
 footer {
@@ -1968,8 +1975,18 @@ select:focus {
 .slider-color .arrow.left {
 	left: calc(1057px - 50%);
 }
+@media (min-width: 992px) and (max-width: 1199px) {
+	.slider-color .arrow.left {
+		left: calc(790px - 50%);
+	}
+}
 .slider-color .arrow.right {
 	left: calc(1057px - 50% + 82px);
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+	.slider-color .arrow.right {
+		left: calc(790px - 50% + 82px);
+	}
 }
 .slider-color .slick-slide.slick-current.slick-active .slider-color--col:before {
 	width: 0;
