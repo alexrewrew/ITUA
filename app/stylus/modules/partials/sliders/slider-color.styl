@@ -7,12 +7,25 @@
   margin-top $r8
   +port()
     flex-direction column
+  +mob()
+    height 210px
+    mt(0)
+    mb($r68)
+    width calc(100% + 30px)
+    left -15px
+    right -15px
+    position relative
   .img-color
     display inline-block
     height 100%
     width auto
+    +mob()
+      height auto
+      width calc(100% + 30px)
 
 .slider-color--col
+  +mob()
+    padding 0 30px
   &:before
     pseudo(block, absolute)
     top 0
@@ -24,6 +37,10 @@
 
 .slider-color
   pb($r62)
+  +mob()
+    left -15px
+    right -15px
+    width calc(100% + 30px)
   &--heading
     font-family $a-font, sans-serif
     font-size $e44
@@ -38,14 +55,13 @@
       mb($r92)
     +port()
       fs($e66)
+    +mob()
+      font-size: $e24
+      line-height: 1.33;
+      mb($r17)
     &:hover
       color $white
-  p
-    color $white
-    +port()
-      font-size ($e16)
-  .link-detail
-    float left
+
   &--date
     flex(row)
     mt($r30)
@@ -62,8 +78,20 @@
         co($white)
         text-decoration underline
 
+  p
+    color $white
+    +port()
+      font-size ($e16)
+    +mob()
+      mb($r34)
+  .link-detail
+    float left
+
   .arrow
     border-color $white30
+    +mob()
+      bottom auto
+      top 210px
     svg
       g
         fill $white
@@ -74,6 +102,9 @@
       left: calc(790px - 50%);
     +port()
       left: calc(570px - 50%);
+    +mob()
+      left auto
+      right: calc(15px + 64px);
 
 
   .arrow.right
@@ -82,6 +113,9 @@
       left: calc(790px - 50% + 82px);
     +port()
       left: calc(570px - 50% + 82px);
+    +mob()
+      right: 15px
+      left auto
 
   .slick-slide.slick-current.slick-active
     .slider-color--col

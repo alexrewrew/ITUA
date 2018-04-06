@@ -15,13 +15,20 @@ h1
   font-family: $a-font, sans-serif;
   letter-spacing: 1px;
   color: $blue-dark
-
+  +mob()
+    font-size: $e24
+    line-height: 2.04;
+    mb($r24)
 h2
   font($e32, 700, 1.53)
   mb($r31)
   font-family: $a-font, sans-serif;
   letter-spacing: 1px;
   color: $blue-dark
+  +mob()
+    font-size: $e24
+    line-height: 2.04;
+    mb($r24)
 
 h3
   font($e18, 700, 1.44)
@@ -67,6 +74,8 @@ hr
   display flex
   flex-wrap wrap
   mb($r31)
+  +mob
+    mb($r24)
   h2
     margin-right $r13
     mb(0)
