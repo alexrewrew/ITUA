@@ -76,6 +76,24 @@
     .btn-more
       position absolute
       bottom 0
+      &:after
+        pseudo(block, absolute)
+        bottom -6px
+        left 6px
+        right 6px
+        height: 34px;
+        opacity: 0
+        filter: blur(12px);
+        background-color: $blue2
+        z-index -1
+        trans()
+
+        visibility hidden
+
+
+        +mob()
+          left 25px
+          right 25px
       +port()
         left 0
         pl($r25)
@@ -92,6 +110,14 @@
             fill $white
 
   &:hover
-    .comment--left-image
-      opacity .6
-
+    box-shadow 0 4px 10px 0 rgba(94, 107, 126, 0.3)
+    .btn-more
+      background $blue
+      color $white
+      max-width 100%
+      pl($r30)
+      svg
+        opacity 1
+      &:after
+        visibility visible
+        opacity .7

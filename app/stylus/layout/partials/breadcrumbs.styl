@@ -3,30 +3,34 @@
 
 .breadcrumbs
   flex(row)
-  margin-bottom $r15
+  mb($r13)
+  mt($r13)
+  line-height: 1.67;
   li
-    position relative
-    padding-right $r15
-    margin-right $r15
-    &:after
-      pseudo(block, absolute)
-      right 0
-      top 0
-      height 100%
-      width 1px
-      background $black
-      transform rotate(25deg)
+    margin-right $r4
     &:last-child
-      &:after
-        display none
+      a
+        &:after
+          display none
 
     a
       display inline-block
-      color $black
-      &:hover
-        color lightblue
+      color $blue-light10
+      fs($e12)
+      line-height: 1.67;
+      position relative
+      pr($r8)
+      &:after
+        content '/'
+        display block
+        position absolute
+        right 0
+        bottom 0
 
-    .active
-      cursor default
-      pointer-events: none
-      color blue
+//&:hover
+//  color lightblue
+
+//.active
+//  cursor default
+//  pointer-events: none
+//  color blue
