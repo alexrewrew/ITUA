@@ -1,6 +1,14 @@
 .slider-calendar
   padding-top $r20
   mb($r71)
+  +mob()
+    margin: 0 -15px;
+    pt(0)
+  +land()
+    margin: 0 -30px $r50;
+    padding-bottom: $r43
+    .slick-track
+      left: 15px;
   .slick-list
     &:after, &:before
       background: rgba(255, 255, 255, 1);
@@ -8,3 +16,8 @@
       background: linear-gradient(to right, rgba(230, 235, 239, 1) 0%, rgba(230, 235, 239, 0) 100%);
     &:after
       background: linear-gradient(to right, rgba(230, 235, 239, 0) 0%, rgba(230, 235, 239, 1) 100%);
+
+
+.slider-partners.slider-with-line.slider-with-line-sync .slick-track
+    +mob()
+      left -15px

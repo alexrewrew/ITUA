@@ -5,15 +5,27 @@
   pt($r0)
   mb($r0)
 
+  +mob()
+    margin: 0 -15px
+    pb($r44)
+  +land()
+    margin-left -30px
+    margin-right -30px
   &:after
     pseudo(block, absolute)
-    width 150vw
+    width 200vw
     background $blue
     height 1px
     bottom 61px
     left -50vw
+    +mob()
+      bottom 47px
+
   .slick-track
     left -146px
+    +mob()
+      left -15px
+
   .slick-list
     &:after, &:before
       pseudo(block, absolute)
@@ -23,6 +35,8 @@
       z-index 300
       +xxl()
         width 278px
+      +mob()
+        display none
     &:before
       left 0
     &:after
@@ -32,17 +46,30 @@
     +tab()
       left calc(946px - 50%)
     +port()
-      left: calc(706px - 50%);
-
+      left auto
+      right calc(300px + 30px + 82px)
+    +mob()
+      right calc(15px + 64px)
+      left auto
+    +land()
+      right: calc(300px + 15px + 30px + 64px);
   .arrow.right
     left calc(1426px - 50% + 82px)
     +tab()
       left calc(946px - 50% + 82px)
     +port()
-      left: calc(706px - 50% + 82px);
+      left auto
+      right calc(300px + 30px)
+    +mob()
+      right 15px
+      left auto
+    +land()
+      right: calc(300px + 15px + 30px);
 
 .slider-with-line.slider-with-line-sync
   padding-bottom $r97
+  +mob()
+    pb($r50)
   .slick-list
     &:after, &:before
       background: rgba(255, 255, 255, 1);
@@ -53,12 +80,23 @@
   .slick-track
     padding-top $r25
     padding-bottom: $r30
+    +mob()
+      pt(0)
+      left: 15px;
 
 .slider-sync
   position: absolute;
   bottom: 51px;
   left: 92px;
   width 47%
+  +port()
+    width 35%
+  +mob()
+    width 100%
+    left -10px
+    bottom 99px
+  +land()
+    bottom 37px
   .slick-track
     position relative
     left: 26.5%;
@@ -74,3 +112,7 @@
     bottom 0
     width 180px
     background $blue
+    +port()
+      width: 80px;
+    +mob()
+      width 50px

@@ -2,6 +2,8 @@
   display block
   position relative
   mb($r68)
+  +mob()
+    mb($r38)
   &--image
     height 173px
     display flex
@@ -17,6 +19,9 @@
     img
       height 100%
       trans()
+      +mob()
+        min-width 100%
+        height auto
   &--date
       position absolute
       bottom: 15px;
@@ -31,6 +36,13 @@
     .blog--image
       img
         opacity .4
+    .btn-more
+      background $blue
+      color $white
+      max-width 100%
+      pl($r30)
+      svg
+        opacity 1
 
 .blog.blog-advantage
   mb($r64)
@@ -41,7 +53,10 @@
       min-height 181px
       mb($r37)
       img
-        width 100%
+        min-width unset
+    +land()
+      img
+        width auto
   .blog--description
     mb(0)
     h3
@@ -51,3 +66,17 @@
       mb($r27)
       +mob()
         mb($r24)
+
++mob()
+  .row-publications
+    .blog
+      width 263px
+
++land()
+  .row-publications
+    margin: 0 -30px;
+    .slick-track
+      left: 15px;
+
+
+

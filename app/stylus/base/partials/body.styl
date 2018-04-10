@@ -13,18 +13,28 @@ body
   font-family $m-font, sans-serif
   background $white
 
++land()
+  .container.container-big
+    max-width 100%
+
+  .container
+    max-width 100%
+
 +dis()
   .container
     max-width 1170px !important
 
-  //.container.container-1300
-  //  max-width 1300px !important
   .container.container-slider
     max-width calc(1170px + 273px + 273px + 30px) !important
 
 +xxl()
   .container.container-big
     max-width 1500px !important
+
++mob()
+  .container.container-slider
+    margin-bottom $r80
+
 
 
 
@@ -72,6 +82,12 @@ body.open
     overflow scroll !important
     background-color $blue-light6 !important
 
-.col-detail
+.col-detail-display
   +mob()
-    text-align center
+    display none
+
+.col-detail-mobile
+  display none
+  text-align center
+  +mob()
+    display: block

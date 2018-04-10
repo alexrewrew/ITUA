@@ -5,7 +5,8 @@ footer
   bg($black-back)
   mt(6.938rem)
   pt($r47)
-
+  +mob()
+    pt($r70)
   h6
     font-size: $e28
     font-weight: 700
@@ -16,6 +17,8 @@ footer
   p
     line-height: 1.43;
     mb($r10)
+    +mob()
+      mb($r14)
     a
       display block
       color $white
@@ -27,6 +30,8 @@ footer
   display flex
   align-items center
   height 46px
+  +mob()
+    height 65px
   &:after
     pseudo(block, absolute)
     left 0
@@ -40,3 +45,5 @@ footer
   line-height: 1.83;
   letter-spacing: normal;
   color: $black-text2
+  +mob()
+    line-height 1.33

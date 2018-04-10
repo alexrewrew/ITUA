@@ -45,6 +45,11 @@
     mr(-.938rem)
   +port()
     pb($r17)
+  +mob()
+    pb(0)
+    ml(-15px)
+    mr(-15px)
+    mb($r34)
   &:after
     pseudo(block, absolute)
     width 1170px
@@ -52,14 +57,21 @@
     bottom 0
     height 1px
     background $blue-light3
+    +mob()
+      bottom 3px
   &--ul
     display flex
     padding-top $r19
     padding-bottom $r19
+    +mob()
+      pt(0)
+      pb(0)
     li
       margin-right $r28
       +tab()
         mr($r15)
+      +mob()
+        mr($r59)
       a
         display block
         font-family $a-font, sans-serif
@@ -69,10 +81,25 @@
         color: $blue-light
         +tab()
           fs($e14)
+        +mob()
+          position relative
+          pb($r30)
+          pl($r16)
+          &:after
+            pseudo(none, absolute)
+            bottom 0px
+            width 80px
+            height 7px
+            bg($blue-light3)
+
         &.active
           color $blue
+          +mob()
+            &:after
+              display block
           &:hover
             color $blue
+
         &:hover
           color $blue-dark3
   &--line
@@ -85,4 +112,6 @@
     trans()
     +tab()
       left -10px
+    +mob()
+      display none
   

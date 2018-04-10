@@ -79,8 +79,7 @@ nav.nav-index.unscrolled
   +mob()
     bg($blue-light6)
     padding-top $r20
-    //min-height calc(100vh - 59px)
-    transform translate3d(0, -110vh, 0)
+    transform translate3d(0, -180vh, 0)
 
 .menu
   flex(row)
@@ -124,9 +123,6 @@ nav.nav-index.unscrolled
             top 9px
           &:after
             transform rotate(-45deg)
-      //&:hover
-      //  &:before, &:after
-      //    color $blue-light-back4
 
       ul
         position absolute
@@ -141,14 +137,15 @@ nav.nav-index.unscrolled
         visibility hidden
         opacity 0
         z-index -1
+        +port()
+          top 32px
         +mob()
           width 100vw
           left 0
           right 0
           bottom 0
           transform translate3d(100vw, 0, 0)
-          padding-left $r34
-          padding-right $r34
+          padding $r5 $r34 $r19
         li
           mb($r15)
           a
@@ -238,9 +235,6 @@ nav.nav-index.unscrolled
 #nav-logo
   animation: ds-none .2s both;
 
-//#nav-panel
-//  +mob()
-//    bg($blue-light6)
 
 @keyframes ds-none {
   0% {

@@ -24,12 +24,17 @@
 
 .form-footer
   display flex
+  +mob()
+    flex-wrap: wrap
+    mb($r60)
   .btn
     max-width 196px
     font-size: $r14
     letter-spacing: 2.3px;
     pt($r19)
     pb($r17)
+    +mob()
+      max-width 100%
   input
     mb($r0)
     border: none
@@ -40,6 +45,10 @@
     color $white
     +placeholder()
       color $white
+    +mob()
+      fs($e14)
+      pt($r14)
+      pb($r16)
     &:focus
       bg(#36393F)
 
@@ -47,6 +56,8 @@
     position relative
     z-index 40
     width 100%
+    +mob()
+      mb($r20)
     &:after
       pseudo(block, absolute)
       z-index -1

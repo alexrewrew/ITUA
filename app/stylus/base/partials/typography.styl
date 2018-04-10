@@ -30,6 +30,10 @@ h2
     line-height: 2.04;
     mb($r24)
 
+h2.h2-public
+  +mob()
+    margin-bottom $r5
+
 h3
   font($e18, 700, 1.44)
   font-family $a-font, sans-serif
@@ -45,6 +49,13 @@ h5
   mt($r51)
   mb($r21)
   color: $white;
+  +mob()
+    mt(0)
+    fs($e24)
+    line-height 1.17
+    mb($r33)
+  +land()
+    mt($r51)
 
 h6
   font($e16, 400, 1.25)
@@ -52,6 +63,8 @@ h6
   color: $blue-light4
   .company
     text-decoration underline
+  +mob()
+    mb($r24)
 
 p
   font($e14, 400, 1.58)
@@ -79,5 +92,13 @@ hr
   h2
     margin-right $r13
     mb(0)
+    +port()
+      line-height 1.3
+    +mob()
+      line-height 1.3
   h1
     mb(0)
+    +port()
+      line-height 1.3
+    +mob()
+      line-height 1.3

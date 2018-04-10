@@ -6,11 +6,20 @@
   mb(0)
   +port()
     flex-wrap wrap
+  +mob()
+    mt(0)
+    mb($r100)
+    flex-wrap wrap
+  +land()
+    mb($r40)
   &--left
     max-width 150px
     flex 1 1 150px
     position relative
     +port()
+      width 100%
+      max-width 100%
+    +mob()
       width 100%
       max-width 100%
     &-date
@@ -23,6 +32,22 @@
       font-family $a-font, sans-serif
       +port()
         right 25px
+      +mob()
+        right 25px
+        bottom 0
+    &-image
+      width 150px
+      height 150px
+      display flex
+      align-items center
+      justify-content center
+      overflow hidden
+      trans()
+      +mob()
+        width 80px
+        height 80px
+        img
+          height 100%
   &--right
     padding $r42 $r15 $r44 $r0
     ml($r44)
@@ -34,9 +59,20 @@
       padding-left $r25
       padding-right $r25
       ml(0)
+    +mob()
+      width 100%
+      padding-left $r25
+      padding-right $r25
+      ml(0)
+      pt($r25)
     h3
       fs($e28)
       mb($r0)
+      +mob()
+        fs($e22)
+    p
+      +mob()
+        mb($r43)
     .btn-more
       position absolute
       bottom 0
@@ -44,3 +80,18 @@
         left 0
         pl($r25)
         min-width 50%
+      +mob()
+        left 0
+        pl($r25)
+        min-width 100%
+        background $blue
+        color $white
+        svg
+          opacity 1
+          g
+            fill $white
+
+  &:hover
+    .comment--left-image
+      opacity .6
+

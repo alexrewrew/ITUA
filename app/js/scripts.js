@@ -23,6 +23,10 @@
         sliderPartners : $('.slider-partners'), //slider of partners
         sliderPartnersSync : $('.slider-partners-sync'), //slider of partners sync
 
+        sliderTabs : $('.tabs-publication--ul'),
+
+        sliderPublications : $('.row-publications'),
+
         dropdownLink : $('.dropdown-link'),
         dropdownList : $('.dropdown ul'),
         dropdownBack : $('.dropdown-back a'),
@@ -93,6 +97,19 @@
                         slidesToShow: 2,
                         slidesToScroll: 1
                     }
+                },
+                {
+                    breakpoint: 767,
+                    settings: {
+                        centerMode: false
+                    }
+                },
+                {
+                    breakpoint: 567,
+                    settings: {
+                        slidesToShow: 1,
+                        arrows: false
+                    }
                 }
             ]
         });
@@ -132,6 +149,14 @@
                         slidesToShow: 2,
                         slidesToScroll: 1
                     }
+                },
+                {
+                    breakpoint: 767,
+                    settings: {
+                        slidesToShow: 1,
+                        centerMode: false,
+                        initialSlide: 1
+                    }
                 }
             ]
         });
@@ -147,7 +172,15 @@
             asNavFor: DOMs.sliderMember,
             centerMode: true,
             draggable: false,
-            initialSlide: 2
+            initialSlide: 2,
+            responsive: [
+                {
+                    breakpoint: 767,
+                    settings: {
+                        initialSlide: 1
+                    }
+                }
+            ]
         });
 
         // SLIDER PARTNERS
@@ -184,6 +217,12 @@
                         slidesToShow: 2,
                         slidesToScroll: 1
                     }
+                },
+                {
+                    breakpoint: 767,
+                    settings: {
+                        initialSlide: 1
+                    }
                 }
             ]
         });
@@ -209,8 +248,6 @@
         // $('#tabs').rewTabs();
 
         (function () {
-
-
             DOMs.tabsArr.click(function (e) {
                 e.preventDefault();
 
@@ -223,8 +260,8 @@
 
                 DOMs.tabsArr.removeClass('active');
                 $(this).addClass('active');
-                DOMs.tabsSlider.css('transform', 'translate3d(' + (tabsLeft - 8) + 'px,0,0)');
 
+                DOMs.tabsSlider.css('transform', 'translate3d(' + (tabsLeft - 8) + 'px,0,0)');
             });
         })();
 
@@ -235,8 +272,8 @@
         // ========== SCROLLSPY ==========
 
         // ----- SCROLLING CLASS CHANGE -----
-        $(window).scroll(function () {
-            if ($(this).scrollTop() > 50) {
+        $(window).on('scroll load', function () {
+            if ($(this).scrollTop() > 20) {
                 DOMs.menuIndex.removeClass("unscrolled");
             }
             else {
@@ -287,7 +324,29 @@
             DOMs.dropdownBack.click(function (e) {
                 e.preventDefault();
                 $(this).parent().parent().removeClass('active');
-            })
+            });
+
+            DOMs.sliderTabs.slick({
+                dots: false,
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                infinite: false,
+                arrows: false,
+                // centerMode: true,
+                variableWidth: true,
+                // initialSlide: 0
+            });
+
+            DOMs.sliderPublications.slick({
+                dots: false,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                infinite: false,
+                arrows: false,
+                // centerMode: true,
+                variableWidth: true,
+                // initialSlide: 0
+            });
 
         } else if (window.matchMedia("(min-width: 768px)").matches) {
             DOMs.menuSearch.insertAfter(DOMs.menuLogo);
