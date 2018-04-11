@@ -13,12 +13,24 @@ body
   font-family $m-font, sans-serif
   background $white
 
++mob()
+  .container.container-slider
+    margin-bottom $r80
+
 +land()
   .container.container-big
     max-width 100%
 
   .container
     max-width 100%
+
++port()
+  .container.container-slider
+    max-width: 100%;
+
++tab()
+  .container.container-slider
+    max-width: 100%;
 
 +dis()
   .container
@@ -31,10 +43,13 @@ body
   .container.container-big
     max-width 1500px !important
 
-+mob()
-  .container.container-slider
-    margin-bottom $r80
 
+
+
+
+.spacer-61
+  height 61px
+  width 100%
 
 
 

@@ -4,25 +4,49 @@
 header
   padding-top 7.563rem
   background $blue-light9
+  height 511px
+  overflow hidden
 
-.header-index
-  background $blue-light4
+  &.header-index
+    background $blue-light4
+    margin-bottom $r90
+    height 100vh
+    min-height 768px
+    display flex
+    align-items flex-end
+    trans()
+    +tab()
+      mb($r60)
+    +port()
+      mb($r60)
+    +mob()
+      padding-top $r59
+      min-height: unset
+      align-items flex-start
+      mb($r65)
+      height auto
 
-  margin-bottom $r90
-  height 100vh
-  min-height 768px
-  display flex
-  align-items flex-end
-  trans()
-  +tab()
-    mb($r60)
-  +port()
-    mb($r60)
+  &.header-about
+    margin-bottom $r90
+    +mob()
+      padding-top $r59
+      height auto
+      mb($r65)
+
+.header-col
+  &.left
+    display flex
+    align-items center
+    +mob()
+      display block
+  &.right
+    pl(0)
+    +mob()
+      pr(0)
+
+.header-text
   +mob()
-    padding-top $r59
-    min-height: unset
-    align-items flex-start
-    mb($r65)
-    height auto
+    pb($r50)
+
 
 

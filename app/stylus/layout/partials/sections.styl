@@ -14,11 +14,40 @@ section
     pt($r55)
     pb($r60)
 
-article {}
+article
+  pb($r32)
+  ul
+    mb($r25)
+    li
+      position relative
+      padding-left $r33
+      margin-bottom $r5
+      line-height 1.25
+      fs($e14)
+      color $black-text
+      &:before
+        pseudo(block, absolute)
+        width 14px
+        height 3px
+        background $blue
+        top 7px
+        left 0
+  a
+    color $blue-dark
+    font-weight 700
+    &:hover
+      color #bec9d6
 
 aside {}
 
 main {}
 
 address {}
+
+.section-question
+  h2
+    font-size: $e28
+    letter-spacing: 0.9px;
+    text-align: center;
+    mb($r61)
 

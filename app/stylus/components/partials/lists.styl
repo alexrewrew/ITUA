@@ -20,18 +20,22 @@ ol
     ol
       margin-top $r15
 
-//.ul-regular
-//  li
-//    position relative
-//    padding-left $r20
-//    margin-bottom $r20
-//    &:before
-//      pseudo(block, absolute)
-//      width 8px
-//      height 1px
-//      background $black
-//      top 10px
-//      left 0
+.ul-regular
+  mb($r25)
+  li
+    position relative
+    padding-left $r33
+    margin-bottom $r5
+    line-height 1.25
+    fs($e14)
+    color $black-text
+    &:before
+      pseudo(block, absolute)
+      width 14px
+      height 3px
+      background $blue
+      top 7px
+      left 0
 
 .ul-lang
   display flex
@@ -101,5 +105,26 @@ ol
         color $blue
         svg g
           fill $blue
+
+.ul-values
+  df(column)
+  flex-wrap wrap
+  margin 0 -15px
+  li
+    flex 1 1 calc(50% - 30px)
+    max-width calc(50% - 30px)
+    padding-right $r100
+    margin 0 15px
+    +tab()
+      pr($r50)
+    +port()
+      pr(0)
+    +mob()
+      flex 1 1 100%
+      max-width 100%
+      pr(0)
+    +land()
+      flex 1 1 calc(50% - 30px)
+      max-width calc(50% - 30px)
 
 

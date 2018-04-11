@@ -44,28 +44,54 @@
       svg
         opacity 1
 
-.blog.blog-advantage
-  mb($r64)
-  .blog--image
-    height 225px
-    mb($r39)
-    +mob()
-      min-height 181px
-      mb($r37)
-      img
-        min-width unset
-    +land()
-      img
-        width auto
-  .blog--description
-    mb(0)
-    h3
-      line-height: 1.3;
-      color $blue-dark2
-      fs($e20)
-      mb($r27)
+  &.blog-advantage
+    mb($r64)
+
+    .blog--image
+      height 225px
+      mb($r39)
       +mob()
-        mb($r24)
+        min-height 181px
+        mb($r37)
+        img
+          min-width unset
+      +land()
+        img
+          width auto
+    .blog--description
+      mb(0)
+      h3
+        line-height: 1.3;
+        color $blue-dark2
+        fs($e20)
+        mb($r27)
+        +mob()
+          mb($r24)
+
+  &.blog-about
+    max-width 360px
+    mb(0)
+    +tab()
+      max-width 320px
+    //+land()
+    //  max-width 50%
+    .blog--image
+      height 280px
+
+
+  &.blog-chief
+    mb($r41)
+    .blog--image
+      height 181px
+      mb($r40)
+    h3
+      fs($e20)
+      mb($r33)
+    &.blog-chief-small
+      mb($r83)
+      h3
+        mb($r13)
+
 
 +mob()
   .row-publications

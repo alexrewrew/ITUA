@@ -20,12 +20,17 @@
         sliderMember : $(".slider-member"), //slider of members
         sliderMemberSync : $(".slider-member-sync"), //slider of members
 
+        sliderAbout : $(".slider-about"), //slider of members
+        sliderAboutSync : $(".slider-about-sync"), //slider of members
+
         sliderPartners : $('.slider-partners'), //slider of partners
         sliderPartnersSync : $('.slider-partners-sync'), //slider of partners sync
 
         sliderTabs : $('.tabs-publication--ul'),
 
         sliderPublications : $('.row-publications'),
+
+        sliderHeaderAbout : $('.slider-header'),
 
         dropdownLink : $('.dropdown-link'),
         dropdownList : $('.dropdown ul'),
@@ -235,6 +240,66 @@
             arrows: false,
             rtl: true,
             asNavFor: DOMs.sliderPartners,
+            centerMode: true,
+            draggable: false,
+            initialSlide: 2
+
+        });
+
+        //SLIDER HEADER
+        DOMs.sliderHeaderAbout.slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            infinite: true,
+            prevArrow: DOMs.sliderArrowLeft,
+            nextArrow: DOMs.sliderArrowRight,
+        });
+
+        // SLIDER ABOUT
+        DOMs.sliderAbout.on('init', function () {
+            var slides = $('.slider-about .slick-slide');
+
+            if (slides.length > 0) {
+                for (var i = 0; i < slides.length; i++) {
+                    if (i === 0) {
+                        DOMs.sliderAboutSync.append('<div class="slider-progress"></div>')
+                    } else {
+                        DOMs.sliderAboutSync.append('<div></div>')
+                    }
+                }
+            }
+
+        });
+
+        DOMs.sliderAbout.slick({
+            prevArrow: DOMs.sliderArrowLeft,
+            nextArrow: DOMs.sliderArrowRight,
+            dots: false,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            infinite: false,
+            initialSlide: 1,
+            centerMode: true,
+            asNavFor: DOMs.sliderAboutSync,
+            variableWidth: true,
+            responsive: [
+                {
+                    breakpoint: 991,
+                    settings: {
+                        centerMode: false
+                    }
+                }
+            ]
+        });
+
+        DOMs.sliderAboutSync.slick({
+            dots: false,
+            slidesToShow: 8,
+            slidesToScroll: 1,
+            infinite: false,
+            arrows: false,
+            rtl: true,
+            asNavFor: DOMs.sliderAbout,
             centerMode: true,
             draggable: false,
             initialSlide: 2

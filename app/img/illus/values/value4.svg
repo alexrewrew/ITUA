@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="68px" height="68px" viewBox="0 0 68 68" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 20</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <ellipse id="path-1" cx="21.3114906" cy="33.9300013" rx="5.05854801" ry="5.07936508"></ellipse>
+        <filter x="-98.8%" y="-78.8%" width="297.7%" height="296.9%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="3" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.0941176471   0 0 0 0 0.435294118   0 0 0 0 0.941176471  0 0 0 0.7 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <ellipse id="path-3" cx="41.0398278" cy="23.2633346" rx="5.05854801" ry="5.07936508"></ellipse>
+        <filter x="-98.8%" y="-78.8%" width="297.7%" height="296.9%" filterUnits="objectBoundingBox" id="filter-4">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="3" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.0941176471   0 0 0 0 0.435294118   0 0 0 0 0.941176471  0 0 0 0.7 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <ellipse id="path-5" cx="41.0398278" cy="44.5966679" rx="5.05854801" ry="5.07936508"></ellipse>
+        <filter x="-98.8%" y="-78.7%" width="297.7%" height="296.9%" filterUnits="objectBoundingBox" id="filter-6">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="3" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.0941176471   0 0 0 0 0.435294118   0 0 0 0 0.941176471  0 0 0 0.7 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="*-Про-асоціацію" transform="translate(-664.000000, -2705.000000)">
+            <g id="Group-20" transform="translate(664.000000, 2705.000000)">
+                <rect id="Rectangle-6-Copy-5" fill="#FFFFFF" x="0" y="0" width="68" height="68" rx="34"></rect>
+                <rect id="Rectangle-9" fill="#F7F8F9" x="11" y="11" width="46" height="46" rx="23"></rect>
+                <path d="M45.604204,33.9300052 C45.604204,27.4682429 40.3890128,22.2315717 33.9578346,22.2315717 C27.5266564,22.2315717 22.3114652,27.4682429 22.3114652,33.9300052 C22.3114652,40.3917675 27.5266564,45.6284387 33.9578346,45.6284387 C40.3890128,45.6284387 45.604204,40.3917675 45.604204,33.9300052 Z M47.604204,33.9300052 C47.604204,41.494501 41.4954267,47.6284387 33.9578346,47.6284387 C26.4202425,47.6284387 20.3114652,41.494501 20.3114652,33.9300052 C20.3114652,26.3655094 26.4202425,20.2315717 33.9578346,20.2315717 C41.4954267,20.2315717 47.604204,26.3655094 47.604204,33.9300052 Z" id="Shape" fill="#186FF0" fill-rule="nonzero"></path>
+                <g id="Oval" fill-rule="nonzero">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    <use fill="#186FF0" fill-rule="evenodd" xlink:href="#path-1"></use>
+                </g>
+                <g id="Oval" fill-rule="nonzero">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-3"></use>
+                    <use fill="#186FF0" fill-rule="evenodd" xlink:href="#path-3"></use>
+                </g>
+                <g id="Oval" fill-rule="nonzero">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-6)" xlink:href="#path-5"></use>
+                    <use fill="#186FF0" fill-rule="evenodd" xlink:href="#path-5"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

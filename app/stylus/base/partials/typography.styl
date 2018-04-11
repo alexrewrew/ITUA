@@ -10,15 +10,16 @@ h1, h2, h3, h4, h5, h6, p, ul li, ol li, blockquote, cite
   color $black
 
 h1
-  font($e32, 700, 1.53)
-  mb($r31)
+  font($e44, 700, 1.11)
+  mb($r43)
   font-family: $a-font, sans-serif;
   letter-spacing: 1px;
-  color: $blue-dark
+  color: $white
   +mob()
-    font-size: $e24
+    font-size: 2.5em
     line-height: 2.04;
     mb($r24)
+
 h2
   font($e32, 700, 1.53)
   mb($r31)
@@ -80,8 +81,11 @@ p
 hr
   border: 0;
   height: 1px;
-  background: $black
-  margin $r15 0
+  background: $blue-light3
+  margin $r42 0
+  width calc(100% + 30px)
+  position relative
+  left -15px
 
 .heading-h1-h2
   display flex
@@ -97,7 +101,12 @@ hr
     +mob()
       line-height 1.3
   h1
+    fs($e32)
+    line-height 1.53
+    color: $blue-dark
     mb(0)
+    +mob()
+      font-size: $e24
     +port()
       line-height 1.3
     +mob()

@@ -2,10 +2,16 @@
 @import '../../utilities/mixins'
 
 .breadcrumbs
-  flex(row)
+  df(row)
   mb($r13)
   mt($r13)
   line-height: 1.67;
+
+  position absolute
+  left 15px
+  top 0
+  +mob()
+    position static
   li
     margin-right $r4
     &:last-child
@@ -26,6 +32,11 @@
         position absolute
         right 0
         bottom 0
+        color $blue-light10
+      &:hover
+        color $blue
+        &:after
+          color $blue-light10
 
 //&:hover
 //  color lightblue

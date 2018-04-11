@@ -2,12 +2,125 @@
 extend layouts/_layout.pug
 
 block title
-    | Главная страница
+    | IT Ukraine Association - Про Асоціацію
 
 
 block content
 
-    include partials/headers/_header
+    include partials/headers/_header-about
+
+    section
+        .container
+            .row
+                .col-md-5
+                    h2 Про Асоціацію
+                .col-lg-6.col-md-7
+                    p Асоціацію «ІТ України» було засновано у 2004 році провідними компаніями сфери інформаційних технологій - Miratech, Mirasoft, ProFIX, SoftLine, SoftServe та Ukrsoft. За роки своєї діяльності Асоціація стала найбільшою спільнотою компаній-розробників програмного забезпечення в Україні.
+
+                    p На сьогодні до складу Асоціації входить 58 провідних ІТ-компаній, які сукупно формують 50% всієї виручки галузі в Україні.
+                    a(href='' title='').btn.btn-margin.btn-small Приєднатись
+
+    section
+        .container.container-slider
+            .row
+                .col-12
+                    .slider.slider-about.slider-with-line.slider-with-line-sync
+                        include partials/blog/_blog-item-about
+                        include partials/blog/_blog-item-about
+                        include partials/blog/_blog-item-about
+                        include partials/blog/_blog-item-about
+                        include partials/blog/_blog-item-about
+                        include partials/blog/_blog-item-about
+                        include partials/blog/_blog-item-about
+                        include partials/blog/_blog-item-about
+                        include partials/blog/_blog-item-about
+
+                    .slider.slider-about-sync.slider-sync
+
+    section
+        .container
+            .row
+                .col-sm-5
+                    h2 Місія
+                    p Місія Асоціації – забезпечити сприятливі умови для сталого розвитку сфери інформаційних технологій в Україні.
+                article.col-lg-6.col-sm-7
+                    h2 Що ми робимо?
+                    ul
+                        li Ми захищаємо інтереси індустрії інформаційних технологій в Україні
+                        li Ми сприяємо розвитку технічної освіти та кадрового капіталу
+                        li Ми промотуємо індустрію в Україні та за її межами, підтримуємо бізнес у встановленні нових ділових контактів
+                    p Асоціація представляє інтереси компаній-учасників у міжнародних індустріальних об’єднаннях та організаціях:
+
+                    p
+                        a(href='' title='') DIGITALEUROPE,
+                        a(href='' title='') WITSA,
+                        a(href='' title='') EMOTA
+
+    section.back-blue-light
+        .container
+            .row
+                .col-12
+                    h2 Наші цінності
+                    hr
+                    ul.ul-values
+                        li
+                            include partials/value/_value-item1
+                        li
+                            include partials/value/_value-item4
+                        li
+                            include partials/value/_value-item2
+                        li
+                            include partials/value/_value-item5
+                        li
+                            include partials/value/_value-item3
+
+
+    section
+        .container
+            .row
+                .col-xl-4.col-lg-5.col-sm-6
+                    h2 Керівництво
+                    p Представники ІТ-бізнесу, які визначають вектори розвитку та акценти у роботі Асоціації у 2018 році
+
+                    .spacer-61
+
+            .row
+                .col-lg-3.col-md-4.col-sm-6
+                    include partials/blog/_blog-item-chief
+                .col-lg-3.col-md-4.col-sm-6
+                    include partials/blog/_blog-item-chief
+                .col-lg-3.col-md-4.col-sm-6
+                    include partials/blog/_blog-item-chief
+                .col-lg-3.col-md-4.col-sm-6
+                    include partials/blog/_blog-item-chief
+
+                .col-12
+                    hr
+                    
+
+    section
+        .container
+            .row
+                .col-md-4.col-sm-6
+                    h2 Виконавці
+                    p Команда професіоналів та фанатів своєї справи, яка працює задля того, щоб надати максимум можливостей для розвитку учасників ринку інформаційних технологій в Україні
+
+                .offset-lg-2.col-lg-3.col-md-4.col-sm-6
+                    include partials/blog/_blog-item-chief-small
+                .col-lg-3.col-md-4.col-sm-6
+                    include partials/blog/_blog-item-chief-small
+                .col-lg-3.col-md-4.col-sm-6
+                    include partials/blog/_blog-item-chief-small
+                .col-lg-3.col-md-4.col-sm-6
+                    include partials/blog/_blog-item-chief-small
+                .col-lg-3.col-md-4.col-sm-6
+                    include partials/blog/_blog-item-chief-small
+                .col-lg-3.col-md-4.col-sm-6
+                    include partials/blog/_blog-item-chief-small
+
+
+    include partials/_questions
+
 
 
 

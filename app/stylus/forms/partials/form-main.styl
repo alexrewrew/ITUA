@@ -69,3 +69,44 @@
       background-color: #26292e;
 
 
+.form-questions
+  display flex
+  justify-content space-between
+  flex-wrap wrap
+  input
+    border none
+    background $blue-light-back5
+    fs($e14)
+    padding $r11 $r24 $r13 $r24
+    mb($r30)
+    flex 1 1 calc(50% - 15px)
+    max-width calc(50% - 15px)
+    +mob()
+      flex 1 1 100%
+      max-width 100%
+      mb($r20)
+  textarea
+    border none
+    background $blue-light-back5
+    fs($e14)
+    padding $r11 $r24 $r13 $r24
+    mb($r30)
+    height 120px
+    +mob()
+      mb($r20)
+  .btn
+    font-size: $e20
+    letter-spacing: 1px;
+    max-width 360px
+    mcen()
+    display flex
+    justify-content center
+    align-items center
+    pt($r13)
+    pb($r17)
+    svg
+      ml($r15)
+    +mob()
+      max-width 414px
+
+
