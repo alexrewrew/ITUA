@@ -1,0 +1,38 @@
+//- layouts/layout.pug
+extend layouts/_layout.pug
+
+block title
+    | IT Ukraine Association - Бізнес про нас
+
+
+block content
+
+
+    include partials/headers/_header-about-business
+
+    section.section-top-zero
+        .container
+            .row
+                .col-sm-6
+                    include partials/items/_comment-item
+                .col-sm-6
+                    include partials/items/_comment-item
+                .col-sm-6
+                    include partials/items/_comment-item
+                .col-sm-6
+                    include partials/items/_comment-item
+                .col-sm-6
+                    include partials/items/_comment-item
+                .col-sm-6
+                    include partials/items/_comment-item
+                .col-sm-6
+                    include partials/items/_comment-item
+                .col-sm-6
+                    include partials/items/_comment-item
+                .col-sm-6
+                    include partials/items/_comment-item
+                .col-sm-6
+                    include partials/items/_comment-item
+
+
+            include partials/_pagination

@@ -30,7 +30,7 @@
 
         sliderPublications : $('.row-publications'),
 
-        sliderHeaderAbout : $('.slider-header'),
+        sliderMiddle : $('.slider-middle'),
 
         dropdownLink : $('.dropdown-link'),
         dropdownList : $('.dropdown ul'),
@@ -247,7 +247,7 @@
         });
 
         //SLIDER HEADER
-        DOMs.sliderHeaderAbout.slick({
+        DOMs.sliderMiddle.slick({
             slidesToShow: 1,
             slidesToScroll: 1,
             infinite: true,

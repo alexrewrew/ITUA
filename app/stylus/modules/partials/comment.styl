@@ -2,8 +2,14 @@
   display flex
   box-shadow: 0 10px 30px 0 rgba(94, 107, 126, 0.3);
   min-height 285px
-  mt($r35)
-  mb(0)
+  position relative
+  z-index 50
+  background $white
+
+  //mt($r35)
+  //mb(0)
+  mt(0)
+  mb($r100)
   +port()
     flex-wrap wrap
   +mob()
@@ -76,6 +82,7 @@
     .btn-more
       position absolute
       bottom 0
+      max-width 50%
       &:after
         pseudo(block, absolute)
         bottom -6px

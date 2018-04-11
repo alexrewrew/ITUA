@@ -4,21 +4,37 @@
 .pagination
   df(row)
   justify-content center
-  margin 0 auto
   li
-    margin 0 $r15
+    margin 0 $r7
+    align-self center
     a
       display inline-block
-      color $black
+      color $blue-light
       font-size $e18
+      font-weight 700
+      font-family $a-font, sans-serif
       &:hover
-        color lightblue
-    .arrow
-      df(row)
-      justify-content center
-      align-items center
-      height 100%
-    .active
-      color blue
-      cursor default
-      pointer-events: none;
+        color $black-text3
+
+      &.active
+        color $blue
+        fs($e22)
+        cursor default
+        pointer-events: none;
+        &:hover
+          color $blue
+    &.arrow
+      a
+        df(row)
+        justify-content center
+        align-items center
+        height 100%
+        svg g
+          fill $blue
+        &:hover
+          svg g
+            fill $black-text3
+      &.left
+        mr($r48)
+      &.right
+        ml($r48)

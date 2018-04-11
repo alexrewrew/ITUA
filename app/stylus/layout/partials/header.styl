@@ -6,7 +6,8 @@ header
   background $blue-light9
   height 511px
   overflow hidden
-
+  +mob()
+    pt($r59)
   &.header-index
     background $blue-light4
     margin-bottom $r90
@@ -26,12 +27,41 @@ header
       mb($r65)
       height auto
 
-  &.header-about
+  &.header-about-us
     margin-bottom $r90
     +mob()
       padding-top $r59
       height auto
       mb($r65)
+    .breadcrumbs
+      position absolute
+      left 15px
+      top 0
+      mb($r13)
+      +mob()
+        position static
+
+  &.header-about-business
+    height calc(317px + 121px)
+    position relative
+    z-index 40
+    overflow visible
+    &:after
+      pseudo(block, absolute)
+      top 100%
+      left 0
+      right 0
+      height 73px
+      background $blue-light9
+      z-index -1
+    p
+      margin-top $r6
+
+  &.header-committees
+    mb($r40)
+    height auto
+    p
+      margin-top $r6
 
 .header-col
   &.left

@@ -127,4 +127,55 @@ ol
       flex 1 1 calc(50% - 30px)
       max-width calc(50% - 30px)
 
+.ul-tablist
+  display flex
+  box-shadow: 0 10px 30px 0 rgba(94, 107, 126, 0.3);
+  mb($r80)
+  +mob()
+    flex-wrap wrap
+  li
+    width 100%
+    //+mob()
+    //  flex 1 1 50%
+    //  max-width 50%
+    a
+      display flex
+      font-size: $e16
+      font-weight: 700
+      font-family $a-font, sans-serif
+      line-height: 1.38;
+      color: $blue
+      background $white
+      padding $r12 $r5 $r16
+      justify-content center
+      align-items center
+      text-align center
+      position relative
+      height 100%
+
+      &:after
+        pseudo(block,absolute)
+        top 4px
+        bottom 4px
+        width 1px
+        background $blue
+        left 0
+        +mob()
+          left calc(50% - 21px)
+          width:42px
+          bottom 4px
+          top auto
+          height 1px
+      &:hover
+        background $blue
+        color $white
+        box-shadow: 0 10px 30px 0 rgba(24, 111, 240, 0.5);
+      &.active
+        background $black-text4
+        color $white
+        box-shadow none
+    &:first-child
+      a
+        &:after
+          display none
 
