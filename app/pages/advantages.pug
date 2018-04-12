@@ -1,0 +1,94 @@
+//- layouts/layout.pug
+extend layouts/_layout.pug
+
+block title
+    | IT Ukraine Association - Переваги участі в Асоціації
+
+
+block content
+
+    include sections/headers/_header-advantages
+
+    section.section-advantages
+        .container
+            .row
+                .col-12
+                    ul.ul-values
+                        li
+                            include blocks/value/value-small/_value-item-small1
+                        li
+                            include blocks/value/value-small/_value-item-small1
+                        li
+                            include blocks/value/value-small/_value-item-small1
+                        li
+                            include blocks/value/value-small/_value-item-small1
+                        li
+                            include blocks/value/value-small/_value-item-small1
+                        li
+                            include blocks/value/value-small/_value-item-small1
+                        li
+                            include blocks/value/value-small/_value-item-small1
+                        li
+                            include blocks/value/value-small/_value-item-small1
+                        li
+                            include blocks/value/value-small/_value-item-small1
+
+    include sections/_comments
+
+    section
+        .container
+            .row
+                .col-12
+                    .attention
+                        h2 Як приєднатися до спільноти?
+                        ol.ol-attention
+                            li
+                                h4 Анкета
+                                p Заповніть Анкету учасника. Після заповнення Анкети ми зв’жемося з вами для уточнення наданої інформації.
+                            li
+                                h4 Затвердження
+                                p Отримайте згоду на вашу участь від інших членів спільноти. Якщо переважна більшість учасників не має заперечень щодо нового учасника, ми надаємо вам офіційне підтвердження та виставляємо рахунок.
+                            li
+                                h4 Оплата
+                                p Сплатіть річний членський внесок. Даний внесок - це єдиний обов’язковийплатіж, який має здійснювати ваша компанія для перебування у складі спільноти. Членство в Асоціації «ІТ України» не передбачає вступних та інших внесків.
+                        p.attention--mark З детальною процедурою вступу в Асоціацію можна ознайомитись у нашому Статуті.
+                        a(href='' title='').btn.btn-arrow Приєднатись
+                            include svgs/arrow-right.svg
+
+    section
+        .container
+            .row
+                .col-12
+                    h2 Суми внесків
+                .col-12
+                    table
+                        thead
+                            tr
+                                th Категорія
+                                th Кількість спеціалістів у компанії
+                                th Розмір внеску
+                        tbody
+                            tr
+                                th 1
+                                td до 50
+                                td 750 - 1800 USD
+                            tr
+                                th 2
+                                td від 50 до 200
+                                td 2000 – 3800 USD
+                            tr
+                                th 3
+                                td від 200 до 800
+                                td 3800 – 5500 USD
+                            tr
+                                th 4
+                                td від 800 до 1500
+                                td 5500 – 6800 USD
+                            tr
+                                th 5
+                                td понад 1500
+                                td 9000 USD
+
+
+    include sections/sliders/_slider-members
+

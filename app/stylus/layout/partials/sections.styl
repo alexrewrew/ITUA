@@ -54,4 +54,22 @@ address {}
 .section-top-zero
   pt(0)
 
+.section-comments
+  position relative
+  z-index 50
+
+.section-advantages
+  bg($blue-light-back)
+  pt($r38)
+  position relative
+  z-index 40
+  &:after
+    pseudo(block, absolute)
+    top 100%
+    left 0
+    right 0
+    height 308px
+    background $blue-light-back
+    z-index -1
+
 

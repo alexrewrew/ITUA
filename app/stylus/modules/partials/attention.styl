@@ -1,0 +1,22 @@
+.attention
+  box-shadow: 0 10px 30px 0 rgba(94, 107, 126, 0.3);
+  border 8px solid $blue
+  border-bottom 0
+  position relative
+  padding $r62 $r87 $r41
+  +port()
+    padding $r31 $r43 $r21
+  +mob()
+    padding $r31 $r43 $r21
+  &--mark
+    color: $blue-light
+    text-align center
+  .btn
+    position absolute
+    bottom -31px
+    left calc(50% - (292px / 2))
+    max-width 292px
+    font-size: $e20
+    padding-top: $r19
+    padding-bottom: $r23
+    letter-spacing: 1px;

@@ -2,7 +2,7 @@
 @import '../../utilities/mixins'
 
 table, tr, th, td
-  border 1px solid $black
+  border 1px solid $blue-light15
 
 table
   width 100%
@@ -11,6 +11,28 @@ table
     caption-side top
     text-align right
   th
-    padding $r5
+    color $blue
+    text-align center
+    line-height: 1.75;
+    letter-spacing: 0.8px;
+    font-weight 700
+    fs($e20)
+    padding $r6 $r0 $r2
+    +mob()
+      fs($e14)
   td
-    padding $r5
+    line-height: 1.75;
+    fs($e14)
+    color $black-text
+    pl($r50)
+    padding $r6 $r10 $r2 $r50
+    +mob()
+      pl($r15)
+
+
+  thead
+    th
+      padding $r24 $r10 $r26
+      fs($e24)
+      +mob()
+        fs($e16)

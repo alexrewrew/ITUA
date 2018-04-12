@@ -1,0 +1,20 @@
+section.section-comments
+    .container
+        .row
+            .col-sm-8.col-md-9
+                    h2 Відгуки
+            .col-sm-4.col-md-3.col-detail-display
+                a(href='' title='').link-detail
+                    | Усі відгуки
+                    include ../svgs/angle-right.svg
+        .row
+            .col-sm-6
+                include ../blocks/_comment-item
+            .col-sm-6
+                include ../blocks/_comment-item
+
+        .row
+            .col-12.col-detail-mobile
+                a(href='' title='').link-detail
+                    | Усі відгуки
+                    include ../svgs/angle-right.svg

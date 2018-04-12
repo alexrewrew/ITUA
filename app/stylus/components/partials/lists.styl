@@ -188,3 +188,43 @@ ol
         &:after
           display none
 
+
+.ol-attention
+  counter-reset: attention;
+  list-style none
+  pt($r28)
+  ml(0)
+  mb($r32)
+  display flex
+  +mob()
+    flex-wrap wrap
+  li
+    position relative
+    pt($r80)
+    width 100%
+    pr($r60)
+    +tab()
+      pr($r30)
+    +port()
+      pr($r20)
+    +mob()
+      pr($r20)
+    +land()
+      width 50%
+    &:before
+      pseudo(block,absolute)
+      background $blue
+      height 49px
+      width 2px
+      top 8px
+    &:after
+      counter-increment: attention;
+      content: counters(attention,".") " ";
+      left 34px
+      top 0
+      position absolute
+      color $blue-light14
+      font-family: $a-font, sans-serif
+      font-size: $e70
+      font-weight: 700
+      letter-spacing: 3.5px;
