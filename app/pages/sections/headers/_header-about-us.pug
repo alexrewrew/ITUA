@@ -2,7 +2,7 @@ header.header-about-us
 
     .container
         .row.justify-content-between
-            .col-md-5.col-lg-4.col-xl-3.header-col.left
+            .col-sm-5.col-lg-4.col-xl-3.header-col.left
                 ul.breadcrumbs
                     li
                         a(href='' title='') Головна
@@ -11,11 +11,5 @@ header.header-about-us
                 .header-text
                     h1 Про нас
                     p Ми – найбільше об’єднання компаній-розробників програмного забезпечення в Україні. Спільною працею ми формуємо економіку майбутньої України
-            .col-md-7.header-col.right
-                .slider.slider-header.slider-middle
-                    div
-                        .slide
-                            img(src='img/illus/slider-about/slide1.png' title='' alt='')
-                    div
-                        .slide
-                            img(src='img/illus/slider-about/slide1.png' title='' alt='')
+            .col-sm-7.header-col.right
+                include ../sliders/_slider-header

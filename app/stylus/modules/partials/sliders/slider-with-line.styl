@@ -22,19 +22,21 @@
       bottom 47px
 
   .slick-track
-    left -146px
+    left 120px
+    +tab()
+      left: 31px;
+    +port()
+      left: 31px;
     +mob()
-      left -15px
+      left 0
 
   .slick-list
     &:after, &:before
       pseudo(block, absolute)
       top 0
       bottom 20px
-      width 10.5vw
+      width 9.3vw
       z-index 300
-      +xxl()
-        width 278px
       +tab()
         width 5.25vw
       +port()
@@ -61,7 +63,7 @@
       right calc(15px + 64px)
       left auto
     +land()
-      right: calc(300px + 15px + 30px + 64px);
+      right: calc(300px + 15px + 15px + 64px);
   .arrow.right
     left calc(1426px - 50% + 82px)
     +tab()
@@ -73,10 +75,16 @@
       right 15px
       left auto
     +land()
-      right: calc(300px + 15px + 30px);
+      right: calc(300px + 15px + 15px);
 
 .slider-with-line.slider-with-line-sync
   padding-bottom $r97
+  +tab()
+    ml(-15px)
+    mr(-15px)
+  +port()
+    ml(-15px)
+    mr(-15px)
   +mob()
     pb($r50)
   .slick-list
@@ -93,35 +101,60 @@
       pt(0)
       left: 15px;
 
-.slider-sync
-  position: absolute;
-  bottom: 51px;
-  left: 92px;
-  width 47%
+//.slider-sync
+//  position: absolute;
+//  bottom: 51px;
+//  left: 92px;
+//  width 47%
+//  +port()
+//    width 35%
+//  +mob()
+//    width 100%
+//    left -10px
+//    bottom 99px
+//  +land()
+//    bottom 37px
+//  .slick-track
+//    position relative
+//    left: 26.5%;
+
+
+.slider-progressbar
+  position absolute
+  left 150px
+  right calc(150px + (1170px / 2) + 180px)
+  width auto
+  bottom 65px
+  +tab()
+    left 50px
+    right calc(150px + (960px / 2) + 180px)
   +port()
-    width 35%
+    left 50px
+    right calc(150px + (720px / 2) + 80px)
   +mob()
-    width 100%
-    left -10px
-    bottom 99px
-  +land()
-    bottom 37px
-  .slick-track
-    position relative
-    left: 26.5%;
-
-
-.slider-progress
-  height: 7px;
-  position relative
-  &:after
-    pseudo(block, absolute)
+    bottom 51px
     left 0
-    top 0
-    bottom 0
-    width 180px
-    background $blue
+    right calc(65px + 65px + 30px + 80px)
+  +land()
+    right calc(65px + 65px + 30px + 300px + 80px + 15px)
+  &--track
+    width 0
+    position relative
+    right -180px
+    trans()
     +port()
-      width: 80px;
+      right -80px
     +mob()
-      width 50px
+      right -80px
+    &:after
+      pseudo(block, absolute)
+      right 0
+      top 0
+      bottom 0
+      height 7px
+      width 180px
+      background $blue
+      +port()
+        width: 80px;
+      +mob()
+        width 50px

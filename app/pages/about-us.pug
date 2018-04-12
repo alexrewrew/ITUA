@@ -8,7 +8,7 @@ block title
 block content
 
 
-    include partials/headers/_header-about-us
+    include sections/headers/_header-about-us
 
     section
         .container
@@ -21,22 +21,7 @@ block content
                     p На сьогодні до складу Асоціації входить 58 провідних ІТ-компаній, які сукупно формують 50% всієї виручки галузі в Україні.
                     a(href='' title='').btn.btn-margin.btn-small Приєднатись
 
-    section
-        .container.container-slider
-            .row
-                .col-12
-                    .slider.slider-about.slider-with-line.slider-with-line-sync
-                        include partials/blog/_blog-item-about
-                        include partials/blog/_blog-item-about
-                        include partials/blog/_blog-item-about
-                        include partials/blog/_blog-item-about
-                        include partials/blog/_blog-item-about
-                        include partials/blog/_blog-item-about
-                        include partials/blog/_blog-item-about
-                        include partials/blog/_blog-item-about
-                        include partials/blog/_blog-item-about
-
-                    .slider.slider-about-sync.slider-sync
+    include sections/sliders/_slider-about
 
     section
         .container
@@ -65,15 +50,15 @@ block content
                     hr
                     ul.ul-values
                         li
-                            include partials/value/_value-item1
+                            include blocks/value/_value-item1
                         li
-                            include partials/value/_value-item4
+                            include blocks/value/_value-item4
                         li
-                            include partials/value/_value-item2
+                            include blocks/value/_value-item2
                         li
-                            include partials/value/_value-item5
+                            include blocks/value/_value-item5
                         li
-                            include partials/value/_value-item3
+                            include blocks/value/_value-item3
 
 
     section
@@ -87,13 +72,13 @@ block content
 
             .row
                 .col-lg-3.col-md-4.col-sm-6
-                    include partials/blog/_blog-item-chief
+                    include blocks/blog/_blog-item-chief
                 .col-lg-3.col-md-4.col-sm-6
-                    include partials/blog/_blog-item-chief
+                    include blocks/blog/_blog-item-chief
                 .col-lg-3.col-md-4.col-sm-6
-                    include partials/blog/_blog-item-chief
+                    include blocks/blog/_blog-item-chief
                 .col-lg-3.col-md-4.col-sm-6
-                    include partials/blog/_blog-item-chief
+                    include blocks/blog/_blog-item-chief
 
                 .col-12
                     hr
@@ -107,20 +92,20 @@ block content
                     p Команда професіоналів та фанатів своєї справи, яка працює задля того, щоб надати максимум можливостей для розвитку учасників ринку інформаційних технологій в Україні
 
                 .offset-lg-2.col-lg-3.col-md-4.col-sm-6
-                    include partials/blog/_blog-item-chief-small
+                    include blocks/blog/_blog-item-chief-small
                 .col-lg-3.col-md-4.col-sm-6
-                    include partials/blog/_blog-item-chief-small
+                    include blocks/blog/_blog-item-chief-small
                 .col-lg-3.col-md-4.col-sm-6
-                    include partials/blog/_blog-item-chief-small
+                    include blocks/blog/_blog-item-chief-small
                 .col-lg-3.col-md-4.col-sm-6
-                    include partials/blog/_blog-item-chief-small
+                    include blocks/blog/_blog-item-chief-small
                 .col-lg-3.col-md-4.col-sm-6
-                    include partials/blog/_blog-item-chief-small
+                    include blocks/blog/_blog-item-chief-small
                 .col-lg-3.col-md-4.col-sm-6
-                    include partials/blog/_blog-item-chief-small
+                    include blocks/blog/_blog-item-chief-small
 
 
-    include partials/_questions
+    include sections/_questions
 
 
 

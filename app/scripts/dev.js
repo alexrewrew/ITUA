@@ -18,13 +18,13 @@
 
 
         sliderMember : $(".slider-member"), //slider of members
-        sliderMemberSync : $(".slider-member-sync"), //slider of members
+        sliderMemberSync : $(".slider-progressbar-member .slider-progressbar--track"), //slider of members
 
-        sliderAbout : $(".slider-about"), //slider of members
-        sliderAboutSync : $(".slider-about-sync"), //slider of members
+        sliderAbout : $(".slider-about"), //slider of abouts
+        sliderAboutSync : $(".slider-progressbar-about .slider-progressbar--track"), //slider of abouts
 
         sliderPartners : $('.slider-partners'), //slider of partners
-        sliderPartnersSync : $('.slider-partners-sync'), //slider of partners sync
+        sliderPartnersSync : $(".slider-progressbar-partners .slider-progressbar--track"), //slider of partners sync
 
         sliderTabs : $('.tabs-publication--ul'),
 
@@ -51,6 +51,14 @@
             $('html, body').toggleClass('open');
         });
 
+        // SLIDER PROGRESSBAR
+
+        var sliderProgressbar = function (nextSlide, slick, sync) {
+            var calc = ( (nextSlide) / (slick.slideCount-1) ) * 100;
+            sync.css('width', calc + '%')
+        };
+
+        // SLIDER OF COLORS
         var colorHeader;
 
         var colorSet = function () {
@@ -63,8 +71,6 @@
             colorHeader = colorThief.getColor(imgObj);
         };
 
-
-        // SLIDER OF COLORS
         DOMs.sliderColor.on('init', colorSet);
 
         DOMs.sliderColor.slick({
@@ -83,170 +89,46 @@
             $('header').css('background-color', '#a0b3c9')
         });
 
-        // SLIDER OF MEMBERS
+
+
+        // SLIDER OF CALENDAR
         DOMs.sliderCalendar.slick({
             prevArrow: DOMs.sliderArrowLeft,
             nextArrow: DOMs.sliderArrowRight,
             dots: false,
-            slidesToShow: 4,
             slidesToScroll: 1,
             infinite: true,
-
-            initialSlide: 2,
-            centerMode: true,
-            variableWidth: true,
-            responsive: [
-                {
-                    breakpoint: 1199,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 1
-                    }
-                },
-                {
-                    breakpoint: 767,
-                    settings: {
-                        centerMode: false
-                    }
-                },
-                {
-                    breakpoint: 567,
-                    settings: {
-                        slidesToShow: 1,
-                        arrows: false
-                    }
-                }
-            ]
+            variableWidth: true
         });
 
-        // SLIDER OF EVENTS
-        DOMs.sliderMember.on('init', function () {
-            var slides = $('.slider-calendar .slick-slide');
 
-            if (slides.length > 0) {
-                for (var i = 0; i < slides.length; i++) {
-                    if (i === 0) {
-                        DOMs.sliderMemberSync.append('<div class="slider-progress"></div>')
-                    } else {
-                        DOMs.sliderMemberSync.append('<div></div>')
-                    }
-                }
-            }
-
-        });
 
         // SLIDER MEMBER
         DOMs.sliderMember.slick({
             prevArrow: DOMs.sliderArrowLeft,
             nextArrow: DOMs.sliderArrowRight,
             dots: false,
-            slidesToScroll: 1,
             infinite: false,
             rows: 2,
-            initialSlide: 2,
-            centerMode: true,
-            asNavFor: DOMs.sliderMemberSync,
-            variableWidth: true,
-            responsive: [
-                {
-                    breakpoint: 1199,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 1
-                    }
-                },
-                {
-                    breakpoint: 767,
-                    settings: {
-                        slidesToShow: 1,
-                        centerMode: false,
-                        initialSlide: 1
-                    }
-                }
-            ]
+            variableWidth: true
+        }).on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+            sliderProgressbar(nextSlide, slick, DOMs.sliderMemberSync);
         });
 
-        DOMs.sliderMemberSync.slick({
-            dots: false,
-            slidesToShow: 8,
-            slidesToScroll: 1,
-            infinite: false,
-            arrows: false,
-            rtl: true,
-            rows: 1,
-            asNavFor: DOMs.sliderMember,
-            centerMode: true,
-            draggable: false,
-            initialSlide: 2,
-            responsive: [
-                {
-                    breakpoint: 767,
-                    settings: {
-                        initialSlide: 1
-                    }
-                }
-            ]
-        });
 
         // SLIDER PARTNERS
-        DOMs.sliderPartners.on('init', function () {
-            var slides = $('.slider-partners .slick-slide');
-
-            if (slides.length > 0) {
-                for (var i = 0; i < slides.length; i++) {
-                    if (i === 0) {
-                        DOMs.sliderPartnersSync.append('<div class="slider-progress"></div>')
-                    } else {
-                        DOMs.sliderPartnersSync.append('<div></div>')
-                    }
-                }
-            }
-
-        });
-
         DOMs.sliderPartners.slick({
             prevArrow: DOMs.sliderArrowLeft,
             nextArrow: DOMs.sliderArrowRight,
             dots: false,
-            slidesToShow: 4,
             slidesToScroll: 1,
             infinite: false,
-            initialSlide: 2,
-            centerMode: true,
-            asNavFor: DOMs.sliderPartnersSync,
-            variableWidth: true,
-            responsive: [
-                {
-                    breakpoint: 1199,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 1
-                    }
-                },
-                {
-                    breakpoint: 767,
-                    settings: {
-                        initialSlide: 1
-                    }
-                }
-            ]
+            variableWidth: true
+        }).on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+            sliderProgressbar(nextSlide, slick, DOMs.sliderPartnersSync);
         });
 
-        DOMs.sliderPartnersSync.slick({
-            dots: false,
-            slidesToShow: 8,
-            slidesToScroll: 1,
-            infinite: false,
-            arrows: false,
-            rtl: true,
-            asNavFor: DOMs.sliderPartners,
-            centerMode: true,
-            draggable: false,
-            initialSlide: 2
-
-        });
-
-        //SLIDER HEADER
+        // //SLIDER HEADER
         DOMs.sliderMiddle.slick({
             slidesToShow: 1,
             slidesToScroll: 1,
@@ -254,23 +136,8 @@
             prevArrow: DOMs.sliderArrowLeft,
             nextArrow: DOMs.sliderArrowRight,
         });
-
-        // SLIDER ABOUT
-        DOMs.sliderAbout.on('init', function () {
-            var slides = $('.slider-about .slick-slide');
-
-            if (slides.length > 0) {
-                for (var i = 0; i < slides.length; i++) {
-                    if (i === 0) {
-                        DOMs.sliderAboutSync.append('<div class="slider-progress"></div>')
-                    } else {
-                        DOMs.sliderAboutSync.append('<div></div>')
-                    }
-                }
-            }
-
-        });
-
+        //
+        // // SLIDER ABOUT
         DOMs.sliderAbout.slick({
             prevArrow: DOMs.sliderArrowLeft,
             nextArrow: DOMs.sliderArrowRight,
@@ -279,31 +146,9 @@
             slidesToScroll: 1,
             infinite: false,
             initialSlide: 1,
-            centerMode: true,
-            asNavFor: DOMs.sliderAboutSync,
-            variableWidth: true,
-            responsive: [
-                {
-                    breakpoint: 991,
-                    settings: {
-                        centerMode: false
-                    }
-                }
-            ]
-        });
-
-        DOMs.sliderAboutSync.slick({
-            dots: false,
-            slidesToShow: 8,
-            slidesToScroll: 1,
-            infinite: false,
-            arrows: false,
-            rtl: true,
-            asNavFor: DOMs.sliderAbout,
-            centerMode: true,
-            draggable: false,
-            initialSlide: 2
-
+            variableWidth: true
+        }).on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+            sliderProgressbar(nextSlide, slick, DOMs.sliderAboutSync);
         });
 
         // ========== ACCORDION ==========
@@ -393,24 +238,18 @@
 
             DOMs.sliderTabs.slick({
                 dots: false,
-                slidesToShow: 2,
                 slidesToScroll: 1,
                 infinite: false,
                 arrows: false,
-                // centerMode: true,
-                variableWidth: true,
-                // initialSlide: 0
+                variableWidth: true
             });
 
             DOMs.sliderPublications.slick({
                 dots: false,
-                slidesToShow: 1,
                 slidesToScroll: 1,
                 infinite: false,
                 arrows: false,
-                // centerMode: true,
-                variableWidth: true,
-                // initialSlide: 0
+                variableWidth: true
             });
 
         } else if (window.matchMedia("(min-width: 768px)").matches) {

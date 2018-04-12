@@ -3,7 +3,7 @@
   position relative
   mb($r68)
   +mob()
-    mb($r38)
+    mb(0)
   &--image
     height 173px
     display flex
@@ -19,6 +19,7 @@
     img
       height 100%
       trans()
+      flex-shrink 0
       +mob()
         min-width 100%
         height auto
@@ -54,7 +55,7 @@
         min-height 181px
         mb($r37)
         img
-          min-width unset
+          width 100%
       +land()
         img
           width auto
@@ -72,7 +73,9 @@
     max-width 360px
     mb(0)
     +tab()
-      max-width 320px
+      max-width 290px
+    +port()
+      max-width 330px
     //+land()
     //  max-width 50%
     .blog--image
@@ -91,6 +94,10 @@
       mb($r83)
       h3
         mb($r13)
+    &:hover
+      .blog--image
+        img
+          opacity 1
 
 
 +mob()

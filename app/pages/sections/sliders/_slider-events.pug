@@ -1,0 +1,42 @@
+section.back-blue-light2
+    .container
+        .row
+            .col-sm-8.col-md-7
+                h2 Найближчі Події
+            .col-sm-4.col-md-5.col-detail-display
+                a(href='' title='').link-detail
+                    | Усі події
+                    include ../../svgs/angle-right.svg
+    .container.container-slider
+        .row
+            .col-12
+                .slider.slider-calendar.slider-with-line
+                    div
+                        include slider-calendar-slides/_calendar-item-month
+                    div
+                        include slider-calendar-slides/_calendar-item-event
+                    div
+                        include slider-calendar-slides/_calendar-item
+                    div
+                        include slider-calendar-slides/_calendar-item-event-month
+                    div
+                        include slider-calendar-slides/_calendar-item
+                    div
+                        include slider-calendar-slides/_calendar-item
+                    div
+                        include slider-calendar-slides/_calendar-item-month
+                    div
+                        include slider-calendar-slides/_calendar-item-event
+                    div
+                        include slider-calendar-slides/_calendar-item
+                    div
+                        include slider-calendar-slides/_calendar-item-event-month
+                    div
+                        include slider-calendar-slides/_calendar-item
+                    div
+                        include slider-calendar-slides/_calendar-item
+
+            .col-12.col-detail-mobile
+                a(href='' title='').link-detail
+                    | Усі події
+                    include ../../svgs/angle-right.svg

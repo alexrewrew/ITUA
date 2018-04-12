@@ -15,7 +15,7 @@ body
 
 +mob()
   .container.container-slider
-    margin-bottom $r80
+    margin-bottom 0
 
 +land()
   .container.container-big
@@ -37,7 +37,9 @@ body
     max-width 1170px !important
 
   .container.container-slider
-    max-width calc(1170px + 273px + 273px + 30px) !important
+    max-width: calc(1170px + 263px + 30px + 30px) !important;
+    //max-width 1280px !important
+    //max-width 1366px !important
 
 +xxl()
   .container.container-big
@@ -104,9 +106,18 @@ body.open
 .col-detail-display
   +mob()
     display none
+  +land()
+    display block
+    .link-detail
+      line-height 1.3
+      padding: 1.125rem 0;
+      float right
 
 .col-detail-mobile
   display none
   text-align center
+  mt($r50)
   +mob()
     display: block
+  +land()
+    display none

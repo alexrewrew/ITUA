@@ -133,11 +133,10 @@ ol
   mb($r80)
   +mob()
     flex-wrap wrap
+  +land()
+    flex-wrap nowrap
   li
     width 100%
-    //+mob()
-    //  flex 1 1 50%
-    //  max-width 50%
     a
       display flex
       font-size: $e16
@@ -166,14 +165,24 @@ ol
           bottom 4px
           top auto
           height 1px
+        +land()
+          top 4px
+          bottom 4px
+          height auto
+          width 1px
+          left 0
       &:hover
         background $blue
         color $white
         box-shadow: 0 10px 30px 0 rgba(24, 111, 240, 0.5);
+        width: calc(100% + 1px);
+        z-index: 20;
       &.active
         background $black-text4
         color $white
         box-shadow none
+        width: calc(100% + 1px);
+        z-index: 20;
     &:first-child
       a
         &:after
