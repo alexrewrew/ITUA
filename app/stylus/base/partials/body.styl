@@ -13,33 +13,19 @@ body
   font-family $m-font, sans-serif
   background $white
 
-+mob()
-  .container.container-slider
-    margin-bottom 0
+.container.container-slider
+  max-width 100%
 
 +land()
-  .container.container-big
-    max-width 100%
-
   .container
     max-width 100%
-
-+port()
-  .container.container-slider
-    max-width: 100%;
-
-+tab()
-  .container.container-slider
-    max-width: 100%;
 
 +dis()
   .container
     max-width 1170px !important
 
   .container.container-slider
-    max-width: calc(1170px + 263px + 30px + 30px) !important;
-    //max-width 1280px !important
-    //max-width 1366px !important
+    max-width: 1493px !important;
 
 +xxl()
   .container.container-big
@@ -47,7 +33,11 @@ body
 
 
 
+// SPACERS
 
+.spacer-127
+  height 127px
+  width 100%
 
 .spacer-61
   height 61px
@@ -58,6 +48,8 @@ body
   width 100%
 
 
+
+// MENU OPEN
 
 html.open
   overflow hidden !important

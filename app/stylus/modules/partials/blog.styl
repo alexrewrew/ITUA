@@ -1,7 +1,7 @@
 .blog
   display block
   position relative
-  mb($r68)
+  mb($r69)
   +mob()
     mb(0)
   &--image
@@ -9,7 +9,7 @@
     display flex
     align-items center
     justify-content center
-    margin-bottom ($r39)
+    margin-bottom ($r37)
     background $white
     overflow hidden
     +tab()
@@ -80,6 +80,9 @@
     //  max-width 50%
     .blog--image
       height 280px
+      mb($r41)
+    .blog--description
+      mb($r33)
 
 
   &.blog-chief
@@ -91,7 +94,7 @@
         mb($r25)
     h3
       fs($e20)
-      mb($r33)
+      mb($r32)
       +mob()
         mb($r13)
     &.blog-chief-small
@@ -99,7 +102,7 @@
       +mob()
         mb($r41)
       h3
-        mb($r13)
+        mb($r12)
     &:hover
       .blog--image
         img
