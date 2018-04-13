@@ -28,24 +28,23 @@ button
 
   &:after
     pseudo(block, absolute)
-    bottom -12px
-    left 6px
-    right 6px
-    height: 34px;
-    opacity: 0.7;
-    filter: blur(12px);
-    background-color: $blue2
+    bottom 0px
+    left 16px
+    right 16px
+    box-shadow: 0px 0px 34px 11px rgba(20,114,255,0.7);
     z-index -1
     trans()
     +mob()
       left 25px
       right 25px
+
   &:hover
     color $blue-light8
     bg($blue3)
     &:after
-      background-color: $blue
+      box-shadow: 0px 0px 34px 11px rgba(24,110,240,.7)
       transform translate3d(0, -6px, 0)
+
 
 .btn-center
   mcen()

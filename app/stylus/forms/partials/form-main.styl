@@ -43,6 +43,8 @@
     pl($r31)
     fs($e16)
     color $white
+    position relative
+    z-index 2
     +placeholder()
       color $white
     +mob()
@@ -51,22 +53,34 @@
       pb($r16)
     &:focus
       bg(#36393F)
+      & + .input-group-shadow--shade
+        &:after
+          transform translate3d(0, -6px, 0)
+          box-shadow: 0px 0px 34px 11px rgba(42,37,61,1);
 
-  .input-shadow
-    position relative
-    z-index 40
+
+  .input-group-shadow
     width 100%
     +mob()
       mb($r20)
-    &:after
-      pseudo(block, absolute)
-      z-index -1
-      left 6px
-      right 6px
-      bottom -17px
-      height: 34px;
-      filter: blur(12px);
-      background-color: #26292e;
+    &--shade
+      position relative
+      z-index 1
+      &:after
+        pseudo(block, absolute)
+        z-index -1
+        left 16px
+        right 16px
+        bottom 0
+        box-shadow: 0px 0px 34px 11px rgba(38,41,46,1);
+        trans()
+        +mob()
+          left 25px
+          right 25px
+
+
+
+
 
 
 .form-questions
