@@ -12,10 +12,10 @@ footer
                 h6 Контакти
                 p Адреса:  01001, м. Київ, вул. Хрещатик, 10 (IHub)
                 p Телефони:
-                    a(href='' title='') +38 099 266 39 03,
-                    a(href='' title='') +38 044 591 10 24
+                    a(href='tel:' title='') +38 099 266 39 03,
+                    a(href='tel:' title='') +38 044 591 10 24
                 p E-mail:
-                    a(href='' title='') office@itukraine.org.ua
+                    a(href='mailto:' title='') office@itukraine.org.ua
                 ul.ul-social
                     li
                         a(href='' title='')
@@ -24,14 +24,10 @@ footer
     .footer-bottom
         .container
             .row.justify-content-between
+
                 .col-6.col-sm-3
                     .footer-copyright Copyright © 2018. Всі права захищені.
-                .col-4.col-sm-2
-                    a(href='//volta.one' title='Volta Agency' target='_blank').volta
-                        span.volta--text created by
-                        span.volta--visible
-                            include ../svgs/volta1.svg
 
-                        span.volta--hidden
-                            include ../svgs/volta2.svg
+                .col-4.col-sm-2
+                    include _volta
 

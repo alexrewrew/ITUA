@@ -3,10 +3,9 @@ header.header-committees
         .row
             .col-12
                 ul.breadcrumbs
-                    li
-                        a(href='' title='') Головна
-                    li
-                        a(href='' title='') Комітети та робочі групи
+                    +li-a('Головна')
+                    +li-a('Комітети та робочі групи')
+
         .row
             .col-sm-6.col-lg-5.col-xl-4
                 h1 Комітети та робочі групи
@@ -18,11 +17,7 @@ header.header-committees
                 .tablist-choose Оберіть комітет, що вас цікавить:
 
                 ul.ul-tablist
-                    li
-                        a(href='' title='').active Загальна інформація
-                    li
-                        a(href='' title='') Фінансово-правовий комітет
-                    li
-                        a(href='' title='') Комітет з питань освіти
-                    li
-                        a(href='' title='') PR комітет
+                    +li-a('Загальна інформація', 'active')
+                    +li-a('Фінансово-правовий комітет')
+                    +li-a('Комітет з питань освіти')
+                    +li-a('PR комітет')

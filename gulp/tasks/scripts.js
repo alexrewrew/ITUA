@@ -8,7 +8,7 @@ module.exports = function () {
             // 'node_modules/chosen-js/chosen.jquery.js',
             // 'node_modules/select2/dist/js/select2.full.js',
             // 'node_modules/jquery.maskedinput/src/jquery.maskedinput.js',
-            // 'node_modules/bowser/bowser.js',
+            'node_modules/bowser/bowser.js',
             // 'node_modules/flatpickr/dist/flatpickr.js',
             // 'node_modules/aos/dist/aos.js',
             // 'node_modules/bootstrap/dist/js/bootstrap.bundle.js',

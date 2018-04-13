@@ -4,16 +4,13 @@
             li.arrow.left
                 a(href='' title='')
                     include ../svgs/arrow-left.svg
-            li
-                a(href='' title='') 1
-            li
-                a(href='' title='') 2
-            li
-                a(href='' title='').active 3
-            li
-                a(href='' title='') 4
-            li
-                a(href='' title='') ...
+
+            +li-a('1')
+            +li-a('2')
+            +li-a('3', 'active')
+            +li-a('4')
+            +li-a('...')
+
             li.arrow.right
                 a(href='' title='')
                     include ../svgs/arrow-right.svg

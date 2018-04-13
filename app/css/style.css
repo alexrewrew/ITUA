@@ -4082,3 +4082,11 @@ select:focus {
 	padding-bottom: 1.438rem;
 	letter-spacing: 1px;
 }
+body.brow-firefox .member:hover {
+	-webkit-box-shadow: 0 10px 15px 0 rgba(94,107,126,.3);
+	        box-shadow: 0 10px 15px 0 rgba(94,107,126,.3);
+}
+body.brow-safari .member:hover {
+	-webkit-box-shadow: 0 10px 15px 0 rgba(94,107,126,.3);
+	        box-shadow: 0 10px 15px 0 rgba(94,107,126,.3);
+}

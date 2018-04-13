@@ -2,14 +2,15 @@ header.header-about-us
 
     .container
         .row.justify-content-between
+
             .col-sm-5.col-lg-4.col-xl-3.header-col.left
                 ul.breadcrumbs
-                    li
-                        a(href='' title='') Головна
-                    li
-                        a(href='' title='') Про асоціацію
+                    +li-a('Головна')
+                    +li-a('Про асоціацію')
+
                 .header-text
                     h1 Про нас
                     p Ми – найбільше об’єднання компаній-розробників програмного забезпечення в Україні. Спільною працею ми формуємо економіку майбутньої України
+
             .col-sm-7.header-col.right
                 include ../sliders/_slider-header

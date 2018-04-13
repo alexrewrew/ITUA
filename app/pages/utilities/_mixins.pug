@@ -1,14 +1,50 @@
-mixin link(href, className, name, target)
-    a(href= href, class= className, title='', target= target)= name
+mixin btn(text)
+    a(href='' title='').btn= text
 
-mixin link2(href, target)
-    a(href= href, title='')= name
+mixin btn-arrow(text)
+    a(href='' title='').btn.btn-arrow
+        = text
+        include ../svgs/arrow-right.svg
 
-mixin img2(src, className, error)
-    img(src= src, class= className, title='', alt='', onerror=error)
+mixin btn-slider(text)
+    a(href='' title='').btn.btn-arrow.btn-arrow-slider
+        = text
+        include ../svgs/arrow-right.svg
 
-mixin img(src)
-    img(src= src, title='', alt='')
+mixin btn-more(text)
+    .btn-more
+        = text
+        include ../svgs/arrow-right.svg
 
-mixin input(type, placeholder)
-    input(type= type, placeholder= placeholder)
+mixin link-detail(text)
+    a(href='' title='').link-detail
+        = text
+        include ../svgs/angle-right.svg
+
+mixin li-a(text, className)
+    li
+        a(href='' title='' class= className)= text
+
+mixin a(text, className)
+    a(href='' title='' class= className)= text
+
+mixin img(src, className)
+    img(src= src, title='' alt='' class= className)
+
+
+
+
+//mixin link(href, className, name, target)
+//    a(href= href, class= className, title='', target= target)= name
+//
+//mixin link2(href, target)
+//    a(href= href, title='')= name
+//
+//mixin img2(src, className, error)
+//    img(src= src, class= className, title='', alt='', onerror=error)
+//
+//mixin img(src)
+//    img(src= src, title='', alt='')
+//
+//mixin input(type, placeholder)
+//    input(type= type, placeholder= placeholder)

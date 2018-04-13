@@ -4,9 +4,8 @@ section.back-blue-light2
             .col-sm-8.col-md-7
                 h2 Найближчі Події
             .col-sm-4.col-md-5.col-detail-display
-                a(href='' title='').link-detail
-                    | Усі події
-                    include ../../svgs/angle-right.svg
+                +link-detail('Усі події')
+
     .container.container-slider
         .row
             .col-12
@@ -37,6 +36,4 @@ section.back-blue-light2
                         include slider-calendar-slides/_calendar-item
 
             .col-12.col-detail-mobile
-                a(href='' title='').link-detail
-                    | Усі події
-                    include ../../svgs/angle-right.svg
+                +link-detail('Усі події')

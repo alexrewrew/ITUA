@@ -14,14 +14,15 @@ block content
     section
         .container
             .row.justify-content-center
+
                 .col-sm-8.col-md-9.order-md-1
                     .heading-h1-h2
                         h2 Переваги членства в
                         h1 IT Ukraine Association
+
                 .col-sm-4.col-md-3.order-2.order-sm-1.col-detail-display
-                    a(href='' title='').link-detail
-                        | Перейти до всіх переваг
-                        include svgs/angle-right.svg
+                    +link-detail('Перейти до всіх переваг')
+
                 .col-lg-9.col-xl-8.order-sm-1
                     .row
                         .col-sm-6
@@ -34,9 +35,7 @@ block content
                             include blocks/blog/_blog-item-advantage
 
                 .col-12.col-detail-mobile
-                    a(href='' title='').link-detail
-                        | Перейти до всіх переваг
-                        include svgs/angle-right.svg
+                    +link-detail('Перейти до всіх переваг')
 
                 aside.col-sm-6.col-lg-3.offset-xl-1.order-3.order-md-1
                     include blocks/_join-item
@@ -45,24 +44,22 @@ block content
     section.back-blue-light
         .container
             .row
+
                 .col-sm-8.col-md-9.col-lg-3.col-xl-2
                     h2.h2-public Публікації
+
                 .col-lg-7.col-xl-8.order-lg-2.order-sm-3
                     .tabs-publication
                         ul.tabs-publication--ul
-                            li
-                                a(href='' title='').active Закордонні змі про нас
-                            li
-                                a(href='' title='') Новини Асоціації
-                            li
-                                a(href='' title='') Новини Галузі
-                            li
-                                a(href='' title='') Авторські статті
+                            +li-a('Закордонні змі про нас', 'active')
+                            +li-a('Новини Асоціації')
+                            +li-a('Новини Галузі')
+                            +li-a('Авторські статті')
                     span.tabs-publication--line
+
                 .col-sm-4.col-md-3.col-lg-2.order-lg-3.order-sm-2.col-detail-display
-                    a(href='' title='').link-detail
-                        | Усі публікації
-                        include svgs/angle-right.svg
+                    +link-detail('Усі публікації')
+
             .row.row-publications
                 .col-md-6.col-lg-4.col-xl-3
                     include blocks/blog/_blog-item
@@ -72,11 +69,10 @@ block content
                     include blocks/blog/_blog-item
                 .col-md-6.col-lg-4.col-xl-3
                     include blocks/blog/_blog-item
+
             .row
                 .col-12.col-detail-mobile
-                    a(href='' title='').link-detail
-                        | Усі публікації
-                        include svgs/angle-right.svg
+                    +link-detail('Усі публікації')
 
 
     include sections/sliders/_slider-events
