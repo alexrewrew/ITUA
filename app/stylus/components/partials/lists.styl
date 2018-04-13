@@ -130,13 +130,25 @@ ol
 .ul-tablist
   display flex
   box-shadow: 0 10px 30px 0 rgba(94, 107, 126, 0.3);
-  //mb($r80)
   +mob()
-    flex-wrap wrap
-  +land()
-    flex-wrap nowrap
+    box-shadow none
+    margin 0 -15px
+    .slick-track
+      left 15px
+      .slick-slide
+        &:first-child
+          a
+            &:after
+              display none
+  //+mob()
+  //  flex-wrap wrap
+  //+land()
+  //  flex-wrap nowrap
   li
     width 100%
+    +mob()
+      box-shadow: 0 10px 30px 0 rgba(94, 107, 126, 0.3);
+      margin  $r10 0 $r30
     a
       display flex
       font-size: $e16
@@ -151,6 +163,8 @@ ol
       text-align center
       position relative
       height 100%
+      +mob()
+        padding $r12 $r15 $r16
 
       &:after
         pseudo(block,absolute)
@@ -159,18 +173,18 @@ ol
         width 1px
         background $blue
         left 0
-        +mob()
-          left calc(50% - 21px)
-          width:42px
-          bottom 4px
-          top auto
-          height 1px
-        +land()
-          top 4px
-          bottom 4px
-          height auto
-          width 1px
-          left 0
+        //+mob()
+        //  left calc(50% - 21px)
+        //  width:42px
+        //  bottom 4px
+        //  top auto
+        //  height 1px
+        //+land()
+        //  top 4px
+        //  bottom 4px
+        //  height auto
+        //  width 1px
+        //  left 0
       &:hover
         background $blue
         color $white
@@ -187,6 +201,8 @@ ol
       a
         &:after
           display none
+          +mob()
+            display block
 
 
 .ol-attention

@@ -34,6 +34,8 @@
 
         sliderMiddle : $('.slider-middle'),
 
+        sliderCommittees : $('.ul-tablist'),
+
         dropdownLink : $('.dropdown-link'),
         dropdownList : $('.dropdown ul'),
         dropdownBack : $('.dropdown-back a'),
@@ -202,6 +204,30 @@
         });
 
         DOMs.sliderPublications.slick({
+            dots: false,
+            slidesToScroll: 1,
+            infinite: false,
+            arrows: false,
+            variableWidth: true,
+            responsive: [
+                {
+                    breakpoint: 40000,
+                    settings: "unslick"
+                },
+                {
+                    breakpoint: 767,
+                    setting: {
+                        dots: false,
+                        slidesToScroll: 1,
+                        infinite: false,
+                        arrows: false,
+                        variableWidth: true
+                    }
+                }
+            ]
+        });
+
+        DOMs.sliderCommittees.slick({
             dots: false,
             slidesToScroll: 1,
             infinite: false,
