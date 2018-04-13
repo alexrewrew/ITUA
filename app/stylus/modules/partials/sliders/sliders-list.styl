@@ -2,7 +2,7 @@
   padding-top $r20
   mb($r71)
   +mob()
-    margin: 0 -15px;
+    margin: 0 -15px 50px;
     pt(0)
   +land()
     margin: 0 -30px $r50;
@@ -16,10 +16,6 @@
       background: linear-gradient(to right, rgba(230, 235, 239, 1) 0%, rgba(230, 235, 239, 0) 100%);
     &:after
       background: linear-gradient(to right, rgba(230, 235, 239, 0) 0%, rgba(230, 235, 239, 1) 100%);
-
-.slider-partners.slider-with-line.slider-with-line-sync .slick-track
-  +mob()
-    left -15px
 
 .slider-middle
   height 427px
@@ -76,6 +72,10 @@
       fill $white
     &.right
       background $blue-light12
+      +mob()
+        background $trans
+      +land()
+        background $blue-light12
       &:hover
         background $blue-light6
   .slide
@@ -90,11 +90,12 @@
     .blog.blog-about
       margin 0 $r15
     .slick-track
-      //left 2px
       padding-top 0
       pb(0)
       +port()
         left: 23px;
+      +mob()
+        left 0
 
 //.slider-about-sync
 //  +mob()

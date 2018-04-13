@@ -146,10 +146,8 @@
             prevArrow: DOMs.sliderArrowLeft,
             nextArrow: DOMs.sliderArrowRight,
             dots: false,
-            slidesToShow: 3,
             slidesToScroll: 1,
             infinite: false,
-            initialSlide: 1,
             variableWidth: true
         }).on('beforeChange', function(event, slick, currentSlide, nextSlide) {
             sliderProgressbar(nextSlide, slick, DOMs.sliderAboutSync);

@@ -3,6 +3,17 @@
     .col-xl-3
       &:last-child
         display none
+  +mob()
+    .blog
+      width 263px
+      mb($r50)
+
+  +land()
+    margin: 0 -30px;
+    .slick-track
+      left: 15px;
 
 .row-reports
   z-index 60
+
+
