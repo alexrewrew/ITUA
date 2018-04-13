@@ -33,7 +33,6 @@
       margin-right $r30
       max-height: 53px;
 
-
   &--block
     box-shadow: 0 10px 23px 0 rgba(94, 107, 126, 0.3);
     border 6px solid $white
@@ -109,9 +108,78 @@
       h3
         opacity 0
 
-.calendar.calendar-event
-  .calendar--block
-    border-color $blue
+  &.calendar-event
+    .calendar--block
+      border-color $blue
 
-  //.calendar--block-button
-  //  left 24px
+  &.calendar-report
+    width: 100%
+    margin 0
+    max-width 100%
+    +mob()
+      width: 263px;
+    .calendar--block
+      height: 200px;
+      border none
+      padding: $r39 $r31 $r39 $r29
+      box-shadow: 0 10px 30px 0 rgba(94, 107, 126, 0.3);
+      margin-bottom $r50
+      &:after
+        display none
+      &:hover
+        .calendar--block-date--date
+          color $blue
+        h3
+          opacity 1
+        .btn-more
+          opacity 1
+          background $blue
+          color $white
+          max-width 100%
+          pl($r30)
+          svg
+            opacity 1
+    .calendar--block-date
+      mb(0)
+      line-height: .8;
+    .calendar--block-date--date
+      fs($e50)
+      mb(0)
+    h3
+      color $blue
+    .calendar--block-date--text
+      position absolute
+
+      bottom: 16px;
+      left: 31px;
+
+      font-size: $e16
+      line-height: 1.25;
+    .btn-more
+      position absolute
+      bottom 0
+      left 0
+      opacity 0
+      pt($r17)
+      pb($r19)
+      svg
+        top 20px
+    &.calendar-report-year
+      .calendar--block
+        box-shadow: 0 10px 28px 0 rgba(94, 107, 126, 0.3);
+        border 6px solid $blue
+        border-top 0
+        padding: $r34 $r27 $r39 $r26
+        &:after
+          display block
+          top 0
+          left 0
+          right 0
+          bottom 0
+        &:hover
+          .calendar--block-date--date
+            color $white
+      .calendar--block-date--text
+        left 27px
+
+

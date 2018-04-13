@@ -59,10 +59,15 @@ address
 .section-comments
   position relative
   z-index 50
+  &.section-comments-big
+    pt(0)
+    .comment
+      mb($r100)
 
 .section-advantages
   bg($blue-light-back)
-  pt($r38)
+  pt($r33)
+  pb($r16)
   position relative
   z-index 40
   &:after
@@ -70,8 +75,10 @@ address
     top 100%
     left 0
     right 0
-    height 308px
+    height 342px
     background $blue-light-back
     z-index -1
+
+
 
 

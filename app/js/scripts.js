@@ -30,6 +30,8 @@
 
         sliderPublications : $('.row-publications'),
 
+        sliderReports : $('.row-reports'),
+
         sliderMiddle : $('.slider-middle'),
 
         dropdownLink : $('.dropdown-link'),
@@ -151,6 +153,78 @@
             sliderProgressbar(nextSlide, slick, DOMs.sliderAboutSync);
         });
 
+        DOMs.sliderReports.slick({
+            dots: false,
+            slidesToScroll: 1,
+            infinite: false,
+            arrows: false,
+            variableWidth: true,
+            responsive: [
+                {
+                    breakpoint: 40000,
+                    settings: "unslick"
+                },
+                {
+                    breakpoint: 767,
+                    setting: {
+                        dots: false,
+                        slidesToScroll: 1,
+                        infinite: false,
+                        arrows: false,
+                        variableWidth: true
+                    }
+                }
+            ]
+        });
+
+        DOMs.sliderTabs.slick({
+            dots: false,
+            slidesToScroll: 1,
+            infinite: false,
+            arrows: false,
+            variableWidth: true,
+            responsive: [
+                {
+                    breakpoint: 40000,
+                    settings: "unslick"
+                },
+                {
+                    breakpoint: 767,
+                    setting: {
+                        dots: false,
+                        slidesToScroll: 1,
+                        infinite: false,
+                        arrows: false,
+                        variableWidth: true
+                    }
+                }
+            ]
+        });
+
+        DOMs.sliderPublications.slick({
+            dots: false,
+            slidesToScroll: 1,
+            infinite: false,
+            arrows: false,
+            variableWidth: true,
+            responsive: [
+                {
+                    breakpoint: 40000,
+                    settings: "unslick"
+                },
+                {
+                    breakpoint: 767,
+                    setting: {
+                        dots: false,
+                        slidesToScroll: 1,
+                        infinite: false,
+                        arrows: false,
+                        variableWidth: true
+                    }
+                }
+            ]
+        });
+
         // ========== ACCORDION ==========
         // $('#accordion').rewAccordion();
 
@@ -224,7 +298,6 @@
         if (window.matchMedia("(max-width: 767px)").matches) {
             DOMs.menuSearch.prependTo(DOMs.menuPanel);
 
-
             DOMs.dropdownLink.click(function (e) {
                 e.preventDefault();
                 DOMs.dropdownList.removeClass('active');
@@ -236,21 +309,6 @@
                 $(this).parent().parent().removeClass('active');
             });
 
-            DOMs.sliderTabs.slick({
-                dots: false,
-                slidesToScroll: 1,
-                infinite: false,
-                arrows: false,
-                variableWidth: true
-            });
-
-            DOMs.sliderPublications.slick({
-                dots: false,
-                slidesToScroll: 1,
-                infinite: false,
-                arrows: false,
-                variableWidth: true
-            });
 
         } else if (window.matchMedia("(min-width: 768px)").matches) {
             DOMs.menuSearch.insertAfter(DOMs.menuLogo);

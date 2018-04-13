@@ -1,0 +1,38 @@
+//- layouts/layout.pug
+extend layouts/_layout.pug
+
+block title
+    | IT Ukraine Association - Річні та квартальні звіти
+
+block content
+
+
+    include sections/headers/_header-reports
+
+    section.section-top-zero
+        .container
+            .row.row-reports
+                .col-lg-3.col-md-4
+                    include blocks/calendar/_calendar-item-report-quart
+                .col-lg-3.col-md-4
+                    include blocks/calendar/_calendar-item-report-quart
+                .col-lg-3.col-md-4
+                    include blocks/calendar/_calendar-item-report-quart
+                .col-lg-3.col-md-4
+                    include blocks/calendar/_calendar-item-report-quart
+            .row
+                .col-12
+                    hr.mb-mt-81-30
+            .row.row-reports
+                .col-lg-3.col-md-4
+                    include blocks/calendar/_calendar-item-report-year
+                .col-lg-3.col-md-4
+                    include blocks/calendar/_calendar-item-report-year
+                .col-lg-3.col-md-4
+                    include blocks/calendar/_calendar-item-report-year
+                .col-lg-3.col-md-4
+                    include blocks/calendar/_calendar-item-report-year
+                .col-lg-3.col-md-4
+                    include blocks/calendar/_calendar-item-report-year
+                .col-lg-3.col-md-4
+                    include blocks/calendar/_calendar-item-report-year

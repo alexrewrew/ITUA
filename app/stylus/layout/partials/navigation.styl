@@ -100,15 +100,23 @@ nav.nav-index.unscrolled
       pb($r16)
       color $blue-dark5
       +port()
-        font-size: $e11
+          pr($r10)
+          pl($r10)
+          text-align center
       +mob()
         font-size $e17
       &:hover
         color $blue-light-back4
     &.dropdown
+      +port()
+        height 100%
       +mob()
         position static
       .dropdown-link
+        +port()
+          display flex
+          align-items center
+          height 100%
         +mob()
           position relative
           &:before, &:after
@@ -132,13 +140,13 @@ nav.nav-index.unscrolled
 
         width 180px
         left: -14px;
-        top: 35px;
+        top: 100%
         trans()
         visibility hidden
         opacity 0
         z-index -1
         +port()
-          top 32px
+          width 140px
         +mob()
           width 100vw
           left 0
@@ -150,6 +158,10 @@ nav.nav-index.unscrolled
           mb($r15)
           a
             pb(0)
+            text-align left
+            +port()
+              pr($r10)
+              pl(0)
           &.dropdown-back
             display none
             +mob()
@@ -157,6 +169,7 @@ nav.nav-index.unscrolled
               a
                 position relative
                 color $blue-dark4
+
                 &:before, &:after
                   pseudo(block, absolute)
                   height 2px
