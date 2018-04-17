@@ -8,10 +8,11 @@
   padding $r31 $r35
   position relative
   height: 294px;
-  width 293px !important
+  max-width 293px
+  bg($white)
   trans()
   +mob()
-    width 263px !important
+    max-width 263px
   &--image
     height 90px
     margin-bottom $r25
@@ -45,6 +46,7 @@
     box-shadow: 0 10px 30px 0 rgba(94, 107, 126, 0.3);
     background $white
     border-color $trans
+    z-index: 30;
     .btn-more
       background $blue
       color $white

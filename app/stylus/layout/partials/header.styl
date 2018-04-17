@@ -62,6 +62,13 @@ header
       z-index -1
     p
       margin-top $r6
+    &.header-about-business-without-after
+      height 457px
+      mb(r(90))
+      +mob()
+        height auto
+      &:after
+        display none
 
   &.header-committees
     mb($r40)

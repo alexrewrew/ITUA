@@ -19,8 +19,9 @@
     min-height auto
   .img-color
     display inline-block
-    height 100%
-    width auto
+    min-height 100%
+    width 100%
+    flex 0 0 auto
     +mob()
       height auto
       width calc(100% + 30px)
@@ -80,6 +81,8 @@
       a
         co($white)
         text-decoration underline
+        &:hover
+          color $blue
 
   p
     color $white
@@ -101,6 +104,8 @@
 
   .arrow.left
     left: calc(1057px - 50%);
+    +xxl()
+      left: calc(1415px - 50%);
     +tab()
       left: calc(790px - 50%);
     +port()
@@ -112,6 +117,8 @@
 
   .arrow.right
     left: calc(1057px - 50% + 82px);
+    +xxl()
+      left: calc(1415px - 50% + 82px);
     +tab()
       left: calc(790px - 50% + 82px);
     +port()
