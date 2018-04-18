@@ -1,5 +1,4 @@
-@import '../../utilities/vars'
-@import '../../utilities/mixins'
+@import '../../utilities/utilities'
 
 table, tr, th, td
   border 1px solid $blue-light15
@@ -10,27 +9,27 @@ table
   //  caption-side top
   //  text-align right
   th
-    color $blue
+    co($blue)
     text-align center
     line-height: 1.75;
     letter-spacing: 0.8px;
-    font-weight 700
-    fs($e20)
-    padding $r6 $r0 $r2
+    fw(700)
+    fs(e(20))
+    padding r(6) 0 r(2)
     +mob()
-      fs($e14)
+      fs(e(14))
   td
     line-height: 1.75;
-    fs($e14)
-    color $black-text
-    padding $r6 $r10 $r2 $r50
+    fs(e(14))
+    co($black-text)
+    padding r(6) r(10) r(2) r(50)
     +mob()
-      pl($r15)
+      pl(r(15))
 
 
   thead
     th
-      padding $r24 $r10 $r26
-      fs($e24)
+      padding r(24) r(10) r(26)
+      fs(e(24))
       +mob()
-        fs($e16)
+        fs(e(16))

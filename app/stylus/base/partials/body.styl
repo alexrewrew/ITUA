@@ -1,17 +1,16 @@
-@import '../../utilities/vars'
-@import '../../utilities/mixins'
+@import '../../utilities/utilities'
 
 html
-  font-size 16px
+  fs($base-font-pixels)
 
 html, body
   overflow-x hidden
 
 body
   font(r(16), 400, normal)
-  color $black
+  co($bk)
+  bg($wt)
   font-family $m-font, sans-serif
-  background $white
 
 .container.container-slider
   max-width 100%
@@ -61,7 +60,7 @@ body.open
     &:before
       bg(rgba(255, 255, 255, .3))
     span
-      bg($white)
+      bg($wt)
       &:nth-child(1)
         top 20px
         width 0
@@ -83,8 +82,8 @@ body.open
     animation: ds-none .2s both;
 
   .nav-top
-    background $blue-light6
-    border-bottom-color: rgba(255, 255, 255, .3);
+    bg($blue-light6)
+    border-bottom-color: $wt30
 
   .nav-bottom
     transform none

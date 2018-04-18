@@ -1,37 +1,36 @@
-@import '../../utilities/vars'
-@import '../../utilities/mixins'
+@import '../../utilities/utilities'
 
 .breadcrumbs
   df(row)
-  mb($r46)
-  mt($r13)
+  mb(r(46))
+  mt(r(13))
   line-height: 1.67;
   li
-    margin-right $r4
+    mr(r(4))
     &:last-child
-      tover()
+      to()
       a
         &:after
           display none
 
     a
       display inline-block
-      color $blue-light10
-      fs($e12)
+      co($blue-light10)
+      fs(e(12))
       line-height: 1.67;
       position relative
-      pr($r8)
+      pr(r(8))
       &:after
         content '/'
         display block
         position absolute
         right 0
         bottom 0
-        color $blue-light10
+        co($blue-light10)
       &:hover
-        color $blue
+        co($blue)
         &:after
-          color $blue-light10
+          co($blue-light10)
 
 //&:hover
 //  color lightblue

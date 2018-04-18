@@ -1,44 +1,43 @@
-@import '../../utilities/vars'
-@import '../../utilities/mixins'
+@import '../../utilities/utilities'
 
 section
-  pt($r78)
-  pb($r109)
+  pt(r(78))
+  pb(r(109))
   +tab()
-    pt($r60)
-    pb($r90)
+    pt(r(60))
+    pb(r(90))
   +port()
-    pt($r60)
-    pb($r90)
+    pt(r(60))
+    pb(r(90))
   +mob()
-    pt($r33)
-    pb($r60)
+    pt(r(33))
+    pb(r(60))
 
 article
-  pb($r32)
+  pb(r(32))
   ul
-    mb($r25)
+    mb(r(25))
     li
       position relative
-      padding-left $r33
-      margin-bottom $r22
+      pl(r(33))
+      mb(r(22))
       line-height 1.58
-      fs($e14)
-      color $black-text
+      fs(e(14))
+      co($black-text)
       b
-        color $blue-dark
+        co($blue-dark)
       &:before
         pseudo(block, absolute)
         width 14px
         height 3px
-        background $blue
+        bg($blue)
         top 10px
         left 0
   a
-    color $blue-dark
-    font-weight 700
+    co($blue-dark)
+    fw(700)
     &:hover
-      color #bec9d6
+      co(#bec9d6)
 
 //aside {}
 
@@ -50,10 +49,10 @@ address
 .section-question
   pt(0)
   h2
-    font-size: $e28
+    fs(e(28))
     letter-spacing: 0.9px;
     text-align: center;
-    mb($r61)
+    mb(r(61))
 
 .section-top-zero
   pt(0)
@@ -64,12 +63,12 @@ address
   &.section-comments-big
     pt(0)
     .comment
-      mb($r100)
+      mb(r(100))
 
 .section-advantages
   bg($blue-light-back)
-  pt($r33)
-  pb($r16)
+  pt(r(33))
+  pb(r(16))
   position relative
   z-index 40
   &:after

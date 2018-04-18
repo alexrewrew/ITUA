@@ -1,28 +1,27 @@
-@import '../../utilities/vars'
-@import '../../utilities/mixins'
+@import '../../utilities/utilities'
 
 .pagination
   df(row)
   justify-content center
   li
-    margin 0 $r7
+    margin 0 r(7)
     align-self center
     a
       display inline-block
-      color $blue-light
-      font-size $e18
-      font-weight 700
+      co($blue-light)
+      fs(e(18))
+      fw(700)
       font-family $a-font, sans-serif
       &:hover
-        color $black-text3
+        co($black-text3)
 
       &.active
-        color $blue
-        fs($e22)
+        co($blue)
+        fs(e(22))
         cursor default
         pointer-events: none;
         &:hover
-          color $blue
+          co($blue)
     &.arrow
       a
         df(row)
@@ -35,6 +34,6 @@
           svg g
             fill $black-text3
       &.left
-        mr($r48)
+        mr(r(48))
       &.right
-        ml($r48)
+        ml(r(48))

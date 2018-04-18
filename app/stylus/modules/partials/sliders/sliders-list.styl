@@ -1,12 +1,14 @@
+@import '../../utilities/utilities'
+
 .slider-calendar
-  padding-top $r20
-  mb($r71)
+  padding-top r(20)
+  mb(r(71))
   +mob()
-    margin: 0 -15px 50px;
+    margin: 0 -15px r(50);
     pt(0)
   +land()
-    margin: 0 -30px $r50;
-    padding-bottom: $r43
+    margin: 0 -30px r(50);
+    padding-bottom: r(43)
     .slick-track
       left: 15px;
   .slick-list
@@ -16,13 +18,24 @@
       background: linear-gradient(to right, rgba(230, 235, 239, 1) 0%, rgba(230, 235, 239, 0) 100%);
     &:after
       background: linear-gradient(to right, rgba(230, 235, 239, 0) 0%, rgba(230, 235, 239, 1) 100%);
+  &.slider-calendar-year
+    +tab()
+      margin-left -15px
+      margin-right -15px
+    .slick-list
+      &:after, &:before
+        background: rgba(255, 255, 255, 1);
+      &:before
+        background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+      &:after
+        background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
 
 .slider-middle
   height 427px
   +mob()
     height: 257px;
   .arrow
-    background $white
+    bg($wt)
     svg g
       fill $blue
 
@@ -38,7 +51,7 @@
       +mob()
         right 15px
         left auto
-        background $trans
+        background $tr
       +land()
         left 0
     &:hover
@@ -66,14 +79,14 @@
 .slider-header
   height 390px
   .arrow
-    background $trans
+    background $tr
     border-color $blue-light11
     svg g
-      fill $white
+      fill $wt
     &.right
-      background $blue-light12
+      bg($blue-light12)
       +mob()
-        background $trans
+        bg($tr)
       +land()
         background $blue-light12
       &:hover
@@ -88,16 +101,36 @@
 .slider-about
   &.slider-with-line.slider-with-line-sync
     .blog.blog-about
-      margin 0 $r15
+      margin 0 r(15)
     .slick-track
-      padding-top 0
-      padding-bottom: 0;
-
+      pt(0)
       pb(0)
       +port()
         left: 23px;
       +mob()
         left 0
+
+.slider-events-year-header
+  .arrow
+    bg($blue-light12)
+    border-color $blue-light11
+    +xs()
+      bottom: auto;
+      top: 220px;
+    svg g
+      fill $blue-light11
+    &.right
+      right calc(50% + 15px)
+      left auto
+      +xs()
+        right 0
+    &.left
+      right calc(50% + 15px + 82px)
+      left auto
+      +land()
+        right calc(50% + 15px + 64px)
+      +xs()
+        right 64px
 
 //.slider-about-sync
 //  +mob()

@@ -1,7 +1,9 @@
+@import '../../utilities/utilities'
+
 .blog
   display block
   position relative
-  mb($r69)
+  mb(r(69))
   +mob()
     mb(0)
   &--image
@@ -9,8 +11,8 @@
     display flex
     align-items center
     justify-content center
-    margin-bottom ($r37)
-    background $white
+    margin-bottom (r(37))
+    bg($wt)
     overflow hidden
     +tab()
       height 191px
@@ -27,33 +29,33 @@
       position absolute
       bottom: 15px;
       right: 13px;
-      font-size: $e14
+      font-size: e(14)
       font-weight: bold;
       color: $blue-light
       font-family $a-font, sans-serif
   &--description
-    mb($r35)
+    mb(r(35))
   &:hover
     .blog--image
       img
         opacity .4
     .btn-more
       background $blue
-      color $white
+      co($wt)
       max-width 100%
-      pl($r30)
+      pl(r(30))
       svg
         opacity 1
 
   &.blog-advantage
-    mb($r64)
+    mb(r(64))
 
     .blog--image
       height 225px
-      mb($r39)
+      mb(r(39))
       +mob()
         min-height 181px
-        mb($r37)
+        mb(r(37))
         img
           width 100%
       +land()
@@ -63,11 +65,11 @@
       mb(0)
       h3
         line-height: 1.3;
-        color $blue-dark2
-        fs($e20)
-        mb($r27)
+        co($blue-dark2)
+        fs(e(20))
+        mb(r(27))
         +mob()
-          mb($r24)
+          mb(r(24))
 
   &.blog-about
     max-width 360px
@@ -80,29 +82,29 @@
       max-width 263px
     .blog--image
       height 280px
-      mb($r41)
+      mb(r(41))
     .blog--description
-      mb($r33)
+      mb(r(33))
 
 
   &.blog-chief
-    mb($r41)
+    mb(r(41))
     .blog--image
       height 181px
-      mb($r40)
+      mb(r(40))
       +mob()
-        mb($r25)
+        mb(r(25))
     h3
-      fs($e20)
-      mb($r32)
+      fs(e(20))
+      mb(r(32))
       +mob()
-        mb($r13)
+        mb(r(13))
     &.blog-chief-small
-      mb($r83)
+      mb(r(83))
       +mob()
-        mb($r41)
+        mb(r(41))
       h3
-        mb($r12)
+        mb(r(12))
     &:hover
       .blog--image
         img

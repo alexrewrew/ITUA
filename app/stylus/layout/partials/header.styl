@@ -1,46 +1,45 @@
-@import '../../utilities/vars'
-@import '../../utilities/mixins'
+@import '../../utilities/utilities'
 
 header
-  padding-top 7.563rem
-  background $blue-light9
+  pt(7.563rem)
+  bg($blue-light9)
   height 511px
   overflow hidden
   +mob()
-    pt($r59)
+    pt(r(59))
   +port()
     pt(8.75rem)
   &.header-index
-    background $blue-light4
-    margin-bottom $r90
+    bg($blue-light4)
+    mb(r(90))
     height 100vh
     min-height 768px
     display flex
     align-items flex-end
     trans()
     +tab()
-      mb($r60)
+      mb(r(60))
     +port()
-      mb($r60)
+      mb(r(60))
     +mob()
-      padding-top $r59
+      pt(r(59))
       min-height: unset
       align-items flex-start
-      mb($r65)
+      mb(r(65))
       height auto
 
   &.header-about-us
-    margin-bottom $r90
+    mb(r(90))
     height auto
     +mob()
-      padding-top $r59
+      pt(r(59))
       height auto
-      mb($r65)
+      mb(r(65))
     .breadcrumbs
       position absolute
       left 15px
       top 0
-      mb($r13)
+      mb(r(13))
       +mob()
         position static
 
@@ -50,7 +49,7 @@ header
     z-index 40
     overflow visible
     +mob()
-      pb($r46)
+      pb(r(46))
       height auto
     &:after
       pseudo(block, absolute)
@@ -58,10 +57,10 @@ header
       left 0
       right 0
       height 73px
-      background $blue-light9
+      bg($blue-light9)
       z-index -1
     p
-      margin-top $r6
+      mt(r(6))
     &.header-about-business-without-after
       height 457px
       mb(r(90))
@@ -71,10 +70,10 @@ header
         display none
 
   &.header-committees
-    mb($r40)
+    mb(r(40))
     height auto
     p
-      margin-top $r6
+      mt(r(6))
     .ul-tablist
       mb(5rem)
 
@@ -83,7 +82,22 @@ header
     bg($blue-light-back)
     mb(0)
     h1
-      color $blue-dark
+      co($blue-dark)
+
+  &.header-events-year
+    height auto
+    pb(r(56))
+    mb(r(91))
+    +mob()
+      pb(r(45))
+    h1
+      position absolute
+      left 15px
+      co($wt)
+      bg($blue-light9)
+      z-index 50
+      +mmax(991px)
+        position static
 
 .header-col
   &.left
@@ -98,7 +112,7 @@ header
 
 .header-text
   +mob()
-    pb($r50)
+    pb(r(50))
 
 
 

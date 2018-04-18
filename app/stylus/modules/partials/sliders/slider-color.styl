@@ -1,17 +1,19 @@
+@import '../../utilities/utilities'
+
 .link-color-img
   display flex
   align-items center
   justify-content center
   overflow hidden
   height 48vh
-  margin-top $r8
+  margin-top r(8)
   min-height 365px
   +port()
     flex-direction column
   +mob()
     height 210px
     mt(0)
-    mb($r68)
+    mb(r(68))
     width calc(100% + 30px)
     left -15px
     right -15px
@@ -20,7 +22,7 @@
   .img-color
     display inline-block
     min-height 100%
-    width 100%
+    width auto
     flex 0 0 auto
     +mob()
       height auto
@@ -35,72 +37,72 @@
     width 100%
     right 0
     bottom 0
-    background $blue-light4
+    bg($blue-light4)
     transition .6s all ease
 
 .slider-color
-  pb($r62)
+  pb(r(62))
   +mob()
     left -15px
     right -15px
     width calc(100% + 30px)
-    pb($r72)
+    pb(r(72))
   &--heading
     font-family $a-font, sans-serif
-    font-size $e44
+    font-size e(44)
     font-weight 700
     line-height 1.14
     letter-spacing 1px
-    color $white
+    co($wt)
     display inline-block
-    margin-bottom $r52
+    margin-bottom r(52)
     +xxl()
-      fs($e56)
-      mb($r92)
+      fs(e(56))
+      mb(r(92))
     +port()
-      fs($e66)
+      fs(e(66))
     +mob()
-      font-size: $e24
+      font-size: e(24)
       line-height: 1.33;
-      mb($r17)
+      mb(r(17))
     &:hover
-      color $white
+      co($wt)
 
   &--date
     df(row)
-    mt($r30)
-    mb($r57)
+    mt(r(30))
+    mb(r(57))
     li
-      color $white
-      fs($e14)
+      co($wt)
+      fs(e(14))
       letter-spacing: 1px;
-      mr($r40)
+      mr(r(40))
       fw(700)
       &:last-child
         mr(0)
       a
-        co($white)
+        co($wt)
         text-decoration underline
         &:hover
           color $blue
 
   p
-    color $white
+    co($wt)
     +port()
-      font-size ($e16)
+      font-size (e(16))
     +mob()
-      mb($r34)
+      mb(r(34))
   .link-detail
     float left
 
   .arrow
-    border-color $white30
+    border-color $wt30
     +mob()
       bottom auto
       top 210px
     svg
       g
-        fill $white
+        fill $wt
 
   .arrow.left
     left: calc(1057px - 50%);

@@ -18,6 +18,7 @@
         sliderColor : $('.slider-color'), //slider for colors
         sliderCalendar : $('.slider-calendar'), //slider of events
 
+        sliderEventsYear : $('.slider-events-year-header'),
 
         sliderMember : $(".slider-member"), //slider of members
         sliderMemberSync : $(".slider-progressbar-member .slider-progressbar--track"), //slider of members
@@ -86,7 +87,7 @@
             prevArrow: DOMs.sliderArrowLeft,
             nextArrow: DOMs.sliderArrowRight,
             fade: true,
-            speed: 0
+            speed: 0,
         }).on('afterChange', colorSet);
 
         DOMs.linkColor.hover(function () {
@@ -104,7 +105,18 @@
             dots: false,
             slidesToScroll: 1,
             infinite: true,
-            variableWidth: true
+            variableWidth: true,
+            speed: 250
+        });
+
+        // SLIDER OF EVENTS YEAR
+        DOMs.sliderEventsYear.slick({
+            prevArrow: DOMs.sliderArrowLeft,
+            nextArrow: DOMs.sliderArrowRight,
+            dots: false,
+            slidesToScroll: 1,
+            infinite: true,
+            speed: 250
         });
 
 
@@ -116,7 +128,8 @@
             dots: false,
             infinite: false,
             rows: 2,
-            variableWidth: true
+            variableWidth: true,
+            speed: 250
         }).on('beforeChange', function(event, slick, currentSlide, nextSlide) {
             sliderProgressbar(nextSlide, slick, DOMs.sliderMemberSync);
         });
@@ -128,8 +141,9 @@
             nextArrow: DOMs.sliderArrowRight,
             dots: false,
             slidesToScroll: 1,
-            infinite: false,
-            variableWidth: true
+            infinite: true,
+            variableWidth: true,
+            speed: 250
         }).on('beforeChange', function(event, slick, currentSlide, nextSlide) {
             sliderProgressbar(nextSlide, slick, DOMs.sliderPartnersSync);
         });
@@ -139,8 +153,9 @@
             slidesToShow: 1,
             slidesToScroll: 1,
             infinite: true,
+            speed: 250,
             prevArrow: DOMs.sliderArrowLeft,
-            nextArrow: DOMs.sliderArrowRight,
+            nextArrow: DOMs.sliderArrowRight
         });
         //
         // // SLIDER ABOUT
@@ -150,6 +165,7 @@
             dots: false,
             slidesToScroll: 1,
             infinite: false,
+            speed: 250,
             variableWidth: true
         }).on('beforeChange', function(event, slick, currentSlide, nextSlide) {
             sliderProgressbar(nextSlide, slick, DOMs.sliderAboutSync);
@@ -161,6 +177,7 @@
             infinite: false,
             arrows: false,
             variableWidth: true,
+            speed: 250,
             responsive: [
                 {
                     breakpoint: 40000,
@@ -185,6 +202,7 @@
             infinite: false,
             arrows: false,
             variableWidth: true,
+            speed: 250,
             responsive: [
                 {
                     breakpoint: 40000,
@@ -209,6 +227,7 @@
             infinite: false,
             arrows: false,
             variableWidth: true,
+            speed: 250,
             responsive: [
                 {
                     breakpoint: 40000,
@@ -233,6 +252,7 @@
             infinite: false,
             arrows: false,
             variableWidth: true,
+            speed: 250,
             responsive: [
                 {
                     breakpoint: 40000,

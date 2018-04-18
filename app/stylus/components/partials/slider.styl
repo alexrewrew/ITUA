@@ -1,5 +1,4 @@
-@import '../../utilities/vars'
-@import '../../utilities/mixins'
+@import '../../utilities/utilities'
 
 .slick-loading .slick-list
   background: #fff url('../img/slick/ajax-loader.gif') center center no-repeat;
@@ -35,7 +34,7 @@
     &:hover
       background $blue-light6
       svg g
-        fill $white
+        fill $wt
   .arrow.left
     left calc(1186px - 50%)
     &:hover
@@ -84,16 +83,16 @@
 
 //.slider-counter
 //  font-size 3em
-//  margin-bottom $r16
+//  margin-bottom r(16)
 //  text-align right
 
 //.slider.slick-dotted.slick-slider
-//  margin-bottom $r30
+//  margin-bottom r(30)
 
 //.slider-two, .slider-three
 //  margin 0 -.938em
 //  .slide
-//    margin 0 $r15
+//    margin 0 r(15)
 //    overflow hidden
 
 .slider-block

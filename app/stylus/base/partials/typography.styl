@@ -1,9 +1,8 @@
-@import '../../utilities/vars'
-@import '../../utilities/mixins'
+@import '../../utilities/utilities'
 
 ::selection
-  background $blue-light4
-  color $white
+  bg($blue-light4)
+  co($wt)
 
 h5, h6, p, ul li, ol li, blockquote, cite
   font-family $m-font, sans-serif
@@ -12,74 +11,73 @@ h1, h2, h3, h4
   font-family $a-font, sans-serif
 
 h1
-  font($e44, 700, 1.11)
-  mb($r43)
+  font(e(44), 700, 1.11)
+  mb(r(43))
   letter-spacing: 1px;
-  color: $white
+  co($wt)
   +mob()
     font-size: 2.5em
-    mb($r24)
+    mb(r(24))
 
 
 h2
-  font($e32, 700, 1.53)
-  mb($r31)
+  font(e(32), 700, 1.53)
+  mb(r(31))
   letter-spacing: 1px;
   color: $blue-dark
   +mob()
-    font-size: $e24
-    //line-height: 2.04;
-    mb($r24)
+    fs(e(24))
+    mb(r(24))
 
 h2.h2-public
   +mob()
-    margin-bottom $r5
+    mb(r(5))
 
 
 
 h3
-  font($e18, 700, 1.45)
-  mb($r15)
-  color $blue-dark3
+  font(e(18), 700, 1.45)
+  mb(r(15))
+  co($blue-dark3)
 
 h4
-  font($e24, 700, 1.75)
-  mb($r17)
+  font(e(24), 700, 1.75)
+  mb(r(17))
   letter-spacing: 0.8px;
-  color $blue
+  co($blue)
 
 h5
-  font($e26, 400, 1.88)
-  mt($r51)
-  mb($r21)
-  color: $white;
+  font(e(26), 400, 1.88)
+  mt(r(51))
+  mb(r(21))
+  co($wt)
   +mob()
     mt(0)
-    fs($e24)
+    fs(e(24))
     line-height 1.17
-    mb($r33)
+    mb(r(33))
   +land()
-    mt($r51)
+    mt(r(51))
 
 h6
-  font($e16, 400, 1.25)
-  mb($r40)
-  color: $blue-light4
+  font(e(16), 400, 1.25)
+  mb(r(40))
+  co($blue-light4)
   .company
     text-decoration underline
   +mob()
-    mb($r24)
+    mb(r(24))
 
 p
-  font($e14, 400, 1.58)
+  font(e(14), 400, 1.58)
   co($black-text)
-  mb($r22)
+  mb(r(22))
 
 hr
   border: 0;
   height: 1px;
-  background: $blue-light3
-  margin $r42 0
+  bg($blue-light3)
+  margin r(42) 0
   width calc(100% + 30px)
   position relative
   left -15px
@@ -87,57 +85,57 @@ hr
 .heading-h1-h2
   display flex
   flex-wrap wrap
-  mb($r31)
+  mb(r(31))
   +mob()
-    mb($r24)
+    mb(r(24))
   h2
-    margin-right $r13
+    mr(r(13))
     mb(0)
-    +cmax(991px)
+    +mmax(991px)
       line-height 1.3
   h1
-    fs($e32)
+    fs(e(32))
     line-height 1.53
     color: $blue-dark
     mb(0)
     +mob()
-      font-size: $e24
-    +cmax(991px)
+      fs(e(24))
+    +mmax(991px)
       line-height 1.3
 
 .tablist-choose
-  font-size: $e16
-  font-weight: bold;
+  fs(e(16))
+  fw(700)
   line-height: 1.38;
-  color: $blue-light13
-  mb($r14)
+  co($blue-light13)
+  mb(r(14))
   &.big
-    mt($r14)
+    mt(r(14))
     line-height: 1.22;
-    fs($e18)
+    fs(e(18))
 
 
 //  MARGINS
 .mb-51
-  mb($r51)
+  mb(r(51))
 
 .mb-66
-  mb($r66)
+  mb(r(66))
 
 .mb-43
-  mb($r43)
+  mb(r(43))
 
 .mb-37
-  mb($r37)
+  mb(r(37))
 
 .mb-mt-43-38
-  margin-top: $r38
-  margin-bottom: $r43
+  mt(r(38))
+  mb(r(43))
 
 .mb-mt-81-30
-  margin-top: $r30
-  margin-bottom: $r81
+  mt(r(30))
+  mb(r(81))
 
 .mb-mt-82-90
-  margin-top: r(90)
-  margin-bottom: r(82)
+  mt(r(90))
+  mb(r(82))

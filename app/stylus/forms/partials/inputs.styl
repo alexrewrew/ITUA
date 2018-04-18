@@ -1,13 +1,12 @@
-@import '../../utilities/vars'
-@import '../../utilities/mixins'
+@import '../../utilities/utilities'
 
 input
   -webkit-appearance none
   width 100%
-  margin-bottom $r20
+  mb(r(20))
   border 1px solid #ccc
   border-radius: 0;
-  padding $r11 $r15 $r12
+  padding r(11) r(15) r(12)
   trans()
   &:-webkit-autofill
     -webkit-box-shadow: inset 0 0 0 50px #fff !important
@@ -16,7 +15,7 @@ input
     outline none
     border-color blue
   +placeholder()
-    color #999
+    co(#999)
 
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button
@@ -31,43 +30,43 @@ input[type=reset]
   cursor pointer
 
 label
-  padding-left $r16
-  font-weight 700
-  font-size $e16
-  margin-bottom $r13
+  pl(r(16))
+  fw(700)
+  fs(e(16))
+  mb(r(13))
 
 textarea
   -webkit-appearance none
   resize none
-  margin-bottom $r20
+  mb(r(20))
   border 1px solid #ccc
   border-radius: 0;
   width 100%
   height 100px
-  padding $r11 $r15 $r12
+  padding r(11) r(15) r(12)
   trans()
   &:focus
     outline none
     border-color blue
   +placeholder()
-    color #999
+    co(#999)
 
 .input-group
   position relative
-  margin-bottom $r20
+  mb(r(20))
   input
-    margin-bottom 0
-    padding-left 45px
+    mb(0)
+    pl(r(45))
   textarea
-    padding-left 45px
-    margin-bottom 0
+    mb(0)
+    pl(r(45))
     & + span
       height 45px
     &:focus + span
-      color blue
+      co(blue)
   select
-    padding-left 45px
-    margin-bottom 0
+    mb(0)
+    pl(r(45))
   span
     position absolute
     top 0

@@ -1,34 +1,36 @@
+@import '../../utilities/utilities'
+
 +mob()
   .menu li a
-    color: $white60
+    color: $wt60
     &:hover
       color $blue-dark4
 
   .ul-lang li a
-    color: $white30;
+    color: $wt30;
     &.active, &:hover
-      color $white
+      co($wt)
   .form-search
     .input-group
       input
-        background $white15
-        color $white
+        background $wt15
+        co($wt)
         +placeholder()
-          color $white
+          co($wt)
       span
         svg g
-          fill $white
+          fill $wt
   .ul-login
     &:before
-      background $white30
+      background $wt30
     li a
-      color $white
+      co($wt)
       svg g
-        fill $white
+        fill $wt
       &:hover
-        color: $white30;
+        color: $wt30;
         svg g
-          fill: $white30;
+          fill: $wt30;
   .menu li.dropdown
     ul
       background $blue-light6

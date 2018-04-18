@@ -1,8 +1,7 @@
-@import '../../utilities/vars'
-@import '../../utilities/mixins'
+@import '../../utilities/utilities'
 
 blockquote
-  padding $r15
+  padding r(15)
   position relative
   &:before, &:after
     position absolute
@@ -18,6 +17,6 @@ blockquote
     bottom 0
 
 cite
-  fs($e16)
+  fs(e(16))
   font-style italic
   color $gray

@@ -1,12 +1,11 @@
-@import '../../utilities/vars'
-@import '../../utilities/mixins'
+@import '../../utilities/utilities'
 
 ul
   li
     list-style none
     ul
-      margin-top $r15
-      margin-left $r20
+      mt(r(15))
+      ml(r(20))
 
 ul, ol
   padding 0
@@ -15,25 +14,25 @@ ul, ol
     font-family $m-font, sans-serif
 
 ol
-  margin-left $r20
+  ml(r(20))
   li
     ol
-      margin-top $r15
+      mt(r(15))
 
 .ul-regular
-  mb($r25)
+  mb(r(25))
   li
     position relative
-    padding-left $r33
-    margin-bottom $r5
+    pl(r(33))
+    mb(r(5))
     line-height 1.25
-    fs($e14)
-    color $black-text
+    fs(e(14))
+    co($black-text)
     &:before
       pseudo(block, absolute)
       width 14px
       height 3px
-      background $blue
+      bg($blue)
       top 7px
       left 0
 
@@ -43,18 +42,18 @@ ol
   +mob()
     order 2
   li
-    margin 0 $r11
+    margin 0 r(11)
     a
-      fs($e18)
-      font-weight: bold;
-      color: $blue-light-back4
+      fs(e(18))
+      fw(700)
+      co($blue-light-back4)
       &:hover, &.active
-        color $blue-dark
+        co($blue-dark)
 
 .ul-login
   display flex
   position relative
-  padding $r1 0
+  padding r(1) 0
   &:before
     pseudo(block, absolute)
     width 1px
@@ -68,10 +67,10 @@ ol
     a
       display flex
       align-items center
-      color $blue-dark3
+      co($blue-dark3)
       fw(700)
       svg
-        mr($r13)
+        mr(r(13))
         g
           fill $blue-dark3
       &:hover
@@ -82,27 +81,27 @@ ol
 .ul-social
   display flex
   flex-wrap wrap
-  pt($r3)
-  mb($r40)
+  pt(r(3))
+  mb(r(40))
   +mob()
-    mt($r43)
+    mt(r(43))
   li
     width 100%
     display flex
     align-items center
-    mb($r10)
+    mb(r(10))
 
     a
       display flex
       align-items center
-      color $white
-      fs($e14)
+      co($wt)
+      fs(e(14))
       svg
-        margin-right $r12
+        mr(r(12))
         g
-          fill $white
+          fill $wt
       &:hover
-        color $blue
+        co($blue)
         svg g
           fill $blue
 
@@ -113,10 +112,10 @@ ol
   li
     flex 1 1 calc(50% - 30px)
     max-width calc(50% - 30px)
-    padding-right $r100
-    margin 0 15px
+    pr(r(100))
+    margin 0 r(15)
     +tab()
-      pr($r50)
+      pr(r(50))
     +port()
       pr(0)
     +mob()
@@ -144,41 +143,41 @@ ol
     width 100%
     +mob()
       box-shadow: 0 10px 30px 0 rgba(94, 107, 126, 0.3);
-      margin  $r10 0 $r30
+      margin  r(10) 0 r(30)
     a
       display flex
-      font-size: $e16
-      font-weight: 700
+      fs(e(16))
+      fw(700)
       font-family $a-font, sans-serif
       line-height: 1.38;
-      color: $blue
-      background $white
-      padding $r12 $r5 $r16
+      co($blue)
+      bg($wt)
+      padding r(12) r(5) r(16)
       justify-content center
       align-items center
       text-align center
       position relative
       height 100%
       +mob()
-        padding $r12 $r15 $r16
+        padding r(12) r(15) r(16)
 
       &:after
         pseudo(block,absolute)
         top 4px
         bottom 4px
         width 1px
-        background $blue
+        bg($blue)
         left 0
 
       &:hover
-        background $blue
-        color $white
+        bg($blue)
+        co($wt)
         box-shadow: 0 10px 30px 0 rgba(24, 111, 240, 0.5);
         width: calc(100% + 1px);
         z-index: 20;
       &.active
-        background $black-text4
-        color $white
+        bg($black-text4)
+        co($wt)
         box-shadow none
         width: calc(100% + 1px);
         z-index: 20;
@@ -189,27 +188,46 @@ ol
           +mob()
             display block
 
+.ul-slider-events-date
+  display flex
+  align-items center
+  mb(r(62))
+  +mob()
+    mb(r(30))
+  li
+    &:first-child
+      co($wt)
+      fs(e(32))
+      fw(700)
+      mr(r(46))
+      font-family $a-font, sans-serif
+    &:last-child
+      fs(e(16))
+      line-height: 1.43;
+      co($blue-light4)
+
+
 
 .ol-attention
   counter-reset: attention;
   list-style none
-  pt($r28)
+  pt(r(28))
   ml(0)
-  mb($r32)
+  mb(r(32))
   display flex
   +mob()
     flex-wrap wrap
   li
     position relative
-    pt($r80)
+    pt(r(80))
     width 100%
-    pr($r60)
+    pr(r(60))
     +tab()
-      pr($r30)
+      pr(r(30))
     +port()
-      pr($r20)
+      pr(r(20))
     +mob()
-      pr($r20)
+      pr(r(20))
     +land()
       width 50%
     &:before
@@ -224,8 +242,8 @@ ol
       left 34px
       top 0
       position absolute
-      color $blue-light14
+      co($blue-light14)
       font-family: $a-font, sans-serif
-      font-size: $e70
+      fs(e(70))
       font-weight: 700
       letter-spacing: 3.5px;

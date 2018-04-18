@@ -1,29 +1,28 @@
-@import '../../utilities/vars'
-@import '../../utilities/mixins'
+@import '../../utilities/utilities'
 
 //.tabs
 //  df(row)
-//  margin-bottom $r16
+//  margin-bottom r(15)
 //
 //.tabs li
 //  a
 //    cursor: pointer;
-//    padding $r12 $r15 $r13
+//    padding r(15) r(15) $r13
 //    color $black
 //    display block
 //    trans()
 //
 //    &:hover
-//      color $white
+//      color $wt
 //      background lightblue
 //  a.active
-//    color $white
+//    color $wt
 //    background blue
 //
 //
 //.tabs-content
 //  display: none;
-//  padding: $r10 $r15
+//  padding: $r10 r(15)
 //  animation: fadeEffect 1s;
 //
 //.tabs-content.active
@@ -38,53 +37,53 @@
 
 .tabs-publication
   position relative
-  pb($r37)
-  mb($r43)
+  pb(r(37))
+  mb(r(43))
   +tab()
     ml(-1.876rem)
     mr(-.938rem)
   +port()
-    pb($r17)
+    pb(r(17))
   +mob()
     pb(0)
     ml(-15px)
     mr(-15px)
-    mb($r34)
+    mb(r(34))
   &:after
     pseudo(block, absolute)
     width 1170px
     left -210px
     bottom 0
     height 1px
-    background $blue-light3
+    bg($blue-light3)
     +mob()
       bottom 3px
   &--ul
     display flex
-    padding-top $r19
-    padding-bottom $r19
+    pt(r(19))
+    pb(r(19))
     +mob()
       pt(0)
       pb(0)
     li
-      margin-right $r28
+      mr(r(28))
       +tab()
-        mr($r15)
+        mr(r(15))
       +mob()
-        mr($r59)
+        mr(r(59))
       a
         display block
         font-family $a-font, sans-serif
-        font-size: $e16
-        font-weight: 700
+        fs(e(16))
+        fw(700)
         letter-spacing: 0.5px
-        color: $blue-light
+        co($blue-light)
         +tab()
-          fs($e14)
+          fs(e(14))
         +mob()
           position relative
-          pb($r30)
-          pl($r16)
+          pb(r(30))
+          pl(r(16))
           &:after
             pseudo(none, absolute)
             bottom 0px
@@ -93,19 +92,19 @@
             bg($blue-light3)
 
         &.active
-          color $blue
+          co($blue)
           +mob()
             &:after
               display block
           &:hover
-            color $blue
+            co($blue)
 
         &:hover
-          color $blue-dark3
+          co($blue-dark3)
   &--line
     width: 183px;
     height: 3px;
-    background-color: $blue-light3
+    bg($blue-light3)
     position absolute
     bottom 42px
     left 22px

@@ -1,3 +1,5 @@
+@import '../../utilities/utilities'
+
 .row-publications
   +tab()
     .col-xl-3
@@ -6,7 +8,7 @@
   +mob()
     .blog
       width 263px
-      mb($r50)
+      mb(r(50))
 
   +land()
     margin: 0 -30px;
@@ -28,5 +30,53 @@
       height 330px
     +mob()
       max-width 100%
+
+.row-events-year-slide
+  padding-top r(10)
+  pb(r(62))
+  +land()
+    pb(r(48))
+  h2
+    mb(r(23))
+  p
+    mb(r(86))
+  .btn-arrow
+    padding r(14) r(29) r(15)
+    letter-spacing: 0.5px;
+    max-width 263px
+    fs(e(16))
+    svg
+      max-width 20px
+      top 13px
+      right 30px
+  &--image
+    position absolute
+    display flex
+    align-items center
+    justify-content center
+    left 16px
+    bottom 0
+    height 300px
+    overflow hidden
+    max-width 456px
+    +tab()
+      max-width 447px
+    +port()
+      position static
+      height 100%
+    +land()
+      position static
+      height 100%
+    +xs()
+      position static
+      height 210px
+      max-width 100%
+      margin-bottom: 4.25rem
+    img
+      flex: 0 0 auto
+      min-height 100%
+
+
+
 
 

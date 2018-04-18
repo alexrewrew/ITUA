@@ -1,10 +1,9 @@
-@import "../../utilities/vars"
-@import "../../utilities/mixins"
+@import '../../utilities/utilities'
 
 a
   text-decoration none
   font-family $m-font, sans-serif
-  color blue
+  co(blue)
   trans()
   svg g
     trans()
@@ -28,13 +27,13 @@ a
   font-family $a-font,sans-serif
   align-items center
   letter-spacing: 0.5px;
-  font-size $e16
-  color $blue
-  font-weight 700
+  fs(e(16))
+  co($blue)
+  fw(700)
   float right
-  padding: $r18 0;
+  padding: r(18) 0
   +tab()
-    fs($e14)
+    fs(e(14))
   +mob()
     line-height: 3.06;
     float: none
@@ -42,13 +41,13 @@ a
     pb(0)
 
   svg
-    margin-left 18px
+    ml(r(18))
     trans()
     g
       fill $blue
       trans()
   &:hover
-    color $blue4
+    co($blue4)
     svg
       transform translate3d(20px,0,0)
       g

@@ -1,19 +1,21 @@
+@import '../../utilities/utilities'
+
 .comment
   display flex
   box-shadow: 0 10px 30px 0 rgba(94, 107, 126, 0.3);
   min-height 285px
   position relative
   z-index 50
-  background $white
+  bg($wt)
 
   +port()
     flex-wrap wrap
-    mb($r100)
+    mb(r(100))
   +mob()
-    mb($r100)
+    mb(r(100))
     flex-wrap wrap
   +land()
-    mb($r40)
+    mb(r(40))
   &--left
     max-width 150px
     flex 1 1 150px
@@ -26,7 +28,7 @@
       max-width 100%
     &-date
       position absolute
-      font-size: $e14
+      font-size: e(14)
       font-weight: bold;
       color: $blue-light;
       right 0
@@ -52,30 +54,30 @@
           min-height 100%
           flex 0 0 auto
   &--right
-    padding $r42 $r15 $r44 $r0
-    ml($r44)
+    padding r(42) r(15) r(44) 0
+    ml(r(44))
     position relative
     +tab()
-      ml($r34)
+      ml(r(34))
     +port()
       width 100%
-      padding-left $r25
-      padding-right $r25
+      padding-left r(25)
+      padding-right r(25)
       ml(0)
     +mob()
       width 100%
-      padding-left $r25
-      padding-right $r25
+      padding-left r(25)
+      padding-right r(25)
       ml(0)
-      pt($r25)
+      pt(r(25))
     h3
-      fs($e28)
-      mb($r0)
+      fs(e(28))
+      mb(0)
       +mob()
-        fs($e22)
+        fs(e(22))
     p
       +mob()
-        mb($r43)
+        mb(r(43))
     &-done
       position absolute
       right 0
@@ -105,18 +107,18 @@
           right 25px
       +port()
         left 0
-        pl($r25)
+        pl(r(25))
         min-width 50%
       +mob()
         left 0
-        pl($r25)
+        pl(r(25))
         min-width 100%
-        background $blue
-        color $white
+        bg($blue)
+        co($wt)
         svg
           opacity 1
           g
-            fill $white
+            fill $wt
 
   &.comment-initiative
     min-height 300px
@@ -185,9 +187,9 @@
     box-shadow 0 4px 10px 0 rgba(94, 107, 126, 0.3)
     .btn-more
       background $blue
-      color $white
+      co($wt)
       max-width 100%
-      pl($r30)
+      pl(r(30))
       svg
         opacity 1
       &:after

@@ -1,8 +1,7 @@
-@import '../../utilities/vars'
-@import '../../utilities/mixins'
+@import '../../utilities/utilities'
 
 nav
-  background $white
+  bg($wt)
   position fixed
   top 0
   left 0
@@ -16,69 +15,69 @@ nav
     height 59px
 
 nav.nav-index.unscrolled
-  background $trans
+  bg($tr)
   .link-logo
     svg
       g, path, polygon
-        fill $white
+        fill $wt
   .nav-top
-    border-bottom-color $white30
+    border-bottom-color $wt30
 
   .nav-icon
     &:before
-      background rgba(255, 255, 255, .3)
+      bg($wt30)
     span
-      bg($white)
+      bg($wt)
 
 
-  +cmin(768px)
+  +mmin(768px)
     .menu li a
-      color: $white60
+      co($wt60)
       &:hover
-        color $blue-dark4
+        co($blue-dark4)
 
     .ul-lang li a
-      color: $white30;
+      co($wt30)
       &.active, &:hover
-        color $white
+        co($wt)
     .form-search
       .input-group
         input
-          background $white15
-          color $white
+          bg($wt15)
+          co($wt)
           +placeholder()
-            color $white
+            co($wt)
         span
           svg g
-            fill $white
+            fill $wt
     .ul-login
       &:before
-        background $white30
+        bg($wt30)
       li a
-        color $white
+        co($wt)
         svg g
-          fill $white
+          fill $wt
         &:hover
-          color: $white30;
+          co($wt30)
           svg g
-            fill: $white30;
+            fill: $wt30;
     .menu li.dropdown
       ul
-        background $blue-light6
+        bg($blue-light6)
 
 .nav-top
-  padding $r22 0 $r12
+  padding r(22) 0 r(12)
   border-bottom 1px solid rgba(95, 128, 165, .15)
   +mob()
-    padding $r14 0 $r8
+    padding r(14) 0 r(8)
     height 59px
 
 .nav-bottom
-  padding-top $r15
+  pt(r(15))
   trans()
   +mob()
     bg($blue-light6)
-    padding-top $r20
+    pt(r(20))
     transform translate3d(0, -180vh, 0)
 
 .menu
@@ -88,8 +87,8 @@ nav.nav-index.unscrolled
   height 100%
   +mob()
     flex-wrap wrap
-    padding-left $r19
-    padding-top $r39
+    pl(r(19))
+    pt(r(39))
   +xxl()
     max-width 75%
   li
@@ -98,17 +97,17 @@ nav.nav-index.unscrolled
       width 100%
     a
       display block
-      font-size: $e13
-      pb($r16)
-      color $blue-dark5
+      fs(e(13))
+      pb(r(16))
+      co($blue-dark5)
       +port()
-          pr($r10)
-          pl($r10)
+          pr(r(10))
+          pl(r(10))
           text-align center
       +mob()
-        font-size $e17
+        fs(e(17))
       &:hover
-        color $blue-light-back4
+        co($blue-light-back4)
     &.dropdown
       +port()
         height 100%
@@ -125,7 +124,7 @@ nav.nav-index.unscrolled
             pseudo(block, absolute)
             height 2px
             width 7px
-            background $blue-light-back4
+            bg($blue-light-back4)
             right 12px
             top 13px
           &:before
@@ -137,9 +136,8 @@ nav.nav-index.unscrolled
       ul
         position absolute
         margin 0
-        padding: $r23 $r14 $r19
-        background $blue-light-back3
-
+        padding: r(23) r(14) r(19)
+        bg($blue-light-back3)
         width 180px
         left: -14px;
         top: 100%
@@ -156,14 +154,14 @@ nav.nav-index.unscrolled
           right 0
           bottom 0
           transform translate3d(100vw, 0, 0)
-          padding $r5 $r34 $r19
+          padding r(5) r(34) r(19)
         li
-          mb($r15)
+          mb(r(15))
           a
             pb(0)
             text-align left
             +port()
-              pr($r10)
+              pr(r(10))
               pl(0)
           &.dropdown-back
             display none
@@ -171,13 +169,13 @@ nav.nav-index.unscrolled
               display block
               a
                 position relative
-                color $blue-dark4
+                co($blue-dark4)
 
                 &:before, &:after
                   pseudo(block, absolute)
                   height 2px
                   width 7px
-                  background $blue-dark4
+                  bg($blue-dark4)
                   left -19px
                   top 13px
                 &:before
@@ -201,7 +199,7 @@ nav.nav-index.unscrolled
   width 26px
   height 23px
   position relative
-  margin $r3 $r11
+  margin r(3) r(11)
   cursor pointer
   trans()
   transform rotate(0deg)
@@ -211,7 +209,7 @@ nav.nav-index.unscrolled
     position absolute
     height 3px
     width 100%
-    background $blue-dark3
+    bg($blue-dark3)
     border-radius 2px
     opacity 1
     left 0
@@ -232,22 +230,20 @@ nav.nav-index.unscrolled
     left: -27px;
     top: -17px;
 
-//@import "../../../source/rew-ui-kit/rew-navigation/nav-right-left.styl"
-//@import "../../../source/rew-ui-kit/rew-navigation/nav-top-bottom.styl"
 
 #nav-list
   display flex
   justify-content space-between
-  padding-right: $r20
-  padding-left: $r47
+  pr(r(20))
+  pl(r(47))
   +xxl()
-    padding-left: $r80
+    pl(r(80))
   +port()
-    padding-right $r15
-    padding-left $r25
+    pr(r(15))
+    pl(r(25))
   +mob()
     display none
-    padding 0 $r15
+    padding 0 r(15)
     align-items center
 
 #nav-logo
