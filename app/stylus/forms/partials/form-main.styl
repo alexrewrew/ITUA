@@ -126,3 +126,71 @@
       max-width 414px
 
 
+.form-filter
+  display flex
+  justify-content space-between
+  mb(r(40))
+  +xs()
+    flex-wrap wrap
+  .select-container
+    flex 1 1 calc(50% - 15px)
+    max-width calc(50% - 15px)
+    +xs()
+      flex 1 1 100%
+      max-width 100%
+    select
+      border: none
+      border-bottom 2px solid $blue
+      color: $blue
+      font-size: e(14)
+      line-height: 1.57;
+      pb(r(11))
+      pl(r(19))
+      pt(r(9))
+  .input-group
+    position relative
+    flex 1 1 calc(50% - 15px)
+    max-width calc(50% - 15px)
+    +xs()
+      flex 1 1 100%
+      max-width 100%
+    input
+      border: none
+      border-bottom 2px solid $blue
+      color: $blue
+      font-size: e(14)
+      line-height: 1.57;
+      bg($tr)
+      pb(r(11))
+      pl(r(19))
+      pt(r(9))
+      +placeholder()
+        color $blue
+    &--button
+      background $blue
+      height 100%
+      width 50px
+      position absolute
+      top 0
+      right 0
+      display flex
+      align-items center
+      justify-content center
+      svg
+        width 20px
+        height 20px
+      &:after
+          pseudo(block, absolute)
+          bottom 0px
+          top 50%
+          left 6px
+          right 6px
+          z-index -1
+          trans()
+      &:hover
+        co($blue-light8)
+        bg($blue3)
+        &:after
+          box-shadow: 0px 0px 17px 6px rgba(20,114,255,0.7);
+
+

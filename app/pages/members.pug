@@ -1,0 +1,74 @@
+//- layouts/layout.pug
+extend layouts/_layout.pug
+
+block title
+    | IT Ukraine Association - Члени Асоціації
+
+
+block content
+
+
+    include sections/headers/_header-members
+
+    section.section-top-zero
+        .container
+            .row
+                .offset-md-4.col-md-8.offset-lg-6.col-lg-6
+                    form.form-filter
+                        .select-container
+                            select
+                                option Фільтр за регіоном
+                                option Фільтр за регіоном
+                                option Фільтр за регіоном
+                        .input-group
+                            input(type='text' placeholder='Фільтр за регіоном')
+                            button(type='submit').input-group--button
+                                include svgs/search.svg
+
+            .row.row-partners.row-members.no-gutters
+                .col-sm-6.col-md-4.col-xl-3
+                    include sections/sliders/slider-member-slides/_member-item.pug
+                .col-sm-6.col-md-4.col-xl-3
+                    include sections/sliders/slider-member-slides/_member-item.pug
+                .col-sm-6.col-md-4.col-xl-3
+                    include sections/sliders/slider-member-slides/_member-item.pug
+                .col-sm-6.col-md-4.col-xl-3
+                    include sections/sliders/slider-member-slides/_member-item.pug
+                .col-sm-6.col-md-4.col-xl-3
+                    include sections/sliders/slider-member-slides/_member-item.pug
+                .col-sm-6.col-md-4.col-xl-3
+                    include sections/sliders/slider-member-slides/_member-item.pug
+                .col-sm-6.col-md-4.col-xl-3
+                    include sections/sliders/slider-member-slides/_member-item.pug
+                .col-sm-6.col-md-4.col-xl-3
+                    include sections/sliders/slider-member-slides/_member-item.pug
+                .col-sm-6.col-md-4.col-xl-3
+                    include sections/sliders/slider-member-slides/_member-item.pug
+                .col-sm-6.col-md-4.col-xl-3
+                    include sections/sliders/slider-member-slides/_member-item.pug
+                .col-sm-6.col-md-4.col-xl-3
+                    include sections/sliders/slider-member-slides/_member-item.pug
+                .col-sm-6.col-md-4.col-xl-3
+                    include sections/sliders/slider-member-slides/_member-item.pug
+                .col-sm-6.col-md-4.col-xl-3
+                    include sections/sliders/slider-member-slides/_member-item.pug
+                .col-sm-6.col-md-4.col-xl-3
+                    include sections/sliders/slider-member-slides/_member-item.pug
+                .col-sm-6.col-md-4.col-xl-3
+                    include sections/sliders/slider-member-slides/_member-item.pug
+                .col-sm-6.col-md-4.col-xl-3
+                    include sections/sliders/slider-member-slides/_member-item.pug
+
+            include sections/_pagination.pug
+
+    section.section-advantages-footer
+        .container
+            .row
+                .col-sm-6
+                    h2 Переваги Асоціації
+                .col-sm-6.col-md-5.col-lg-4
+                    p Ми – спільнота лідерів індустрії, які працюють задля розвитку галузі інформаційних технологій в Україні
+                    +btn('Приєднатись')
+
+
+
