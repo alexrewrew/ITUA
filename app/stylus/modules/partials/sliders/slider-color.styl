@@ -49,13 +49,15 @@
     pb(r(72))
   &--heading
     font-family $a-font, sans-serif
-    font-size e(44)
-    font-weight 700
+    fs(e(44))
+    fw(700)
     line-height 1.14
     letter-spacing 1px
     co($wt)
     display inline-block
-    margin-bottom r(52)
+    mb(r(52))
+    max-height 150px
+
     +xxl()
       fs(e(56))
       mb(r(92))
@@ -94,6 +96,10 @@
       mb(r(34))
   .link-detail
     float left
+
+  .slick-track
+    display: flex;
+    align-items: flex-end;
 
   .arrow
     border-color $wt30

@@ -1482,6 +1482,10 @@ button:focus {
 	-webkit-transform: translate3d(0, -6px, 0);
 	        transform: translate3d(0, -6px, 0);
 }
+.btn-center {
+	margin-left: auto;
+	margin-right: auto;
+}
 .btn-more {
 	display: inline-block;
 	width: 100%;
@@ -2958,6 +2962,9 @@ select:focus {
 .blog.blog-advantage {
 	margin-bottom: 4rem;
 }
+.blog.blog-advantage:hover .blog--image img {
+	opacity: 1;
+}
 .blog.blog-advantage .blog--image {
 	height: 225px;
 	margin-bottom: 2.4375rem;
@@ -3199,12 +3206,12 @@ select:focus {
 		width: 80px;
 		height: 80px;
 	}
-	.comment--left-image img {
-		min-height: 100%;
-		-webkit-box-flex: 0;
-		-ms-flex: 0 0 auto;
-		    flex: 0 0 auto;
-	}
+}
+.comment--left-image img {
+	height: 100%;
+	-webkit-box-flex: 0;
+	-ms-flex: 0 0 auto;
+	    flex: 0 0 auto;
 }
 .comment--right {
 	padding: 2.625rem .9375rem 2.75rem 0;
@@ -3242,8 +3249,15 @@ select:focus {
 		font-size: 1.375em;
 	}
 }
+.comment--right p {
+	max-height: 86px;
+	overflow: hidden;
+	margin-bottom: 0;
+}
 @media (max-width: 767px) {
 	.comment--right p {
+		max-height: 100%;
+		overflow: visible;
 		margin-bottom: 2.6875rem;
 	}
 }
@@ -3507,6 +3521,8 @@ select:focus {
 	-webkit-transition: all .2s ease;
 	     -o-transition: all .2s ease;
 	        transition: all .2s ease;
+	max-height: 80px;
+	overflow: hidden;
 }
 .calendar--block-date {
 	display: -webkit-box;
@@ -3706,6 +3722,8 @@ select:focus {
 }
 .member p {
 	font-size: .75em;
+	max-height: 90px;
+	overflow: hidden;
 }
 .member--tags {
 	display: -webkit-box;
@@ -3714,7 +3732,7 @@ select:focus {
 	-ms-flex-wrap: wrap;
 	    flex-wrap: wrap;
 	padding-left: .3125rem;
-	padding-top: 1px;
+	padding-top: .0625rem;
 }
 .member--tags li {
 	border: 1px solid #e2e8ee;
@@ -3913,6 +3931,7 @@ select:focus {
 	color: #fff;
 	display: inline-block;
 	margin-bottom: 3.25rem;
+	max-height: 150px;
 }
 @media (min-width: 1600px) {
 	.slider-color--heading {
@@ -3974,6 +3993,14 @@ select:focus {
 }
 .slider-color .link-detail {
 	float: left;
+}
+.slider-color .slick-track {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: end;
+	-ms-flex-align: end;
+	align-items: flex-end;
 }
 .slider-color .arrow {
 	border-color: rgba(255,255,255,.3);

@@ -7,7 +7,6 @@
   position relative
   z-index 50
   bg($wt)
-
   +port()
     flex-wrap wrap
     mb(r(100))
@@ -50,9 +49,9 @@
       +mob()
         width 80px
         height 80px
-        img
-          min-height 100%
-          flex 0 0 auto
+      img
+        height 100%
+        flex 0 0 auto
   &--right
     padding r(42) r(15) r(44) 0
     ml(r(44))
@@ -76,7 +75,12 @@
       +mob()
         fs(e(22))
     p
+      max-height 86px
+      overflow hidden
+      mb(0)
       +mob()
+        max-height 100%
+        overflow visible
         mb(r(43))
     &-done
       position absolute
