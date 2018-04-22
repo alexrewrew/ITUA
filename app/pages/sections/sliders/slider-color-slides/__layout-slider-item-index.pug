@@ -1,0 +1,19 @@
+mixin slider-item-index(heading, img, text, date)
+    .row.justify-content-center
+
+        .slider-color--col.offset-md-3.col-md-9.offset-lg-4.col-lg-7.col-xl-7.offset-xxl-3.col-xxl-7.order-2.order-md-1
+            a(href='' title='').slider-color--heading.link-color= heading
+
+        .slider-color--col.col-lg-6.col-md-7.order-1
+            a(href='' title='').link-color.link-color-img
+                img(src=img title='' alt='').img-color
+
+        .slider-color--col.col-xl-3.offset-lg-1.col-lg-4.col-md-5.order-2.order-md-1
+            p= text
+            ul.slider-color--date
+                li= date
+                li
+                    a(href='' title='') Новини Асоціації
+            a(href='' title='').link-detail.link-color
+                | Детальніше
+                include ../../../svgs/angle-right.svg

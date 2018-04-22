@@ -378,6 +378,7 @@
                     }
                 }
 
+
                 DOMs.tabsFilterSlider.css({
                     "width": "calc(" + tabsLinkWidth + "% + 1px",
                     "transform": 'translate3d(' + tabsFilterLeft + 'px,0,0)',

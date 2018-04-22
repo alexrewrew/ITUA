@@ -1,0 +1,11 @@
+mixin news(img, heading, text, date)
+    a(href='' title='').blog
+        .blog--image
+            +img(img)
+        .blog--description
+            h3= heading
+            p= text
+
+        .blog--date= date
+
+        +btn-more('Читати більше')

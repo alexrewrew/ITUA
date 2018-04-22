@@ -21,22 +21,19 @@ block content
                         h2 Переваги членства в
                         h1 IT Ukraine Association
 
-
                 .col-sm-4.col-md-3.order-2.order-sm-1.col-detail-display
                     +link-detail('Перейти до всіх переваг')
-
-
 
                 .col-lg-9.col-xl-8.order-sm-1
                     .row
                         .col-sm-6
-                            include blocks/blog/advantages/_blog-item-advantage1
+                            +advantage('img/illus/advantages/advantage1.png', 'Обмін досвідом та експертна підтримка', 'Тримайте зв\'язок з лідерами індустрії та отримуйте експерту підтримку від ділової спільноти з найбільш нагальних бізнес-питань')
                         .col-sm-6
-                            include blocks/blog/advantages/_blog-item-advantage2
+                            +advantage('img/illus/advantages/advantage2.png','Відкритий діалог з органами державної влади','Приймайте участь у постійному діалозі з представниками державної влади та впливайте на вектори розвитку індустрії всередині країни')
                         .col-sm-6
-                            include blocks/blog/advantages/_blog-item-advantage3
+                            +advantage('img/illus/advantages/advantage3.png','Нетворкінг та встановлення нових контактів','Будучи частиною найбільшою спільноти компаній-розробників в Україні, встановлюйте корисні ділові контакти та отримуйте допомогу у пошуку нових клієнтів для вашого бізнесу')
                         .col-sm-6
-                            include blocks/blog/advantages/_blog-item-advantage4
+                            +advantage('img/illus/advantages/advantage4.png','Адвокація та захист ІТ-бізнесу','Отримайте правову підтримку з боку інших учасників спільноти та розроблюйте спільну стратегію захисту інтересів вашої компанії')
 
                 .col-12.col-detail-mobile
                     +link-detail('Перейти до всіх переваг')
@@ -65,13 +62,13 @@ block content
 
             .row.row-publications
                 .col-md-6.col-lg-4.col-xl-3
-                    include blocks/blog/news/_blog-item1
+                    +news('img/illus/news/news1.jpg','Відтепер ввозити прототипи для R&D цілей в Україну стане простіше','Завдяки спільній роботі галузевих експертів були прийняті новели, що значно спрощують процедуру імпорту в Україну прототипів обладнання для R&D цілей (дослідження та розробки).', '13.02.2018')
                 .col-md-6.col-lg-4.col-xl-3
-                    include blocks/blog/news/_blog-item2
+                    +news('img/illus/news/news2.jpg','ELEKS та Miratech - у списку фіналістів престижної премії European IT & Software Excellence Awards 2018','ІТ Europa, міжнародна агенція, яка займається ринковими дослідженнями, оприлюднила список фіналістів престижної загальноєвропейської премії European IT & Software Excellence Awards.', '20.03.18')
                 .col-md-6.col-lg-4.col-xl-3
-                    include blocks/blog/news/_blog-item3
+                    +news('img/illus/news/news3.jpg','18 українських компаній увійшли до ТОП-100 кращих провайдерів ІТ-послуг у світі','Міжнародна організація IAOP (International Association of Outsourcing Professionals) під час своєї щорічної події Outsourcing World Summit, традиційно підбила підсумки року та оприлюднила список кращих світових постачальників ІТ-послуг.', '20.02.18')
                 .col-md-6.col-lg-4.col-xl-3
-                    include blocks/blog/news/_blog-item4
+                    +news('img/illus/news/news4.jpg','5 українських ІТ-компаній потрапили до міжнародного рейтингу Inc. 5000','Вітчизняний ІТ-бізнес продовжує отримувати міжнародне визнання. Цього разу 5 українських компаній зі сфери інформаційних технологій увійшли до відомого рейтингу «Inc. 5000 Europe» – списку приватних компаній Європи, які розвиваються найбільш динамічно.','28.02.18')
 
             .row
                 .col-12.col-detail-mobile
@@ -80,7 +77,7 @@ block content
 
     include sections/sliders/_slider-events
 
-    include sections/_comments
+    include sections/_section-comments
 
     include sections/sliders/_slider-members
 
