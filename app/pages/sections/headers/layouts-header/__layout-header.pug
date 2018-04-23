@@ -1,0 +1,35 @@
+mixin header-about-business(heading, text)
+
+    header.header-about-business
+
+        .container
+            .row
+                .col-md-6
+                    ul.breadcrumbs
+                        +li-a('Головна')
+                        +li-a(heading)
+            .row
+                .col-sm-6.col-lg-5.col-xl-4
+                    h1= heading
+
+                .col-sm-6.offset-md-1.col-md-5.col-lg-4.offset-xl-2
+                    p= text
+
+
+mixin header-about-us(heading, text)
+    header.header-about-us
+
+        .container
+            .row.justify-content-between
+
+                .col-sm-5.col-lg-4.col-xl-3.header-col.left
+                    ul.breadcrumbs
+                        +li-a('Головна')
+                        +li-a(heading)
+
+                    .header-text
+                        h1= heading
+                        p= text
+
+                .col-sm-7.header-col.right
+                    include ../../sliders/_slider-header
