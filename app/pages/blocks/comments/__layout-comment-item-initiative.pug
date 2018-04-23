@@ -1,0 +1,33 @@
+mixin comment-item-initiative(img, heading, type, company, text)
+    a(href='' title='').comment.comment-initiative
+
+        .comment--left
+            .comment--left-image
+                +img(img)
+
+        .comment--right
+            h3= heading
+            h6= type
+                span.company= company
+            p= text
+
+            +btn-more('Читати більше')
+
+            +img('img/illus/done.svg', 'comment--right-done')
+
+mixin comment-item-initiative-done(img, heading, type, company, text)
+    a(href='' title='').comment.comment-initiative.done
+
+        .comment--left
+            .comment--left-image
+                +img(img)
+
+        .comment--right
+            h3= heading
+            h6= type
+                span.company= company
+            p= text
+
+            +btn-more('Читати більше')
+
+            +img('img/illus/done.svg', 'comment--right-done')

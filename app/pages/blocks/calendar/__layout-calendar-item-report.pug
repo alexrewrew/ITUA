@@ -1,0 +1,22 @@
+mixin calendar-item-report-quat(date, heading, name)
+
+    a(href='' title='').calendar.calendar-report.calendar-report-quart
+        .calendar--block
+            .calendar--block-date
+                .calendar--block-date--date= date
+
+            h3= heading
+
+            .calendar--block-date--text= name
+
+            +btn-more('Детальніше')
+
+mixin calendar-item-report-year(date, name)
+    a(href='' title='').calendar.calendar-report.calendar-report-year
+        .calendar--block
+            .calendar--block-date
+                .calendar--block-date--date= date
+
+            .calendar--block-date--text= name
+
+            +btn-more('Детальніше')

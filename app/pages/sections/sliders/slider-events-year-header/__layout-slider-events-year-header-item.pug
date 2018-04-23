@@ -1,0 +1,12 @@
+mixin slider-events-year-header-item(img, date, time, heading, text)
+    .row.row-events-year-slide
+        .offset-xl-1.col-xl-5.col-sm-6
+            .row-events-year-slide--image
+                +img(img)
+        .offset-lg-1.col-xl-4.col-lg-5.col-sm-6
+            ul.ul-slider-events-date
+                li= date
+                li= time
+            h2= heading
+            p= text
+            +btn-arrow('Перейти до події')

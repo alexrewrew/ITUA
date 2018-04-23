@@ -11,15 +11,15 @@ section.back-blue-light2
             .col-12
                 .slider.slider-calendar.slider-with-line
                     div
-                        include slider-calendar-slides/_calendar-item-month1
+                        +calendar-item-month('21.04', 'Початок о 9:00', 'AI&BigData Conference 2018')
                     div
-                        include slider-calendar-slides/_calendar-item1
+                        +calendar-item('25.04', 'Початок о 16:00', 'Конференція «Забезпечення безпеки кіберпростору в системі національної безпеки України»')
                     div
-                        include slider-calendar-slides/_calendar-item-month2
+                        +calendar-item-month('18.05', 'Початок о 18:30', 'Хакатон Синхро-Простір', 'Травень')
                     div
-                        include slider-calendar-slides/_calendar-item-event1
+                        +calendar-item-event('21.05', 'Початок о 9:30', 'INTAX FORUM UKRAINE - ІНВЕСТИЦІЇ. ФІНАНСИ. ПОДАТКИ. ПРАВО', 'Подія Асоціації')
                     div
-                        include slider-calendar-slides/_calendar-item-event-month1
+                        +calendar-item-event-month('21.06', 'Початок о 10:00', 'M-FORCE18 від Miratech', 'Червень', 'Подія Асоціації')
 
             .col-12.col-detail-mobile
                 +link-detail('Усі події')

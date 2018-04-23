@@ -49,9 +49,10 @@ block content
                     hr.mb-mt-82-90
                     h2.mb-66 Ініціативи комітету
                 .col-lg-6
-                    include blocks/comments/_comment-item-initiative
+                    +comment-item-initiative('img/illus/director.png', 'Join IT', 'Проект', 'PR комітету', 'Join IT – це група освітніх проектів з популяризації IT-галузі серед дітей та підлітків, що прагнуть відкрити в собі хист до творчості …')
                 .col-lg-6
-                    include blocks/comments/_comment-item-initiative-done
+                    +comment-item-initiative-done('img/illus/comments/comments-initiative/comment-initiative1.png', 'IT-галузі серед дітей та підлітків', '', 'Фінансово-правовий комітет', 'Join IT – це група освітніх проектів з популяризації IT-галузі серед дітей та підлітків, що прагнуть відкрити в собі хист до творчості …')
+
 
     include sections/_section-committiees-more
 

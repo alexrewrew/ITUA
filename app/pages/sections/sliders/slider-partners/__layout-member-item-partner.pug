@@ -1,0 +1,8 @@
+mixin member-item-partner(img, text)
+    a(href='' title='').member.member-partner
+        .member--image
+            +img(img)
+
+        p= text
+
+        +btn-more('Детальніше')

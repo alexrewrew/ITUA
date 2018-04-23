@@ -1,0 +1,11 @@
+mixin value-item(img, heading, text)
+    .value
+        +img(img)
+        h3= heading
+        p= text
+
+mixin value-item-small(img, heading, text)
+    .value.value-small
+        +img(img)
+        h3= heading
+        p= text
