@@ -21,8 +21,8 @@ h1
 
 
 h2
-  font(e(32), 700, 1.53)
-  mb(r(31))
+  font(e(32), 700, 1.19)
+  mb(r(36))
   letter-spacing: 1px;
   color: $blue-dark
   +mob()
@@ -32,6 +32,13 @@ h2
 h2.h2-public
   +mob()
     mb(r(5))
+
+h2.h2-project
+  position absolute
+  top 0
+  left 15px
+  +xs()
+    position static
 
 
 
@@ -85,7 +92,7 @@ hr
 .heading-h1-h2
   display flex
   flex-wrap wrap
-  mb(r(31))
+  mb(r(36))
   +mob()
     mb(r(24))
   h2
@@ -95,7 +102,7 @@ hr
       line-height 1.3
   h1
     fs(e(32))
-    line-height 1.53
+    line-height 1.19
     color: $blue-dark
     mb(0)
     +mob()

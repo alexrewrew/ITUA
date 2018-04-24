@@ -29,6 +29,9 @@
         sliderPartners: $('.slider-partners'), //slider of partners
         sliderPartnersSync: $(".slider-progressbar-partners .slider-progressbar--track"), //slider of partners sync
 
+        sliderProject : $('.slider-project'),
+        sliderProjectSync : $(".slider-progressbar-project .slider-progressbar--track"),
+
         sliderTabs: $('.tabs-publication--ul'),
         sliderPublications: $('.row-publications'),
         sliderReports: $('.row-reports'),
@@ -154,8 +157,8 @@
             prevArrow: DOMs.sliderArrowLeft,
             nextArrow: DOMs.sliderArrowRight
         });
-        //
-        // // SLIDER ABOUT
+
+        // SLIDER ABOUT
         DOMs.sliderAbout.slick({
             prevArrow: DOMs.sliderArrowLeft,
             nextArrow: DOMs.sliderArrowRight,
@@ -168,6 +171,19 @@
             sliderProgressbar(nextSlide, slick, DOMs.sliderAboutSync);
         });
 
+        // SLIDER PROJECT
+        DOMs.sliderProject.slick({
+            prevArrow: DOMs.sliderArrowLeft,
+            nextArrow: DOMs.sliderArrowRight,
+            dots: false,
+            slidesToScroll: 1,
+            infinite: false,
+            speed: 250,
+        }).on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+            sliderProgressbar(nextSlide, slick, DOMs.sliderProjectSync);
+        });
+
+        //  SLIDER REPORTS
         DOMs.sliderReports.slick({
             dots: false,
             slidesToScroll: 1,

@@ -1,0 +1,21 @@
+mixin slider-project-item(img, profession, company, heading, text)
+    div
+        .container
+            a(href='' title='').row.slider-project--slide
+                .col-sm-5.col-md-5.offset-lg-1.col-lg-4
+                    .slider-project--image
+                        img(src= img title='' alt='')
+
+                .offset-sm-1.col-sm-6.offset-md-1.col-md-6.col-lg-5
+                    ul.ul-project
+                        li
+                            h6= profession
+                                | &nbsp;
+                                span.company= company
+                        li.ul-project--done
+                            +img('img/illus/done.svg')
+                            span Вирішено
+
+                    h2= heading
+                    p= text
+                    +btn-more('Читати більше')

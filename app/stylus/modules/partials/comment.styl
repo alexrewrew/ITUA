@@ -74,6 +74,9 @@
       mb(0)
       +mob()
         fs(e(22))
+    h6
+      +tab()
+        mb(r(16))
     p
       max-height 86px
       overflow hidden
@@ -143,6 +146,7 @@
         flex 0 0 auto
         +mob()
           min-width 100%
+          height auto
       &:before
         pseudo(block, absolute)
         opacity 0
@@ -156,7 +160,11 @@
 
     .comment--right
       pt(r(40))
+      pr(r(50))
       ml(r(45))
+      +tab()
+        pr(0)
+        mr(r(30))
       +port()
         width calc(100% - 150px - 45px)
       +mob()
@@ -170,9 +178,14 @@
         fs(e(26))
       h6
         mb(r(28))
+      p
+        +port()
+          max-height 160px
       .btn-more
         pb(r(20))
         pt(r(19))
+        +tab()
+          max-width 60%
         svg
           top 21px
           right 34px
@@ -185,6 +198,8 @@
     &.done
       .comment--right-done
         display block
+        +tab()
+          right -30px
 
 
   &:hover

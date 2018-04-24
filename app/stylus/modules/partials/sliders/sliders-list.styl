@@ -132,10 +132,51 @@
       +xs()
         right 64px
 
-//.slider-about-sync
-//  +mob()
-//    bottom: 37px;
-//  .slider-progress:after
-//    width 100px
-//    +mob()
-//      width 50px
+.slider-project
+  &.slider-with-line.slider-with-line-sync
+    .slick-track
+      left 0
+      pt(r(3))
+      pb(r(22))
+  &--slide
+    h2
+      mb(r(32))
+  &--image
+    position absolute
+    left 15px
+    bottom 0
+    width: 100%
+    height: 300px;
+    display flex
+    align-items center
+    justify-content center
+    overflow hidden
+    +xs()
+      position static
+      height 210px
+      mb(r(25))
+    img
+      height 100%
+      +xs()
+        height auto
+        width 100%
+  p
+    height 177px
+  .btn-more
+    position absolute
+    left 15px
+    bottom 0
+    &:hover
+      max-width 263px
+    +mob()
+      bg($blue)
+      co($wt)
+      pl(r(30))
+      mb(r(25))
+      max-width 263px
+      position relative
+      left auto
+      svg
+        opacity 1
+        g
+          fill $wt
