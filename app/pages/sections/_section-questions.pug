@@ -6,9 +6,16 @@ section.section-question
                 h2 Залишились запитання ?
 
                 form.form-questions
-                    input(type='' placeholder='Ваше ім’я')
-                    input(type='' placeholder='E-mail')
-                    textarea(placeholder='Введіть повідомлення')
+                    .input-group
+                        input(type='' placeholder='Ваше ім’я').error
+                        .input-error Неправильно введені дані
+                    .input-group
+                        input(type='' placeholder='E-mail').error
+                        .input-error  Введено неіснуючий e-mail
+                    .input-group.textarea-group
+                        textarea(placeholder='Введіть повідомлення').error
+                        .input-error  Заповніть це поле
+
                     button(type='submit').btn.btn-plane.btn-center
                         | Відправити
                         include ../svgs/arrow-plane.svg

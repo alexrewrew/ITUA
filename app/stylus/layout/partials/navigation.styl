@@ -40,14 +40,16 @@ nav.nav-index.unscrolled
       co($wt30)
       &.active, &:hover
         co($wt)
-    .form-search
+    .form-search-nav
       .input-group
         input
           bg($wt15)
           co($wt)
           +placeholder()
             co($wt)
-        span
+          &:focus
+            bg($wt30)
+        button
           svg g
             fill $wt
     .ul-login

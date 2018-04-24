@@ -39,13 +39,16 @@ block content
             .row
                 .offset-md-4.col-md-8.offset-lg-6.col-lg-6
                     form.form-filter
-                        .select-container
+                        .select-group
                             select
-                                option Фільтр за регіоном
-                                option Фільтр за регіоном
-                                option Фільтр за регіоном
-                        .input-group
-                            input(type='text' placeholder='Фільтр за регіоном')
+                                option(disabled selected) Фільтр за регіоном
+                                option м. Київ
+                                option Львівська обл.
+                                option Харківська обл.
+                                option Одеська обл.
+                                option Вінницька обл.
+                        .input-group.input-group-blue
+                            input(type='text' placeholder='Назва').input-blue
                             button(type='submit').input-group--button
                                 include svgs/search.svg
 

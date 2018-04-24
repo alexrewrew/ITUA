@@ -1,28 +1,33 @@
 @import '../../utilities/utilities'
 
 select
-  width 100%
-  bg($wt)
-  border 1px solid #ccc
-  padding r(12) r(15) r(13)
-  border-radius 0
   display block
-  mb(r(20))
+
+  width 100%
+  bg($tr)
+  color $blue
+
+  border none
+  border-bottom 2px solid $blue
+  border-radius 0
+
+  fs(e(14))
+  line-height: 1.57
+  mb(r(30))
+  padding r(9) r(19) r(11)
+
   -webkit-appearance none
   -moz-appearance none
   trans()
   &:focus
     outline none
-    border 1px solid blue
 
 .select-group
   position relative
-  mb(r(20))
+  mb(r(30))
+  select
+    mb(0)
   &:after
-    triangle($bk, down, 4px)
+    triangle($blue, down, 4px)
     top calc(50% - 2px)
     right 15px
-
-.select-group-noarrow
-  &:after
-    display none

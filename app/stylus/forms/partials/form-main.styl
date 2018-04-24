@@ -1,26 +1,20 @@
 @import '../../utilities/utilities'
 
-.form-search
+.form-search-nav
   .input-group
-    mb(0)
-    +mob()
-      span
-        left auto
-        right 0
     input
-      background rgba(95,128,165,0.08)
-      width: calc(100% + 15px);
-      border none
-      border-radius: 3px;
-      fs(e(14))
       padding r(4) r(15) r(4) r(45)
+      bg(rgba(95, 128, 165, 0.08))
+      width: calc(100% + 15px)
+      border-radius: 3px;
       +placeholder()
-        color rgba(38,74,117,.5)
+        color rgba(38, 74, 117, .5)
+      &:focus
+        background rgba(95, 128, 165, .2)
       +mob()
         width 100%
         padding r(9) r(20) r(11)
-
-    span
+    button
       svg g
         fill $blue-dark3
 
@@ -29,38 +23,6 @@
   +mob()
     flex-wrap: wrap
     mb(r(60))
-  .btn
-    max-width 196px
-    fs(e(14))
-    letter-spacing: 2.3px;
-    pt(r(19))
-    pb(r(17))
-    +mob()
-      max-width 100%
-  input
-    mb(0)
-    border: none
-    bg($black-back2)
-    height 100%
-    pl(r(31))
-    fs(e(16))
-    co($wt)
-    position relative
-    z-index 2
-    +placeholder()
-      co($wt)
-    +mob()
-      fs(e(14))
-      pt(r(14))
-      pb(r(16))
-    &:focus
-      bg(#36393F)
-      & + .input-group-shadow--shade
-        &:after
-          transform translate3d(0, -6px, 0)
-          box-shadow: 0px 0px 34px 11px rgba(42,37,61,1);
-
-
   .input-group-shadow
     width 100%
     +mob()
@@ -74,42 +36,69 @@
         left 16px
         right 16px
         bottom 0
-        box-shadow: 0px 0px 34px 11px rgba(38,41,46,1);
+        box-shadow: 0px 0px 34px 11px rgba(38, 41, 46, 1);
         trans()
         +mob()
           left 25px
           right 25px
-
-
-
-
-
+    input
+      bg($black-back2)
+      mb(0)
+      height 100%
+      pl(r(31))
+      fs(e(16))
+      co($wt)
+      position relative
+      z-index 2
+      +placeholder()
+        co($wt)
+      +mob()
+        fs(e(14))
+        pt(r(14))
+        pb(r(16))
+      &:focus
+        bg(#36393F)
+        & ~ .input-group-shadow--shade
+          &:after
+            transform translate3d(0, -6px, 0)
+            box-shadow: 0px 0px 34px 11px rgba(42, 37, 61, 1);
+  .btn
+    max-width 196px
+    fs(e(14))
+    letter-spacing: 2.3px;
+    pt(r(19))
+    pb(r(17))
+    +mob()
+      max-width 100%
 
 .form-questions
   display flex
   justify-content space-between
   flex-wrap wrap
-  input
-    border none
-    bg($blue-light-back5)
-    fs(e(14))
-    padding r(11) r(24) r(13) r(24)
-    mb(r(30))
+  .input-group
     flex 1 1 calc(50% - 15px)
     max-width calc(50% - 15px)
+    mb(r(30))
     +mob()
       flex 1 1 100%
       max-width 100%
       mb(r(20))
-  textarea
-    border none
-    bg($blue-light-back5)
-    fs(e(14))
-    padding r(11) r(24) r(13) r(24)
-    mb(r(30))
+    input
+      &:focus
+        bg($wt)
+        box-shadow: inset 0px 0px 0px 2px rgba(24, 111, 240, 1);
+        +placeholder()
+          co(#e8ecf1)
+    textarea
+      &:focus
+        bg($wt)
+        box-shadow: inset 0px 0px 0px 2px rgba(24, 111, 240, 1);
+        +placeholder()
+          co(#e8ecf1)
+  .input-group.textarea-group
+    flex 1 1 100%
+    max-width 100%
     height 120px
-    +mob()
-      mb(r(20))
   .btn
     fs(e(20))
     letter-spacing: 1px;
@@ -126,71 +115,29 @@
       max-width 414px
 
 
+
 .form-filter
   display flex
   justify-content space-between
   mb(r(40))
   +xs()
     flex-wrap wrap
-  .select-container
+  .select-group
     flex 1 1 calc(50% - 15px)
     max-width calc(50% - 15px)
+    mb(0)
     +xs()
       flex 1 1 100%
       max-width 100%
-    select
-      border: none
-      border-bottom 2px solid $blue
-      color: $blue
-      font-size: e(14)
-      line-height: 1.57;
-      pb(r(11))
-      pl(r(19))
-      pt(r(9))
   .input-group
-    position relative
     flex 1 1 calc(50% - 15px)
     max-width calc(50% - 15px)
     +xs()
       flex 1 1 100%
       max-width 100%
+
+.form-search-news
+  pt(r(23))
+  .input-group
     input
-      border: none
-      border-bottom 2px solid $blue
-      color: $blue
-      font-size: e(14)
-      line-height: 1.57;
-      bg($tr)
-      pb(r(11))
-      pl(r(19))
-      pt(r(9))
-      +placeholder()
-        color $blue
-    &--button
-      background $blue
-      height 100%
-      width 50px
-      position absolute
-      top 0
-      right 0
-      display flex
-      align-items center
-      justify-content center
-      svg
-        width 20px
-        height 20px
-      &:after
-          pseudo(block, absolute)
-          bottom 0px
-          top 50%
-          left 6px
-          right 6px
-          z-index -1
-          trans()
-      &:hover
-        co($blue-light8)
-        bg($blue3)
-        &:after
-          box-shadow: 0px 0px 17px 6px rgba(20,114,255,0.7);
-
-
+      bg($wt)
