@@ -349,12 +349,12 @@
         });
 
         // ----- SELECT2 -----
-        // $('.select2-select').select2({
-        //     placeholder: "Choose...",
-        //     allowClear: true
+        $('.select2-select').select2({
+            placeholder: "Оберіть компанію",
+            allowClear: true
         //     // dropdownParent: $('.select-select2-container'),
         //     // minimumResultsForSearch: Infinity
-        // });
+        });
 
         // ========== TABS PUBLICATIONS ==========
         (function () {

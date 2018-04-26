@@ -1,12 +1,15 @@
 .news-big
   mb(r(38))
-  .news-big--image
+  &--image
     width 100%
     height 301px
     overflow hidden
     dfc()
     img
       height 100%
+      +land()
+        height auto
+        width 100%
     +mob()
       mb(r(37))
   h3
@@ -40,3 +43,20 @@
       top 13px
       right 30px
 
+
+  &--author
+    display flex
+    align-items center
+    mb(r(26))
+    &-image
+      width: 40px;
+      height: 40px;
+      border-radius 50%
+      overflow hidden
+      mr(r(21))
+      img
+        height 100%
+    h6
+      mb(0)
+      b
+        display block

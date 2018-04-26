@@ -1,0 +1,31 @@
+header.header-about-business.header-about-business-news
+
+
+    .container
+        .row
+            .col-md-6
+                +breadcrumbs('Новини асоціації')
+        .row
+            .col-sm-6.col-lg-5
+                h1.mb-46 Новини асоціації
+                form.form-search-news
+                    .input-group.input-group-blue
+                        input(type='text' placeholder='Фільтр за регіоном')
+                        button(type='submit').input-group--button
+                            include ../../_svgs/search.svg
+
+            .col-sm-6.offset-lg-1.col-lg-5
+                form.form-search-news-author
+                    .select-group.form-search-news-author--select2
+                        select.chosen-select
+                            option Місяць
+                            option Місяць
+                            option Місяць
+
+                    .select-group.form-search-news-author--select3
+                        select.chosen-select
+                            option Рік
+                            option Рік
+                            option Рік
+                            option Рік
+

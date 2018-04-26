@@ -9,3 +9,35 @@ mixin news(img, heading, text, date)
         .blog--date= date
 
         +btn-more('Читати більше')
+
+mixin news-author(img, author, company, profession, heading, text, date)
+    a(href='' title='').blog
+        .blog--image
+            +img(img)
+        .blog--description
+            h6
+                = author
+                | , &nbsp
+                span.company= company
+                | , &nbsp
+                = profession
+            h3= heading
+            p= text
+
+        .blog--date= date
+
+        +btn-more('Читати більше')
+
+mixin news-association(img, company, heading, text, date)
+    a(href='' title='').blog
+        .blog--image
+            +img(img)
+        .blog--description
+            h6
+                span.company= company
+            h3= heading
+            p= text
+
+        .blog--date= date
+
+        +btn-more('Читати більше')

@@ -1,0 +1,23 @@
+.form-search-news-author
+  display flex
+  flex-wrap wrap
+  justify-content space-between
+  position absolute
+  bottom 0
+  left 15px
+  right 15px
+  +xs()
+    position static
+    mt(r(30))
+  &--select1
+    flex 1 1 100%
+    max-width 100%
+    mb(r(18))
+  &--select2
+    flex 1 1 calc(60% - 15px)
+    max-width calc(60% - 15px)
+    mb(0)
+  &--select3
+    flex 1 1 calc(40% - 15px)
+    max-width calc(40% - 15px)
+    mb(0)

@@ -1,26 +1,28 @@
-
-
 .select2-container--default
   .select2-selection--single
-    border 1px solid #ccc
+    border 0
+    border-bottom 2px solid $blue
     border-radius 0
     height auto
+    background $tr
     trans()
     &:focus
       outline none
-      border-color blue
     .select2-selection__clear
       right 20px
     .select2-selection__rendered
-      co($bk)
-      fs(e(16))
+      co($blue)
+      fs(e(14))
       line-height normal
       padding r(12) r(15) r(13)
     .select2-selection__arrow
       top calc(50% - 15px)
       right 9px
       b
-        border-color: $bk transparent transparent transparent;
+        //border-color: $blue transparent transparent transparent;
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;
+        border-top: 4px solid $blue;
         trans()
 
   .select2-results__option[aria-selected=true]
@@ -39,10 +41,10 @@
     padding r(12) r(10) r(13)
 
   .select2-search--dropdown .select2-search__field
-      font-size e(16)
-      margin-bottom r(12)
-      border 1px solid #ccc
-      padding r(11) r(10) r(12)
+    font-size e(16)
+    margin-bottom r(12)
+    border 1px solid #ccc
+    padding r(11) r(10) r(12)
 
 .select2-container--default.select2-container--open.select2-container--below .select2-selection--single
   border-color blue
@@ -58,6 +60,9 @@
   fs(e(16))
 
 .select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b
-  border-color: $bk transparent transparent transparent;
+  border-color: $blue transparent transparent transparent;
   transform rotate(180deg)
-  border-width: 5px 4px 0 4px;
+  border-width: 4px 4px 0 4px;
+
+.select2-container--default .select2-selection--single .select2-selection__placeholder
+  color $blue
