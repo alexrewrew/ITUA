@@ -1,0 +1,131 @@
+header
+  pt(7.563rem)
+  bg($blue-light9)
+  height 511px
+  overflow hidden
+  +mob()
+    pt(r(59))
+  +port()
+    pt(8.75rem)
+  &.header-index
+    bg($blue-light4)
+    mb(r(90))
+    height 100vh
+    min-height 768px
+    display flex
+    align-items flex-end
+    trans()
+    +tab()
+      mb(r(60))
+    +port()
+      mb(r(60))
+    +mob()
+      pt(r(59))
+      min-height: unset
+      align-items flex-start
+      mb(r(65))
+      height auto
+
+  &.header-about-us
+    mb(r(90))
+    height auto
+    +mob()
+      pt(r(59))
+      height auto
+      mb(r(65))
+    .breadcrumbs
+      position absolute
+      left 15px
+      top 0
+      mb(r(13))
+      +mob()
+        position static
+
+  &.header-about-business
+    height 438px
+    position relative
+    z-index 40
+    overflow visible
+    +mob()
+      pb(r(46))
+      height auto
+    &:after
+      pseudo(block, absolute)
+      top 100%
+      left 0
+      right 0
+      height 73px
+      bg($blue-light9)
+      z-index -1
+    p
+      mt(r(6))
+    &.header-about-business-without-after
+      height 457px
+      mb(r(90))
+      +mob()
+        height auto
+      &:after
+        display none
+    &.header-about-business-news
+      height 457px
+      mb(r(17))
+      +mob()
+        height auto
+      &:after
+        display none
+
+  &.header-committees
+    mb(r(40))
+    height auto
+    p
+      mt(r(6))
+    .ul-tablist
+      mb(5rem)
+
+  &.header-members
+    mb(r(21))
+    height auto
+    p
+      mt(r(6))
+    .ul-tablist
+      mb(5rem)
+
+  &.header-advantages
+    height auto
+    bg($blue-light-back)
+    mb(0)
+    h1
+      co($blue-dark)
+
+  &.header-events-year
+    height auto
+    pb(r(56))
+    mb(r(91))
+    +mob()
+      pb(r(45))
+    h1
+      position absolute
+      left 15px
+      co($wt)
+      bg($blue-light9)
+      z-index 50
+      +mmax(991px)
+        position static
+
+.header-col
+  &.left
+    display flex
+    align-items center
+    +mob()
+      display block
+  &.right
+    pl(0)
+    +mob()
+      pr(0)
+
+.header-text
+  +mob()
+    pb(r(50))
+
+
+

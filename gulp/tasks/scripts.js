@@ -2,7 +2,7 @@ module.exports = function () {
     $.gulp.task('scripts:lib', function () {
         return $.gulp.src([
             'node_modules/jquery/dist/jquery.js',
-            'app/source/color-thief/src/color-thief.js',
+            'dev/source/color-thief/src/color-thief.js',
             'node_modules/slick-carousel/slick/slick.js',
             // 'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js',
             // 'node_modules/chosen-js/chosen.jquery.js',
@@ -29,7 +29,7 @@ module.exports = function () {
         return $.gulp.src([
             // 'app/scripts/rew.accordion.js',
             // 'app/scripts/rew.tabs.js',
-            'app/scripts/dev.js',
+            'dev/scripts/dev.js',
             // 'app/scripts/mail.js'
         ])
             .pipe($.concat('scripts.js'))

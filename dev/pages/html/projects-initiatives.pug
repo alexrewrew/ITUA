@@ -1,0 +1,35 @@
+//- layouts/layout.pug
+extend layouts/_layout.pug
+
+block title
+    | IT Ukraine Association - Проекти та ініціативи
+
+block content
+
+
+    +header-about-business('Проекти та ініціативи', 'Талановиті фахівці – це основа успішного IT-бізнесу. Саме тому Асоціація кожного року відкриває все більше освітніх проектів, що спрямовані на популяризацію цифрової індустрії як серед молоді, так і серед дорослих. ')
+
+    section.section-comments-big.section-comments
+        .container
+            .row
+                .col-lg-6
+                    +comment-item-initiative('img/illus/comments/comments-initiative/comment-initiative1.png', 'Join IT', 'Проект', 'PR комітет', 'Join IT – це група освітніх проектів з популяризації IT-галузі серед дітей та підлітків, що прагнуть відкрити в собі хист до творчості …')
+                .col-lg-6
+                    +comment-item-initiative('img/illus/comments/comments-initiative/comment-initiative2.png', 'IT-галузі серед дітей та підлітків', '', 'Фінансово-правовий комітет', 'Join IT – це група освітніх проектів з популяризації IT-галузі серед дітей та підлітків, що прагнуть відкрити в собі хист до творчості …')
+                .col-lg-6
+                    +comment-item-initiative('img/illus/comments/comments-initiative/comment-initiative3.png', 'Join IT', 'Проект', 'PR комітет', 'Join IT – це група освітніх проектів з популяризації IT-галузі серед дітей та підлітків, що прагнуть відкрити в собі хист до творчості …')
+                .col-lg-6
+                    +comment-item-initiative('img/illus/comments/comments-initiative/comment-initiative4.png', 'Core Skills Projec', 'Ініціатива', 'Фінансово-правового комітету', 'Це ініціатива Асоціації, що має на меті сформувати ключові вимоги до Junior-спеціалістів  в ІТ-індустрії.')
+                .col-lg-6
+                    +comment-item-initiative('img/illus/comments/comments-initiative/comment-initiative5.png', 'Join IT', '', 'Фінансово-правовий комітет', 'Join IT – це група освітніх проектів з популяризації IT-галузі серед дітей та підлітків, що прагнуть відкрити в собі хист до творчості …')
+                .col-lg-6
+                    +comment-item-initiative('img/illus/comments/comments-initiative/comment-initiative1.png', 'Join IT', 'Проект', 'PR комітет', 'Join IT – це група освітніх проектів з популяризації IT-галузі серед дітей та підлітків, що прагнуть відкрити в собі хист до творчості …')
+                .col-lg-6
+                    +comment-item-initiative('img/illus/comments/comments-initiative/comment-initiative2.png', 'IT-галузі серед дітей та підлітків', '', 'Фінансово-правовий комітет', 'Join IT – це група освітніх проектів з популяризації IT-галузі серед дітей та підлітків, що прагнуть відкрити в собі хист до творчості …')
+                .col-lg-6
+                    +comment-item-initiative('img/illus/comments/comments-initiative/comment-initiative3.png', 'Join IT', 'Проект', 'PR комітет', 'Join IT – це група освітніх проектів з популяризації IT-галузі серед дітей та підлітків, що прагнуть відкрити в собі хист до творчості …')
+
+
+
+
+            include ../../components/_widgets/pagination/pagination

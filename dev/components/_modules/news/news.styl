@@ -1,0 +1,45 @@
+.blog
+  display block
+  position relative
+  mb(r(69))
+
+  &--image
+    height 173px
+    display flex
+    align-items center
+    justify-content center
+    margin-bottom (r(37))
+    bg($wt)
+    overflow hidden
+    +tab()
+      height 191px
+    +port()
+      height: 218px;
+    img
+      height 100%
+      trans()
+      flex-shrink 0
+      +mob()
+        width 100%
+        height auto
+  &--date
+    position absolute
+    bottom: 15px;
+    right: 13px;
+    font-size: e(14)
+    font-weight: bold;
+    color: $blue-light
+    font-family $a-font, sans-serif
+  &--description
+    mb(r(35))
+  &:hover
+    .blog--image
+      img
+        opacity .4
+    .btn-more
+      background $blue
+      co($wt)
+      max-width 100%
+      pl(r(30))
+      svg
+        opacity 1

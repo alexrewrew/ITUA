@@ -1,0 +1,91 @@
+
+//- layouts/layout.pug
+extend layouts/_layout-index.pug
+
+block title
+    | IT Ukraine Association - Головна сторінка
+
+block content
+
+
+    header.header-index
+
+        include ../components/_sliders/slider-color/slider-color
+
+
+    section
+        .container
+
+            .row.justify-content-center
+
+                .col-sm-8.col-md-9.order-md-1
+                    .heading-h1-h2
+                        h2 Переваги членства в
+                        h1 IT Ukraine Association
+
+                .col-sm-4.col-md-3.order-2.order-sm-1.col-detail-display
+                    +link-detail('Перейти до всіх переваг')
+
+
+                .col-lg-9.col-xl-8.order-sm-1
+                    .row
+                        .col-sm-6
+                            +advantage('img/illus/advantages/advantage1.png', 'Обмін досвідом та експертна підтримка', 'Тримайте зв\'язок з лідерами індустрії та отримуйте експерту підтримку від ділової спільноти з найбільш нагальних бізнес-питань')
+                        .col-sm-6
+                            +advantage('img/illus/advantages/advantage2.png','Відкритий діалог з органами державної влади','Приймайте участь у постійному діалозі з представниками державної влади та впливайте на вектори розвитку індустрії всередині країни')
+                        .col-sm-6
+                            +advantage('img/illus/advantages/advantage3.png','Нетворкінг та встановлення нових контактів','Будучи частиною найбільшою спільноти компаній-розробників в Україні, встановлюйте корисні ділові контакти та отримуйте допомогу у пошуку нових клієнтів для вашого бізнесу')
+                        .col-sm-6
+                            +advantage('img/illus/advantages/advantage4.png','Адвокація та захист ІТ-бізнесу','Отримайте правову підтримку з боку інших учасників спільноти та розроблюйте спільну стратегію захисту інтересів вашої компанії')
+
+                .col-12.col-detail-mobile
+                    +link-detail('Перейти до всіх переваг')
+
+                aside.col-sm-6.col-lg-3.offset-xl-1.order-3.order-md-1
+                    include ../components/_modules/join/join
+
+
+    section.back-blue-light
+        .container
+            .row
+                .col-sm-8.col-md-9.col-lg-3.col-xl-2
+                    h2.h2-public Публікації
+
+                .col-lg-7.col-xl-8.order-lg-2.order-sm-3
+                    .tabs-publication
+                        ul.tabs-publication--ul
+                            +li-a('Закордонні змі про нас', 'active')
+                            +li-a('Новини Асоціації')
+                            +li-a('Новини Галузі')
+                            +li-a('Авторські статті')
+                    span.tabs-publication--line
+
+                .col-sm-4.col-md-3.col-lg-2.order-lg-3.order-sm-2.col-detail-display
+                    +link-detail('Усі публікації')
+
+            .row.row-publications
+                .col-md-6.col-lg-4.col-xl-3
+                    +news('img/illus/news/news1.jpg','Відтепер ввозити прототипи для R&D цілей в Україну стане простіше','Завдяки спільній роботі галузевих експертів були прийняті новели, що значно спрощують процедуру імпорту в Україну прототипів обладнання для R&D цілей (дослідження та розробки).', '13.02.2018')
+                .col-md-6.col-lg-4.col-xl-3
+                    +news('img/illus/news/news2.jpg','ELEKS та Miratech - у списку фіналістів престижної премії European IT & Software Excellence Awards 2018','ІТ Europa, міжнародна агенція, яка займається ринковими дослідженнями, оприлюднила список фіналістів престижної загальноєвропейської премії European IT & Software Excellence Awards.', '20.03.18')
+                .col-md-6.col-lg-4.col-xl-3
+                    +news('img/illus/news/news3.jpg','18 українських компаній увійшли до ТОП-100 кращих провайдерів ІТ-послуг у світі','Міжнародна організація IAOP (International Association of Outsourcing Professionals) під час своєї щорічної події Outsourcing World Summit, традиційно підбила підсумки року та оприлюднила список кращих світових постачальників ІТ-послуг.', '20.02.18')
+                .col-md-6.col-lg-4.col-xl-3
+                    +news('img/illus/news/news4.jpg','5 українських ІТ-компаній потрапили до міжнародного рейтингу Inc. 5000','Вітчизняний ІТ-бізнес продовжує отримувати міжнародне визнання. Цього разу 5 українських компаній зі сфери інформаційних технологій увійшли до відомого рейтингу «Inc. 5000 Europe» – списку приватних компаній Європи, які розвиваються найбільш динамічно.','28.02.18')
+
+            .row
+                .col-12.col-detail-mobile
+                    +link-detail('Усі публікації')
+
+
+    include ../components/_sliders/slider-calendar/slider-calendar
+
+    include ../components/_modules/comment/section-comments
+
+    include ../components/_sliders/slider-member/slider-members
+
+    include ../components/_sliders/slider-partners/slider-partners
+
+
+
+

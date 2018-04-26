@@ -1,0 +1,344 @@
+ul
+  li
+    list-style none
+    ul
+      mt(r(15))
+      ml(r(20))
+
+ul, ol
+  padding 0
+  margin 0
+  li
+    font-family $m-font, sans-serif
+
+ol
+  ml(r(20))
+  li
+    ol
+      mt(r(15))
+
+.ul-regular
+  mb(r(25))
+  li
+    position relative
+    pl(r(33))
+    mb(r(5))
+    line-height 1.25
+    fs(e(14))
+    co($black-text)
+    &:before
+      pseudo(block, absolute)
+      width 14px
+      height 3px
+      bg($blue)
+      top 7px
+      left 0
+
+.ul-lang
+  display flex
+  justify-content center
+  +mob()
+    order 2
+  li
+    margin 0 r(11)
+    a
+      fs(e(18))
+      fw(700)
+      co($blue-light-back4)
+      &:hover, &.active
+        co($blue-dark)
+
+.ul-login
+  display flex
+  position relative
+  padding r(1) 0
+  &:before
+    pseudo(block, absolute)
+    width 1px
+    height 70px
+    background rgba(95, 128, 165, .15)
+    left -29px
+    top -22px
+    +mob()
+      display none
+  li
+    a
+      display flex
+      align-items center
+      co($blue-dark3)
+      fw(700)
+      svg
+        mr(r(13))
+        g
+          fill $blue-dark3
+      &:hover
+        co($blue-light-back4)
+        svg g
+          fill $blue-light-back4
+
+.ul-social
+  display flex
+  flex-wrap wrap
+  pt(r(3))
+  mb(r(40))
+  +mob()
+    mt(r(43))
+  li
+    width 100%
+    display flex
+    align-items center
+    mb(r(10))
+
+    a
+      display flex
+      align-items center
+      co($wt)
+      fs(e(14))
+      svg
+        mr(r(12))
+        g
+          fill $wt
+      &:hover
+        co($blue)
+        svg g
+          fill $blue
+
+.ul-values
+  df(row)
+  flex-wrap wrap
+  margin 0 -15px
+  li
+    flex 1 1 calc(50% - 30px)
+    max-width calc(50% - 30px)
+    pr(r(100))
+    margin 0 r(15)
+    +tab()
+      pr(r(50))
+    +port()
+      pr(0)
+    +mob()
+      flex 1 1 100%
+      max-width 100%
+      pr(0)
+    +land()
+      flex 1 1 calc(50% - 30px)
+      max-width calc(50% - 30px)
+
+.ul-tablist
+  display flex
+  box-shadow: 0 10px 30px 0 rgba(94, 107, 126, 0.3);
+  +mob()
+    box-shadow none
+    margin 0 -15px
+    .slick-track
+      left 15px
+      .slick-slide
+        &:first-child
+          a
+            &:after
+              display none
+  li
+    width 100%
+    +mob()
+      box-shadow: 0 10px 30px 0 rgba(94, 107, 126, 0.3);
+      margin  r(10) 0 r(30)
+    a
+      display flex
+      fs(e(16))
+      fw(700)
+      font-family $a-font, sans-serif
+      line-height: 1.38;
+      co($blue)
+      bg($wt)
+      padding r(12) 0 r(16)
+      justify-content center
+      align-items center
+      text-align center
+      position relative
+      height 100%
+      +mob()
+        padding r(12) r(10) r(16)
+
+      &:after
+        pseudo(block,absolute)
+        top 4px
+        bottom 4px
+        width 1px
+        bg($blue)
+        left 0
+
+      &:hover
+        bg($blue)
+        co($wt)
+        box-shadow: 0 10px 30px 0 rgba(24, 111, 240, 0.5);
+        width: calc(100% + 1px);
+        pr(1px)
+        z-index: 20;
+      &.active
+        bg($black-text4)
+        co($wt)
+        box-shadow none
+        width: calc(100% + 1px);
+        z-index: 20;
+        pr(1px)
+        +mob()
+          pr(r(11))
+    &:first-child
+      a
+        &:after
+          display none
+          +mob()
+            display block
+
+
+  &.ul-tablist-filter
+    mt(r(80))
+    mb(0)
+    +mob()
+      mt(0)
+    li
+      position relative
+      background $wt
+
+      span
+        position absolute
+        line-height: 1.18;
+        letter-spacing: 2.2px;
+        fs(e(44))
+        fw(700)
+        top -58px
+        left 0
+        font-family $a-font, sans-serif
+        co($blue-light17)
+
+        visibility hidden
+        opacity 0
+        z-index -1
+        trans()
+      a
+        position relative
+        z-index 2
+        background $tr
+        +mob()
+          min-width: 263px;
+        &:hover
+          box-shadow none
+        &.active + span, &:hover + span
+          visibility visible
+          opacity 1
+          z-index 1
+        &.active
+          color $wt
+          +mob()
+            background $blue
+        &.unhover
+          color $blue-light17
+          + span
+            color $wt
+          &:hover
+            color $wt
+            + span
+              color $blue-light17
+
+
+
+    & + .ul-tablist-filter--slider
+      position absolute
+      background $blue
+      top 0
+      left 0
+      bottom 0
+      height 50px
+      trans()
+      +mob()
+        display none
+
+
+.tablist-filter
+  position relative
+  .slick-track
+    +mob()
+      padding-top r(50)
+
+
+
+
+.ul-slider-events-date
+  display flex
+  align-items center
+  mb(r(62))
+  +mob()
+    mb(r(30))
+  li
+    &:first-child
+      co($wt)
+      fs(e(32))
+      fw(700)
+      mr(r(46))
+      font-family $a-font, sans-serif
+    &:last-child
+      fs(e(16))
+      line-height: 1.43;
+      co($blue-light4)
+
+
+.ul-project
+  display flex
+  align-items center
+  justify-content space-between
+  max-width 77%
+  mb(r(63))
+  +mob()
+    max-width 100%
+  +xs()
+    mb(r(25))
+  li
+    h6
+      mb(0)
+  .ul-project--done
+    display flex
+    align-items center
+    img
+      mr(r(18))
+
+
+
+.ol-attention
+  counter-reset: attention;
+  list-style none
+  pt(r(28))
+  ml(0)
+  mb(r(32))
+  display flex
+  +mob()
+    flex-wrap wrap
+  li
+    position relative
+    pt(r(80))
+    width 100%
+    pr(r(60))
+    +tab()
+      pr(r(30))
+    +port()
+      pr(r(20))
+    +mob()
+      pr(r(20))
+    +land()
+      width 50%
+    &:before
+      pseudo(block,absolute)
+      background $blue
+      height 49px
+      width 2px
+      top 8px
+    &:after
+      counter-increment: attention;
+      content: counters(attention,".") " ";
+      left 34px
+      top 0
+      position absolute
+      co($blue-light14)
+      font-family: $a-font, sans-serif
+      fs(e(70))
+      font-weight: 700
+      letter-spacing: 3.5px;

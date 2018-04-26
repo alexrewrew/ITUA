@@ -1,0 +1,50 @@
+mixin calendar-item(date, time, heading)
+    a(href='' title='').calendar
+        .calendar--block
+            .calendar--block-date
+                .calendar--block-date--date= date
+                .calendar--block-date--text= time
+            h3= heading
+            .calendar--block-button
+                | Перейти до події
+                include ../../_svgs/arrow-right.svg
+
+mixin calendar-item-month(date, time, heading, month)
+    a(href='' title='').calendar
+        .calendar--block
+            .calendar--block-date
+                .calendar--block-date--date= date
+                .calendar--block-date--text= time
+            h3= heading
+            .calendar--block-button
+                | Перейти до події
+                include ../../_svgs/arrow-right.svg
+        .calendar--mark
+            .calendar--mark-month.calendar--mark-text= month
+
+mixin calendar-item-event(date, time, heading, event)
+    a(href='' title='').calendar.calendar-event
+        .calendar--block
+            .calendar--block-date
+                .calendar--block-date--date= date
+                .calendar--block-date--text= time
+            h3= heading
+            .calendar--block-button
+                | Перейти до події
+                include ../../_svgs/arrow-right.svg
+        .calendar--mark
+            .calendar--mark-event.calendar--mark-text= event
+
+mixin calendar-item-event-month(date, time, heading, month, event)
+    a(href='' title='').calendar.calendar-event
+        .calendar--block
+            .calendar--block-date
+                .calendar--block-date--date= date
+                .calendar--block-date--text= time
+            h3= heading
+            .calendar--block-button
+                | Перейти до події
+                include ../../_svgs/arrow-right.svg
+        .calendar--mark
+            .calendar--mark-month.calendar--mark-text= month
+            .calendar--mark-event.calendar--mark-text= event

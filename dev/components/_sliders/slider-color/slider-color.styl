@@ -1,0 +1,139 @@
+.link-color-img
+  display flex
+  align-items center
+  justify-content center
+  overflow hidden
+  height 48vh
+  margin-top r(8)
+  min-height 365px
+  +port()
+    flex-direction column
+  +mob()
+    height 210px
+    mt(0)
+    mb(r(68))
+    width calc(100% + 30px)
+    left -15px
+    right -15px
+    position relative
+    min-height auto
+  .img-color
+    display inline-block
+    min-height 100%
+    width auto
+    flex 0 0 auto
+    +mob()
+      height auto
+      width calc(100% + 30px)
+
+.slider-color--col
+  +mob()
+    padding 0 30px
+  &:before
+    pseudo(block, absolute)
+    top 0
+    width 100%
+    right 0
+    bottom 0
+    bg($blue-light4)
+    transition .6s all ease
+
+.slider-color
+  pb(r(62))
+  +mob()
+    left -15px
+    right -15px
+    width calc(100% + 30px)
+    pb(r(72))
+  &--heading
+    font-family $a-font, sans-serif
+    fs(e(44))
+    fw(700)
+    line-height 1.14
+    letter-spacing 1px
+    co($wt)
+    display inline-block
+    mb(r(52))
+    max-height 150px
+
+    +xxl()
+      fs(e(56))
+      mb(r(92))
+    +port()
+      fs(e(66))
+    +mob()
+      font-size: e(24)
+      line-height: 1.33;
+      mb(r(17))
+    &:hover
+      co($wt)
+
+  &--date
+    df(row)
+    mt(r(30))
+    mb(r(57))
+    li
+      co($wt)
+      fs(e(14))
+      letter-spacing: 1px;
+      mr(r(40))
+      fw(700)
+      &:last-child
+        mr(0)
+      a
+        co($wt)
+        text-decoration underline
+        &:hover
+          color $blue
+
+  p
+    co($wt)
+    +port()
+      font-size (e(16))
+    +mob()
+      mb(r(34))
+  .link-detail
+    float left
+
+  .slick-track
+    display: flex;
+    align-items: flex-end;
+
+  .arrow
+    border-color $wt30
+    +mob()
+      bottom auto
+      top 210px
+    svg
+      g
+        fill $wt
+
+  .arrow.left
+    left: calc(1057px - 50%);
+    +xxl()
+      left: calc(1415px - 50%);
+    +tab()
+      left: calc(790px - 50%);
+    +port()
+      left: calc(570px - 50%);
+    +mob()
+      left auto
+      right: calc(15px + 64px);
+
+
+  .arrow.right
+    left: calc(1057px - 50% + 82px);
+    +xxl()
+      left: calc(1415px - 50% + 82px);
+    +tab()
+      left: calc(790px - 50% + 82px);
+    +port()
+      left: calc(570px - 50% + 82px);
+    +mob()
+      right: 15px
+      left auto
+
+  .slick-slide.slick-current.slick-active
+    .slider-color--col
+      &:before
+        width 0%

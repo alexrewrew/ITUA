@@ -1,0 +1,32 @@
+html
+  fs($base-font-pixels)
+
+html, body
+  overflow-x hidden
+
+body
+  font(r(16), 400, normal)
+  co($bk)
+  bg($wt)
+  font-family $m-font, sans-serif
+
+
+//  CONTAINERS
+
+.container.container-slider
+  max-width 100%
+
++land()
+  .container
+    max-width 100%
+
++dis()
+  .container
+    max-width 1170px !important
+
+  .container.container-slider
+    max-width: 1493px !important;
+
++xxl()
+  .container.container-big
+    max-width 1500px !important

@@ -1,0 +1,43 @@
+html.open
+  overflow hidden !important
+  height 100vh
+
+body.open
+  overflow hidden !important
+  .nav-icon
+    &:before
+      bg(rgba(255, 255, 255, .3))
+    span
+      bg($wt)
+      &:nth-child(1)
+        top 20px
+        width 0
+        left 50%
+      &:nth-child(2)
+        transform rotate(45deg)
+      &:nth-child(3)
+        transform rotate(-45deg)
+      &:nth-child(4)
+        top 20px
+        width 0
+        left 50%
+
+  #nav-logo
+    display none
+
+  #nav-list
+    display flex
+    animation: ds-none .2s both;
+
+  .nav-top
+    bg($blue-light6)
+    border-bottom-color: $wt30
+
+  .nav-bottom
+    transform none
+    overflow-x: hidden;
+
+  nav
+    height 100%
+    overflow scroll !important
+    background-color $blue-light6 !important

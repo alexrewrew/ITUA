@@ -1,0 +1,100 @@
+.slick-loading .slick-list
+  background: #fff url('../img/slick/ajax-loader.gif') center center no-repeat;
+
+@font-face
+  font-family: 'slick';
+  font-weight: normal;
+  font-style: normal;
+  src: url('../fonts/slick/slick.eot');
+  src: url('../fonts/slick/slick.eot?#iefix') format('embedded-opentype'), url('../fonts/slick/slick.woff') format('woff'), url('../fonts/slick/slick.ttf') format('truetype'), url('../fonts/slick/slick.svg#slick') format('svg');
+
+.slider
+  .arrow
+    position absolute
+    bottom 0
+    z-index 100
+    height 62px
+    width 83px
+    border 1px solid $blue
+    cursor pointer
+    display flex
+    align-items center
+    justify-content center
+    trans()
+    +mob()
+      height 48px
+      width 65px
+    svg
+      trans()
+      g
+        fill $blue
+        trans()
+    &:hover
+      background $blue-light6
+      svg g
+        fill $wt
+  .arrow.left
+    left calc(1186px - 50%)
+    &:hover
+      svg
+        transform translate3d(-10px, 0, 0)
+  .arrow.right
+    left calc(1186px - 50% + 82px)
+    &:hover
+      svg
+        transform translate3d(10px, 0, 0)
+
+//.slide
+//  display flex !important
+//  justify-content center
+//  align-items center
+//  height 350px
+//  overflow hidden
+//  &:focus
+//    outline none
+
+//.slick-dots
+//  bottom 0
+//  left 0
+//  right 0
+//  display flex
+//  justify-content center
+//  li
+//    width auto
+//    height auto
+//    margin 0 $r3
+//    button
+//      padding 0
+//      border-radius 50%
+//      background #ccc
+//      width 10px
+//      height 10px
+//      font-size: 0;
+//      trans()
+//      &:before
+//        display none
+//      &:hover
+//        background blue
+//  .slick-active
+//    button
+//      background blue
+
+//.slider-counter
+//  font-size 3em
+//  margin-bottom r(16)
+//  text-align right
+
+//.slider.slick-dotted.slick-slider
+//  margin-bottom r(30)
+
+//.slider-two, .slider-three
+//  margin 0 -.938em
+//  .slide
+//    margin 0 r(15)
+//    overflow hidden
+
+.slider-block
+  position relative
+
+
+

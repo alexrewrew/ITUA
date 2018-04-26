@@ -1,0 +1,52 @@
+.form-footer
+  display flex
+  +mob()
+    flex-wrap: wrap
+    mb(r(60))
+  .input-group-shadow
+    width 100%
+    +mob()
+      mb(r(20))
+    &--shade
+      position relative
+      z-index 1
+      &:after
+        pseudo(block, absolute)
+        z-index -1
+        left 16px
+        right 16px
+        bottom 0
+        box-shadow: 0px 0px 34px 11px rgba(38, 41, 46, 1);
+        trans()
+        +mob()
+          left 25px
+          right 25px
+    input
+      bg($black-back2)
+      mb(0)
+      height 100%
+      pl(r(31))
+      fs(e(16))
+      co($wt)
+      position relative
+      z-index 2
+      +placeholder()
+        co($wt)
+      +mob()
+        fs(e(14))
+        pt(r(14))
+        pb(r(16))
+      &:focus
+        bg(#36393F)
+        & ~ .input-group-shadow--shade
+          &:after
+            transform translate3d(0, -6px, 0)
+            box-shadow: 0px 0px 34px 11px rgba(42, 37, 61, 1);
+  .btn
+    max-width 196px
+    fs(e(14))
+    letter-spacing: 2.3px;
+    pt(r(19))
+    pb(r(17))
+    +mob()
+      max-width 100%

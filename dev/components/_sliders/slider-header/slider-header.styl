@@ -1,0 +1,21 @@
+.slider-header
+  height 390px
+  .arrow
+    background $tr
+    border-color $blue-light11
+    svg g
+      fill $wt
+    &.right
+      bg($blue-light12)
+      +mob()
+        bg($tr)
+      +land()
+        background $blue-light12
+      &:hover
+        background $blue-light6
+  .slide
+    height 390px
+    +mob()
+      height 342px
+    +land()
+      height 390px

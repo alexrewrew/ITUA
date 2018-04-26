@@ -1,0 +1,95 @@
+//- layouts/layout.pug
+extend layouts/_layout.pug
+
+block title
+    | IT Ukraine Association - Члени Асоціації
+
+
+block content
+
+
+    header.header-members
+        +header-part('Члени Асоціації', 'Асоціація – ефективний та надійний інструмент для просування та захисту інтересів галузі. Будучи найчисельнішою профільною спільнотою, ми, як ніхто інший, розуміємо індустрію інформаційних')
+
+        .container
+            .row
+                .col-12
+                    .tablist-filter
+                        ul.ul-tablist.ul-tablist-filter.slider-tablist-filter
+                            li
+                                +a('Всі', 'active')
+                                span 431
+                            li
+                                +a('Дизайн')
+                                span 56
+                            li
+                                +a('SMM')
+                                span 56
+                            li
+                                +a('Програмування')
+                                span 56
+                            li
+                                +a('Дизайн')
+                                span 56
+                        .ul-tablist-filter--slider
+
+
+    section.section-top-zero
+        .container
+            .row
+                .offset-md-4.col-md-8.offset-lg-6.col-lg-6
+                    form.form-filter
+                        .select-group
+                            select
+                                option(disabled selected) Фільтр за регіоном
+                                option м. Київ
+                                option Львівська обл.
+                                option Харківська обл.
+                                option Одеська обл.
+                                option Вінницька обл.
+                        .input-group.input-group-blue
+                            input(type='text' placeholder='Назва').input-blue
+                            button(type='submit').input-group--button
+                                include ../../components/_svgs/search.svg
+
+            .row.row-partners.row-members.no-gutters
+                .col-sm-6.col-md-4.col-xl-3
+                    +member-item('img/illus/members/member1.jpg')
+                .col-sm-6.col-md-4.col-xl-3
+                    +member-item('img/illus/members/member2.png')
+                .col-sm-6.col-md-4.col-xl-3
+                    +member-item('img/illus/members/member3.jpg')
+                .col-sm-6.col-md-4.col-xl-3
+                    +member-item('img/illus/members/member4.png')
+                .col-sm-6.col-md-4.col-xl-3
+                    +member-item('img/illus/members/member5.jpg')
+                .col-sm-6.col-md-4.col-xl-3
+                    +member-item('img/illus/members/member6.png')
+                .col-sm-6.col-md-4.col-xl-3
+                    +member-item('img/illus/members/member7.png')
+                .col-sm-6.col-md-4.col-xl-3
+                    +member-item('img/illus/members/member8.svg')
+                .col-sm-6.col-md-4.col-xl-3
+                    +member-item('img/illus/members/member9.png')
+                .col-sm-6.col-md-4.col-xl-3
+                    +member-item('img/illus/members/member10.png')
+                .col-sm-6.col-md-4.col-xl-3
+                    +member-item('img/illus/members/member11.svg')
+                .col-sm-6.col-md-4.col-xl-3
+                    +member-item('img/illus/members/member12.png')
+                .col-sm-6.col-md-4.col-xl-3
+                    +member-item('img/illus/members/member13.svg')
+
+            include ../../components/_widgets/pagination/pagination
+
+    section.section-advantages-footer
+        .container
+            .row
+                .col-sm-6
+                    h2 Переваги Асоціації
+                .col-sm-6.col-md-5.col-lg-4
+                    p Ми – спільнота лідерів індустрії, які працюють задля розвитку галузі інформаційних технологій в Україні
+                    +btn('Приєднатись')
+
+
+

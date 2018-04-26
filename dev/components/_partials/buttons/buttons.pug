@@ -1,0 +1,20 @@
+mixin btn(text)
+    a(href='' title='').btn= text
+
+mixin btn-small(text)
+    a(href='' title='').btn.btn-small= text
+
+mixin btn-arrow(text)
+    a(href='' title='').btn.btn-arrow
+        = text
+        include ../../_svgs/arrow-right.svg
+
+mixin btn-slider(text)
+    a(href='' title='').btn.btn-arrow.btn-arrow-slider
+        = text
+        include ../../_svgs/arrow-right.svg
+
+mixin btn-more(text)
+    .btn-more
+        = text
+        include ../../_svgs/arrow-right.svg

@@ -1,0 +1,32 @@
+.join
+  pt(r(30))
+  +mob()
+    pt(r(60))
+    pb(r(60))
+  +land()
+    pt(0)
+  &--block
+    position relative
+    margin-bottom r(20)
+    +port()
+      height 431px
+      overflow hidden
+    +mob()
+      height 410px
+      overflow hidden
+    &-image
+      width 100%
+    p
+      color: $blue-dark2
+      position absolute
+      bottom 0
+      left 0
+      right 0
+      padding r(37) r(20)
+      margin-bottom 0
+      +tab()
+        padding r(32) r(15)
+      +port()
+        padding r(25) r(15)
+      +mob()
+        padding r(35) r(20)

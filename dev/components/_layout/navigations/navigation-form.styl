@@ -1,0 +1,17 @@
+.form-search-nav
+  .input-group
+    input
+      padding r(4) r(15) r(4) r(45)
+      bg(rgba(95, 128, 165, 0.08))
+      width: calc(100% + 15px)
+      border-radius: 3px;
+      +placeholder()
+        color rgba(38, 74, 117, .5)
+      &:focus
+        background rgba(95, 128, 165, .2)
+      +mob()
+        width 100%
+        padding r(9) r(20) r(11)
+    button
+      svg g
+        fill $blue-dark3

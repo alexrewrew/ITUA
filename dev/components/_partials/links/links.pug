@@ -1,0 +1,11 @@
+mixin link-detail(text)
+    a(href='' title='').link-detail
+        = text
+        include ../../_svgs/angle-right.svg
+
+mixin li-a(text, className)
+    li
+        a(href='' title='' class= className)= text
+
+mixin a(text, className)
+    a(href='' title='' class= className)= text

@@ -1,0 +1,35 @@
+
+
+table, tr, th, td
+  border 1px solid $blue-light15
+
+table
+  width 100%
+  //caption
+  //  caption-side top
+  //  text-align right
+  th
+    co($blue)
+    text-align center
+    line-height: 1.75;
+    letter-spacing: 0.8px;
+    fw(700)
+    fs(e(20))
+    padding r(6) 0 r(2)
+    +mob()
+      fs(e(14))
+  td
+    line-height: 1.75;
+    fs(e(14))
+    co($black-text)
+    padding r(6) r(10) r(2) r(50)
+    +mob()
+      pl(r(15))
+
+
+  thead
+    th
+      padding r(24) r(10) r(26)
+      fs(e(24))
+      +mob()
+        fs(e(16))

@@ -1,0 +1,82 @@
+.member
+  display block
+  border-top solid 1px $blue-light5
+  border-bottom solid 1px $blue-light5
+  border-left solid 1px $blue-light5
+  margin-bottom -1px
+  box-shadow: 1px 0px 0px 0px rgba(226, 232, 238, 1);
+  padding r(31) r(35)
+  position relative
+  height: 294px;
+  max-width 293px
+  bg($wt)
+  trans()
+  +mob()
+    max-width 263px
+  &--image
+    height 90px
+    margin-bottom r(25)
+    img
+      max-height 100%
+      max-width 100%
+  p
+    fs(e(12))
+    max-height 90px
+    overflow hidden
+  &--tags
+    display flex
+    flex-wrap wrap
+    padding-left r(5)
+    pt(r(1))
+    li
+      border 1px solid $blue-light5
+      fs(e(12))
+      line-height: 1.33;
+      text-align center
+      co($blue-light5)
+      padding r(3) r(13) r(4)
+      margin-top: -1px
+      margin-left: -1px
+
+  .btn-more
+    position absolute
+    bottom -1px
+    left -1px
+    pl(r(38))
+
+  &:hover
+    box-shadow: 0 10px 30px 0 rgba(94, 107, 126, 0.3);
+    bg($wt)
+    border-color $tr
+    z-index: 30;
+    .btn-more
+      bg($blue)
+      co($wt)
+      max-width calc(100% + 1px)
+      width calc(100% + 1px)
+      pl(r(38))
+      svg
+        opacity 1
+
+.member.member-regular
+  padding r(24) r(33)
+  height: 194px;
+  .member--image
+    height 54px
+    margin-bottom r(21)
+  .btn-more
+
+    bottom: 2px;
+    left: 6px
+    fs(e(14))
+    co($wt)
+  &:hover
+    .btn-more
+      bg($tr)
+      co($blue)
+      max-width calc(100% - 19px)
+      pl(r(30))
+      svg
+        opacity 1
+        g
+          fill $blue
