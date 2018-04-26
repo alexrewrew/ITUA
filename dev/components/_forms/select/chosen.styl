@@ -1,5 +1,3 @@
-
-
 .chosen-rtl .chosen-search input[type="text"],
 .chosen-container-single .chosen-single abbr,
 .chosen-container-single .chosen-single div b,
@@ -24,25 +22,47 @@
 
 .chosen-container
   width 100%
-  mb(r(20))
-  &:after
-    triangle($bk, down, 4px)
-    top calc(50% - 2px)
-    right 15px
+  mb(0)
+  fs(r(16))
+  padding-bottom 1px
+  &:before
+    pba()
+    left -15px
+    right -15px
+    top 0
+    bottom 0
+    background #E9EDF3
+    opacity 0
+    visibility hidden
     trans()
+
+  &:after
+    triangle($blue, down, 4px)
+    top: calc(50% - 4px);
+    right: 18px;
+    trans()
+
   &:focus
     outline none
+
   .chosen-single
     padding 0
     height auto
+
     border-radius 0
-    border 1px solid #ccc
-    bg($wt)
+    border none
+    border-bottom 2px solid $blue
+
+    background none
     box-shadow none
     trans()
     span
-      padding r(10) r(15) r(11)
-      fs(e(16))
+      color $blue
+      bg($tr)
+      padding r(7) r(19) r(10)
+      fs(e(14))
+
+
   .chosen-default
     span
       opacity .5
@@ -58,35 +78,74 @@
       background-image none !important
 
 .chosen-container.chosen-with-drop
+  &:before
+    opacity 1
+    visibility visible
   &:after
     transform rotate(180deg)
+  .chosen-single
+    background #E9EDF3
 
 .chosen-container.chosen-container-active
   box-shadow none
+
   .chosen-single
+    border none
+    border-bottom 2px solid $blue
     box-shadow none
-    border 1px solid blue
-    background none
+    border-color $blue
+
 
 .chosen-container-single .chosen-drop
+  animation: ds-none .2s both;
   border-radius 0
-  border 1px solid blue
-  border-top 0
-  padding 0
+  background #E9EDF3
+  border none
+
+  //
   box-shadow none
+
+  left -15px
+  right -15px
+  width calc(100% + 30px)
+
+  //&:before
+  //  pba()
+  //  top 0
+  //  left 15px
+  //  right 15px
+  //  background $blue
+  //  height 1px
+
+  //&:after, &:before
+  //  pba()
+  //  z-index 40
+  //  left 0
+  //  right 13px
+  //  height 25px
+  //
+  //&:before
+  //  top 0
+  //  background: linear-gradient(to bottom, rgba(233,237,243,1) 0%, rgba(233,237,243,0) 50%);
+  //
+  //&:after
+  //  bottom 0
+  //  background: linear-gradient(to bottom, rgba(233,237,243,0) 0%, rgba(233,237,243,1) 50%);
+
   .chosen-results
     padding 0
     margin 0
     box-shadow none
+
     .active-result
-      padding r(12) r(15) r(13)
-      fs(e(16))
+      padding r(9) r(30) r(11)
+      fs(e(14))
       line-height normal
+      co(#264A75)
     .active-result.highlighted
-      bg(blue)
+      background #E0E4EC
     .result-selected
-      bg(#ccc)
-      co($wt)
+      display none
 
 .chosen-container-single .chosen-single div b
   display none

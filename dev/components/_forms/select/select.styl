@@ -1,5 +1,3 @@
-
-
 select
   display block
 
@@ -31,3 +29,6 @@ select
     triangle($blue, down, 4px)
     top calc(50% - 2px)
     right 15px
+  +mmin( 768px )
+    &:after
+      display none

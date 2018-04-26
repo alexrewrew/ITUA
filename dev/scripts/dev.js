@@ -343,10 +343,10 @@
         // ========== SELECT ==========
 
         // ----- CHOSEN -----
-        // $(".chosen-select").chosen({
-        //     disable_search_threshold: 4,
-        //     no_results_text: "Нічого не знайдено"
-        // });
+        $(".chosen-select").chosen({
+            disable_search_threshold: 4000,
+            no_results_text: "Нічого не знайдено"
+        });
 
         // ----- SELECT2 -----
         // $('.select2-select').select2({
