@@ -1,0 +1,70 @@
+//- layouts/layout.pug
+extend layouts/_layout.pug
+
+block title
+    | IT Ukraine Association - Новини напряму
+
+
+block content
+
+
+    header.header-about-business.header-about-business-news
+        +header-part('Новини напряму', "Асоціація – ефективний та надійний інструмент для просування \n" +
+        "та захисту інтересів галузі. Будучи найчисельнішою профільною спільнотою, ми, як ніхто")
+
+        .container
+            .row
+                .col-sm-6.col-lg-5
+                    form.form-search-news
+                        .input-group.input-group-blue
+                            input(type='text' placeholder='Фільтр за регіоном')
+                            button(type='submit').input-group--button
+                                include ../components/_svgs/search.svg
+
+
+    section.section-news-big
+        .container
+            a(href='' title='').row.news-big
+                .col-md-5
+                    .news-big--image
+                        +img('img/illus/news/news1.jpg')
+                .col-md-7.offset-lg-1.col-lg-6.col-xl-5
+                    h6
+                        span.company Ciklum
+                        | , Іван Микитюк, голова відділу PR
+                    h3 5 українських ІТ-компаній потрапили до міжнародного рейтингу Inc. 5000
+                    p Вітчизняний ІТ-бізнес продовжує отримувати міжнародне визнання. Цього разу 5 українських компаній зі сфери інформаційних технологій увійшли до відомого рейтингу «Inc. 5000 Europe» – списку приватних […] компаній Європи, які розвиваються найбільш динамічно.
+                    .blog--date 21.02.18
+                    .btn.btn-arrow Читати більше
+                        include ../components/_svgs/arrow-right.svg
+
+            .row
+                .col-12
+                    hr
+
+
+    section.section-top-zero
+        .container
+            .row
+                .col-md-6.col-lg-4.col-xl-3
+                    +news('img/illus/news/news1.jpg','Відтепер ввозити прототипи для R&D цілей в Україну стане простіше','Завдяки спільній роботі галузевих експертів були прийняті новели, що значно спрощують процедуру імпорту в Україну прототипів обладнання для R&D цілей (дослідження та розробки).', '13.02.2018')
+                .col-md-6.col-lg-4.col-xl-3
+                    +news('img/illus/news/news2.jpg','ELEKS та Miratech - у списку фіналістів престижної премії European IT & Software Excellence Awards 2018','ІТ Europa, міжнародна агенція, яка займається ринковими дослідженнями, оприлюднила список фіналістів престижної загальноєвропейської премії European IT & Software Excellence Awards.', '20.03.18')
+                .col-md-6.col-lg-4.col-xl-3
+                    +news('img/illus/news/news3.jpg','18 українських компаній увійшли до ТОП-100 кращих провайдерів ІТ-послуг у світі','Міжнародна організація IAOP (International Association of Outsourcing Professionals) під час своєї щорічної події Outsourcing World Summit, традиційно підбила підсумки року та оприлюднила список кращих світових постачальників ІТ-послуг.', '20.02.18')
+                .col-md-6.col-lg-4.col-xl-3
+                    +news('img/illus/news/news4.jpg','5 українських ІТ-компаній потрапили до міжнародного рейтингу Inc. 5000','Вітчизняний ІТ-бізнес продовжує отримувати міжнародне визнання. Цього разу 5 українських компаній зі сфери інформаційних технологій увійшли до відомого рейтингу «Inc. 5000 Europe» – списку приватних компаній Європи, які розвиваються найбільш динамічно.','28.02.18')
+                .col-md-6.col-lg-4.col-xl-3
+                    +news('img/illus/news/news1.jpg','Відтепер ввозити прототипи для R&D цілей в Україну стане простіше','Завдяки спільній роботі галузевих експертів були прийняті новели, що значно спрощують процедуру імпорту в Україну прототипів обладнання для R&D цілей (дослідження та розробки).', '13.02.2018')
+                .col-md-6.col-lg-4.col-xl-3
+                    +news('img/illus/news/news2.jpg','ELEKS та Miratech - у списку фіналістів престижної премії European IT & Software Excellence Awards 2018','ІТ Europa, міжнародна агенція, яка займається ринковими дослідженнями, оприлюднила список фіналістів престижної загальноєвропейської премії European IT & Software Excellence Awards.', '20.03.18')
+                .col-md-6.col-lg-4.col-xl-3
+                    +news('img/illus/news/news3.jpg','18 українських компаній увійшли до ТОП-100 кращих провайдерів ІТ-послуг у світі','Міжнародна організація IAOP (International Association of Outsourcing Professionals) під час своєї щорічної події Outsourcing World Summit, традиційно підбила підсумки року та оприлюднила список кращих світових постачальників ІТ-послуг.', '20.02.18')
+                .col-md-6.col-lg-4.col-xl-3
+                    +news('img/illus/news/news4.jpg','5 українських ІТ-компаній потрапили до міжнародного рейтингу Inc. 5000','Вітчизняний ІТ-бізнес продовжує отримувати міжнародне визнання. Цього разу 5 українських компаній зі сфери інформаційних технологій увійшли до відомого рейтингу «Inc. 5000 Europe» – списку приватних компаній Європи, які розвиваються найбільш динамічно.','28.02.18')
+
+
+            include ../components/_widgets/pagination/pagination
+
+
+

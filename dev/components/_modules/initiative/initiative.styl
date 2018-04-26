@@ -1,0 +1,74 @@
+.comment
+  &.comment-initiative
+    min-height 300px
+    .comment--left
+      +port()
+        max-width 150px
+      +mob()
+        height 191px
+      +land()
+        max-width 150px
+        height auto
+    .comment--left-image
+      height 100%
+      +mob()
+        width auto
+      img
+        min-height 100%
+        flex 0 0 auto
+        +mob()
+          min-width 100%
+          height auto
+      &:before
+        pseudo(block, absolute)
+        opacity 0
+        bg($blue-light16)
+        top 0
+        bottom 0
+        left 0
+        right 0
+        trans()
+        z-index 30
+
+    .comment--right
+      pt(r(40))
+      pr(r(50))
+      ml(r(45))
+      +tab()
+        pr(0)
+        mr(r(30))
+      +port()
+        width calc(100% - 150px - 45px)
+      +mob()
+        ml(0)
+      +land()
+        width calc(100% - 150px - 45px)
+        ml(r(45))
+      h3
+        mb(r(3))
+        line-height: 1.15;
+        fs(e(26))
+      h6
+        mb(r(28))
+      p
+        +port()
+          max-height 160px
+      .btn-more
+        pb(r(20))
+        pt(r(19))
+        +tab()
+          max-width 60%
+        svg
+          top 21px
+          right 34px
+    &:hover
+      .comment--left-image
+        img
+          filter grayscale(100%)
+        &:before
+          opacity .6
+    &.done
+      .comment--right-done
+        display block
+        +tab()
+          right -30px
