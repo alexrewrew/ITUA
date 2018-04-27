@@ -7,8 +7,10 @@
   position relative
   padding r(62) r(87) r(41)
   mb(r(11))
-  +mmax(991px)
+  +port(991px)
     padding r(31) r(43) r(21)
+  +mob()
+    padding r(82) r(17)
   &--mark
     color: $blue-light
     text-align center
@@ -21,3 +23,14 @@
     padding-top: r(19)
     padding-bottom: r(23)
     letter-spacing: 1px;
+    +xs()
+      left 15px
+      right 15px
+      max-width 100%
+      width calc(100% - 30px)
+      text-align center
+      svg
+        display none
+  h2
+    +mob()
+      fs(e(28))

@@ -4,6 +4,10 @@
   pb(r(16))
   position relative
   z-index 40
+  +mob()
+    pt(0)
+  +xs()
+    pb(r(65))
   &:after
     pseudo(block, absolute)
     top 100%
@@ -12,3 +16,5 @@
     height 342px
     background $blue-light-back
     z-index -1
+    +xs()
+      display none

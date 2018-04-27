@@ -1,0 +1,12 @@
+mixin contribution(heading, counter, price)
+
+    .contribution-category
+        .contribution-category--head
+                = heading
+                | &nbsp;категорія
+        .contribution-category--td
+            b Кількість спеціалістів у компанії:
+            = counter
+        .contribution-category--td
+            b Розмір внеску:
+            = price

@@ -68,33 +68,42 @@ block content
             .row
                 .col-12
                     h2.mb-51 Суми внесків
-                    table
-                        thead
-                            tr
-                                th Категорія
-                                th Кількість спеціалістів у компанії
-                                th Розмір внеску
-                        tbody
-                            tr
-                                th 1
-                                td до 50
-                                td 750 - 1800 USD
-                            tr
-                                th 2
-                                td від 50 до 200
-                                td 2000 – 3800 USD
-                            tr
-                                th 3
-                                td від 200 до 800
-                                td 3800 – 5500 USD
-                            tr
-                                th 4
-                                td від 800 до 1500
-                                td 5500 – 6800 USD
-                            tr
-                                th 5
-                                td понад 1500
-                                td 9000 USD
+
+                    .contribution
+                        table
+                            thead
+                                tr
+                                    th Категорія
+                                    th Кількість спеціалістів у компанії
+                                    th Розмір внеску
+                            tbody
+                                tr
+                                    th 1
+                                    td до 50
+                                    td 750 - 1800 USD
+                                tr
+                                    th 2
+                                    td від 50 до 200
+                                    td 2000 – 3800 USD
+                                tr
+                                    th 3
+                                    td від 200 до 800
+                                    td 3800 – 5500 USD
+                                tr
+                                    th 4
+                                    td від 800 до 1500
+                                    td 5500 – 6800 USD
+                                tr
+                                    th 5
+                                    td понад 1500
+                                    td 9000 USD
+
+                        +contribution('1', 'до 50', '750 – 1800 USD')
+                        +contribution('2', 'від 50 до 200', '2000 – 3800 USD')
+                        +contribution('3', 'від 200 до 800', '3800 – 5500 USD')
+                        +contribution('4', 'від 800 до 1500', '5500 – 6800 USD')
+                        +contribution('5', 'понад 1500', '9000 USD')
+
 
 
     include ../components/_sliders/slider-member/slider-members

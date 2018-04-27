@@ -145,6 +145,7 @@ ol
     +mob()
       box-shadow: 0 10px 30px 0 rgba(94, 107, 126, 0.3);
       margin  r(10) 0 r(30)
+      width 263px !important
     a
       display flex
       fs(e(16))
@@ -177,6 +178,8 @@ ol
         width: calc(100% + 1px);
         pr(1px)
         z-index: 20;
+        +mob()
+          pr(r(10))
       &.active
         bg($black-text4)
         co($wt)
@@ -243,8 +246,6 @@ ol
             + span
               color $blue-light17
 
-
-
     & + .ul-tablist-filter--slider
       position absolute
       background $blue
@@ -255,6 +256,19 @@ ol
       trans()
       +mob()
         display none
+
+  &.ul-tablist-more
+    +mob()
+      flex-wrap wrap
+      margin 0
+      li
+        mt(r(5))
+        mb(r(15))
+        width 100% !important
+        a
+          &:after
+            display none
+
 
 
 .tablist-filter
@@ -315,6 +329,8 @@ ol
   display flex
   +mob()
     flex-wrap wrap
+  +xs()
+    mb(r(12))
   li
     position relative
     pt(r(80))
@@ -326,8 +342,11 @@ ol
       pr(r(20))
     +mob()
       pr(r(20))
+      pt(r(100))
     +land()
       width 50%
+    +xs()
+      mb(r(35))
     &:before
       pseudo(block,absolute)
       background $blue
