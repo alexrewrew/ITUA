@@ -14,8 +14,8 @@ h1
   letter-spacing: 1px;
   co($wt)
   +mob()
-    font-size: 2.5em
-    mb(r(24))
+    font-size: e(28)
+    mb(r(22))
 
 
 h2
@@ -25,11 +25,11 @@ h2
   color: $blue-dark
   +mob()
     fs(e(24))
-    mb(r(24))
+    mb(r(34))
 
   &.h2-public
     +mob()
-      mb(r(5))
+      mb(r(25))
 
   &.h2-project
     position absolute
@@ -86,6 +86,10 @@ hr
   width calc(100% + 30px)
   position relative
   left -15px
+  +xs()
+    position static
+    width 100%
+    margin r(36) 0 r(76)
 
 .heading-h1-h2
   display flex
@@ -129,6 +133,8 @@ hr
 
 .mb-66
   mb(r(66))
+  +mob()
+    mb(r(34))
 
 .mb-43
   mb(r(43))

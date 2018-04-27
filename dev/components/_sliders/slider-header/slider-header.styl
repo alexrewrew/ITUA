@@ -1,5 +1,11 @@
 .slider-header
   height 390px
+  +xs()
+    height 258px
+    mb(r(35))
+  +land()
+    height 300px
+
   .arrow
     background $tr
     border-color $blue-light11
@@ -7,15 +13,15 @@
       fill $wt
     &.right
       bg($blue-light12)
-      +mob()
-        bg($tr)
-      +land()
-        background $blue-light12
+      +xs()
+        bg(#c9d1db)
       &:hover
         background $blue-light6
+    +xs()
+      bg(#c9d1db)
   .slide
     height 390px
-    +mob()
-      height 342px
+    +xs()
+      height 210px
     +land()
-      height 390px
+      height 300px

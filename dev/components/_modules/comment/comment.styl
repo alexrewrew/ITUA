@@ -63,8 +63,8 @@
       ml(0)
     +mob()
       width 100%
-      padding-left r(25)
-      padding-right r(25)
+      padding-left r(24)
+      padding-right r(24)
       ml(0)
       pt(r(25))
     h3
@@ -106,10 +106,8 @@
 
         visibility hidden
 
-
         +mob()
-          left 25px
-          right 25px
+          display none
       +port()
         left 0
         pl(r(25))
@@ -118,12 +116,13 @@
         left 0
         pl(r(25))
         min-width 100%
-        bg($blue)
-        co($wt)
+        bg($wt)
+        co($blue)
         svg
           opacity 1
           g
-            fill $wt
+            fill $blue
+
 
   &:hover
     box-shadow 0 4px 10px 0 rgba(94, 107, 126, 0.3)
@@ -137,3 +136,9 @@
       &:after
         visibility visible
         opacity .7
+      +mob()
+        pl(r(25))
+        bg($wt)
+        co($blue)
+        &:after
+          display none

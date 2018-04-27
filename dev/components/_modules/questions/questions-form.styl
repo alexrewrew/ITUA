@@ -2,6 +2,9 @@
   display flex
   justify-content space-between
   flex-wrap wrap
+  +mob()
+    pb(r(20))
+
   .input-group
     flex 1 1 calc(50% - 15px)
     max-width calc(50% - 15px)
@@ -9,7 +12,7 @@
     +mob()
       flex 1 1 100%
       max-width 100%
-      mb(r(20))
+      mb(r(22))
     input
       &:focus
         bg($wt)

@@ -9,13 +9,18 @@
       height 225px
       mb(r(39))
       +mob()
-        min-height 181px
+        height 181px
         mb(r(37))
-        img
-          width 100%
-      +land()
-        img
-          width auto
+        align-items flex-end
+      img
+        flex 0 0 auto
+
+        //+mob()
+        //  height 100%
+        //  width auto
+      //+land()
+      //  img
+      //    width auto
     .blog--description
       mb(0)
       h3
@@ -24,4 +29,4 @@
         fs(e(20))
         mb(r(27))
         +mob()
-          mb(r(24))
+          mb(r(19))

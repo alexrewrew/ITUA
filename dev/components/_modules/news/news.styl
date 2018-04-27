@@ -20,8 +20,8 @@
       trans()
       flex-shrink 0
       +mob()
-        width 100%
-        height auto
+        //width 100%
+        height 100%
   &--date
     position absolute
     bottom: 15px;
@@ -32,6 +32,8 @@
     font-family $a-font, sans-serif
   &--description
     mb(r(35))
+    +mob()
+      mb(r(20))
     h6
       font-size: e(14)
       line-height: 1.57

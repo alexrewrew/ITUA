@@ -23,6 +23,7 @@ button
     padding r(17) 0 r(19)
     max-width 100%
 
+
   &:after
     pseudo(block, absolute)
     bottom 0px
@@ -89,6 +90,7 @@ button
   +mob()
     padding r(21) r(36) r(23)
     fs(e(18))
+    letter-spacing .6px
   svg
     position absolute
     right 38px
@@ -96,6 +98,8 @@ button
     trans()
     g
       transition .1s all ease
+    +mob()
+      right 30px
   &:hover
     svg
       transform translate3d(10px,0,0)
