@@ -4,9 +4,11 @@ mixin slider-events-year-header-item(img, date, time, heading, text)
             .row-events-year-slide--image
                 +img(img)
         .offset-lg-1.col-xl-4.col-lg-5.col-sm-6
-            ul.ul-slider-events-date
-                li= date
-                li= time
-            h2= heading
-            p= text
-            +btn-arrow('Перейти до події')
+            .slider-events-slide
+                ul.ul-slider-events-date
+                    li= date
+                    li= time
+                .slider-events-slide--description
+                    h2= heading
+                    p= text
+                +btn-arrow('Перейти до події')

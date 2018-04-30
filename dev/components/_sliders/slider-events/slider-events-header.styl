@@ -1,21 +1,31 @@
 .slider-events-year-header
+  +xs()
+    margin 0 -15px
   .arrow
     bg($blue-light12)
     border-color $blue-light11
     +xs()
       bottom: auto;
-      top: 220px;
+      top: 211px;
     svg g
       fill $blue-light11
     &.right
       right calc(50% + 15px)
       left auto
       +xs()
-        right 0
+        right 15px
     &.left
       right calc(50% + 15px + 82px)
       left auto
       +land()
         right calc(50% + 15px + 64px)
       +xs()
-        right 64px
+        right 79px
+
+.slider-events-slide
+  +xs()
+    display flex
+    flex-wrap wrap
+  &--description
+    +xs()
+      order: -1

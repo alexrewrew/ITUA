@@ -35,6 +35,7 @@
         sliderTabs: $('.tabs-publication--ul'),
         sliderPublications: $('.row-publications'),
         sliderReports: $('.row-reports'),
+
         sliderMiddle: $('.slider-middle'),
         sliderCommittees: $('.slider-tablist'),
         sliderFilter: $('.slider-tablist-filter'),
@@ -48,7 +49,8 @@
         tabsSlider: $('.tabs-publication--line'),
 
         tabsFilterLink: $('.ul-tablist-filter li a'),
-        tabsFilterSlider: $('.ul-tablist-filter--slider')
+        tabsFilterSlider: $('.ul-tablist-filter--slider'),
+
 
     };
 
@@ -61,6 +63,8 @@
             e.preventDefault();
             $('html, body').toggleClass('open');
         });
+
+
 
         // SLIDER PROGRESSBAR
 
@@ -188,7 +192,10 @@
             dots: false,
             slidesToScroll: 1,
             infinite: false,
-            arrows: false,
+            // arrows: false,
+            prevArrow: DOMs.sliderArrowLeft,
+            nextArrow: DOMs.sliderArrowRight,
+
             variableWidth: true,
             speed: 250,
             responsive: [
@@ -202,7 +209,10 @@
                         dots: false,
                         slidesToScroll: 1,
                         infinite: false,
-                        arrows: false,
+                        // arrows: false,
+                        prevArrow: DOMs.sliderArrowLeft,
+                        nextArrow: DOMs.sliderArrowRight,
+
                         variableWidth: true
                     }
                 }
@@ -481,6 +491,7 @@
             });
 
 
+
         } else if (window.matchMedia("(min-width: 768px)").matches) {
             DOMs.menuSearch.insertAfter(DOMs.menuLogo);
 
@@ -491,6 +502,9 @@
             DOMs.dropdown.hover(function () {
                 $(this).children('ul').toggleClass('active')
             });
+
+
+
         }
     });
 

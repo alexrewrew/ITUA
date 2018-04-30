@@ -20,7 +20,7 @@
   margin-left -15px
   margin-right -15px
   +mob()
-    margin 0
+    margin 0 0 r(70)
   .member
     +tab()
       max-width 100%
@@ -34,10 +34,16 @@
   pb(r(62))
   +land()
     pb(r(48))
+  +xs()
+    padding  0 15px
   h2
     mb(r(23))
+    +xs()
+      mb(r(18))
   p
     mb(r(86))
+    +xs()
+      mb(r(35))
   .btn-arrow
     padding r(14) r(29) r(15)
     letter-spacing: 0.5px;
@@ -47,6 +53,16 @@
       max-width 20px
       top 13px
       right 30px
+      +xs()
+        right 38px
+        max-width 25px
+        top 20px
+    +xs()
+      max-width 100%
+      fs(e(18))
+      pl(r(38))
+      pt(r(21))
+      pb(r(23))
   &--image
     position absolute
     display flex
@@ -68,8 +84,11 @@
     +xs()
       position static
       height 210px
-      max-width 100%
-      margin-bottom: 4.25rem
+      //max-width 100%
+      width calc(100% + 30px)
+      margin-bottom: r(76)
+      margin-left -15px
+      margin-right -15px
     img
       flex: 0 0 auto
       min-height 100%
