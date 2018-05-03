@@ -4,7 +4,7 @@ module.exports = function () {
             'node_modules/jquery/dist/jquery.js',
             'dev/source/color-thief/src/color-thief.js',
             'node_modules/slick-carousel/slick/slick.js',
-            // 'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js',
+            'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js',
             'node_modules/chosen-js/chosen.jquery.js',
             'node_modules/select2/dist/js/select2.full.js',
             // 'node_modules/jquery.maskedinput/src/jquery.maskedinput.js',

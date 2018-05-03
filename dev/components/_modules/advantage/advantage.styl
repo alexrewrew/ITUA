@@ -14,13 +14,6 @@
         align-items flex-end
       img
         flex 0 0 auto
-
-        //+mob()
-        //  height 100%
-        //  width auto
-      //+land()
-      //  img
-      //    width auto
     .blog--description
       mb(0)
       h3
@@ -30,3 +23,23 @@
         mb(r(27))
         +mob()
           mb(r(19))
+
+
+.ul-advantage-contacts
+  display flex
+  justify-content space-between
+  max-width 376px
+  +xs()
+    flex-direction column
+  li
+    +xs()
+      mb(r(20))
+    a
+      fs(e(14))
+      display flex
+      align-items center
+      fw(700)
+      svg
+        mr(r(13))
+      span
+        text-decoration underline

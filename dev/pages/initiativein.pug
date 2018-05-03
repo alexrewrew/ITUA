@@ -1,0 +1,98 @@
+//- layouts/layout.pug
+extend layouts/_layout.pug
+
+block title
+    | IT Ukraine Association - Про напрям
+
+
+block content
+
+    header.header-article
+
+        +header-article('img/illus/headers/header-article.png', 'Спрощення процедури ФОП іноземцями', 'Комітету з питань освіти')
+
+        .container
+            .row
+                .offset-md-5.col-md-7
+                    .header-article--author
+                        ul.ul-status
+                            li
+                                b Дата оновлення:
+                                | 21.02.18
+                            li
+                                b Статус:
+                                span.ul-project--done
+                                    +img('img/illus/done.svg')
+                                    span Вирішено
+
+
+    section.section-article
+        article.container
+            .row
+                .col-md-5
+                    h2 Опис проекту
+
+                .col-md-7.col-lg-6
+                    p Розробка програмного забезпечення для обладнання вимагає безпосередньої взаємодії компанії-розробника з таким обладнанням, яке в свою чергу, часто знаходиться на етапі прототипу. При цьому зазвичай такі прототипи класифікуються як радіоелектронні засоби та випромінювальні пристрої (РЕЗ та ВП).
+
+    section.section-article
+        article.container
+            .row
+                .col-md-5
+                    h2 Результат:
+
+                .col-md-7.col-lg-6
+                    p Завдяки спільній роботі галузевих експертів були прийняті новели, що значно спрощують процедуру імпорту в Україну прототипів обладнання для R&D цілей (дослідження та розробки).
+
+                    p 13 лютого за результатами засідання Національної комісії, що здійснює державне регулювання у сфері зв’язку та інформатизації (НКРЗІ), було затверджено Порядок ввезення з-за кордону та реалізації в Україні радіоелектронних засобів та випромінювальних пристроїв. Відповідно до нового Порядку прототипи, що ввозяться до України з метою розроблення програмного забезпечення, потрапляють до списку продукції, яка не потребує документів про підтвердження відповідності вимогам Технічного регламенту радіообладнання. Всього ж дозволено ввозити до 10 штук прототипів однієї моделі обладнання, а мета ввезення прототипів має бути підтверджена контрактом з відправником продукції.
+
+                    p Найближчим часом дане рішення НКРЗІ буде подано на державну реєстрацію до Міністерства юстиції України.
+
+                    p Отже, ще один важливий регуляторний бар’єр для ІТ-галузі в Україні подолано. Відзначимо, що помітне спрощення процедури імпорту прототипів обладнання в Україну позитивно вплине на роботу вітчизняних ІТ-компаній, пришвидшить темпи розробки програмного забезпечення та зробить ведення бізнесу в сфері інформаційних технологій значно простішими.
+
+    section.section-share
+        .container
+            .row
+                .col-sm-3.col-lg-2
+                    ul.ul-article-eye
+                        li
+                            include ../components/_svgs/eye.svg
+                            | 101
+                        li
+                            include ../components/_svgs/share.svg
+                            | 53
+                .col-sm-7.col-md-5.col-lg-4
+                    ul.ul-article-share
+                        li
+                            a(href='' title='')
+                                include ../components/_svgs/facebook2.svg
+                        li
+                            a(href='' title='')
+                                include ../components/_svgs/twitter.svg
+                        li
+                            a(href='' title='')
+                                include ../components/_svgs/linkedin.svg
+                        li
+                            a(href='' title='')
+                                include ../components/_svgs/google.svg
+
+                .col-12
+                    hr
+
+    section
+        .container
+            .row
+                .col-12
+                    h2.text-center.mb-66 Перегляньте також
+                .col-lg-6
+                    +comment-item-initiative('img/illus/comments/comments-initiative/comment-initiative1.png', 'Join IT', 'Проект', 'PR комітет', 'Join IT – це група освітніх проектів з популяризації IT-галузі серед дітей та підлітків, що прагнуть відкрити в собі хист до творчості …')
+                .col-lg-6
+                    +comment-item-initiative('img/illus/comments/comments-initiative/comment-initiative2.png', 'IT-галузі серед дітей та підлітків', '', 'Фінансово-правовий комітет', 'Join IT – це група освітніх проектів з популяризації IT-галузі серед дітей та підлітків, що прагнуть відкрити в собі хист до творчості …')
+
+
+    include ../components/_modules/advantage/section-advantages-footer2
+
+
+
+
+

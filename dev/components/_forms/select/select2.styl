@@ -9,55 +9,98 @@
     &:focus
       outline none
     .select2-selection__clear
-      right 20px
+      display none
     .select2-selection__rendered
       co($blue)
       fs(e(14))
       line-height normal
-      padding r(12) r(15) r(13)
+      padding r(10) r(19) r(13)
     .select2-selection__arrow
-      top calc(50% - 15px)
+      top calc(50% - 12px)
       right 9px
       b
-        //border-color: $blue transparent transparent transparent;
         border-left: 4px solid transparent;
         border-right: 4px solid transparent;
         border-top: 4px solid $blue;
         trans()
 
+  .select2-results__option
+    co(#264A75)
+    padding r(9) r(19) r(11)
+    position relative
+    z-index 10
+    &:after
+      pba()
+      width calc(100% + 30px)
+      left -15px
+      right -15px
+      top 0
+      bottom 0
+      bg(#E0E4EC)
+      z-index -1
+      opacity 0
+      
+      
+
+
   .select2-results__option[aria-selected=true]
     mb(0)
-    background #ccc
-    co($wt)
+    background $tr
+    co(#264A75)
 
   .select2-results__option--highlighted[aria-selected]
-    bg(blue)
-    co($wt)
+    bg(#E0E4EC)
+    co(#264A75)
+    &:after
+      opacity 1
 
   .select2-results__option.select2-results__message
-    bg($wt)
+    bg($tr)
     fs(e(14))
     co(#999)
-    padding r(12) r(10) r(13)
+    padding r(10) r(19) r(13)
 
-  .select2-search--dropdown .select2-search__field
-    font-size e(16)
-    margin-bottom r(12)
-    border 1px solid #ccc
-    padding r(11) r(10) r(12)
+  .select2-search--dropdown
+    padding 0
+    .select2-search__field
+      font-size e(14)
+      margin-bottom r(12)
+      border 0
+      border-bottom 2px solid $blue
+      padding r(12) r(19) r(13)
+      background $tr
 
-.select2-container--default.select2-container--open.select2-container--below .select2-selection--single
-  border-color blue
-  border-bottom-color $tr
 
-.select2-container--open .select2-dropdown--below
-  border 1px solid blue
-  border-top 0
-  border-radius 0
+
+.select2-container--open
+  .select2-dropdown--below, .select2-dropdown--above
+    border 0
+    border-top 0
+    border-radius 0
+    background #E9EDF3
+    animation ds-none .2s both
+    trans()
+    &:after
+      pba()
+      width calc(100% + 30px)
+      background #E9EDF3
+      top 0
+      left -15px
+      right -15px
+      bottom 0
+      z-index -1
+  .select2-dropdown--below
+    top -47px
+
+
+
+.select2-container--default .select2-results > .select2-results__options
+  overflow: visible;
+
 
 .select2-results__option
-  padding r(12) r(15) r(13)
-  fs(e(16))
+  padding r(9) r(34) r(11)
+  fs(e(14))
 
 .select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b
   border-color: $blue transparent transparent transparent;
@@ -66,3 +109,8 @@
 
 .select2-container--default .select2-selection--single .select2-selection__placeholder
   color $blue
+
+#select-author
+    &:after
+      +mob()
+        display none

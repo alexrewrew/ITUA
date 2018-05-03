@@ -1,6 +1,9 @@
 .comment
   &.comment-initiative
     min-height 300px
+    +xs()
+      min-height unset
+
     .comment--left
       +port()
         max-width 150px
@@ -9,6 +12,9 @@
       +land()
         max-width 150px
         height auto
+      +xs()
+        height 156px
+        max-width 80px
     .comment--left-image
       height 100%
       +mob()
@@ -44,10 +50,20 @@
       +land()
         width calc(100% - 150px - 45px)
         ml(r(45))
+      +xs()
+        max-width calc(100% - 80px)
+        pt(0)
+        pr(r(24))
+        pb(0)
       h3
         mb(r(3))
         line-height: 1.15;
         fs(e(26))
+        +xs()
+          height 156px
+          display flex
+          align-items center
+          mb(0)
       h6
         mb(r(28))
       p
@@ -61,6 +77,12 @@
         svg
           top 21px
           right 34px
+      &-description
+        +xs()
+          width: calc(100vw - 45px);
+          position: relative;
+          left: -104px;
+          padding r(17) r(24) r(44)
     &:hover
       .comment--left-image
         img

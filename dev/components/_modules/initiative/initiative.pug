@@ -7,11 +7,12 @@ mixin comment-item-initiative(img, heading, type, company, text)
 
         .comment--right
             h3= heading
-            h6= type
-                span.company= company
-            p= text
+            .comment--right-description
+                h6= type
+                    span.company= company
+                p= text
 
-            +btn-more('Читати більше')
+                +btn-more('Читати більше')
 
             +img('img/illus/done.svg', 'comment--right-done')
 
@@ -24,10 +25,11 @@ mixin comment-item-initiative-done(img, heading, type, company, text)
 
         .comment--right
             h3= heading
-            h6= type
-                span.company= company
-            p= text
+            .comment--right-description
+                h6= type
+                    span.company= company
+                p= text
 
-            +btn-more('Читати більше')
+                +btn-more('Читати більше')
 
             +img('img/illus/done.svg', 'comment--right-done')

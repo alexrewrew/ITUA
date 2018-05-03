@@ -1,0 +1,133 @@
+.header-article--author
+  bg($wt)
+  padding r(25) r(34) r(21)
+  position absolute
+  left 15px
+  top -32px
+  box-shadow: 0 10px 30px 0 rgba(94, 107, 126, 0.14);
+  width 360px
+  display flex
+  +mob()
+    width calc(100% - 30px)
+  &-year
+    co($blue)
+    font-family 'Apercu Pro', sans-serif
+    fw(700)
+    line-height: 1
+    fs(e(50))
+  &-quart
+    co($blue)
+    font-family 'Apercu Pro', sans-serif
+    fw(700)
+    line-height: 1.78;
+    fs(e(18))
+  &-date
+    mr(r(48))
+    +xs()
+      mr(0)
+      mb(r(24))
+  &.header-article--author-report
+    width auto
+    right 15px
+    pl(r(38))
+    +xs()
+      flex-wrap wrap
+      padding r(24)
+
+
+
+
+.ul-status
+  li
+    co(#a0b3c9)
+    fs(e(13))
+    mb(r(11))
+    b
+      mr(r(9))
+      co(#053a78)
+
+    .ul-project--done
+      co(#176cea)
+      fs(16px)
+      img
+        mr(r(12))
+        width 25px
+        height 25px
+
+.header-article--image
+  position absolute
+  left 0
+  right 0
+  top 121px
+  bottom 0
+  display flex
+  justify-content flex-end
+  +mob()
+    top 59px
+  img
+    height 100%
+  &:after
+    pba()
+    right 0
+    left 0
+    top 0
+    bottom 0
+    background: linear-gradient(to right, rgba(247,248,249,1) 0%, rgba(247,248,249,1) 50%, rgba(247,248,249,0) 100%);
+    +mob()
+      opacity .6
+
+.ul-article-eye
+  display flex
+  max-width 135px
+  justify-content space-between
+  height 50px
+  mb(r(8))
+  +xs()
+    margin 0 auto r(20)
+  li
+    display flex
+    align-items center
+    line-height normal
+    co(#a0b3c9)
+    fs(e(14))
+    svg
+      mr(r(11))
+
+
+.ul-article-share
+  display flex
+  mb(r(8))
+  +xs()
+    mb(r(45))
+  li
+    width 100%
+    a
+      background $blue
+      height 50px
+      display flex
+      align-items center
+      justify-content center
+
+    &:nth-child(1)
+      a
+        bg($fb)
+        &:hover
+          box-shadow: 0 4px 18px 0 $fb;
+
+    &:nth-child(2)
+      a
+        bg($tw)
+        &:hover
+          box-shadow: 0 4px 18px 0 $tw
+
+    &:nth-child(3)
+      a
+        bg($li)
+        &:hover
+          box-shadow: 0 4px 18px 0 $li
+
+    &:nth-child(4)
+      a
+        bg($go)
+        &:hover
+          box-shadow: 0 4px 18px 0 $go

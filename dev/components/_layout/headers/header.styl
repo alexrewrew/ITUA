@@ -86,6 +86,9 @@ header
       mb(5rem)
       +mob()
         mb(r(5))
+    &.header-committees-initiative
+      +xs()
+        mb(0)
 
   &.header-members
     mb(r(21))
@@ -94,6 +97,8 @@ header
       mt(r(6))
     .ul-tablist
       mb(5rem)
+      +mob()
+        mb(r(6))
 
   &.header-advantages
     height auto
@@ -121,6 +126,35 @@ header
       z-index 50
       +mmax(991px)
         position static
+
+  &.header-article
+    height 391px
+    overflow visible
+    bg(#f7f8f9)
+    position relative
+    mb(r(90))
+    +mob()
+      height 313px
+      mb(r(24))
+    h1
+      color #053a78
+      mb(r(2))
+      +mob()
+        mb(r(22))
+        line-height: 1.33;
+    &--row
+      height: 184px;
+      .col-12
+        height 100%
+    &.header-article-report
+      height 457px
+      mb(r(47))
+      .header-article--row
+        height: 186px
+
+
+
+
 
 .header-col
   &.left

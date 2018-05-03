@@ -23,13 +23,12 @@ button
     padding r(17) 0 r(19)
     max-width 100%
 
-
   &:after
     pseudo(block, absolute)
     bottom 0px
     left 16px
     right 16px
-    box-shadow: 0px 0px 34px 11px rgba(20,114,255,0.7);
+    box-shadow: 0px 0px 34px 11px rgba(20, 114, 255, 0.7);
     z-index -1
     trans()
     +mob()
@@ -40,9 +39,8 @@ button
     co($blue-light8)
     bg($blue3)
     &:after
-      box-shadow: 0px 0px 34px 11px rgba(24,110,240,.7)
+      box-shadow: 0px 0px 34px 11px rgba(24, 110, 240, .7)
       transform translate3d(0, -6px, 0)
-
 
 .btn-center
   mc()
@@ -104,7 +102,7 @@ button
       right 30px
   &:hover
     svg
-      transform translate3d(10px,0,0)
+      transform translate3d(10px, 0, 0)
       g
         fill $blue-light8
 
@@ -152,7 +150,29 @@ button
       trans()
   &:hover
     svg
-      transform translate3d(15px,0,0)
+      transform translate3d(15px, 0, 0)
       g
         opacity 1
 
+.btn-pdf
+  pt(r(16))
+  pb(r(18))
+  letter-spacing: normal
+  span
+    position relative
+    pl(r(18))
+    svg
+      position absolute
+      left: -21px;
+      top: -4px;
+      g
+        transition .05s all ease
+  +mob()
+    max-width 305px
+  +land()
+    margin  r(15) auto 0
+  +xs()
+    mc()
+  &:hover
+    svg g
+      fill $blue-light8

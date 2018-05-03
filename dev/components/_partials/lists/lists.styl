@@ -180,6 +180,7 @@ ol
         z-index: 20;
         +mob()
           pr(r(10))
+          co($blue)
       &.active
         bg($black-text4)
         co($wt)
@@ -205,7 +206,8 @@ ol
     li
       position relative
       background $wt
-
+      +mob()
+        box-shadow none
       span
         position absolute
         line-height: 1.18;
@@ -309,9 +311,15 @@ ol
   mb(r(63))
   +mob()
     max-width 100%
+  +land()
+    mb(r(30))
   +xs()
     mb(r(25))
+    justify-content flex-start
   li
+    +xs()
+      &:first-child
+        mr(r(36))
     h6
       mb(0)
   .ul-project--done

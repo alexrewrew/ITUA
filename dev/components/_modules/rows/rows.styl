@@ -15,6 +15,15 @@
 
 .row-reports
   z-index 60
+  &.slider-with-line.slider-with-line-sync
+    +mob()
+      .slick-track
+        left 0
+
+.slider-progressbar-reports1, .slider-progressbar-reports2
+  display none
+  +mob()
+    display block
 
 .row-partners
   margin-left -15px

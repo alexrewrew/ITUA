@@ -30,6 +30,36 @@ mixin header-about-us(heading, text)
                 .col-sm-7.header-col.right
                     include ../../_sliders/slider-header/slider-header
 
+mixin header-article(img, heading, company, date)
+
+        .header-article--image
+            +img(img)
+
+        .container
+            .row
+                .col-md-6
+                    +breadcrumbs(heading)
+            .row.header-article--row
+                .col-12
+                    h1= heading
+                    h6 Проект
+                        | &nbsp;
+                        span.company= company
+
+
+mixin header-report(heading)
+        .container
+            .row
+                .col-md-6
+                    ul.breadcrumbs
+                        +li-a('Головна')
+                        +li-a('Звіти')
+                        +li-a(heading)
+            .row.header-article--row
+                .col-md-8.col-lg-6.col-xl-5
+                    h1= heading
+
+
 mixin header-part(heading, text)
     .container
         .row

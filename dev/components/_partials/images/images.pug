@@ -1,2 +1,6 @@
 mixin img(src, className)
     img(src= src, title='' alt='' class= className)
+
+mixin img-mod(imgBig, imgSmall)
+    a(href=imgBig, data-fancybox='images', data-caption='' class='img-gallery--item')
+        img(src=imgSmall, alt='')

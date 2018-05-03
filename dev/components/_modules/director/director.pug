@@ -1,0 +1,9 @@
+mixin director(img, prof, name, company, text)
+    .col-sm-5.col-lg-4
+        +img(img, 'img-director')
+    article.offset-lg-1.col-sm-7.col-lg-6
+        .director
+            p.director--position= prof
+            h3= name
+            p.director--profession= company
+            p= text

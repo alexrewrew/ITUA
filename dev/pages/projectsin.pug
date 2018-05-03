@@ -1,0 +1,103 @@
+//- layouts/layout.pug
+extend layouts/_layout.pug
+
+block title
+    | IT Ukraine Association - Про напрям
+
+
+block content
+
+    header.header-article
+        +header-article('img/illus/headers/header-article.png', 'Join IT', 'Комітету з питань освіти')
+
+    section.section-article
+        article.container
+            .row
+                .col-md-5
+                    h2 Опис проекту
+
+                .col-md-7.col-lg-6
+                    p Join IT – це група освітніх проектів з популяризації IT-галузі серед дітей та підлітків, що прагнуть відкрити в собі хист до творчості та пов’язати своє майбутнє з новітніми технологіями, які вже сьогодні змінюють наш світ. Ми хочемо, щоб наступне покоління українців не сприймало ІТ-індустрію, як щось складне і незрозуміле, та не вагалось спробувати себе у цій сфері.
+
+                    p Ініціативи, які ми проводимо в рамках Join IT, успішно реалізуються вже 5 років поспіль, а їх географія простягається по всій Україні. Наприклад, у 2017 році ми працювали зі школярами не тільки з великих міст, таких як Київ, Харків, Одеса або Львів, й з менших населених пунктів –Прилук, Конотопа та інших. Навколо наших ініціатив ми зібрали більш ніж 14 тис. дітей та підлітків з 250 шкіл України.
+
+                    p Для створення цікавого та мотивуючого навчального процесу Асоціація залучає найкращих лекторів та найбільш ініціативних викладачів, що розділяють наш порив до вільного розповсюдження знань серед населення. В цьому нам допомагають як державні освітні заклади, так і великі світові IT-компанії, чиї експерти залюбки розповідають дітям про всі тонкощі роботи програміста
+
+    section
+        .container
+            .row.justify-content-between
+
+                .col-md-5.col-lg-4.order-2.order-md-1
+                    h2.mb-mt-43-38 Проблематика
+                    p Ініціативи, які ми проводимо в рамках Join IT, успішно реалізуються вже 5 років поспіль, а їх географія простягається по всій Україні. Наприклад, у 2017 році ми працювали зі школярами не тільки з великих міст, таких як Київ, Харків, Одеса або Львів, й з менших населених пунктів –Прилук, Конотопа та інших.
+
+                .offset-sm-2.col-sm-10.offset-md-0.col-md-7.header-col.right.order-1.order-md-2
+                    include ../components/_sliders/slider-middle/slider-middle
+
+
+    section.section-article
+        article.container
+            .row
+                .col-md-5
+                    h2 Ключові вектори роботи Join IT:
+
+                .col-md-7.col-lg-6
+                    ul
+                        li
+                            b Summer Code School.
+                            | Літня школа з програмування для дітей та підлітків віком від 12 до 17 років, що проводиться за підтримки Міністерства освіти та науки і Комітету Верховної Ради України з питань інформатизації та зв’язку
+
+                        li
+                            b Профорієнтаційні зустрічі.
+                            | Провідні ІТ-фахівці компаній-учасників Асоціації проводять відкриті лекції в загальноосвітніх закладах, під час яких розповідають учням про те, які кроки вони мають зробити, щоб почати кар’єру в індустрії
+
+                        li
+                            b Профорієнтаційний портал.
+                            | Це онлайн-майданчик, який допоможе новачкам зорієнтуватися в світі ІТ-технологій та визначитися з напрямком свого майбутнього розвитку
+
+    section.section-share
+        .container
+            .row
+                .col-sm-3.col-lg-2
+                    ul.ul-article-eye
+                        li
+                            include ../components/_svgs/eye.svg
+                            | 101
+                        li
+                            include ../components/_svgs/share.svg
+                            | 53
+                .col-sm-7.col-md-5.col-lg-4
+                    ul.ul-article-share
+                        li
+                            a(href='' title='')
+                                include ../components/_svgs/facebook2.svg
+                        li
+                            a(href='' title='')
+                                include ../components/_svgs/twitter.svg
+                        li
+                            a(href='' title='')
+                                include ../components/_svgs/linkedin.svg
+                        li
+                            a(href='' title='')
+                                include ../components/_svgs/google.svg
+
+                .col-12
+                    hr
+
+    section
+        .container
+            .row
+                .col-12
+                    h2.text-center.mb-66 Перегляньте також
+                .col-lg-6
+                    +comment-item-initiative('img/illus/comments/comments-initiative/comment-initiative1.png', 'Join IT', 'Проект', 'PR комітет', 'Join IT – це група освітніх проектів з популяризації IT-галузі серед дітей та підлітків, що прагнуть відкрити в собі хист до творчості …')
+                .col-lg-6
+                    +comment-item-initiative('img/illus/comments/comments-initiative/comment-initiative2.png', 'IT-галузі серед дітей та підлітків', '', 'Фінансово-правовий комітет', 'Join IT – це група освітніх проектів з популяризації IT-галузі серед дітей та підлітків, що прагнуть відкрити в собі хист до творчості …')
+
+
+    include ../components/_modules/advantage/section-advantages-footer2
+
+
+
+
+

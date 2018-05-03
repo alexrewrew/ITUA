@@ -44,6 +44,7 @@
     left -1px
     pl(r(38))
 
+
   &:hover
     box-shadow: 0 10px 30px 0 rgba(94, 107, 126, 0.3);
     bg($wt)
@@ -65,11 +66,21 @@
     height 54px
     margin-bottom r(21)
   .btn-more
-
     bottom: 2px;
     left: 6px
     fs(e(14))
     co($wt)
+    +mob()
+      bg($tr)
+      co($blue)
+      max-width calc(100% - 19px)
+      pl(r(30))
+      bottom 0
+      svg
+        opacity 1
+        g
+          fill $blue
+
   &:hover
     .btn-more
       bg($tr)

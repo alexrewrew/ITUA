@@ -29,12 +29,18 @@
         sliderPartners: $('.slider-partners'), //slider of partners
         sliderPartnersSync: $(".slider-progressbar-partners .slider-progressbar--track"), //slider of partners sync
 
-        sliderProject : $('.slider-project'),
-        sliderProjectSync : $(".slider-progressbar-project .slider-progressbar--track"),
+        sliderProject: $('.slider-project'),
+        sliderProjectSync: $(".slider-progressbar-project .slider-progressbar--track"),
 
         sliderTabs: $('.tabs-publication--ul'),
         sliderPublications: $('.row-publications'),
-        sliderReports: $('.row-reports'),
+        sliderReports1: $('.slider-reports1'),
+        sliderReports2: $('.slider-reports2'),
+        sliderReports1Sync: $(".slider-progressbar-reports1 .slider-progressbar--track"),
+        sliderReports2Sync: $(".slider-progressbar-reports2 .slider-progressbar--track"),
+
+        sliderGraph: $('.slider-graph'),
+        sliderGraphSync: $('.slider-progressbar-graph .slider-progressbar--track'),
 
         sliderMiddle: $('.slider-middle'),
         sliderCommittees: $('.slider-tablist'),
@@ -63,7 +69,6 @@
             e.preventDefault();
             $('html, body').toggleClass('open');
         });
-
 
 
         // SLIDER PROGRESSBAR
@@ -175,6 +180,27 @@
             sliderProgressbar(nextSlide, slick, DOMs.sliderAboutSync);
         });
 
+        // SLIDER ABOUT
+        DOMs.sliderGraph.slick({
+            prevArrow: DOMs.sliderArrowLeft,
+            nextArrow: DOMs.sliderArrowRight,
+            dots: false,
+            slidesToScroll: 1,
+            slidesToShow: 2,
+            infinite: false,
+            speed: 250,
+            responsive: [
+                {
+                    breakpoint: 567,
+                    settings: {
+                        slidesToShow: 1,
+                    }
+                }
+            ]
+        }).on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+            sliderProgressbar(nextSlide, slick, DOMs.sliderGraphSync);
+        });
+
         // SLIDER PROJECT
         DOMs.sliderProject.slick({
             prevArrow: DOMs.sliderArrowLeft,
@@ -188,11 +214,10 @@
         });
 
         //  SLIDER REPORTS
-        DOMs.sliderReports.slick({
+        DOMs.sliderReports1.slick({
             dots: false,
             slidesToScroll: 1,
             infinite: false,
-            // arrows: false,
             prevArrow: DOMs.sliderArrowLeft,
             nextArrow: DOMs.sliderArrowRight,
 
@@ -209,7 +234,6 @@
                         dots: false,
                         slidesToScroll: 1,
                         infinite: false,
-                        // arrows: false,
                         prevArrow: DOMs.sliderArrowLeft,
                         nextArrow: DOMs.sliderArrowRight,
 
@@ -217,6 +241,38 @@
                     }
                 }
             ]
+        }).on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+            sliderProgressbar(nextSlide, slick, DOMs.sliderReports1Sync);
+        });
+        DOMs.sliderReports2.slick({
+            dots: false,
+            slidesToScroll: 1,
+            infinite: false,
+            prevArrow: DOMs.sliderArrowLeft,
+            nextArrow: DOMs.sliderArrowRight,
+
+            variableWidth: true,
+            speed: 250,
+            responsive: [
+                {
+                    breakpoint: 40000,
+                    settings: "unslick"
+                },
+                {
+                    breakpoint: 767,
+                    setting: {
+                        dots: false,
+                        slidesToScroll: 1,
+                        infinite: false,
+                        prevArrow: DOMs.sliderArrowLeft,
+                        nextArrow: DOMs.sliderArrowRight,
+
+                        variableWidth: true
+                    }
+                }
+            ]
+        }).on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+            sliderProgressbar(nextSlide, slick, DOMs.sliderReports2Sync);
         });
 
         DOMs.sliderTabs.slick({
@@ -361,9 +417,9 @@
         // ----- SELECT2 -----
         $('.select2-select').select2({
             placeholder: "Оберіть компанію",
-            allowClear: true
-        //     // dropdownParent: $('.select-select2-container'),
-        //     // minimumResultsForSearch: Infinity
+            allowClear: true,
+            dropdownParent: $('#select-author'),
+            // minimumResultsForSearch: Infinity
         });
 
         // ========== TABS PUBLICATIONS ==========
@@ -490,7 +546,8 @@
                 $(this).parent().parent().removeClass('active');
             });
 
-
+            DOMs.sliderReports1.addClass('slider-with-line').addClass('slider-with-line-sync').addClass('slider');
+            DOMs.sliderReports2.addClass('slider-with-line').addClass('slider-with-line-sync').addClass('slider');
 
         } else if (window.matchMedia("(min-width: 768px)").matches) {
             DOMs.menuSearch.insertAfter(DOMs.menuLogo);
@@ -503,7 +560,8 @@
                 $(this).children('ul').toggleClass('active')
             });
 
-
+            DOMs.sliderReports1.removeClass('slider-with-line').removeClass('slider-with-line-sync').removeClass('slider');
+            DOMs.sliderReports2.removeClass('slider-with-line').removeClass('slider-with-line-sync').removeClass('slider');
 
         }
     });
