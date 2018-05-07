@@ -30,7 +30,7 @@ mixin header-about-us(heading, text)
                 .col-sm-7.header-col.right
                     include ../../_sliders/slider-header/slider-header
 
-mixin header-article(img, heading, company, date)
+mixin header-article(img, heading, company, type)
 
         .header-article--image
             +img(img)
@@ -42,7 +42,7 @@ mixin header-article(img, heading, company, date)
             .row.header-article--row
                 .col-12
                     h1= heading
-                    h6 Проект
+                    h6= type
                         | &nbsp;
                         span.company= company
 

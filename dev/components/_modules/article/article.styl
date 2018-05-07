@@ -3,12 +3,14 @@
   padding r(25) r(34) r(21)
   position absolute
   left 15px
-  top -32px
+  top 42px
   box-shadow: 0 10px 30px 0 rgba(94, 107, 126, 0.14);
   width 360px
   display flex
   +mob()
     width calc(100% - 30px)
+  +xs()
+    top: 15px;
   &-year
     co($blue)
     font-family 'Apercu Pro', sans-serif
@@ -30,6 +32,7 @@
     width auto
     right 15px
     pl(r(38))
+    top -32px
     +xs()
       flex-wrap wrap
       padding r(24)
@@ -42,6 +45,8 @@
     co(#a0b3c9)
     fs(e(13))
     mb(r(11))
+    &:last-child
+      mb(r(4))
     b
       mr(r(9))
       co(#053a78)
