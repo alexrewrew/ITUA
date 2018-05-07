@@ -159,7 +159,17 @@ header
     &.header-article-events
       height 471px
       .header-article--container
-        top: calc(100% - 180px);
+        top: calc(100% - 180px)
+        left: calc(50% - (1101px / 2))
+        +tab()
+          left calc(50% - (891px / 2))
+        +port()
+          left calc(50% - (651px / 2))
+          top: calc(100% - 150px)
+        +land()
+          left calc(50% - (471px / 2))
+        +mob()
+          left 0
 
 
 

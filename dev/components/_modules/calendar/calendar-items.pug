@@ -48,3 +48,39 @@ mixin calendar-item-event-month(date, time, heading, month, event)
         .calendar--mark
             .calendar--mark-month.calendar--mark-text= month
             .calendar--mark-event.calendar--mark-text= event
+
+
+
+                //
+mixin calendar-item-month-block(date, time, heading)
+    a(href='' title='').calendar
+        .calendar--block
+            .calendar--block-date
+                .calendar--block-date--date= date
+                .calendar--block-date--text= time
+            h3= heading
+            .calendar--block-button
+                | Перейти до події
+                include ../../_svgs/arrow-right.svg
+
+mixin calendar-item-event-block(date, time, heading)
+    a(href='' title='').calendar.calendar-event
+        .calendar--block
+            .calendar--block-date
+                .calendar--block-date--date= date
+                .calendar--block-date--text= time
+            h3= heading
+            .calendar--block-button
+                | Перейти до події
+                include ../../_svgs/arrow-right.svg
+
+mixin calendar-item-event-month-block(date, time, heading)
+    a(href='' title='').calendar.calendar-event
+        .calendar--block
+            .calendar--block-date
+                .calendar--block-date--date= date
+                .calendar--block-date--text= time
+            h3= heading
+            .calendar--block-button
+                | Перейти до події
+                include ../../_svgs/arrow-right.svg

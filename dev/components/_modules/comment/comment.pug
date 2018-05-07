@@ -14,3 +14,20 @@ mixin comment-item-regular(img, date, name, profession, company, text)
             p= text
 
             +btn-more('Читати більше')
+
+mixin comment-item-lector(img, name, profession, company, text)
+    .comment
+
+        .comment--left
+            .comment--left-image
+                +img(img)
+            a(href='' title='').comment--left-social
+                include ../../_svgs/facebook.svg
+                | Facebook
+
+        .comment--right
+            h3= name
+            h6= profession
+                | &nbsp;
+                span.company= company
+            p= text

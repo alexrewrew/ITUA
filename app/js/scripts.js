@@ -46,6 +46,11 @@
         sliderCommittees: $('.slider-tablist'),
         sliderFilter: $('.slider-tablist-filter'),
 
+        sliderPartnerEve : $('.slider-partner-eventsin'),
+        sliderPartnerEveSync: $('.slider-progressbar-partner-eventsin .slider-progressbar--track'),
+        sliderCalendarEve : $('.slider-calendar-eventsin'),
+        sliderCalendarEveSync: $('.slider-progressbar-calendar-eventsin .slider-progressbar--track'),
+
         dropdownLink: $('.dropdown-link'),
         dropdownList: $('.dropdown ul'),
         dropdownBack: $('.dropdown-back a'),
@@ -244,6 +249,9 @@
         }).on('beforeChange', function (event, slick, currentSlide, nextSlide) {
             sliderProgressbar(nextSlide, slick, DOMs.sliderReports1Sync);
         });
+
+
+
         DOMs.sliderReports2.slick({
             dots: false,
             slidesToScroll: 1,
@@ -274,6 +282,81 @@
         }).on('beforeChange', function (event, slick, currentSlide, nextSlide) {
             sliderProgressbar(nextSlide, slick, DOMs.sliderReports2Sync);
         });
+
+
+
+        DOMs.sliderPartnerEve.slick({
+            dots: false,
+            slidesToScroll: 1,
+            infinite: false,
+            prevArrow: DOMs.sliderArrowLeft,
+            nextArrow: DOMs.sliderArrowRight,
+
+            variableWidth: true,
+            speed: 250,
+            responsive: [
+                {
+                    breakpoint: 40000,
+                    settings: "unslick"
+                },
+                {
+                    breakpoint: 767,
+                    setting: {
+                        dots: false,
+                        slidesToScroll: 1,
+                        infinite: false,
+                        prevArrow: DOMs.sliderArrowLeft,
+                        nextArrow: DOMs.sliderArrowRight,
+
+                        variableWidth: true
+                    }
+                }
+            ]
+        }).on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+            sliderProgressbar(nextSlide, slick, DOMs.sliderPartnerEveSync);
+        });
+
+
+        DOMs.sliderCalendarEve.slick({
+            dots: false,
+            slidesToScroll: 1,
+            infinite: false,
+            prevArrow: DOMs.sliderArrowLeft,
+            nextArrow: DOMs.sliderArrowRight,
+
+            variableWidth: true,
+            speed: 250,
+            responsive: [
+                {
+                    breakpoint: 40000,
+                    settings: "unslick"
+                },
+                {
+                    breakpoint: 767,
+                    setting: {
+                        dots: false,
+                        slidesToScroll: 1,
+                        infinite: false,
+                        prevArrow: DOMs.sliderArrowLeft,
+                        nextArrow: DOMs.sliderArrowRight,
+
+                        variableWidth: true
+                    }
+                }
+            ]
+        }).on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+            sliderProgressbar(nextSlide, slick, DOMs.sliderCalendarEveSync);
+        });
+
+
+            // sliderPartnerEve : $('.slider-partner-eventsin'),
+            // sliderPartnerEveSync: $('.slider-progressbar-partner-eventsin .slider-progressbar--track'),
+            // sliderCalendarEve : $('.slider-calendar-eventsin'),
+            // sliderCalendarEveSync: $('.slider-progressbar-calendar-eventsin .slider-progressbar--track'),
+
+
+
+
 
         DOMs.sliderTabs.slick({
             dots: false,
@@ -548,6 +631,8 @@
 
             DOMs.sliderReports1.addClass('slider-with-line').addClass('slider-with-line-sync').addClass('slider');
             DOMs.sliderReports2.addClass('slider-with-line').addClass('slider-with-line-sync').addClass('slider');
+            DOMs.sliderPartnerEve.addClass('slider-with-line').addClass('slider-with-line-sync').addClass('slider');
+            DOMs.sliderCalendarEve.addClass('slider-with-line').addClass('slider-with-line-sync').addClass('slider');
 
         } else if (window.matchMedia("(min-width: 768px)").matches) {
             DOMs.menuSearch.insertAfter(DOMs.menuLogo);
@@ -562,6 +647,7 @@
 
             DOMs.sliderReports1.removeClass('slider-with-line').removeClass('slider-with-line-sync').removeClass('slider');
             DOMs.sliderReports2.removeClass('slider-with-line').removeClass('slider-with-line-sync').removeClass('slider');
+            DOMs.sliderCalendarEve.removeClass('slider-with-line').removeClass('slider-with-line-sync').removeClass('slider');
 
         }
     });

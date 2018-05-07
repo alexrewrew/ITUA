@@ -31,12 +31,14 @@
     font-weight: bold;
     line-height: 1.67;
     letter-spacing: 1px;
-    color: $blue;
+    color: $blue
+    mb(r(9))
   &-button
     .btn
-      width: 229px;
+      width: 229px
       fs(e(14))
       padding r(12) 0 r(14)
+      letter-spacing: normal
 
 
   &.header-article--author-report
@@ -45,6 +47,15 @@
     +xs()
       flex-wrap wrap
       padding r(24)
+
+  &.header-article--author-event
+    pl(r(63))
+    pb(r(38))
+    width: calc(100% - 19px);
+    .header-article--author-date
+      margin-right: r(65)
+    .ul-status
+      padding-top: r(12)
 
 
 .header-article--container

@@ -27,3 +27,17 @@
         background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
       &:after
         background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+
+
+.slider-calendar-eventsin
+  .col-md-6
+    +mob()
+      padding 0
+  &.slider-with-line.slider-with-line-sync .slick-track
+    +mob()
+      left 0
+
+.slider-progressbar-calendar-eventsin
+  display none
+  +mob()
+    display block

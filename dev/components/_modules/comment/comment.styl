@@ -17,12 +17,10 @@
     max-width 150px
     flex 1 1 150px
     position relative
-    +port()
+    +mmax(991px)
       width 100%
       max-width 100%
-    +mob()
-      width 100%
-      max-width 100%
+      display flex
     &-date
       position absolute
       font-size: e(14)
@@ -50,6 +48,33 @@
       img
         height 100%
         flex 0 0 auto
+    &-social
+      justify-content center
+      display flex
+      align-items center
+      margin r(2) 0
+      fs(e(14))
+      fw(400)
+      padding r(14) 0 r(16)
+      color $blue
+      svg
+        mr(r(13))
+        g
+          fill $blue
+      &:hover
+        bg($blue)
+        co($wt)
+        svg g
+          fill $wt
+      +mmax(991px)
+        padding-left r(25)
+        padding-right r(25)
+        &:hover
+          color $blue
+          bg($wt)
+          svg g
+            fill $blue
+
   &--right
     padding r(42) r(15) r(44) 0
     ml(r(44))
@@ -122,7 +147,6 @@
           opacity 1
           g
             fill $blue
-
 
   &:hover
     box-shadow 0 4px 10px 0 rgba(94, 107, 126, 0.3)

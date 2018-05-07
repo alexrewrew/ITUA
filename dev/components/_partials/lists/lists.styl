@@ -374,3 +374,42 @@ ol
       fs(e(70))
       font-weight: 700
       letter-spacing: 3.5px;
+
+.ol-style
+  counter-reset: olstyle
+  list-style none
+  ml(0)
+  & > li
+    font-size: e(18)
+    font-weight: bold
+    color: #053a78
+    position relative
+    pl(r(31))
+    pt(r(10))
+    &:after
+      counter-increment: olstyle;
+      content: counters(olstyle,".") " ";
+      left 0
+      top 0
+      position absolute
+      co($blue)
+      fs(e(30))
+      font-weight: 700
+      letter-spacing: 3.5px;
+    ul
+      mt(r(21))
+      mb(r(33))
+      li
+        pl(0)
+        fw(400)
+        color: #768190;
+        fs(14px)
+        &:before
+          left: -30px;
+
+.ul-schedule
+  li
+    &:before
+      width: 8px;
+      height: 8px;
+      border-radius 50%
