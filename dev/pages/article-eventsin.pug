@@ -7,27 +7,32 @@ block title
 
 block content
 
-    header.header-article.header-article-report
+    header.header-article.header-article-events
 
-        +header-report('Підсумки діяльності ІТ Асоціації')
+        +header-article('', 'Синергія 2018', 'Асоціації', 'Подія від')
 
         .container.header-article--container
             .row
-                .offset-md-4.col-md-8.offset-lg-6.col-lg-6
+                .offset-md-4.col-md-8.offset-lg-4.col-lg-8
                     .header-article--author.header-article--author-report
                         .header-article--author-date
-                            .header-article--author-year 2018
-                            .header-article--author-quart 1-ий квартал
+                            .header-article--author-small 18 Червня, 2018
+                            .header-article--author-button
+                                +btn('Додати до календаря')
                         ul.ul-status
                             li
-                                b Категорія звіту:
-                                +a('Квартальний звіт')
+                                b Час:
+                                | 9:00 - 14:00
                             li
-                                b Дата публікації:
-                                | 21.02.18
+                                b Адреса:
+                                | вул. Дорогожицька 1, Unit City, Київ
                             li
-                                b Наступний звіт очікується:
-                                | 21.02.19
+                                b Умови:
+                                | попередня реєстрація обов'язкова та доступна за даним
+                                +a('посиланням')
+                            li
+                                b Цільова аудиторія:
+                                | представники ІТ-індустрії, освітніх закладів та державних органів.
 
 
     section

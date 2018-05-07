@@ -1,9 +1,6 @@
 .header-article--author
   bg($wt)
   padding r(25) r(34) r(21)
-  position absolute
-  left 15px
-  top 42px
   box-shadow: 0 10px 30px 0 rgba(94, 107, 126, 0.14);
   width 360px
   display flex
@@ -28,14 +25,40 @@
     +xs()
       mr(0)
       mb(r(24))
+  &-small
+    font-size: e(24)
+    font-family $a-font, sans-serif
+    font-weight: bold;
+    line-height: 1.67;
+    letter-spacing: 1px;
+    color: $blue;
+  &-button
+    .btn
+      width: 229px;
+      fs(e(14))
+      padding r(12) 0 r(14)
+
+
   &.header-article--author-report
     width auto
-    right 15px
     pl(r(38))
-    top -32px
     +xs()
       flex-wrap wrap
       padding r(24)
+
+
+.header-article--container
+  position absolute
+  top calc(100% - 33px)
+  left calc(50% - (1170px / 2))
+  +tab()
+    left calc(50% - (960px / 2))
+  +port()
+    left calc(50% - (720px / 2))
+  +land()
+    left calc(50% - (540px / 2))
+  +mob()
+    left 0
 
 
 

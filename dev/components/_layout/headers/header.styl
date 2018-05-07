@@ -135,13 +135,16 @@ header
     mb(r(90))
     +mob()
       height 313px
-      mb(r(24))
+      mb(r(94))
     h1
       color #053a78
       mb(r(2))
+      +port()
+        fs(e(34))
       +mob()
         mb(r(22))
         line-height: 1.33;
+        fs(e(20))
     &--row
       height: 184px;
       .col-12
@@ -151,6 +154,12 @@ header
       mb(r(47))
       .header-article--row
         height: 186px
+      .header-article--container
+        top calc(100% - 98px)
+    &.header-article-events
+      height 471px
+      .header-article--container
+        top: calc(100% - 180px);
 
 
 
