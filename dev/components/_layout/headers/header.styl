@@ -171,9 +171,115 @@ header
         +mob()
           left 0
 
+    &.header-article-members
+      height 457px
+      mb(r(121))
+      +port()
+        margin-bottom: r(300)
+      +land()
+        margin-bottom: r(300)
+      +xs()
+        margin-bottom: r(500)
+      h2
+        font-size: e(34)
+        color: #d6dce4;
+        letter-spacing: 0.8px;
+        line-height: 1.53;
+        mb(r(19))
+      .header-article--row
+        img
+          max-width 100%
+      .header-article--container
+        left: calc(50% - (1101px / 2))
+        top: 41.5%;
+        +tab()
+          left: calc(50% - (850px / 2));
+        +port()
+          left calc(50% - (651px / 2))
+          top: calc(70% - 150px);
+        +land()
+          left calc(50% - (471px / 2))
+          top: 70%;
+        +mob()
+          left 0
+        +xs()
+          top: 70%;
+      .header-article--author
+        width calc(100% - 15px)
+        pl(r(47))
+        pb(r(30))
+        +tab()
+          width: calc(95% - 15px);
+        +port()
+          flex-wrap wrap
+        +mob()
+          pl(r(24))
+          pr(r(24))
+        +xs()
+          flex-wrap wrap
 
+        h1
+          font-size: e(30)
+          line-height: 1.33;
+          letter-spacing: 1.3px;
+          color $blue
+          margin-bottom: r(15)
+        h3
+          font-size: e(20)
+          line-height: 2;
+          letter-spacing: 1px;
+        .spec
+          color: #a0b3c9;
+          mb(r(9))
+        .found
+          position absolute
+          bottom 0
+          left 15px
+          co(#a0b3c9)
+          mb(r(5))
+          +port()
+            position static
+            mt(r(10))
+            mb(r(15))
+          +xs()
+            position static
+            mt(r(10))
+            mb(r(15))
+          span
+            co(#053a78)
+        .article-contact
+          mb(r(10))
+          line-height: 1.43
+          a
+            co(#053a78)
+            &:hover
+              co($blue)
+        .ul-article-share li
+          max-width 83px
+          a
+            height: 40px;
+      .header-article--author-left
+        flex 1 1 47%
+        max-width 47%
+        pl(r(15))
+        pr(r(15))
+        position relative
+        +port()
+          flex 1 1 100%
+          max-width 100%
+          pl(0)
+          pr(0)
+        +mob()
+          pl(0)
+          pr(0)
+        +xs()
 
-
+          flex 1 1 100%
+          max-width 100%
+      .member--tags
+        pl(0)
+        li
+          color #a0b3c9
 
 .header-col
   &.left

@@ -1,10 +1,48 @@
-header.header-article.header-article-events
+header.header-article.header-article-members
 
     .container
         .row
             .col-md-6
                 +breadcrumbs('Ciklum')
         .row.header-article--row
-            .col-12
+            .col-md-6.col-lg-4
                 h2 Член Асоціації
                 +img('img/illus/members/member14.png')
+
+    .container.header-article--container
+        .row
+            .offset-md-5.col-md-7.offset-lg-3.col-lg-9.offset-xl-4.col-xl-8
+                .header-article--author
+                    .header-article--author-left
+                        h1 Ciklum
+                        p.spec Company's specialization:
+                        ul.member--tags
+                            li Дизайн
+                            li Програмування
+                            li Програмування
+                            li SMM
+                        p.found Founded in
+                            | &nbsp;
+                            span 1989
+                    .header-article--author-right
+                        h3 Contacts:
+                        p.article-contact General phone number in Ukraine:
+                            br
+                            +a('+38 (044) 545 77 45')
+                        p.article-contact Address of company's head office in Ukraine:
+                            br
+                            +a("BC 'Horizon Park', 12 Amosova st., Kyiv, 03038")
+                        p.article-contact General e-mail address in Ukraine:
+                            br
+                            +a('ciklum@ciklum.com')
+                        p.article-contact Web page:
+                            br
+                            +a('www.ciklum.com')
+                        p.article-contact Social links:
+                        ul.ul-article-share
+                            li
+                                a(href='' title='')
+                                    include ../../_svgs/facebook2.svg
+                            li
+                                a(href='' title='')
+                                    include ../../_svgs/linkedin.svg

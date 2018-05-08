@@ -413,3 +413,25 @@ ol
       width: 8px;
       height: 8px;
       border-radius 50%
+
+.ul-clients
+  display flex
+  justify-content space-between
+  align-items center
+  mb(r(30))
+  +mob()
+    flex-wrap wrap
+  li
+    +mob()
+      max-width 50%
+      flex 1 1 50%
+      mb(r(50))
+    a
+      display block
+      +mob()
+        text-align center
+      img
+        max-height 48px
+        +xs()
+          max-height 35px
+          max-width 90%

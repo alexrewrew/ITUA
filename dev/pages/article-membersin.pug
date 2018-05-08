@@ -14,16 +14,10 @@ block content
         article.container
             .row
                 .col-md-5
-                    h2 На конференції:
+                    h2 Про компанію
 
                 .col-md-7.col-lg-6
-                    p Під час конференції
-                        | &nbsp;
-                        b "Синергія: ВНЗ та ІТ-бізнес"
-                        | &nbsp;
-                        | відбудеться перша в Україні презентація індустріального стандарту для ІТ-фахівців. Разом з провідними ІТ-компаніями країни, представниками Міністерства освіти і науки України та вищих навчальних закладів ми обговоримо доцільність таких стандартів та нагальність їх впровадження.
-
-                    p Створення та імплементація єдиного стандарту освіти для ІТ-спеціалістів є важливим кроком для індустрії. Професійний стандарт допоможе навчальним закладам підлаштувати поточні освітні програми відповідно до вимог ринку, а отже – випускати дипломованих фахівців, які одразу зможуть почати роботу у галузі за відповідним фахом.
+                    p Ciklum is a global software engineering and technology company. Ciklum delivers software engineering excellence to Fortune 500 and fast-growing organizations alike around the world. Since 2002, over 3,000+ developers located in the delivery centers across the globe provide company’s clients with a range of services including extended software development teams, outsourcing software development, Quality Assurance, R&D, IoT, Big Data, and engineering consulting.
 
 
 
@@ -31,21 +25,34 @@ block content
         article.container
             .row
                 .col-md-5
-                    h2 Ключові теми:
+                    h2 Технічна інформація про діяльність компанії
                 .col-md-7.col-lg-6
-                    ol.ol-style
-                        li ІТ-освіта та людський капітал — як підвищити ефективність системи ІТ-освіти для розвитку індустрії.
-                            ul
-                                li Презентація бачення взаємодії МОН з бізнесом (дуальна освіта, Нова Українська Школа)
+                    p
+                        b Company's offices in Ukraine:
+                        | &nbsp;
+                        |Kyiv, Dnipro, Kharkiv, Vinnytsia, Lviv, Odessa
 
-                                li ІТ-компанії: аналітика (випускники, що в цілому робимо, де gaps?)
+                    p
+                        b Company's offices in the world:
+                        | &nbsp;
+                        | Poland; Spain; Belarus; Pakistan; Denmark; Israel; Switzerland; UK, USA; UAE, Germany
 
-                                li Університети: автономія, як вони можуть співпрацювати
+                    p
+                        b Total number of specialists in Ukraine:
+                        | &nbsp;
+                        | 2400+
 
-                                li Міжнародний досвід про взаємодію ВНЗ і бізнес
-                        li Презентація індустріальних стандартів. Освітні та промислові стандарти - участь бізнесу в формуванні - міжнародний досвід.
+                    p
+                        b Total number of specialists in the world:
+                        | &nbsp;
+                        | 3200+
 
-    section
+                    p
+                        b Major clients:
+                        | &nbsp;
+                        | Just Eat, Jabra, EFG, Flixbus, Thomas Cook, Google, Sisense, Intel, Lenovo, Zurich Insurance Group, Betsson, CC-Interactive, 20/20 Vision
+
+    section.section-article
         .container
             .row.justify-content-between
 
@@ -53,102 +60,49 @@ block content
                     include ../components/_sliders/slider-middle/slider-middle
 
 
-    section
+    section.section-article
         .container
             .row
                 .col-12
-                    article.attention
-                        .row
-                            .col-md-4
-                                h2 Програма:
-                            .col-md-8
-                                ul.ul-schedule
-                                    li
-                                        b 09:00 – 09:30
-                                        | &nbsp;
-                                        | Реєстрація
-
-                                    li
-                                        b 09:30 – 10:30
-                                        | &nbsp;
-                                        | ІТ-освіта та людський капітал: як підвищити ефективність системи ІТ-освіти для розвитку індустрії?
-
-                                    li
-                                        b 10:30 – 11:00
-                                        | &nbsp;
-                                        | Перерва на каву
-
-                                    li
-                                        b 11:00 – 13:00
-                                        | &nbsp;
-                                        | Презентація перших в Україні індустріальних стандартів для ІТ-галузі. Роль бізнесу у формуванні стандартів та міжнародний досвід
-
-                                    li
-                                        b 13:00 – 14:00
-                                        | &nbsp;
-                                        | Обід та неформальне спілкування.
-                                p.attention--mark.text-left Попередня реєстрація обов'язкова та доступна за посиланням нижче
-                        +btn-arrow('Зареєструватись')
+                    h2.mb-66 Клієнти компанії
+                    ul.ul-clients
+                        li
+                            a(href='' title='')
+                                +img('img/illus/members/member1.jpg')
+                        li
+                            a(href='' title='')
+                                +img('img/illus/members/member2.png')
+                        li
+                            a(href='' title='')
+                                +img('img/illus/members/member3.jpg')
+                        li
+                            a(href='' title='')
+                                +img('img/illus/members/member4.png')
+                    .spacer-36
+                    hr.mb-mt-82-30
 
 
-
-
-
-
-    section.section-article
-        article.container
-            .row
-                .col-12
-                    h2.mb-66 Лектори:
-                .col-sm-6
-                    +comment-item-lector('img/illus/comments/comments-regular/comment-regular3.jpg', 'Дмитро Овчаренко', 'СЕО', 'ALCOR', 'Не дивлячись на конкуренцію між представниками ІТ-ринку, існують певні стратегічні питання, які не можуть бути вирішені самотужки, але від результату яких залежить успішність всієї галузі. Зокрема, це законодавче врегулювання роботи ІТ-сфери, освіта, промоція індустрії в Україні та за її межами.')
-                .col-sm-6
-                    +comment-item-lector('img/illus/comments/comments-regular/comment-regular4.jpg', 'Микола Роєнко', 'засновник і президент', 'Miratech', "Потреба підприємств (або співробітників) спілкуватися з колегами, обмінюватися думками, ділитися досвідом, спільно вирішувати загальні проблеми і т.д. є об'єктивною основою того, що в світі існує безліч різних асоціацій - галузевих, професійних, територіальних, наукових, спортивних та ін. Багато з них об'єднують в своїх рядах величезну кількість членів.")
-
-
-
-    section.section-article
-        article.container
-            .row
-                .col-12
-                    h2.mb-66 Партнери:
-                .col-12
-                    .row.no-gutters.slider-partner-eventsin
-                        .col-md-4.col-xl-3
-                            +member-item-partner('img/illus/partners/partner1.png', 'УкрСиббанк BNP Paribas Group – це банк, що є активним членом IT-асоціації України. Банк пропонує ІТ-фахівцям найкращі продукти та послуги, а також професійну фінансову експертизу. УкрСиббанк також відкриває спеціалізовані відділи поруч із офісами ІТ-компаній.\n' +
-                            '        | Разом з Startup.Network в 2017 році УкрСибБанк організували «Битву стартапів» для представників FinTech та IT-компаній з 10 українських міст.\n')
-                        .col-md-4.col-xl-3
-                            +member-item-partner('img/illus/partners/partner2.svg', 'Компанія Alcor надає своїм клієнтам альтернативні послуги з ВРО порівняно з традиційними аутсорсинговими моделями. Alcor має більш ніж десятирічний досвід на ринку та пропонує своїм клієнтам послуги майже 100 тисяч талановитих українських IT-спеціалістів. Компанія також надає послуги з відкриття R&D-центрів та підтримку проекту замовника у майбутньому – від рекомендацій з розташування офісу до рекрутингу, брендингу, юридичних та фінансових послуг.')
-                        .col-md-4.col-xl-3
-                            +member-item-partner('img/illus/partners/partner3.png', 'Lorem Ipsum - це текст-"риба", що використовується в друкарстві та дизайні. Lorem Ipsum є, фактично, стандартною "рибою" аж з XVI стор […]')
-                        .col-md-4.col-xl-3
-                            +member-item-partner('img/illus/partners/partner4.png', 'Lorem Ipsum - це текст-"риба", що використовується в друкарстві та дизайні. Lorem Ipsum є, фактично, стандартною "рибою" аж з XVI стор […]')
-
-                    .slider-progressbar.slider-progressbar-partner-eventsin
-                        .slider-progressbar--track
-
-
-
-
-    include ../components/_modules/share/section-share
 
     section
-        .container
-            .row.row-calendar
+        article.container
+            .row
                 .col-12
-                    h2.text-center.mb-66 Перегляньте також
+                    h2.mb-66.text-center Статті компанії
                 .col-12
-                    .row.slider-calendar-eventsin
+                    .row.row-publications
                         .col-md-6.col-lg-4.col-xl-3
-                            +calendar-item-month-block('21.04', 'Початок о 9:00', 'AI&BigData Conference 2018', 'Березень')
+                            +news-association('img/illus/news/news1.jpg', 'Ciklum',    'Відтепер ввозити прототипи для R&D цілей в Україну стане простіше','Завдяки спільній роботі галузевих експертів були прийняті новели, що значно спрощують процедуру імпорту в Україну прототипів обладнання для R&D цілей (дослідження та розробки).', '13.02.2018')
                         .col-md-6.col-lg-4.col-xl-3
-                            +calendar-item('25.04', 'Початок о 16:00', 'Конференція «Забезпечення безпеки кіберпростору в системі національної безпеки України»')
+                            +news-association('img/illus/news/news1.jpg', 'Ciklum',    'Відтепер ввозити прототипи для R&D цілей в Україну стане простіше','Завдяки спільній роботі галузевих експертів були прийняті новели, що значно спрощують процедуру імпорту в Україну прототипів обладнання для R&D цілей (дослідження та розробки).', '13.02.2018')
                         .col-md-6.col-lg-4.col-xl-3
-                            +calendar-item-month-block('18.05', 'Початок о 18:30', 'Хакатон Синхро-Простір', 'Травень')
+                            +news-association('img/illus/news/news1.jpg', 'Ciklum',    'Відтепер ввозити прототипи для R&D цілей в Україну стане простіше','Завдяки спільній роботі галузевих експертів були прийняті новели, що значно спрощують процедуру імпорту в Україну прототипів обладнання для R&D цілей (дослідження та розробки).', '13.02.2018')
                         .col-md-6.col-lg-4.col-xl-3
-                            +calendar-item-event-block('21.05', 'Початок о 9:30', 'INTAX FORUM UKRAINE - ІНВЕСТИЦІЇ. ФІНАНСИ. ПОДАТКИ. ПРАВО', 'Подія Асоціації')
-                    .slider-progressbar.slider-progressbar-calendar-eventsin
-                        .slider-progressbar--track
+                            +news-association('img/illus/news/news2.jpg','Ciklum', 'ELEKS та Miratech - у списку фіналістів престижної премії European IT & Software Excellence Awards 2018','ІТ Europa, міжнародна агенція, яка займається ринковими дослідженнями, оприлюднила список фіналістів престижної загальноєвропейської премії European IT & Software Excellence Awards.', '20.03.18')
+
+
+
+
+    include ../components/_modules/advantage/section-advantages-footer.pug
 
 
 
