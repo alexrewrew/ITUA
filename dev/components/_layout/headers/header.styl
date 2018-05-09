@@ -280,6 +280,72 @@ header
         pl(0)
         li
           color #a0b3c9
+  &.header-newsin
+    position relative
+    overflow visible
+    height 390px
+    bg(#f7f8f9)
+    mb(r(55))
+    +mob()
+      mb(r(100))
+    +land()
+      height: 350px;
+    .breadcrumbs
+      mb(r(13))
+    h1
+      text-align center
+      font-size: r(32)
+      line-height: 1.25;
+      letter-spacing: normal;
+      color: #053a78
+      +mob()
+        fs(e(24))
+        text-align left
+    .header-article--container
+      +mob()
+        top: calc(100% - 50px);
+    .header-article--author
+      width auto
+      pt(r(27))
+      +mob()
+        pl(r(24))
+        pr(r(24))
+
+      li
+        mb(r(7))
+        b
+          mr(r(16))
+        &.ds-flex
+          display flex
+          +xs()
+            b
+              display none
+
+    &.header-newsin-photo
+      bg($tr)
+      .header-newsin-photo--image
+        position absolute
+        left 0
+        right 0
+        top 0
+        z-index -1
+        +xs()
+          display flex
+          justify-content center
+        img
+          width 100%
+          filter: grayscale(100%);
+          opacity .3
+          +xs()
+            width 200vw
+            //flex 0 0 auto
+        &:after
+          pba()
+          background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+          bottom 0
+          left 0
+          right 0
+          top 0
 
 .header-col
   &.left

@@ -62,6 +62,23 @@ mixin header-report(heading)
                     h1= heading
 
 
+mixin header-newsin(heading)
+        .container
+            .row
+                .col-md-6
+                    ul.breadcrumbs
+                        +li-a('Головна')
+                        +li-a('Публікація')
+                        +li-a(heading)
+            .row.justify-content-center
+                .col-12
+                    a(href='' title='').link-back
+                        include ../../_svgs/arrow-left2.svg
+                        | До всіх статей
+                .col-lg-10
+                    h1= heading
+
+
 mixin header-part(heading, text)
     .container
         .row

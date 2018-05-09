@@ -92,6 +92,29 @@
         mr(r(12))
         width 25px
         height 25px
+  &-author
+    display inline-flex
+    &-image
+      width: 62px;
+      height: 62px;
+      border-radius 50%
+      overflow hidden
+      mr(r(20))
+      ml(r(8))
+      +mob()
+        width 40px
+        height 40px
+      img
+        width 100%
+    &-name
+      padding-top: r(4)
+      h3
+        mb(0)
+        fs(18px)
+        +mob()
+          fs(16px)
+      h6
+        mb(0)
 
 .header-article--image
   position absolute
@@ -170,3 +193,34 @@
         bg($go)
         &:hover
           box-shadow: 0 4px 18px 0 $go
+
+
+.article-news
+  h2
+     fs(e(28))
+     mb(r(47))
+  h3
+    font-size: e(20)
+    line-height: 1.4;
+    mt(r(77))
+    mb(r(33))
+  p
+    b
+      co(#153b74)
+    a
+      co($blue)
+      text-decoration underline
+  img
+    mt(r(91))
+    mb(r(120))
+    +xs()
+      mb(r(60))
+      mt(r(45))
+
+  .slider-middle
+    mt(r(96))
+    +xs()
+      ml(-15px)
+      mr(-15px)
+    +land()
+      margin-left: 12.3%;

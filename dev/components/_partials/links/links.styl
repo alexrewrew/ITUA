@@ -51,6 +51,23 @@ a
       g
         fill $blue4
 
+.link-back
+  display flex
+  align-items center
+  line-height: 1.67;
+  color $blue
+  fs(e(12))
+  fw(700)
+  mb(r(20))
+  +mob()
+    mb(r(43))
+  svg
+    mr(r(14))
+  &:hover
+    svg g
+      fill #0056b3
+
+
 .col-detail-display
   +mob()
     display none

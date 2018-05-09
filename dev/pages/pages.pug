@@ -6,73 +6,30 @@ block title
 
 block content
 
+    //mixin ul-a(array, className)
+    //    ul(class= className)
+    //        each val in array
+    //            li
+    //                a(href='' title='')= val
+
+        var partners =[{ "name":"partnerx", "image": "imagex" }, { "name": "partnery", "image": "imagey" }]
+
+        ul#slides.swiper-wrapper
+           each partner in partners
+             li.swiper-slide
+               img(src=partner.image, alt=partner.name)
+
+    -var n = 1
+
+    -array = [{name: 'Відгук', href: 'about-business.html'}, {name: 'Про напрям', href: 'about-direction.html'}, {name: 'Про нас', href: 'about-us.html'}, {name: 'Переваги', href: 'advantages.html'}, {name: 'Відгук', href: 'article-businessin.html'}, {name: 'Подія', href: 'article-eventsin.html'}, {name: 'Ініціатива Внутрішня', href: 'article-initiativein.html'}, {name: 'Ініціатива Внутрішня 2', href: 'article-initiativein2.html'}, {name: 'Член Асоціації', href: 'article-membersin.html'}, {name: 'Проект Внутрішня', href: 'article-projectsin.html'}, {name: 'Звіт Внутрішня', href: 'article-reportsin.html'}, {name: 'Комітети', href: 'committees.html'}, {name: 'Комітети 2', href: 'committees2.html'}, {name: 'Головні Події', href: 'events-year.html'}, {name: 'Головна', href: 'index.html'}, {name: 'Інструменти', href: 'instruments.html'}, {name: 'Члени Асоціації', href: 'members.html'}, {name: '', href: 'news-association.html'},{name: '', href: 'news-author.html'},{name: '', href: 'news-authorin.html'},{name: '', href: 'news-authorin2.html'}, {name: '', href: 'news-branch.html'},{name: '', href: 'news-branchin.html'},{name: '', href: 'news-branchin2.html'},{name: '', href: 'news-direction.html'},{name: '', href: 'partners.html'},{name: 'Проекти та ініціативи', href: 'projects-initiatives.html'},{name: 'Проекти та ініціативи 2', href: 'projects-initiatives2.html'},{name: 'Звіти', href: 'reports.html'},]
+
     section
         .container
             .row
-                .col-12
-                    h2 Сторінки
-                .col-md-4.col-lg-3
-                    a(href='index.html' title='' target='_blank').btn Головна сторінка
-                .col-md-4.col-lg-3
-                    a(href='about-business.html' title='' target='_blank').btn Бізнес про нас
-                .col-md-4.col-lg-3
-                    a(href='about-direction.html' title='' target='_blank').btn Про напрям
-                .col-md-4.col-lg-3
-                    a(href='about-us.html' title='' target='_blank').btn Про Асоціацію
-            .spacer-28
-            .row
-                .col-md-4.col-lg-3
-                    a(href='article-businessin.html' title='' target='_blank').btn Відгук
-                .col-md-4.col-lg-3
-                    a(href='article-initiativein.html' title='' target='_blank').btn Ініціатива
-                .col-md-4.col-lg-3
-                    a(href='article-projectsin.html' title='' target='_blank').btn Проект
-                .col-md-4.col-lg-3
-                    a(href='article-reportsin.html' title='' target='_blank').btn Звіт
-            .spacer-28
-            .row
-                .col-md-4.col-lg-3
-                    a(href='article-initiativein2.html' title='' target='_blank').btn Ініціатива 2
-                .col-md-4.col-lg-3
-                    a(href='article-eventsin.html' title='' target='_blank').btn Подія
-            .spacer-28
-            .row
-                .col-md-4.col-lg-3
-                    a(href='advantages.html' title='' target='_blank').btn Переваги участі в Асоціації
-                .col-md-4.col-lg-3
-                    a(href='committees.html' title='' target='_blank').btn Комітети та робочі групи
-                .col-md-4.col-lg-3
-                    a(href='committees2.html' title='' target='_blank').btn Комітети та робочі групи 2
-                .col-md-4.col-lg-3
-                    a(href='events-year.html' title='' target='_blank').btn Головні події року
-            .spacer-28
-            .row
-                .col-md-4.col-lg-3
-                    a(href='news-association.html' title='' target='_blank').btn Новини Асоціації
-                .col-md-4.col-lg-3
-                    a(href='news-author.html' title='' target='_blank').btn Новини Авторські
-                .col-md-4.col-lg-3
-                    a(href='news-branch.html' title='' target='_blank').btn Новини Галузі
-                .col-md-4.col-lg-3
-                    a(href='news-direction.html' title='' target='_blank').btn Новини Напрямку
-            .spacer-28
-            .row
-                .col-md-4.col-lg-3
-                    a(href='instruments.html' title='' target='_blank').btn Інструменти для захисту інтересів індустрії
-                .col-md-4.col-lg-3
-                    a(href='members.html' title='' target='_blank').btn Члени Асоціації
-                .col-md-4.col-lg-3
-                    a(href='reports.html' title='' target='_blank').btn Річні та квартальні звіти
-                .col-md-4.col-lg-3
-                    a(href='partners.html' title='' target='_blank').btn Партнери Асоціації
-            .spacer-28
-            .row
-                .col-md-4.col-lg-3
-                    a(href='projects-initiatives.html' title='' target='_blank').btn Проекти та ініціативи
-                .col-md-4.col-lg-3
-                    a(href='projects-initiatives2.html' title='' target='_blank').btn Проекти та ініціативи 2
-            //    .col-md-4.col-lg-3
-            //        a(href='' title='' target='_blank').btn Голвна сторінка
-            //    .col-md-4.col-lg-3
-            //        a(href='' title='' target='_blank').btn Голвна сторінка
-            .spacer-28
+                each val in array
+                    .col-md-4.col-lg-3
+                        a(href= val.href title='' target='_blank' style='margin-bottom:25px').btn
+                            = n++
+                            | .
+                            | &nbsp;
+                            = val.name

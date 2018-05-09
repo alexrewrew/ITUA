@@ -1,22 +1,70 @@
 
 
 blockquote
-  padding r(15)
+  padding r(94) 0 r(79)
   position relative
-  &:before, &:after
-    position absolute
-    display block
-    line-height 1
-  &:before
-    content open-quote
-    left 0
-    top 0
+  z-index 10
+  mb(r(100))
+  +xs()
+    pl(r(25))
+    pr(r(25))
+    pb(r(100))
+  +land()
+    margin: 0 65px;
   &:after
-    content close-quote
-    right 0
+    pba()
+    top 0
+    width 200vw
+    left -100vw
     bottom 0
+    bg(#f7f8f9)
+    z-index: -1
 
-cite
-  fs(e(16))
-  font-style italic
-  color $gr
+
+  p
+    color $blue
+    font-weight: bold;
+    line-height 1.63
+    fs(e(16))
+    position relative
+    &:before, &:after
+      position absolute
+      display block
+      line-height 1
+      color $blue
+      fw(700)
+      fs(e(70))
+    &:before
+      content '«'
+      left -68px
+      top -23px
+      z-index 10
+      +xs()
+        top -60px
+        left -25px
+    &:after
+      content '»'
+      right -68px
+      bottom -23px
+      z-index 10
+      +xs()
+        bottom -60px
+        right -25px
+
+  .blockquote-author
+    position absolute
+    bottom 0
+    left 0
+    font-size: e(14)
+    line-height: 1.57;
+    color: #768190;
+    mb(r(13))
+    +xs()
+      left 25px
+
+
+
+//cite
+//  fs(e(16))
+//  font-style italic
+//  color $gr
