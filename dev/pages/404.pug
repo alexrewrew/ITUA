@@ -1,0 +1,63 @@
+//- layouts/layout.pug
+extend layouts/_layout.pug
+
+block title
+    | IT Ukraine Association - Інструменти для захисту інтересів індустрії
+
+
+block content
+
+
+    header.header-404
+        .container
+            .row
+                .col-md-6
+                    +breadcrumbs('404')
+
+    section.section-404
+        .container
+            .row
+                .col-md-7
+                    h1.h1-404
+                        span 4
+                        span 0
+                        span 4
+
+                        .h1-404--block
+
+                    script.
+                        var initial = 500;
+                        var count = initial;
+                        var counter = setInterval(timer, 10);
+                        function timer() {
+                            if (count <= 0) {
+                                clearInterval(counter);
+                                window.location.href = "./";
+                                return;
+                            }
+                            count--;
+                            displayCount(count);
+                        }
+                        function displayCount(count) {
+                            var res = count / 100;
+                            document.getElementById("value").innerHTML = res.toPrecision(count.toString().length);
+                        }
+                        displayCount(initial);
+
+                .col-md-5.col-lg-4
+                    h2.h2-404 Сторінка не знайдена
+                    p.p-404 Для економії вашого часу, перехід на головну відбудеться автоматично через декілька секунд:
+                    .counter-404#value
+                    a(href='./' title='').btn.btn-small#to-index На головну
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,134 @@
+.section-search
+  bg(#f7f8f9)
+  padding-top: 0;
+  padding-bottom r(220)
+  +mob()
+    padding-bottom r(130)
+  & + footer
+    mt(0)
+
+.search-block
+  display flex
+  padding r(40) r(97)
+  bg($wt)
+  mb(r(1))
+  position relative
+  +tab()
+    padding r(30) r(30)
+  +port()
+    padding r(30) r(30)
+    flex-wrap wrap
+  +mob()
+    padding r(34) r(24)
+    flex-wrap wrap
+  &--image
+    max-width: 263px;
+    height: 173px;
+    overflow hidden
+    display flex
+    justify-content center
+    align-items center
+    mr(r(31))
+    flex 0 0 auto
+    +xs()
+      max-width 100%
+      width 100%
+      mr(0)
+      mb(r(31))
+    img
+      height 100%
+      flex 0 0 auto
+      trans()
+      +xs()
+        width 100%
+        height auto
+  &--description
+    position relative
+    flex 0 0 457px
+    max-width 457px
+    +tab()
+      flex 0 0 400px
+      max-width 400px
+    +port()
+      max-width calc(100% - 294px)
+      flex 1 1 calc(100% - 294px)
+    +land()
+      max-width calc(100% - 294px)
+      flex 1 1 calc(100% - 294px)
+    +xs()
+      max-width 100%
+      flex 1 1 100%
+    h3
+      mb(r(13))
+    p
+      +xs()
+        mb(r(34))
+    &-data
+      position absolute
+      bottom -6px
+      left 0
+      display flex
+      &--date
+        font-size: e(14)
+        font-weight: bold;
+        line-height: normal;
+        letter-spacing: 1px;
+        color: #c7d3df;
+        mr(r(39))
+      &--route
+        font-size: e(14)
+        font-weight: bold;
+        line-height: normal;
+        color: #c7d3df;
+        text-decoration underline
+  &--button
+    position relative
+    flex 0 0 162px
+    max-width 162px
+    +port()
+      flex 1 1 100%
+      max-width 100%
+      padding-top r(30)
+    +land()
+      flex 1 1 100%
+      max-width 100%
+      padding-top r(30)
+    +xs()
+      padding-top r(30)
+    .btn
+      position absolute
+      bottom 0
+      left 0
+      padding 0
+      bg($tr)
+      co($blue)
+      display block
+      &:after
+        display none
+      +mmax(992px)
+        position relative
+      +land()
+        max-width 200px
+      svg
+        width: 19px;
+        top 0
+        opacity 0
+        g
+          fill $blue
+        +land()
+          opacity 1
+        +xs()
+          opacity 1
+          right 0
+
+  &:hover
+    box-shadow: 0 10px 30px 0 rgba(94, 107, 126, 0.3);
+    z-index 100
+    .search-block--image
+      img
+        opacity .6
+    .search-block--button
+      .btn
+        svg
+          right 0
+          opacity 1

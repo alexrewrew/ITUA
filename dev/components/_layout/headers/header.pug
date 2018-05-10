@@ -91,3 +91,17 @@ mixin header-part(heading, text)
             .col-sm-6.offset-md-1.col-md-5.col-lg-4
                 p= text
 
+mixin header-search(heading, text)
+    .container
+        .row
+            .col-md-6
+                +breadcrumbs(heading)
+        .row
+            .col-sm-6
+                h1= heading
+
+            .col-sm-6.col-md-5.col-lg-4
+                p= text
+            .col-12
+                hr
+

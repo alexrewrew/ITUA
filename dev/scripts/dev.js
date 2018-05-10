@@ -56,6 +56,8 @@
         dropdownBack: $('.dropdown-back a'),
         dropdown: $('.dropdown'),
 
+        calendarMonth: $('#calendar'),
+
         tabsArr: $('.tabs-publication--ul li a'),
         tabsSlider: $('.tabs-publication--line'),
 
@@ -591,6 +593,25 @@
 
                 tabsFilterDetectActive();
             });
+
+            // DOMs.calendarMonth.fullCalendar({
+            //     defaultView: 'month'
+            // });
+
+            $('#calendar').fullCalendar({
+                defaultView: 'month',
+                locale: 'uk',
+                events: [
+                    {
+                        title  : 'EVENTEVENT',
+                        start  : '2018-05-05',
+                        end    : '2018-05-05'
+                    }
+                ]
+            });
+
+            $('.fc-icon-left-single-arrow').replaceWith(DOMs.sliderArrowLeft);
+            $('.fc-icon-right-single-arrow').replaceWith(DOMs.sliderArrowRight);
 
         })();
 

@@ -1,0 +1,13 @@
+mixin search(img, heading, text, date, route)
+    a(href='' title='').search-block
+        .search-block--image
+            +img(img)
+        .search-block--description
+            h3= heading
+            p= text
+            .search-block--description-data
+                .search-block--description-data--date= date
+                .search-block--description-data--route= route
+        .search-block--button
+            span.btn.btn-arrow Читати більше
+                include ../../_svgs/arrow-right.svg

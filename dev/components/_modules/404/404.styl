@@ -1,0 +1,74 @@
+.section-404
+  bg(#d6dce4)
+  pb(r(230))
+  & + footer
+    mt(0)
+  +mob()
+    pt(0)
+    pb(r(160))
+
+.header-404
+    bg(#d6dce4)
+    height: 220px;
+    +mob()
+      height 120px
+
+.h1-404
+  line-height .78
+  fs(e(300))
+  text-align center
+  position relative
+  z-index 40
+  +tab()
+    fs(e(275))
+  +port()
+    fs(e(200))
+  +mob()
+    fs(e(200))
+  +xs()
+    fs(e(144))
+    mb(r(45))
+  &--block
+    position absolute
+    bottom 0
+    left 0
+    right 0
+    height 46%
+    background #d6dce4
+    z-index 20
+    box-shadow: 0px -20px 19px -13px rgba(173,186,203,0.51);
+
+  span
+    position relative
+    display inline-block
+    &:nth-child(1)
+      z-index 30
+    &:nth-child(2)
+      z-index 10
+      animation: swim 2s ease-in-out 2s infinite alternate;
+      transform-origin: center;
+    &:nth-child(3)
+      z-index 30
+
+@keyframes swim
+  0%
+    transform translate(8px, 8px) rotate(20deg)
+  100%
+    transform translate(-8px, -8px) rotate(-20deg)
+
+.h2-404
+  margin-bottom: r(32)
+  co($wt)
+
+.counter-404
+  co(#d6dce4)
+  line-height: 0.91;
+  fs(e(22))
+  bg($blue)
+  padding r(4) 0 r(1)
+  text-align center
+  max-width 120px
+  mb(r(45))
+
+.p-404
+  mb(r(13))
