@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="108px" height="113px" viewBox="0 0 108 113" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
+    <title>Pin</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-51.7%" y="-60.2%" width="203.4%" height="220.5%" filterUnits="objectBoundingBox" id="filter-1">
+            <feGaussianBlur stdDeviation="10" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-34.6%" y="-100.0%" width="169.2%" height="300.0%" filterUnits="objectBoundingBox" id="filter-2">
+            <feGaussianBlur stdDeviation="3" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Контакти" transform="translate(-302.000000, -389.000000)">
+            <g id="Pin" transform="translate(321.000000, 389.000000)">
+                <polygon id="Rectangle-28-Copy" fill="#186FF0" opacity="0.699999988" filter="url(#filter-1)" points="6 44 64 44 64 78 45.6456355 78 35 93.7988381 25.9182757 78 6 78"></polygon>
+                <ellipse id="Oval-4" fill="#186FF0" opacity="0.300000012" filter="url(#filter-2)" cx="36" cy="87.5" rx="13" ry="4.5"></ellipse>
+                <rect id="Rectangle" fill="#FFFFFF" x="0" y="0" width="70" height="70"></rect>
+                <path d="M63.3630695,62.539087 L55.4328174,62.539087 C44.3109492,62.539087 35.2630105,53.449378 35.2630105,42.2772604 L35.2630105,34.3120698 L49.1906267,34.3120698 L49.1906267,42.2772604 C49.1906267,45.7345755 51.9910525,48.5485448 55.4328174,48.5485448 L63.3630695,48.5485448 L63.3630695,62.539087 Z M35.2807516,6.44236801 L49.2305441,6.44236801 L49.2305441,20.4560778 L63.1803367,20.4560778 L63.1803367,34.4680054 L49.2305441,34.4680054 L49.2305441,20.4560778 L35.2807516,20.4560778 L35.2807516,6.44236801 Z M45.4270748,69.9954819 L35.5,89.9908529 L25.6245305,69.9954819 L0,69.9954819 L0,0 L70.0060174,0 L70.0060174,69.9954819 L45.4270748,69.9954819 Z" id="Fill-26" fill="#186FF0"></path>
+            </g>
+        </g>
+    </g>
+</svg>

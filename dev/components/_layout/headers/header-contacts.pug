@@ -1,0 +1,34 @@
+header.header-article.header-contacts
+
+    .container
+        .row
+            .col-md-6
+                +breadcrumbs('Контакти')
+        .row.header-article--row
+            .col-md-6.col-lg-4
+                h1 Контакти
+
+    .container.header-article--container
+        .row
+            .offset-md-4.col-md-8.offset-lg-5.col-lg-7.offset-xl-6.col-xl-6
+                .header-article--author
+                    .header-article--author-right
+                        p.article-contact Адреса:
+                            br
+                            +a('01001, м. Київ, вул. Хрещатик, 10 (IHub)', 'link-phone')
+                        p.article-contact Телефони:
+                            br
+                            a(href='tel:+380992663903' title='').link-phone +38 099 266 39 03
+                            | ,
+                            a(href='tel:+380992663903' title='').link-phone +38 044 591 10 24
+                        p.article-contact E-mail:
+                            br
+                            +a('ciklum@ciklum.com', 'link-site')
+                        p.article-contact Social links:
+                        ul.ul-article-share
+                            li
+                                a(href='' title='')
+                                    include ../../_svgs/facebook2.svg
+                            li
+                                a(href='' title='')
+                                    include ../../_svgs/linkedin.svg

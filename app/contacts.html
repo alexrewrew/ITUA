@@ -224,47 +224,420 @@
       </div>
     </nav>
     <main>
-      <header class="header-article header-article-members">
+      <div id="map"></div>
+      <script type="text/javascript">
+        function init() {
+            var mapOptions = {
+                zoom: 15,
+                center: new google.maps.LatLng(50.4393844, 30.5012227),
+                styles:
+                    [
+                        {
+                            "featureType": "all",
+                            "elementType": "all",
+                            "stylers": [
+                                {
+                                    "visibility": "on"
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "all",
+                            "elementType": "labels",
+                            "stylers": [
+                                {
+                                    "visibility": "off"
+                                },
+                                {
+                                    "saturation": "-100"
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "all",
+                            "elementType": "labels.text.fill",
+                            "stylers": [
+                                {
+                                    "saturation": 36
+                                },
+                                {
+                                    "color": "#000000"
+                                },
+                                {
+                                    "lightness": 40
+                                },
+                                {
+                                    "visibility": "off"
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "all",
+                            "elementType": "labels.text.stroke",
+                            "stylers": [
+                                {
+                                    "visibility": "off"
+                                },
+                                {
+                                    "color": "#000000"
+                                },
+                                {
+                                    "lightness": 16
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "all",
+                            "elementType": "labels.icon",
+                            "stylers": [
+                                {
+                                    "visibility": "off"
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "administrative",
+                            "elementType": "geometry.fill",
+                            "stylers": [
+                                {
+                                    "color": "#d6dce4"
+                                },
+                                {
+                                    "lightness": 20
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "administrative",
+                            "elementType": "geometry.stroke",
+                            "stylers": [
+                                {
+                                    "color": "#c8c8c8"
+                                },
+                                {
+                                    "lightness": 17
+                                },
+                                {
+                                    "weight": 1.2
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "landscape",
+                            "elementType": "geometry",
+                            "stylers": [
+                                {
+                                    "color": "#000000"
+                                },
+                                {
+                                    "lightness": 20
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "landscape",
+                            "elementType": "geometry.fill",
+                            "stylers": [
+                                {
+                                    "color": "#d6dce4"
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "landscape",
+                            "elementType": "geometry.stroke",
+                            "stylers": [
+                                {
+                                    "color": "#e9e9e9"
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "landscape.natural",
+                            "elementType": "geometry.fill",
+                            "stylers": [
+                                {
+                                    "color": "#d6dce4"
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "poi",
+                            "elementType": "geometry",
+                            "stylers": [
+                                {
+                                    "lightness": 21
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "poi",
+                            "elementType": "geometry.fill",
+                            "stylers": [
+                                {
+                                    "color": "#d6dce4"
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "poi",
+                            "elementType": "geometry.stroke",
+                            "stylers": [
+                                {
+                                    "color": "#b0c2d7"
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "road",
+                            "elementType": "geometry",
+                            "stylers": [
+                                {
+                                    "visibility": "on"
+                                },
+                                {
+                                    "color": "#bcccde"
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "road",
+                            "elementType": "geometry.fill",
+                            "stylers": [
+                                {
+                                    "color": "#a9c0da"
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "road.highway",
+                            "elementType": "geometry.fill",
+                            "stylers": [
+                                {
+                                    "color": "#d6dee9"
+                                },
+                                {
+                                    "lightness": 17
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "road.highway",
+                            "elementType": "geometry.stroke",
+                            "stylers": [
+                                {
+                                    "color": "#dee4ec"
+                                },
+                                {
+                                    "lightness": 29
+                                },
+                                {
+                                    "weight": 0.2
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "road.arterial",
+                            "elementType": "geometry",
+                            "stylers": [
+                                {
+                                    "color": "#dee4ec"
+                                },
+                                {
+                                    "lightness": 18
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "road.arterial",
+                            "elementType": "geometry.fill",
+                            "stylers": [
+                                {
+                                    "color": "#dee4ec"
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "road.arterial",
+                            "elementType": "geometry.stroke",
+                            "stylers": [
+                                {
+                                    "color": "#dee4ec"
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "road.local",
+                            "elementType": "geometry",
+                            "stylers": [
+                                {
+                                    "color": "#dee4ec"
+                                },
+                                {
+                                    "lightness": 16
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "road.local",
+                            "elementType": "geometry.fill",
+                            "stylers": [
+                                {
+                                    "color": "#dee4ec"
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "road.local",
+                            "elementType": "geometry.stroke",
+                            "stylers": [
+                                {
+                                    "color": "#dee4ec"
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "transit",
+                            "elementType": "geometry",
+                            "stylers": [
+                                {
+                                    "color": "#c2cbd8"
+                                },
+                                {
+                                    "lightness": 19
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "water",
+                            "elementType": "all",
+                            "stylers": [
+                                {
+                                    "color": "#c9d4e3"
+                                },
+                                {
+                                    "visibility": "on"
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "water",
+                            "elementType": "geometry",
+                            "stylers": [
+                                {
+                                    "color": "#c9d4e3"
+                                },
+                                {
+                                    "lightness": 17
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "water",
+                            "elementType": "geometry.fill",
+                            "stylers": [
+                                {
+                                    "color": "#c4cfdd"
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "water",
+                            "elementType": "geometry.stroke",
+                            "stylers": [
+                                {
+                                    "color": "#c0ccdc"
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "water",
+                            "elementType": "labels",
+                            "stylers": [
+                                {
+                                    "visibility": "off"
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "water",
+                            "elementType": "labels.text",
+                            "stylers": [
+                                {
+                                    "visibility": "off"
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "water",
+                            "elementType": "labels.text.fill",
+                            "stylers": [
+                                {
+                                    "visibility": "off"
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "water",
+                            "elementType": "labels.text.stroke",
+                            "stylers": [
+                                {
+                                    "visibility": "off"
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "water",
+                            "elementType": "labels.icon",
+                            "stylers": [
+                                {
+                                    "visibility": "off"
+                                }
+                            ]
+                        }
+                    ],
+                scrollwheel: false,
+                navigationControl: false,
+                scaleControl: false,
+                draggable: false
+            };
+            var mapElement = document.getElementById('map');
+            var map = new google.maps.Map(mapElement, mapOptions);
+            var marker = new google.maps.Marker({
+                position: new google.maps.LatLng(50.4393913, 30.5030251),
+                map: map,
+                title: 'Project',
+                animation: google.maps.Animation.DROP,
+                icon: '/img/illus/mappin.svg'
+            });
+        }
+      </script>
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCghHhOudfnxm7aSYdRnLaR_Wk3-IBQox8&amp;callback=init" async="" defer=""></script>
+      <header class="header-article header-contacts">
         <div class="container">
           <div class="row">
             <div class="col-md-6">
               <ul class="breadcrumbs">
                 <li><a href="" title="">Головна</a></li>
-                <li><a href="" title="">Ciklum</a></li>
+                <li><a href="" title="">Контакти</a></li>
               </ul>
             </div>
           </div>
           <div class="row header-article--row">
             <div class="col-md-6 col-lg-4">
-              <h2>Член Асоціації</h2><img src="img/illus/members/member14.png" title="" alt=""/>
+              <h1>Контакти</h1>
             </div>
           </div>
         </div>
         <div class="container header-article--container">
           <div class="row">
-            <div class="offset-md-5 col-md-7 offset-lg-3 col-lg-9 offset-xl-4 col-xl-8">
+            <div class="offset-md-4 col-md-8 offset-lg-5 col-lg-7 offset-xl-6 col-xl-6">
               <div class="header-article--author">
-                <div class="header-article--author-left">
-                  <h1>Ciklum</h1>
-                  <p class="spec">Company's specialization:</p>
-                  <ul class="member--tags">
-                    <li>Дизайн</li>
-                    <li>Програмування</li>
-                    <li>Програмування</li>
-                    <li>SMM</li>
-                  </ul>
-                  <p class="found">
-                    Founded in&nbsp;<span>1989</span></p>
-                </div>
                 <div class="header-article--author-right">
-                  <h3>Contacts:</h3>
-                  <p class="article-contact">General phone number in Ukraine:<br><a class="link-phone" href="" title="">+38 (044) 545 77 45</a>
+                  <p class="article-contact">Адреса:<br><a class="link-phone" href="" title="">01001, м. Київ, вул. Хрещатик, 10 (IHub)</a>
                   </p>
-                  <p class="article-contact">Address of company's head office in Ukraine:<br><a class="link-phone" href="" title="">BC 'Horizon Park', 12 Amosova st., Kyiv, 03038</a>
-                  </p>
-                  <p class="article-contact">General e-mail address in Ukraine:<br><a class="link-site" href="" title="">ciklum@ciklum.com</a>
-                  </p>
-                  <p class="article-contact">Web page:<br><a class="link-site" href="" title="">www.ciklum.com</a>
+                  <p class="article-contact">Телефони:<br><a class="link-phone" href="tel:+380992663903" title="">+38 099 266 39 03</a>,<a class="link-phone" href="tel:+380992663903" title="">+38 044 591 10 24</a></p>
+                  <p class="article-contact">E-mail:<br><a class="link-site" href="" title="">ciklum@ciklum.com</a>
                   </p>
                   <p class="article-contact">Social links:</p>
                   <ul class="ul-article-share">
@@ -307,182 +680,42 @@
           </div>
         </div>
       </header>
-      <section class="section-article">
-        <article class="container">
-          <div class="row">
-            <div class="col-md-5">
-              <h2>Про компанію</h2>
-            </div>
-            <div class="col-md-7 col-lg-6">
-              <p>Ciklum is a global software engineering and technology company. Ciklum delivers software engineering excellence to Fortune 500 and fast-growing organizations alike around the world. Since 2002, over 3,000+ developers located in the delivery centers across the globe provide company’s clients with a range of services including extended software development teams, outsourcing software development, Quality Assurance, R&D, IoT, Big Data, and engineering consulting.</p>
-            </div>
-          </div>
-        </article>
-      </section>
-      <section class="section-article">
-        <article class="container">
-          <div class="row">
-            <div class="col-md-5">
-              <h2>Технічна інформація про діяльність компанії</h2>
-            </div>
-            <div class="col-md-7 col-lg-6">
-              <p><b>Company's offices in Ukraine:</b>&nbsp;
-                Kyiv, Dnipro, Kharkiv, Vinnytsia, Lviv, Odessa
-              </p>
-              <p><b>Company's offices in the world:</b>&nbsp;
-                Poland; Spain; Belarus; Pakistan; Denmark; Israel; Switzerland; UK, USA; UAE, Germany
-              </p>
-              <p><b>Total number of specialists in Ukraine:</b>&nbsp;
-                2400+
-              </p>
-              <p><b>Total number of specialists in the world:</b>&nbsp;
-                3200+
-              </p>
-              <p><b>Major clients:</b>&nbsp;
-                Just Eat, Jabra, EFG, Flixbus, Thomas Cook, Google, Sisense, Intel, Lenovo, Zurich Insurance Group, Betsson, CC-Interactive, 20/20 Vision
-              </p>
-            </div>
-          </div>
-        </article>
-      </section>
-      <section class="section-article">
+      <section class="section-question">
         <div class="container">
-          <div class="row justify-content-between">
-            <div class="offset-sm-2 col-sm-10 offset-md-5 col-md-7 header-col right">
-              <div class="slider slider-middle">
-                <div>
-                  <div class="slide"><img src="img/illus/slider3.png" title="" alt=""></div>
+          <div class="row justify-content-center">
+            <div class="col-sm-10 col-lg-8 col-xl-6">
+              <h2>Залишились запитання ?</h2>
+              <form class="form-questions">
+                <div class="input-group">
+                  <input class="error" type="" placeholder="Ваше ім’я">
+                  <div class="input-error">Неправильно введені дані</div>
                 </div>
-                <div>
-                  <div class="slide"><img src="img/illus/slider3.png" title="" alt=""></div>
+                <div class="input-group">
+                  <input class="error" type="" placeholder="E-mail">
+                  <div class="input-error"> Введено неіснуючий e-mail</div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="section-article">
-        <div class="container">
-          <div class="row">
-            <div class="col-12">
-              <h2 class="mb-66">Клієнти компанії</h2>
-              <ul class="ul-clients">
-                <li><a href="" title=""><img src="img/illus/members/member1.jpg" title="" alt=""/></a></li>
-                <li><a href="" title=""><img src="img/illus/members/member2.png" title="" alt=""/></a></li>
-                <li><a href="" title=""><img src="img/illus/members/member3.jpg" title="" alt=""/></a></li>
-                <li><a href="" title=""><img src="img/illus/members/member4.png" title="" alt=""/></a></li>
-              </ul>
-              <div class="spacer-36"></div>
-              <hr class="mb-mt-82-30">
-            </div>
-          </div>
-        </div>
-      </section>
-      <section>
-        <article class="container">
-          <div class="row">
-            <div class="col-12">
-              <h2 class="mb-66 text-center">Статті компанії</h2>
-            </div>
-            <div class="col-12">
-              <div class="row row-publications">
-                <div class="col-md-6 col-lg-4 col-xl-3"><a class="blog" href="" title="">
-                    <div class="blog--image"><img src="img/illus/news/news1.jpg" title="" alt=""/>
-                    </div>
-                    <div class="blog--description">
-                      <h6>Іван Микитюк, &nbsp<span class="company">Ciklum</span>, &nbspголова відділу PR
-                      </h6>
-                      <h3>Відтепер ввозити прототипи для R&amp;D цілей в Україну стане простіше</h3>
-                      <p>Завдяки спільній роботі галузевих експертів були прийняті новели, що значно спрощують процедуру імпорту в Україну прототипів обладнання для R&amp;D цілей (дослідження та розробки).</p>
-                    </div>
-                    <div class="blog--date">13.02.2018</div>
-                    <div class="btn-more">Читати більше<svg width="27px" height="17px" viewBox="0 0 27 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g transform="translate(-680.000000, -720.000000)" fill="#FFFFFF" fill-rule="nonzero">
-            <g transform="translate(649.500000, 728.500000) scale(-1, 1) rotate(-90.000000) translate(-649.500000, -728.500000) translate(641.000000, 671.000000)">
-                <polygon transform="translate(8.249795, 13.297414) scale(-1, 1) rotate(-180.000000) translate(-8.249795, -13.297414) " points="14.3031081 15.9989117 9.60107486 20.9146165 9.60107486 0.345032821 6.89851459 0.345032821 6.89851459 20.9146165 2.19648132 15.9989117 0.249794726 17.8861615 8.24979473 26.2497947 16.2497947 17.8861615"></polygon>
+                <div class="input-group textarea-group">
+                  <textarea class="error" placeholder="Введіть повідомлення"></textarea>
+                  <div class="input-error"> Заповніть це поле</div>
+                </div>
+                <button class="btn btn-plane btn-center" type="submit">
+                  Відправити<svg width="19px" height="17px" viewBox="0 0 19 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.300000012">
+        <g transform="translate(-707.000000, -5248.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <g transform="translate(470.000000, 5233.000000)">
+                <g>
+                    <g transform="translate(105.000000, 9.000000)">
+                        <g transform="translate(132.000000, 6.000000)">
+                            <polygon points="0 0.855670103 0 7.42038256 9.14196994 8.92783505 0 10.4352875 0 17 18.8674699 8.92783505"></polygon>
+                        </g>
+                    </g>
+                </g>
             </g>
         </g>
     </g>
 </svg>
-                    </div></a>
-                </div>
-                <div class="col-md-6 col-lg-4 col-xl-3"><a class="blog" href="" title="">
-                    <div class="blog--image"><img src="img/illus/news/news2.jpg" title="" alt=""/>
-                    </div>
-                    <div class="blog--description">
-                      <h6>Іван Микитюк, &nbsp<span class="company">Ciklum</span>, &nbspголова відділу PR
-                      </h6>
-                      <h3>ELEKS та Miratech - у списку фіналістів престижної премії European IT &amp; Software Excellence Awards 2018</h3>
-                      <p>ІТ Europa, міжнародна агенція, яка займається ринковими дослідженнями, оприлюднила список фіналістів престижної загальноєвропейської премії European IT &amp; Software Excellence Awards.</p>
-                    </div>
-                    <div class="blog--date">20.03.18</div>
-                    <div class="btn-more">Читати більше<svg width="27px" height="17px" viewBox="0 0 27 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g transform="translate(-680.000000, -720.000000)" fill="#FFFFFF" fill-rule="nonzero">
-            <g transform="translate(649.500000, 728.500000) scale(-1, 1) rotate(-90.000000) translate(-649.500000, -728.500000) translate(641.000000, 671.000000)">
-                <polygon transform="translate(8.249795, 13.297414) scale(-1, 1) rotate(-180.000000) translate(-8.249795, -13.297414) " points="14.3031081 15.9989117 9.60107486 20.9146165 9.60107486 0.345032821 6.89851459 0.345032821 6.89851459 20.9146165 2.19648132 15.9989117 0.249794726 17.8861615 8.24979473 26.2497947 16.2497947 17.8861615"></polygon>
-            </g>
-        </g>
-    </g>
-</svg>
-                    </div></a>
-                </div>
-                <div class="col-md-6 col-lg-4 col-xl-3"><a class="blog" href="" title="">
-                    <div class="blog--image"><img src="img/illus/news/news3.jpg" title="" alt=""/>
-                    </div>
-                    <div class="blog--description">
-                      <h6>Іван Микитюк, &nbsp<span class="company">Ciklum</span>, &nbspголова відділу PR
-                      </h6>
-                      <h3>18 українських компаній увійшли до ТОП-100 кращих провайдерів ІТ-послуг у світі</h3>
-                      <p>Міжнародна організація IAOP (International Association of Outsourcing Professionals) під час своєї щорічної події Outsourcing World Summit, традиційно підбила підсумки року та оприлюднила список кращих світових постачальників ІТ-послуг.</p>
-                    </div>
-                    <div class="blog--date">20.02.18</div>
-                    <div class="btn-more">Читати більше<svg width="27px" height="17px" viewBox="0 0 27 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g transform="translate(-680.000000, -720.000000)" fill="#FFFFFF" fill-rule="nonzero">
-            <g transform="translate(649.500000, 728.500000) scale(-1, 1) rotate(-90.000000) translate(-649.500000, -728.500000) translate(641.000000, 671.000000)">
-                <polygon transform="translate(8.249795, 13.297414) scale(-1, 1) rotate(-180.000000) translate(-8.249795, -13.297414) " points="14.3031081 15.9989117 9.60107486 20.9146165 9.60107486 0.345032821 6.89851459 0.345032821 6.89851459 20.9146165 2.19648132 15.9989117 0.249794726 17.8861615 8.24979473 26.2497947 16.2497947 17.8861615"></polygon>
-            </g>
-        </g>
-    </g>
-</svg>
-                    </div></a>
-                </div>
-                <div class="col-md-6 col-lg-4 col-xl-3"><a class="blog" href="" title="">
-                    <div class="blog--image"><img src="img/illus/news/news4.jpg" title="" alt=""/>
-                    </div>
-                    <div class="blog--description">
-                      <h6>Іван Микитюк, &nbsp<span class="company">Ciklum</span>, &nbspголова відділу PR
-                      </h6>
-                      <h3>5 українських ІТ-компаній потрапили до міжнародного рейтингу Inc. 5000</h3>
-                      <p>Вітчизняний ІТ-бізнес продовжує отримувати міжнародне визнання. Цього разу 5 українських компаній зі сфери інформаційних технологій увійшли до відомого рейтингу «Inc. 5000 Europe» – списку приватних компаній Європи, які розвиваються найбільш динамічно.</p>
-                    </div>
-                    <div class="blog--date">28.02.18</div>
-                    <div class="btn-more">Читати більше<svg width="27px" height="17px" viewBox="0 0 27 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g transform="translate(-680.000000, -720.000000)" fill="#FFFFFF" fill-rule="nonzero">
-            <g transform="translate(649.500000, 728.500000) scale(-1, 1) rotate(-90.000000) translate(-649.500000, -728.500000) translate(641.000000, 671.000000)">
-                <polygon transform="translate(8.249795, 13.297414) scale(-1, 1) rotate(-180.000000) translate(-8.249795, -13.297414) " points="14.3031081 15.9989117 9.60107486 20.9146165 9.60107486 0.345032821 6.89851459 0.345032821 6.89851459 20.9146165 2.19648132 15.9989117 0.249794726 17.8861615 8.24979473 26.2497947 16.2497947 17.8861615"></polygon>
-            </g>
-        </g>
-    </g>
-</svg>
-                    </div></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </article>
-      </section>
-      <section class="section-advantages-footer">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-6">
-              <h2>Переваги Асоціації</h2>
-            </div>
-            <div class="col-sm-6 col-md-5 col-lg-4">
-              <p>Ми – спільнота лідерів індустрії, які працюють задля розвитку галузі інформаційних технологій в Україні</p><a class="btn" href="" title="">Приєднатись</a>
+                </button>
+              </form>
             </div>
           </div>
         </div>

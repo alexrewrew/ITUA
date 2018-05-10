@@ -171,6 +171,38 @@ header
         +mob()
           left 0
 
+    &.header-contacts
+      bg($tr)
+      position relative
+      mb(r(390))
+      +land()
+        mb(r(450))
+      +xs()
+        mb(r(620))
+      h1
+        co($wt)
+        +mob()
+          font-size: e(28)
+      .header-article--container
+        top calc(100% - 100px)
+        +mob()
+          top: calc(100% - 90px);
+      .header-article--author
+        width auto
+        padding r(46) r(97)
+        +mob()
+          padding r(37) r(24)
+        .article-contact
+          mb(r(5))
+        .ul-article-share
+          +mob()
+            mb(0)
+          li
+            max-width: 83px;
+            a
+              height: 40px;
+
+
     &.header-article-members
       height 457px
       mb(r(121))
@@ -250,10 +282,6 @@ header
         .article-contact
           mb(r(10))
           line-height: 1.43
-          a
-            co(#053a78)
-            &:hover
-              co($blue)
         .ul-article-share li
           max-width 83px
           a
@@ -346,6 +374,8 @@ header
           left 0
           right 0
           top 0
+
+
 
 .header-col
   &.left
