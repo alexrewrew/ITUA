@@ -122,10 +122,12 @@
             nextArrow: DOMs.sliderArrowRight,
             dots: false,
             slidesToScroll: 1,
+            swipeToSlide: true,
             infinite: true,
             variableWidth: true,
             speed: 250
         });
+
 
         // SLIDER OF EVENTS YEAR
         DOMs.sliderEventsYear.slick({
@@ -133,6 +135,7 @@
             nextArrow: DOMs.sliderArrowRight,
             dots: false,
             slidesToScroll: 1,
+            swipeToSlide: true,
             infinite: true,
             speed: 250
         });
@@ -143,6 +146,7 @@
             nextArrow: DOMs.sliderArrowRight,
             dots: false,
             infinite: false,
+            swipeToSlide: true,
             rows: 2,
             variableWidth: true,
             speed: 250
@@ -157,6 +161,7 @@
             nextArrow: DOMs.sliderArrowRight,
             dots: false,
             slidesToScroll: 1,
+            swipeToSlide: true,
             infinite: true,
             variableWidth: true,
             speed: 250
@@ -169,6 +174,7 @@
             slidesToShow: 1,
             slidesToScroll: 1,
             infinite: true,
+            swipeToSlide: true,
             speed: 250,
             prevArrow: DOMs.sliderArrowLeft,
             nextArrow: DOMs.sliderArrowRight
@@ -180,6 +186,7 @@
             nextArrow: DOMs.sliderArrowRight,
             dots: false,
             slidesToScroll: 1,
+            swipeToSlide: true,
             infinite: false,
             speed: 250,
             variableWidth: true
@@ -194,6 +201,7 @@
             dots: false,
             slidesToScroll: 1,
             slidesToShow: 2,
+            swipeToSlide: true,
             infinite: false,
             speed: 250,
             responsive: [
@@ -214,6 +222,7 @@
             nextArrow: DOMs.sliderArrowRight,
             dots: false,
             slidesToScroll: 1,
+            swipeToSlide: true,
             infinite: false,
             speed: 250,
         }).on('beforeChange', function (event, slick, currentSlide, nextSlide) {
@@ -227,7 +236,7 @@
             infinite: false,
             prevArrow: DOMs.sliderArrowLeft,
             nextArrow: DOMs.sliderArrowRight,
-
+            swipeToSlide: true,
             variableWidth: true,
             speed: 250,
             responsive: [
@@ -243,7 +252,7 @@
                         infinite: false,
                         prevArrow: DOMs.sliderArrowLeft,
                         nextArrow: DOMs.sliderArrowRight,
-
+                        swipeToSlide: true,
                         variableWidth: true
                     }
                 }
@@ -260,7 +269,7 @@
             infinite: false,
             prevArrow: DOMs.sliderArrowLeft,
             nextArrow: DOMs.sliderArrowRight,
-
+            swipeToSlide: true,
             variableWidth: true,
             speed: 250,
             responsive: [
@@ -276,7 +285,7 @@
                         infinite: false,
                         prevArrow: DOMs.sliderArrowLeft,
                         nextArrow: DOMs.sliderArrowRight,
-
+                        swipeToSlide: true,
                         variableWidth: true
                     }
                 }
@@ -293,7 +302,7 @@
             infinite: false,
             prevArrow: DOMs.sliderArrowLeft,
             nextArrow: DOMs.sliderArrowRight,
-
+            swipeToSlide: true,
             variableWidth: true,
             speed: 250,
             responsive: [
@@ -309,7 +318,7 @@
                         infinite: false,
                         prevArrow: DOMs.sliderArrowLeft,
                         nextArrow: DOMs.sliderArrowRight,
-
+                        swipeToSlide: true,
                         variableWidth: true
                     }
                 }
@@ -325,7 +334,7 @@
             infinite: false,
             prevArrow: DOMs.sliderArrowLeft,
             nextArrow: DOMs.sliderArrowRight,
-
+            swipeToSlide: true,
             variableWidth: true,
             speed: 250,
             responsive: [
@@ -341,7 +350,7 @@
                         infinite: false,
                         prevArrow: DOMs.sliderArrowLeft,
                         nextArrow: DOMs.sliderArrowRight,
-
+                        swipeToSlide: true,
                         variableWidth: true
                     }
                 }
@@ -351,14 +360,6 @@
         });
 
 
-            // sliderPartnerEve : $('.slider-partner-eventsin'),
-            // sliderPartnerEveSync: $('.slider-progressbar-partner-eventsin .slider-progressbar--track'),
-            // sliderCalendarEve : $('.slider-calendar-eventsin'),
-            // sliderCalendarEveSync: $('.slider-progressbar-calendar-eventsin .slider-progressbar--track'),
-
-
-
-
 
         DOMs.sliderTabs.slick({
             dots: false,
@@ -366,6 +367,7 @@
             infinite: false,
             arrows: false,
             variableWidth: true,
+            swipeToSlide: true,
             speed: 250,
             responsive: [
                 {
@@ -379,6 +381,7 @@
                         slidesToScroll: 1,
                         infinite: false,
                         arrows: false,
+                        swipeToSlide: true,
                         variableWidth: true
                     }
                 }
@@ -391,6 +394,7 @@
             infinite: false,
             arrows: false,
             variableWidth: true,
+            swipeToSlide: true,
             speed: 250,
             responsive: [
                 {
@@ -403,6 +407,7 @@
                         dots: false,
                         slidesToScroll: 1,
                         infinite: false,
+                        swipeToSlide: true,
                         arrows: false,
                         variableWidth: true
                     }
@@ -416,6 +421,7 @@
             infinite: false,
             arrows: false,
             variableWidth: true,
+            swipeToSlide: true,
             speed: 250,
             responsive: [
                 {
@@ -428,6 +434,7 @@
                         dots: false,
                         slidesToScroll: 1,
                         infinite: false,
+                        swipeToSlide: true,
                         arrows: false,
                         variableWidth: true
                     }
@@ -441,6 +448,7 @@
             arrows: false,
             variableWidth: true,
             speed: 250,
+            swipeToSlide: true,
             responsive: [
                 {
                     breakpoint: 40000,
@@ -451,6 +459,7 @@
                     setting: {
                         dots: false,
                         slidesToScroll: 1,
+                        swipeToSlide: true,
                         infinite: false,
                         arrows: false,
                         variableWidth: true
@@ -601,13 +610,56 @@
             $('#calendar').fullCalendar({
                 defaultView: 'month',
                 locale: 'uk',
+
+                // eventRender: function (event, element) {
+                //     element.attr('href', 'javascript:void(0);');
+                //     element.click(function() {
+                //         $("#startTime").html(moment(event.start).format('MMM Do h:mm A'));
+                //         $("#endTime").html(moment(event.end).format('MMM Do h:mm A'));
+                //         $("#eventInfo").html(event.description);
+                //         $("#eventLink").attr('href', event.url);
+                //         $("#eventContent").dialog({ modal: true, title: event.title, width:350});
+                //     });
+                // },
+
                 events: [
                     {
-                        title  : 'EVENTEVENT',
-                        start  : '2018-05-05',
-                        end    : '2018-05-05'
+                        title  : 'Програма розвитку з ділової англійської',
+                        start  : '2018-05-03T16:30:00',
+                        end    : '2018-05-03T16:30:00',
+                        url: 'article-eventsin.html',
+                        displayEventTime: true
+                    },
+                    {
+                        title  : 'Програма розвитку з ділової англійської',
+                        start  : '2018-05-12T16:30:00',
+                        end    : '2018-05-12T16:30:00',
+                        url: 'article-eventsin.html',
+                        displayEventTime: true
+                    },
+                    {
+                        title  : 'Програма розвитку з ділової англійської',
+                        start  : '2018-05-17T16:00:00',
+                        end    : '2018-05-17T16:00:00',
+                        url: 'article-eventsin.html',
+                        className: 'event-important',
+                        displayEventTime: true
                     }
-                ]
+                ],
+                timeFormat: 'H:mm',
+                eventRender: function (event, element) {
+                    if (window.matchMedia("(max-width: 567px)").matches) {
+                        element.attr('data-fancybox', '');
+                        element.attr('data-src', '#modal-event');
+                        element.attr('href', 'javascript:;');
+                        element.click(function () {
+                            $("#event-date").html(moment(event.start).format('DD.MM'));
+                            $("#event-time").html(moment(event.start).format('Початок о H:mm'));
+                            $("#event-heading").html(event.title);
+                            $("#event-link").attr('href', event.url);
+                        });
+                    }
+                }
             });
 
             $('.fc-icon-left-single-arrow').replaceWith(DOMs.sliderArrowLeft);

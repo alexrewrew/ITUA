@@ -1,0 +1,46 @@
+//- layouts/layout.pug
+extend layouts/_layout.pug
+
+block title
+    | IT Ukraine Association - Головні події року
+
+block content
+
+    header.header-committees.header-events-all
+
+        +header-part('Календар подій', 'Щороку в Україні проходять сотні подій, \n' +
+        'які стосуються ІТ-індустрії та розвитку технічних талантів. Тут оперативно розміщується інформація \n' +
+        'щодо проведення форумів, конференцій та інших подій.')
+
+        .container
+            .row
+                .col-12
+                    ul.ul-tablist.slider-tablist
+                        +li-a('Всі Події', 'active')
+                        +li-a('Зустрічі комітетів')
+                        +li-a('Від Асоціації')
+                        +li-a('Від партнерів')
+
+    section.section-calendarsheet.section-calendarsheet-small
+        .container
+            .row
+                .col-12
+                    #calendar
+
+
+
+        #modal-event(style='display: none;')
+            a(href='' title='').calendar#event-link
+                .calendar--block
+                    .calendar--block-date
+                        .calendar--block-date--date#event-date 12.04
+                        .calendar--block-date--text#event-time 16:00
+                    h3#event-heading Якась срака
+                    .calendar--block-button
+                        | Перейти до події
+                        include ../components/_svgs/arrow-right.svg
+
+
+
+
+

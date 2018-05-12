@@ -1,5 +1,30 @@
+.section-calendarsheet
+  bg(#f7f8f9)
+  pt(r(174))
+  pb(r(220))
+  +mob()
+    pb(r(160))
+    pt(r(101))
+  & + footer
+    margin-top 0 !important
+
+.section-calendarsheet-small
+  pt(r(0))
+
+header.header-events-year.header-events-world
+  margin-bottom 0
+
 body .fc
   pt(r(35))
+  +xs()
+    margin: 0 -15px;
+
+.fc-unthemed td.fc-today
+  bg($tr)
+
+.fc-scroller.fc-day-grid-container
+  overflow hidden !important
+  height auto !important
 
 .fc-toolbar h2
   text-transform capitalize
@@ -8,6 +33,8 @@ body .fc
   line-height: 1.86;
   letter-spacing: 1px;
   fs(e(28))
+  +mob()
+    fs(e(24))
 
 .fc-toolbar .fc-left
   width 100%
@@ -28,6 +55,10 @@ body .fc
   pt(r(9))
   pb(r(9))
   position relative
+  margin-bottom: r(7)
+  +mob()
+    pt(r(8))
+    pb(r(8))
 
 .fc-today-button
   display none
@@ -38,6 +69,8 @@ body .fc
   max-width 380px
   width 100%
   pt(r(13))
+  +mob()
+    pt(r(9))
 
 .fc-prev-button
   float left !important
@@ -45,8 +78,215 @@ body .fc
 .fc-next-button
   float right !important
 
-
 .fc-state-default
   background none
   border none
   box-shadow none
+
+.fc-day-header.fc-widget-header
+  border-color $tr
+  span
+    font-family: $a-font, sans-serif
+    font-size: r(20)
+    font-weight: 500;
+    line-height: 2.6;
+    letter-spacing: 1px;
+    color: #c8d1de
+    text-transform capitalize
+    +mob()
+      fs(r(14))
+
+.fc-head .fc-head-container
+  border-color $tr
+  border-bottom-color #c8d1de
+  pb(r(10))
+
+.fc-day-top
+  position relative
+  .fc-day-number
+    opacity: 0.5;
+    font-family: $a-font, sans-serif
+    font-size: r(36)
+    font-weight: bold;
+    line-height: 1.44;
+    letter-spacing: 1.3px;
+    color: #186ff0;
+    +port()
+      fs(r(24))
+    +mob()
+      fs(r(20))
+
+.fc-day-top.fc-other-month.fc-past, .fc-day-top.fc-other-month.fc-future
+  opacity 1 !important
+  .fc-day-number
+    font-weight: 300;
+    letter-spacing: 1px;
+    color: #c8d1de;
+    opacity 1
+
+.fc-content-skeleton thead tr
+  border-bottom-color $tr
+
+.fc-row.fc-week
+  height 160px !important
+  +tab()
+    height 132px !important
+  +port()
+    height 99px !important
+  +land()
+    height 75px !important
+  +xs()
+    height 55px !important
+    overflow hidden
+
+.fc-event-container
+  position relative
+  height 100%
+  .fc-day-grid-event
+    margin 0 !important
+    position absolute
+    top 0px
+    left 0
+    right 0
+    height 160px
+    bg($wt)
+    border-radius 0
+    border none
+    transition none
+    +tab()
+      height 132px
+    +port()
+      height 99px
+    +land()
+      height 75px
+    +xs()
+      height 55px
+      &:after
+        pba()
+        bg($blue)
+        width: 5px;
+        height: 5px;
+        border-radius 50%
+        top 5px
+        right 5px
+
+    .fc-content
+      padding r(24) r(18)
+      +tab()
+        padding r(10)
+      +port()
+        padding r(8)
+      +mob()
+        padding r(3)
+    &:hover
+      box-shadow: 0 10px 30px 0 rgba(94, 107, 126, 0.3);
+      left -1px
+      right -1px
+      top -1px
+      bottom -1px
+      z-index 50
+      .fc-content
+        padding r(25) r(19)
+        +tab()
+          padding r(11)
+        +port()
+          padding r(9)
+        +mob()
+          padding r(4)
+      +xs()
+        &:after
+          top 6px
+          right 6px
+
+.fc-content-skeleton tr
+  height 100%
+
+.fc-ltr .fc-basic-view .fc-day-top .fc-day-number
+  float left
+  z-index 100
+
+  position absolute
+  padding 0
+  left 19px
+  top 9px
+  +tab()
+    left 10px
+    top 5px
+  +port()
+    left 10px
+    top 5px
+  +mob()
+    left 5px
+    top 2px
+
+.fc-title
+  font-family: $a-font, sans-serif
+  font-size: r(12)
+  font-weight: bold;
+  line-height: 1.29;
+  color: #264a75;
+  display block
+  white-space normal
+  +port()
+    fs(r(9))
+  +land()
+    fs(r(8))
+  +xs()
+    display none
+
+.fc-time
+  font-size: r(11)
+  line-height: 1.71;
+  color: #a0b3c9;
+  display block
+  font-weight normal !important
+  text-align right
+  padding-bottom r(30)
+  position relative
+  right -6px
+  +tab()
+    right 0
+    pb(r(20))
+  +port()
+    right 0
+    pb(r(10))
+  +land()
+    right 0
+    pb(r(5))
+  +xs()
+    right 0
+    pb(r(10))
+    display none
+
+.fc-event-container .fc-day-grid-event.event-important
+  border 4px solid $blue
+  height 152px
+  left -1px
+  right -1px
+  top -2px
+  bottom -2px
+  +tab()
+    height 124px
+  +port()
+    height 91px
+  +land()
+    height 67px
+    overflow hidden
+  +xs()
+    height 48px
+    overflow hidden
+    &:after
+      top 4px
+      right 4px
+  .fc-content
+    padding r(24) r(18)
+    +tab()
+      padding (r(10))
+    +port()
+      padding (r(6))
+    +mob()
+      padding (r(1))
+  &:hover
+      &:after
+        top 4px
+        right 4px

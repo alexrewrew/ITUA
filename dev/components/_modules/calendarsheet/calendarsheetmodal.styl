@@ -1,0 +1,25 @@
+#modal-event
+  width calc(100vw - 30px)
+  height calc(100vw - 30px)
+  margin 0
+  padding 0
+  .calendar
+    max-width 100%
+    height 100%
+    margin 0
+    &--block
+      height 100%
+      margin 0
+      &:after
+        display none
+      &-button
+        color $blue
+        opacity 1
+        svg g
+          fill $blue
+          opacity 1
+      &:hover
+        .calendar--block-date--date
+          color $blue
+        .calendar--block-date--text, h3
+          opacity 1
