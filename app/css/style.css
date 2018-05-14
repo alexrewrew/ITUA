@@ -1041,7 +1041,7 @@ ol li ol {
 	}
 }
 .ul-tablist.ul-tablist-filter {
-	margin-top: 5rem;
+	margin-top: 5.0625rem;
 	margin-bottom: 0;
 }
 @media (max-width: 767px) {
@@ -1080,6 +1080,7 @@ ol li ol {
 	position: relative;
 	z-index: 2;
 	background: transparent;
+	padding: .8125rem 0 .9375rem;
 }
 @media (max-width: 767px) {
 	.ul-tablist.ul-tablist-filter li a {
@@ -1158,10 +1159,10 @@ ol li ol {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
-	align-items: center;
-	margin-bottom: 3.875rem;
+	-webkit-box-align: end;
+	-ms-flex-align: end;
+	align-items: flex-end;
+	margin-bottom: 4.1875rem;
 }
 @media (min-width: 568px) and (max-width: 767px) {
 	.ul-slider-events-date {
@@ -1196,7 +1197,7 @@ ol li ol {
 	-ms-flex-pack: justify;
 	justify-content: space-between;
 	max-width: 77%;
-	margin-bottom: 3.9375rem;
+	margin-bottom: 4rem;
 }
 @media (max-width: 767px) {
 	.ul-project {
@@ -1223,6 +1224,13 @@ ol li ol {
 }
 .ul-project li h6 {
 	margin-bottom: 0;
+	height: 35px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
 }
 .ul-project .ul-project--done {
 	display: -webkit-box;
@@ -3719,6 +3727,11 @@ header.header-newsin.header-newsin-photo .header-newsin-photo--image:after {
 	right: 0;
 	top: 0;
 }
+@media (min-width: 1600px) {
+	header.header-newsin.header-newsin-photo .header-newsin-photo--container {
+		max-width: 1500px !important;
+	}
+}
 header.header-search {
 	background-color: #f7f8f9;
 	height: auto;
@@ -4962,6 +4975,9 @@ audio {
 		display: block;
 	}
 }
+.slider.slider-calendar.slider-with-line.slider-calendar-year.slider-calendar-year-bottom {
+	margin-bottom: 0;
+}
 @media (max-width: 567px) {
 	.slider-events-year-header {
 		margin: 0 -15px;
@@ -5188,7 +5204,7 @@ audio {
 }
 .slider-project--image {
 	position: absolute;
-	left: 15px;
+	left: 0;
 	bottom: 0;
 	width: 100%;
 	height: 300px;
@@ -6716,7 +6732,7 @@ audio {
 	}
 }
 .row-events-year-slide h2 {
-	margin-bottom: 1.4375rem;
+	margin-bottom: 1.75rem;
 }
 @media (max-width: 767px) {
 	.row-events-year-slide h2 {
@@ -6937,7 +6953,7 @@ audio {
 	}
 }
 .comment.comment-initiative {
-	min-height: 300px;
+	height: 295px;
 }
 @media (max-width: 567px) {
 	.comment.comment-initiative {
@@ -7948,10 +7964,12 @@ audio {
 }
 .h1-404 {
 	line-height: .78;
-	font-size: 18.75em;
+	font-size: 17.875em;
 	text-align: center;
 	position: relative;
 	z-index: 40;
+	letter-spacing: -3px;
+	left: -10px;
 }
 @media (min-width: 992px) and (max-width: 1199px) {
 	.h1-404 {
@@ -8019,6 +8037,10 @@ audio {
 }
 .p-404 {
 	margin-bottom: .8125rem;
+}
+#to-index {
+	padding-top: .8125rem;
+	padding-bottom: 1.0625rem;
 }
 @-webkit-keyframes swim {
 	0% {

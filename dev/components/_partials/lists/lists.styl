@@ -199,7 +199,7 @@ ol
 
 
   &.ul-tablist-filter
-    mt(r(80))
+    mt(r(81))
     mb(0)
     +mob()
       mt(0)
@@ -227,6 +227,7 @@ ol
         position relative
         z-index 2
         background $tr
+        padding r(13) 0 r(15)
         +mob()
           min-width: 263px;
         &:hover
@@ -284,8 +285,8 @@ ol
 
 .ul-slider-events-date
   display flex
-  align-items center
-  mb(r(62))
+  align-items flex-end
+  mb(r(67))
   +land()
     mb(r(30))
   +xs()
@@ -308,7 +309,7 @@ ol
   align-items center
   justify-content space-between
   max-width 77%
-  mb(r(63))
+  mb(r(64))
   +mob()
     max-width 100%
   +land()
@@ -322,6 +323,9 @@ ol
         mr(r(36))
     h6
       mb(0)
+      height 35px
+      display flex
+      align-items center
   .ul-project--done
     display flex
     align-items center
