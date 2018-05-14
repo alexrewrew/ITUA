@@ -1,33 +1,44 @@
+//.volta
+//  display flex
+//  justify-content flex-end
+//  position relative
+//  align-items flex-end
+//  flex-wrap wrap
+//  &--text
+//    fs(e(12))
+//    co($black-text2)
+//    position relative
+//    top -3px
+//    mr(r(5))
+//    +mob()
+//      line-height 1.3
+//  &--visible
+//    svg
+//      width 62px
+//      g
+//        fill $black-text2
+//  &--hidden
+//    position absolute
+//    right 0
+//    top 0
+//    height 0
+//    overflow hidden
+//    trans()
+//    svg
+//      width 62px
+//      g
+//        fill #7521E1
+//  &:hover
+//    .volta--hidden
+//      height 100%
+
 .volta
-  display flex
-  justify-content flex-end
-  position relative
-  align-items flex-end
-  flex-wrap wrap
-  &--text
-    fs(e(12))
-    co($black-text2)
-    position relative
-    top -3px
-    mr(r(5))
-    +mob()
-      line-height 1.3
-  &--visible
-    svg
-      width 62px
-      g
-        fill $black-text2
-  &--hidden
-    position absolute
-    right 0
-    top 0
-    height 0
-    overflow hidden
-    trans()
-    svg
-      width 62px
-      g
-        fill #7521E1
+  color #52555A
+  fs(e(12))
+  float right
+  text-align right
+  line-height 1.83
+  +mob()
+    line-height 1.33
   &:hover
-    .volta--hidden
-      height 100%
+    color $blue

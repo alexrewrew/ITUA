@@ -2,3 +2,68 @@
   pb(r(9))
   +mob()
     pt(0)
+
+.btn-share
+  display flex
+  align-items center
+  justify-content  center
+  max-width 165px
+  width 100%
+  color $blue
+  box-shadow: 0 10px 30px 0 rgba(94, 107, 126, 0.3);
+  bg($wt)
+  font-family $a-font, sans-serif
+  font-size: e(16)
+  font-weight: 700;
+  line-height: 1.38;
+  pt(r(13))
+  pb(r(14))
+  svg
+    margin-right r(11)
+    g
+      fill $blue
+  &:hover
+    color $wt
+    bg($blue)
+    box-shadow none
+    svg g
+      fill $wt
+
+  &.hide
+    display none
+
+.ul-article-share
+  display flex
+  mb(r(8))
+  &.hide
+    display none
+  +xs()
+    mb(r(45))
+  li
+    width 100%
+    a
+      background $blue
+      height 50px
+      display flex
+      align-items center
+      justify-content center
+
+      &.share-fb
+        bg($fb)
+        &:hover
+          box-shadow: 0 4px 18px 0 $fb;
+
+      &.share-tw
+        bg($tw)
+        &:hover
+          box-shadow: 0 4px 18px 0 $tw
+
+      &.share-li
+        bg($li)
+        &:hover
+          box-shadow: 0 4px 18px 0 $li
+
+      &.share-go
+        bg($go)
+        &:hover
+          box-shadow: 0 4px 18px 0 $go

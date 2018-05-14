@@ -2,12 +2,12 @@
 extend layouts/_layout.pug
 
 block title
-    | IT Ukraine Association - Про напрям
+    | IT Ukraine Association - Спрощення процедури ФОП іноземцями
 
 
 block content
 
-    header.header-article
+    header.header-article.header-article-initiative
 
         +header-article('img/illus/headers/header-article.png', 'Спрощення процедури ФОП іноземцями', 'Комітету з питань освіти', 'Проект')
 
@@ -50,40 +50,13 @@ block content
 
                     p Отже, ще один важливий регуляторний бар’єр для ІТ-галузі в Україні подолано. Відзначимо, що помітне спрощення процедури імпорту прототипів обладнання в Україну позитивно вплине на роботу вітчизняних ІТ-компаній, пришвидшить темпи розробки програмного забезпечення та зробить ведення бізнесу в сфері інформаційних технологій значно простішими.
 
-    section.section-share
-        .container
-            .row
-                .col-sm-3.col-lg-2
-                    ul.ul-article-eye
-                        li
-                            include ../components/_svgs/eye.svg
-                            | 101
-                        li
-                            include ../components/_svgs/share.svg
-                            | 53
-                .col-sm-7.col-md-5.col-lg-4
-                    ul.ul-article-share
-                        li
-                            a(href='' title='')
-                                include ../components/_svgs/facebook2.svg
-                        li
-                            a(href='' title='')
-                                include ../components/_svgs/twitter.svg
-                        li
-                            a(href='' title='')
-                                include ../components/_svgs/linkedin.svg
-                        li
-                            a(href='' title='')
-                                include ../components/_svgs/google.svg
-
-                .col-12
-                    hr
+    include ../components/_modules/share/section-share
 
     section
         .container
             .row
                 .col-12
-                    h2.text-center.mb-66 Перегляньте також
+                    h2.text-center.mb-61 Перегляньте також
                 .col-lg-6
                     +comment-item-initiative('img/illus/comments/comments-initiative/comment-initiative1.png', 'Join IT', 'Проект', 'PR комітет', 'Join IT – це група освітніх проектів з популяризації IT-галузі серед дітей та підлітків, що прагнуть відкрити в собі хист до творчості …')
                 .col-lg-6

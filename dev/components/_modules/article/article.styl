@@ -1,6 +1,6 @@
 .header-article--author
   bg($wt)
-  padding r(25) r(34) r(21)
+  padding r(26) r(34) r(25)
   box-shadow: 0 10px 30px 0 rgba(94, 107, 126, 0.14);
   width 360px
   display flex
@@ -32,7 +32,7 @@
     line-height: 1.67;
     letter-spacing: 1px;
     color: $blue
-    mb(r(9))
+    mb(r(8))
   &-button
     .btn
       width: 229px
@@ -161,43 +161,7 @@
       mr(r(11))
 
 
-.ul-article-share
-  display flex
-  mb(r(8))
-  +xs()
-    mb(r(45))
-  li
-    width 100%
-    a
-      background $blue
-      height 50px
-      display flex
-      align-items center
-      justify-content center
 
-    &:nth-child(1)
-      a
-        bg($fb)
-        &:hover
-          box-shadow: 0 4px 18px 0 $fb;
-
-    &:nth-child(2)
-      a
-        bg($tw)
-        &:hover
-          box-shadow: 0 4px 18px 0 $tw
-
-    &:nth-child(3)
-      a
-        bg($li)
-        &:hover
-          box-shadow: 0 4px 18px 0 $li
-
-    &:nth-child(4)
-      a
-        bg($go)
-        &:hover
-          box-shadow: 0 4px 18px 0 $go
 
 
 .article-news

@@ -27,7 +27,8 @@ header
       height auto
 
   &.header-about-us
-    mb(r(90))
+    //mb(r(90))
+    mb(r(41))
     height auto
     +mob()
       pt(r(59))
@@ -60,6 +61,7 @@ header
       z-index -1
     p
       mt(r(6))
+
     &.header-about-business-without-after
       height 457px
       mb(r(90))
@@ -113,6 +115,7 @@ header
     mb(0)
     h1
       co($blue-dark)
+      mb(r(51))
 
   &.header-events-year
     height auto
@@ -139,7 +142,8 @@ header
     overflow visible
     bg(#f7f8f9)
     position relative
-    mb(r(90))
+    //mb(r(90))
+    mb(r(47))
     +mob()
       height 313px
       mb(r(94))
@@ -165,6 +169,7 @@ header
         top calc(100% - 98px)
     &.header-article-events
       height 471px
+      mb(r(60))
       +xs()
         mb(r(180))
       .header-article--container
@@ -181,6 +186,8 @@ header
           left 0
         +xs()
           top: calc(100% - 220px);
+    &.header-article-initiative
+      mb(r(90))
 
     &.header-contacts
       bg($tr)

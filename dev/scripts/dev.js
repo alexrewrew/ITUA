@@ -58,12 +58,27 @@
 
         calendarMonth: $('#calendar'),
 
+        calendarArrowLeft : $('.fc-icon-left-single-arrow'),
+        calendarArrowRight : $('.fc-icon-right-single-arrow'),
+
+
+        eventDate : $('#event-date'),
+        eventTime : $('#event-time'),
+        eventHeading : $('#event-heading'),
+        eventLink : $('#event-link'),
+
         tabsArr: $('.tabs-publication--ul li a'),
         tabsSlider: $('.tabs-publication--line'),
 
         tabsFilterLink: $('.ul-tablist-filter li a'),
         tabsFilterSlider: $('.ul-tablist-filter--slider'),
 
+        btnShare : $('.btn-share'),
+        ulShare : $('.ul-article-share-main'),
+        ulShareLink : $('.ul-article-share-main li a'),
+
+        selectChosen : $(".chosen-select"),
+        selectSelect2 : $('.select2-select')
 
     };
 
@@ -107,7 +122,7 @@
             prevArrow: DOMs.sliderArrowLeft,
             nextArrow: DOMs.sliderArrowRight,
             fade: true,
-            speed: 0,
+            speed: 0
         }).on('afterChange', colorSet);
 
         DOMs.linkColor.hover(function () {
@@ -208,7 +223,7 @@
                 {
                     breakpoint: 567,
                     settings: {
-                        slidesToShow: 1,
+                        slidesToShow: 1
                     }
                 }
             ]
@@ -224,7 +239,7 @@
             slidesToScroll: 1,
             swipeToSlide: true,
             infinite: false,
-            speed: 250,
+            speed: 250
         }).on('beforeChange', function (event, slick, currentSlide, nextSlide) {
             sliderProgressbar(nextSlide, slick, DOMs.sliderProjectSync);
         });
@@ -468,16 +483,6 @@
             ]
         });
 
-        // ========== ACCORDION ==========
-        // $('#accordion').rewAccordion();
-
-        // ========== TABS ==========
-        // $('#tabs').rewTabs();
-
-
-        // ========== DATEPICKER ==========
-        // $(".datepicker").flatpickr();
-
         // ========== SCROLLSPY ==========
 
         // ----- SCROLLING CLASS CHANGE -----
@@ -490,29 +495,22 @@
             }
         });
 
-        // ----- ANCHOR LINKS SCROLLING -----
-        // $(".smooth").click(function (e) {
-        //     e.preventDefault();
-        //     var id = $(this).attr("href"),
-        //         top = $(id).offset().top - 70;
-        //     $("body,html").animate({
-        //         scrollTop: top
-        //     }, 1500);
-        // });
-
         // ========== SELECT ==========
 
         // ----- CHOSEN -----
-        $(".chosen-select").chosen({
+
+
+
+        DOMs.selectChosen.chosen({
             disable_search_threshold: 4000,
             no_results_text: "Нічого не знайдено"
         });
 
         // ----- SELECT2 -----
-        $('.select2-select').select2({
+        DOMs.selectSelect2.select2({
             placeholder: "Оберіть компанію",
             allowClear: true,
-            dropdownParent: $('#select-author'),
+            dropdownParent: $('#select-author')
             // minimumResultsForSearch: Infinity
         });
 
@@ -557,7 +555,7 @@
 
                 DOMs.tabsFilterSlider.css({
                     "width": "calc(" + tabsLinkWidth + "% + 1px",
-                    "transform": 'translate3d(' + tabsFilterLeft + 'px,0,0)',
+                    "transform": 'translate3d(' + tabsFilterLeft + 'px,0,0)'
                 });
 
             };
@@ -603,24 +601,10 @@
                 tabsFilterDetectActive();
             });
 
-            // DOMs.calendarMonth.fullCalendar({
-            //     defaultView: 'month'
-            // });
 
-            $('#calendar').fullCalendar({
+            DOMs.calendarMonth.fullCalendar({
                 defaultView: 'month',
                 locale: 'uk',
-
-                // eventRender: function (event, element) {
-                //     element.attr('href', 'javascript:void(0);');
-                //     element.click(function() {
-                //         $("#startTime").html(moment(event.start).format('MMM Do h:mm A'));
-                //         $("#endTime").html(moment(event.end).format('MMM Do h:mm A'));
-                //         $("#eventInfo").html(event.description);
-                //         $("#eventLink").attr('href', event.url);
-                //         $("#eventContent").dialog({ modal: true, title: event.title, width:350});
-                //     });
-                // },
 
                 events: [
                     {
@@ -647,23 +631,36 @@
                     }
                 ],
                 timeFormat: 'H:mm',
+
                 eventRender: function (event, element) {
                     if (window.matchMedia("(max-width: 567px)").matches) {
                         element.attr('data-fancybox', '');
                         element.attr('data-src', '#modal-event');
                         element.attr('href', 'javascript:;');
                         element.click(function () {
-                            $("#event-date").html(moment(event.start).format('DD.MM'));
-                            $("#event-time").html(moment(event.start).format('Початок о H:mm'));
-                            $("#event-heading").html(event.title);
-                            $("#event-link").attr('href', event.url);
+                            DOMs.eventDate.html(moment(event.start).format('DD.MM'));
+                            DOMs.eventTime.html(moment(event.start).format('Початок о H:mm'));
+                            DOMs.eventHeading.html(event.title);
+                            DOMs.eventLink.attr('href', event.url);
                         });
                     }
                 }
             });
 
-            $('.fc-icon-left-single-arrow').replaceWith(DOMs.sliderArrowLeft);
-            $('.fc-icon-right-single-arrow').replaceWith(DOMs.sliderArrowRight);
+            DOMs.calendarArrowLeft.replaceWith(DOMs.sliderArrowLeft);
+            DOMs.calendarArrowRight.replaceWith(DOMs.sliderArrowRight);
+
+            DOMs.btnShare.click(function (e) {
+                e.preventDefault();
+                $(this).addClass('hide');
+                DOMs.ulShare.removeClass('hide');
+            });
+
+            DOMs.ulShareLink.click(function (e) {
+                e.preventDefault();
+                DOMs.btnShare.removeClass('hide');
+                DOMs.ulShare.addClass('hide');
+            });
 
         })();
 

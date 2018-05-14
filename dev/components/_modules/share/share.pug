@@ -1,0 +1,26 @@
+mixin share()
+    .col-sm-3.col-lg-2
+        ul.ul-article-eye
+            li
+                include ../../_svgs/eye.svg
+                | 101
+            li
+                include ../../_svgs/share.svg
+                | 53
+    .col-sm-7.col-md-5.col-lg-4
+        a(href='' title='').btn-share
+            include ../../_svgs/share-big.svg
+            | Поділитись
+        ul.ul-article-share.ul-article-share-main.hide
+            li
+                a(href='' title='').share-fb
+                    include ../../_svgs/facebook2.svg
+            li
+                a(href='' title='').share-tw
+                    include ../../_svgs/twitter.svg
+            li
+                a(href='' title='').share-li
+                    include ../../_svgs/linkedin.svg
+            li
+                a(href='' title='').share-go
+                    include ../../_svgs/google.svg
