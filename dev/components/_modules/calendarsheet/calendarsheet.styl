@@ -14,8 +14,41 @@
 header.header-events-year.header-events-world
   margin-bottom 0
 
+
+.calendar-container
+  position relative
+
+.calendar-month
+  position absolute
+  z-index 400
+  top 0
+  right 0
+  left 0
+  +xs()
+    display none
+  &--prev, &--next
+    font-size: e(20)
+    font-weight: bold;
+    line-height: 1
+    letter-spacing: 1px;
+    color: $wt
+    position absolute
+    top 60px
+    cursor pointer
+    trans()
+    &:hover
+      color $blue
+  &--prev
+    left 50px
+  &--next
+    right 50px
+
+
+
+
 body .fc
   pt(r(35))
+  mb(r(100))
   +xs()
     margin: 0 -15px;
 
@@ -104,7 +137,7 @@ body .fc
 .fc-day-top
   position relative
   .fc-day-number
-    opacity: 0.5;
+    //opacity: 0.5;
     font-family: $a-font, sans-serif
     font-size: r(36)
     font-weight: bold;
@@ -152,7 +185,7 @@ body .fc
     bg($wt)
     border-radius 0
     border none
-    transition none
+    transition box-shadow .2s ease
     +tab()
       height 132px
     +port()
@@ -179,7 +212,7 @@ body .fc
       +mob()
         padding r(3)
     &:hover
-      box-shadow: 0 10px 30px 0 rgba(94, 107, 126, 0.3);
+      box-shadow: 0 8px 25px 0 rgba(94, 107, 126, 0.3);
       left -1px
       right -1px
       top -1px
@@ -290,3 +323,36 @@ body .fc
       &:after
         top 4px
         right 4px
+
+
+.fc-content-skeleton tbody td
+  position relative
+  &:before
+    position: absolute;
+    background: #f7f8f9
+    opacity .4
+    width: 50px;
+    height: 45px;
+    content: '';
+    display: block;
+    z-index: 30;
+    top 16px
+    left 14px
+    z-index 100
+  &.fc-event-container
+    &:before
+      display none
+
+
+#to-next-month
+  font-size: e(20)
+  pl(r(66))
+  pt(r(19))
+  pb(r(23))
+  letter-spacing: 1px;
+  svg
+    right: 64px;
+    top 25px
+    height: auto;
+
+

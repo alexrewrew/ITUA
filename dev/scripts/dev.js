@@ -4,6 +4,7 @@
     var DOMs = {
 
         body: $('body'),
+        bodyHtml : $('body, html'),
 
         menuBurger: $('#menu-trigger'),
         menuSearch: $('#nav-search'),
@@ -46,9 +47,9 @@
         sliderCommittees: $('.slider-tablist'),
         sliderFilter: $('.slider-tablist-filter'),
 
-        sliderPartnerEve : $('.slider-partner-eventsin'),
+        sliderPartnerEve: $('.slider-partner-eventsin'),
         sliderPartnerEveSync: $('.slider-progressbar-partner-eventsin .slider-progressbar--track'),
-        sliderCalendarEve : $('.slider-calendar-eventsin'),
+        sliderCalendarEve: $('.slider-calendar-eventsin'),
         sliderCalendarEveSync: $('.slider-progressbar-calendar-eventsin .slider-progressbar--track'),
 
         dropdownLink: $('.dropdown-link'),
@@ -57,15 +58,14 @@
         dropdown: $('.dropdown'),
 
         calendarMonth: $('#calendar'),
+        calendarMonthNext: $('.calendar-month--next'),
+        calendarMonthNextBtn: $('#to-next-month'),
+        calendarMonthPrev: $('.calendar-month--prev'),
 
-        calendarArrowLeft : $('.fc-icon-left-single-arrow'),
-        calendarArrowRight : $('.fc-icon-right-single-arrow'),
-
-
-        eventDate : $('#event-date'),
-        eventTime : $('#event-time'),
-        eventHeading : $('#event-heading'),
-        eventLink : $('#event-link'),
+        eventDate: $('#event-date'),
+        eventTime: $('#event-time'),
+        eventHeading: $('#event-heading'),
+        eventLink: $('#event-link'),
 
         tabsArr: $('.tabs-publication--ul li a'),
         tabsSlider: $('.tabs-publication--line'),
@@ -73,12 +73,12 @@
         tabsFilterLink: $('.ul-tablist-filter li a'),
         tabsFilterSlider: $('.ul-tablist-filter--slider'),
 
-        btnShare : $('.btn-share'),
-        ulShare : $('.ul-article-share-main'),
-        ulShareLink : $('.ul-article-share-main li a'),
+        btnShare: $('.btn-share'),
+        ulShare: $('.ul-article-share-main'),
+        ulShareLink: $('.ul-article-share-main li a'),
 
-        selectChosen : $(".chosen-select"),
-        selectSelect2 : $('.select2-select')
+        selectChosen: $(".chosen-select"),
+        selectSelect2: $('.select2-select')
 
     };
 
@@ -277,7 +277,6 @@
         });
 
 
-
         DOMs.sliderReports2.slick({
             dots: false,
             slidesToScroll: 1,
@@ -308,7 +307,6 @@
         }).on('beforeChange', function (event, slick, currentSlide, nextSlide) {
             sliderProgressbar(nextSlide, slick, DOMs.sliderReports2Sync);
         });
-
 
 
         DOMs.sliderPartnerEve.slick({
@@ -373,7 +371,6 @@
         }).on('beforeChange', function (event, slick, currentSlide, nextSlide) {
             sliderProgressbar(nextSlide, slick, DOMs.sliderCalendarEveSync);
         });
-
 
 
         DOMs.sliderTabs.slick({
@@ -500,7 +497,6 @@
         // ----- CHOSEN -----
 
 
-
         DOMs.selectChosen.chosen({
             disable_search_threshold: 4000,
             no_results_text: "Нічого не знайдено"
@@ -608,23 +604,23 @@
 
                 events: [
                     {
-                        title  : 'Програма розвитку з ділової англійської',
-                        start  : '2018-05-03T16:30:00',
-                        end    : '2018-05-03T16:30:00',
+                        title: 'Програма розвитку з ділової англійської',
+                        start: '2018-05-03T16:30:00',
+                        end: '2018-05-03T16:30:00',
                         url: 'article-eventsin.html',
                         displayEventTime: true
                     },
                     {
-                        title  : 'Програма розвитку з ділової англійської',
-                        start  : '2018-05-12T16:30:00',
-                        end    : '2018-05-12T16:30:00',
+                        title: 'Програма розвитку з ділової англійської',
+                        start: '2018-05-12T16:30:00',
+                        end: '2018-05-12T16:30:00',
                         url: 'article-eventsin.html',
                         displayEventTime: true
                     },
                     {
-                        title  : 'Програма розвитку з ділової англійської',
-                        start  : '2018-05-17T16:00:00',
-                        end    : '2018-05-17T16:00:00',
+                        title: 'Програма розвитку з ділової англійської',
+                        start: '2018-05-17T16:00:00',
+                        end: '2018-05-17T16:00:00',
                         url: 'article-eventsin.html',
                         className: 'event-important',
                         displayEventTime: true
@@ -647,8 +643,121 @@
                 }
             });
 
-            DOMs.calendarArrowLeft.replaceWith(DOMs.sliderArrowLeft);
-            DOMs.calendarArrowRight.replaceWith(DOMs.sliderArrowRight);
+            function getCurrentMonth() {
+                var prevMonth, nextMonth;
+                var date = new Date(DOMs.calendarMonth.fullCalendar('getDate'));
+                var month = date.getMonth();
+                switch(month) {
+                    case 0:
+                        prevMonth = 'Грудень';
+                        nextMonth = 'Лютий';
+                        break;
+
+                    case 1:
+                        prevMonth = 'Січень';
+                        nextMonth = 'Березень';
+                        break;
+
+                    case 2:
+                        prevMonth = 'Лютий';
+                        nextMonth = 'Квітень';
+                        break;
+
+                    case 3:
+                        prevMonth = 'Березень';
+                        nextMonth = 'Травень';
+                        break;
+
+                    case 4:
+                        prevMonth = 'Квітень';
+                        nextMonth = 'Червень';
+                        break;
+
+                    case 5:
+                        prevMonth = 'Травень';
+                        nextMonth = 'Липень';
+                        break;
+
+                    case 6:
+                        prevMonth = 'Червень';
+                        nextMonth = 'Серпень';
+                        break;
+
+                    case 7:
+                        prevMonth = 'Липень';
+                        nextMonth = 'Вересень';
+                        break;
+
+                    case 8:
+                        prevMonth = 'Серпень';
+                        nextMonth = 'Жовтень';
+                        break;
+
+                    case 9:
+                        prevMonth = 'Вересень';
+                        nextMonth = 'Листопад';
+                        break;
+
+                    case 10:
+                        prevMonth = 'Жовтень';
+                        nextMonth = 'Грудень';
+                        break;
+
+                    case 11:
+                        prevMonth = 'Листопад';
+                        nextMonth = 'Січень';
+                        break;
+
+                    default:
+                        break;
+                }
+                DOMs.calendarMonthPrev.html(prevMonth);
+                DOMs.calendarMonthNext.html(nextMonth);
+            };
+
+            getCurrentMonth();
+
+            $('.fc-prev-button').click(function () {
+                getCurrentMonth();
+            });
+
+            $('.fc-next-button').click(function () {
+                getCurrentMonth();
+            });
+
+            DOMs.calendarMonthPrev.click(function () {
+                DOMs.calendarMonth.fullCalendar('prev');
+                getCurrentMonth();
+            });
+
+            DOMs.calendarMonthNext.click(function () {
+                DOMs.calendarMonth.fullCalendar('next');
+                getCurrentMonth();
+            });
+
+            DOMs.calendarMonthNextBtn.click(function (e) {
+                e.preventDefault();
+
+                DOMs.calendarMonth.fullCalendar('next');
+                getCurrentMonth();
+
+                var id = $(this).attr("href");
+                var top = $(id).offset().top - 140;
+                DOMs.bodyHtml.animate({
+                    scrollTop: top
+                }, 500);
+                window.location.href.split('#')[0]
+
+            });
+
+
+
+
+
+
+
+            $('.fc-icon-left-single-arrow').replaceWith(DOMs.sliderArrowLeft);
+            $('.fc-icon-right-single-arrow').replaceWith(DOMs.sliderArrowRight);
 
             DOMs.btnShare.click(function (e) {
                 e.preventDefault();

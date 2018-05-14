@@ -3238,12 +3238,14 @@ header.header-committees .ul-tablist {
 header.header-committees.header-events-all {
 	background-color: #f7f8f9;
 	margin-bottom: 0;
+	overflow: visible;
 }
 header.header-committees.header-events-all h1 {
 	color: #053a78;
 }
 header.header-committees.header-events-all .ul-tablist {
 	margin-top: 3.75rem;
+	margin-bottom: .25rem;
 }
 header.header-members {
 	margin-bottom: 1.3125rem;
@@ -8082,8 +8084,46 @@ audio {
 header.header-events-year.header-events-world {
 	margin-bottom: 0;
 }
+.calendar-container {
+	position: relative;
+}
+.calendar-month {
+	position: absolute;
+	z-index: 400;
+	top: 0;
+	right: 0;
+	left: 0;
+}
+@media (max-width: 567px) {
+	.calendar-month {
+		display: none;
+	}
+}
+.calendar-month--prev, .calendar-month--next {
+	font-size: 1.25em;
+	font-weight: bold;
+	line-height: 1;
+	letter-spacing: 1px;
+	color: #fff;
+	position: absolute;
+	top: 60px;
+	cursor: pointer;
+	-webkit-transition: all .2s ease;
+	     -o-transition: all .2s ease;
+	        transition: all .2s ease;
+}
+.calendar-month--prev:hover, .calendar-month--next:hover {
+	color: #186ff0;
+}
+.calendar-month--prev {
+	left: 50px;
+}
+.calendar-month--next {
+	right: 50px;
+}
 body .fc {
 	padding-top: 2.1875rem;
+	margin-bottom: 6.25rem;
 }
 @media (max-width: 567px) {
 	body .fc {
@@ -8190,7 +8230,6 @@ body .fc {
 	position: relative;
 }
 .fc-day-top .fc-day-number {
-	opacity: .5;
 	font-family: 'Apercu Pro', sans-serif;
 	font-size: 2.25rem;
 	font-weight: bold;
@@ -8258,9 +8297,11 @@ body .fc {
 	background-color: #fff;
 	border-radius: 0;
 	border: none;
-	-webkit-transition: none;
-	     -o-transition: none;
-	        transition: none;
+	-webkit-transition: -webkit-box-shadow .2s ease;
+	        transition: -webkit-box-shadow .2s ease;
+	     -o-transition:         box-shadow .2s ease;
+	        transition:         box-shadow .2s ease;
+	        transition:         box-shadow .2s ease, -webkit-box-shadow .2s ease;
 }
 @media (min-width: 992px) and (max-width: 1199px) {
 	.fc-event-container .fc-day-grid-event {
@@ -8312,8 +8353,8 @@ body .fc {
 	}
 }
 .fc-event-container .fc-day-grid-event:hover {
-	-webkit-box-shadow: 0 10px 30px 0 rgba(94,107,126,.3);
-	        box-shadow: 0 10px 30px 0 rgba(94,107,126,.3);
+	-webkit-box-shadow: 0 8px 25px 0 rgba(94,107,126,.3);
+	        box-shadow: 0 8px 25px 0 rgba(94,107,126,.3);
 	left: -1px;
 	right: -1px;
 	top: -1px;
@@ -8488,6 +8529,37 @@ body .fc {
 .fc-event-container .fc-day-grid-event.event-important:hover:after {
 	top: 4px;
 	right: 4px;
+}
+.fc-content-skeleton tbody td {
+	position: relative;
+}
+.fc-content-skeleton tbody td:before {
+	position: absolute;
+	background: #f7f8f9;
+	opacity: .4;
+	width: 50px;
+	height: 45px;
+	content: '';
+	display: block;
+	z-index: 30;
+	top: 16px;
+	left: 14px;
+	z-index: 100;
+}
+.fc-content-skeleton tbody td.fc-event-container:before {
+	display: none;
+}
+#to-next-month {
+	font-size: 1.25em;
+	padding-left: 4.125rem;
+	padding-top: 1.1875rem;
+	padding-bottom: 1.4375rem;
+	letter-spacing: 1px;
+}
+#to-next-month svg {
+	right: 64px;
+	top: 25px;
+	height: auto;
 }
 #modal-event {
 	width: calc(100vw - 30px);
