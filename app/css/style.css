@@ -1,14 +1,3 @@
-/*@font-face {*/
-/*font-family: 'Circular Std';*/
-/*src: url('../fonts/CircularStd/CircularStd-Bold.eot');*/
-/*src: url('../fonts/CircularStd/CircularStd-Bold.eot?#iefix') format('embedded-opentype'),*/
-/*url('../fonts/CircularStd/CircularStd-Bold.woff2') format('woff2'),*/
-/*url('../fonts/CircularStd/CircularStd-Bold.woff') format('woff'),*/
-/*url('../fonts/CircularStd/CircularStd-Bold.ttf') format('truetype');*/
-/*font-weight: bold;*/
-/*font-style: normal;*/
-/*}*/
-
 @font-face {
 	font-family: 'Apercu Pro';
 	src: url('../fonts/ApercuPro/ApercuPro-Mono.eot');
@@ -50,17 +39,6 @@
 	url('../fonts/ApercuPro/ApercuPro-Medium.woff') format('woff'),
 	url('../fonts/ApercuPro/ApercuPro-Medium.ttf') format('truetype');
 	font-weight: 500;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: 'Circular Std Book';
-	src: url('../fonts/CircularStd/CircularStd-Book.eot');
-	src: url('../fonts/CircularStd/CircularStd-Book.eot?#iefix') format('embedded-opentype'),
-	url('../fonts/CircularStd/CircularStd-Book.woff2') format('woff2'),
-	url('../fonts/CircularStd/CircularStd-Book.woff') format('woff'),
-	url('../fonts/CircularStd/CircularStd-Book.ttf') format('truetype');
-	font-weight: normal;
 	font-style: normal;
 }
 
@@ -8517,7 +8495,7 @@ audio {
 	margin-top: 0 !important;
 }
 .section-calendarsheet-small {
-	padding-top: 0rem;
+	padding-top: 0;
 }
 header.header-events-year.header-events-world {
 	margin-bottom: 0;
@@ -8605,7 +8583,7 @@ body .fc {
 	margin: 0;
 }
 .fc-toolbar .fc-center {
-	display-inside: none;
+	display: none;
 }
 .fc-toolbar.fc-header-toolbar {
 	background-color: #d6dce4;
@@ -8990,7 +8968,6 @@ body .fc {
 	height: 45px;
 	content: '';
 	display: block;
-	z-index: 30;
 	top: 16px;
 	left: 14px;
 	z-index: 100;
@@ -9102,4 +9079,94 @@ body.brow-safari .btn:after, body.brow-safari .comment--right .btn-more:after {
 	right: 26px;
 	-webkit-box-shadow: 0 0 20px 12px #1472ff;
 	        box-shadow: 0 0 20px 12px #1472ff;
+	z-index: -1;
+}
+body.brow-msedge .btn:after, body.brow-msedge .comment--right .btn-more:after {
+	bottom: 12px;
+	background: transparent;
+	-webkit-filter: none;
+	        filter: none;
+	height: 0;
+	left: 26px;
+	right: 26px;
+	-webkit-box-shadow: 0 0 20px 12px #1472ff;
+	        box-shadow: 0 0 20px 12px #1472ff;
+	z-index: -1;
+}
+body.brow-msedge .btn-more {
+	max-width: 100%;
+}
+body.brow-msedge .btn-more svg {
+	top: 18px;
+}
+body.brow-msedge .member.member-regular:hover .btn-more {
+	max-width: 100%;
+}
+body.brow-msedge .btn-arrow-slider {
+	max-height: 62px;
+	padding-top: 1.125rem;
+	padding-bottom: 1.3125rem;
+}
+body.brow-msedge .news-big h3 {
+	font-size: 1.5em;
+}
+body.brow-msedge .news-big .btn {
+	max-height: 42px;
+	padding-top: .5rem;
+	padding-bottom: .6875rem;
+}
+body.brow-msedge .search-block--button .btn svg {
+	top: 4px;
+}
+@-webkit-keyframes swim {
+	0% {
+		-webkit-transform: translate(6px, 6px) rotate(20deg);
+		        transform: translate(6px, 6px) rotate(20deg);
+	}
+	100% {
+		-webkit-transform: translate(-6px, -6px) rotate(-20deg);
+		        transform: translate(-6px, -6px) rotate(-20deg);
+	}
+}
+@keyframes swim {
+	0% {
+		-webkit-transform: translate(6px, 6px) rotate(20deg);
+		        transform: translate(6px, 6px) rotate(20deg);
+	}
+	100% {
+		-webkit-transform: translate(-6px, -6px) rotate(-20deg);
+		        transform: translate(-6px, -6px) rotate(-20deg);
+	}
+}
+body.brow-msie .calendar--mark-text::after, body.brow-msie .calendar--mark-event::after {
+	bottom: -6px;
+}
+body.brow-msie .btn:after, body.brow-msie .comment--right .btn-more:after {
+	bottom: 12px;
+	background: transparent;
+	-webkit-filter: none;
+	        filter: none;
+	height: 0;
+	left: 26px;
+	right: 26px;
+	-webkit-box-shadow: 0 0 20px 12px #1472ff;
+	        box-shadow: 0 0 20px 12px #1472ff;
+	z-index: -1;
+}
+body.brow-msie .comment--left {
+	-webkit-box-flex: 0;
+	-ms-flex: 0 0 150px;
+	    flex: 0 0 150px;
+}
+body.brow-msie .comment--right {
+	height: 285px;
+}
+body.brow-msie .btn-more svg {
+	top: 18px;
+}
+body.brow-msie .video-block--play {
+	left: calc(50% - 45px);
+}
+body.brow-msie #to-next-month svg {
+	top: 0;
 }
