@@ -16,15 +16,39 @@
   & + footer
     mt(0)
 
+  &.section-advantages-footer-mob
+    +mob()
+      background-position-x 35%
+    +xs()
+      margin: r(37) r(15) r(125)
+      pt(r(260))
+      pb(r(30))
+      h2
+        fs(e(24))
+        mb(r(10))
+
+
+
   &.section-advantages-footer-initiative
     background url('../img/illus/backs/back-member2.png') center center no-repeat
     background-size cover
     mt(r(86))
     pt(r(60))
     pb(r(79))
+    +mob()
+      background-position-x 35%
+    +xs()
+      pt(r(263))
+      pb(r(137))
     h3
       fs(e(20))
       mb(r(30))
+      +xs()
+        fs(e(24))
+        line-height 1.2
+        mb(r(22))
     p
       co(#144682)
       mb(r(27))
+      +xs()
+        mb(r(38))

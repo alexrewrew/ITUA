@@ -11,7 +11,7 @@
   +mob()
     height 210px
     mt(0)
-    mb(r(66))
+    mb(r(68))
     width calc(100% + 30px)
     left -15px
     right -15px
@@ -22,9 +22,12 @@
     min-height 100%
     width auto
     flex 0 0 auto
-    +mob()
+    +land()
       height auto
-      width calc(100% + 30px)
+      width 100%
+    +xs()
+      height 100%
+      width auto
 
 .slider-color--col
   +mob()
@@ -44,7 +47,7 @@
     left -15px
     right -15px
     width calc(100% + 30px)
-    pb(r(61))
+    pb(r(56))
   &--heading
     font-family $a-font, sans-serif
     fs(e(44))
@@ -64,7 +67,7 @@
     +mob()
       font-size: e(24)
       line-height: 1.33;
-      mb(r(14))
+      mb(r(16))
     &:hover
       co($wt)
 
@@ -73,12 +76,12 @@
     mt(r(30))
     mb(r(57))
     +mob()
-      mb(r(37))
+      mb(r(40))
     li
       co($wt)
       fs(e(14))
       letter-spacing: 1px;
-      mr(r(40))
+      mr(r(47))
       fw(700)
       &:last-child
         mr(0)
@@ -100,6 +103,8 @@
   .slick-track
     display: flex;
     align-items: flex-end;
+    +xs()
+      align-items flex-start
 
   .slick-slide
     +land()

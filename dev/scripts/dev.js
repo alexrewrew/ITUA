@@ -104,13 +104,15 @@
         var colorHeader;
 
         var colorSet = function () {
-            var imgSrc = $('.slider-color .slick-slide.slick-current.slick-active .img-color').attr('src');
-            var imgObj = new Image();
+            if (window.matchMedia("(min-width: 768px)").matches) {
+                var imgSrc = $('.slider-color .slick-slide.slick-current.slick-active .img-color').attr('src');
+                var imgObj = new Image();
 
-            imgObj.src = imgSrc;
+                imgObj.src = imgSrc;
 
-            var colorThief = new ColorThief();
-            colorHeader = colorThief.getColor(imgObj);
+                var colorThief = new ColorThief();
+                colorHeader = colorThief.getColor(imgObj);
+            }
         };
 
         DOMs.sliderColor.on('init', colorSet);
@@ -218,6 +220,7 @@
             slidesToShow: 2,
             swipeToSlide: true,
             infinite: false,
+            // variableWidth: true,
             speed: 250,
             responsive: [
                 {

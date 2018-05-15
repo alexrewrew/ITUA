@@ -15,7 +15,7 @@ h1
   co($wt)
   +mob()
     font-size: e(28)
-    mb(r(22))
+    mb(r(33))
 
 
 h2
@@ -25,11 +25,13 @@ h2
   color: $blue-dark
   +mob()
     fs(e(24))
-    mb(r(34))
-
+    mb(r(33))
+    letter-spacing: .5px;
+    line-height 1.35
   &.h2-public
     +mob()
-      mb(r(25))
+      mb(r(19))
+
 
   &.h2-project
     position absolute
@@ -38,14 +40,12 @@ h2
     +xs()
       position static
 
-
-
-
-
 h3
   font(e(18), 700, 1.45)
-  mb(r(15))
+  mb(r(25))
   co($blue-dark3)
+  +mob()
+    mb(r(15))
 
 h4
   font(e(24), 700, 1.75)
@@ -100,7 +100,7 @@ hr
   flex-wrap wrap
   mb(r(36))
   +mob()
-    mb(r(24))
+    mb(r(33))
   h2
     mr(r(13))
     mb(0)
@@ -124,6 +124,7 @@ hr
   mb(r(14))
   +mob()
     mt(r(40))
+    mb(r(10))
   &.big
     mt(r(14))
     line-height: 1.22;
@@ -134,22 +135,28 @@ hr
 
 .mb-46
   mb(r(46))
+  +mob()
+    mb(r(33))
 
 .mb-71
   mb(r(71))
   +mob()
-    mb(r(34))
+    mb(r(33))
 
 .mb-61
   mb(r(61))
   +mob()
-    mb(r(34))
+    mb(r(33))
 
 .mb-48
   mb(r(48))
+  +mob()
+    mb(r(33))
 
 .mb-41
   mb(r(41))
+  +mob()
+    mb(r(33))
 
 .mb-mt-43-38
   mt(r(38))
@@ -158,6 +165,9 @@ hr
 .mb-mt-81-30
   mt(r(30))
   mb(r(81))
+  +mob()
+    margin-top: r(51)
+    margin-bottom: r(93)
 
 .mb-mt-82-90
   mt(r(90))
@@ -173,6 +183,8 @@ hr
   color #053a78
   fs(e(16))
   font-family $a-font, sans-serif
+  +mob()
+    fs(e(14))
   a
     text-decoration underline
     fw(700)

@@ -8,6 +8,8 @@
     mb(r(43))
     +mob()
       mb(r(24))
+    +xs()
+      mt(r(26))
   &--profession
     co($blue-light4)
     mb(r(34))
@@ -23,10 +25,24 @@
       fs(e(20))
       mb(r(10))
 
+
   &.director-small
     h3
       mt(r(24))
       fs(e(36))
       mb(0)
+      +xs()
+        fs(e(20))
+        mb(r(2))
     .director--profession
       fs(e(16))
+      +xs()
+        mb(r(21))
+
+.img-director
+  width 100%
+  +mob()
+    mb(r(35))
+  +xs()
+    margin 0 -15px r(11)
+    width calc(100% + 30px)

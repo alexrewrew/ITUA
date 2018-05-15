@@ -1,7 +1,9 @@
 .slider-middle
   height 427px
-  +mob()
-    height: 257px;
+  +xs()
+    height: 248px;
+  +land()
+    height: 248px;
   .arrow
     bg($wt)
     svg g
@@ -31,6 +33,10 @@
     overflow hidden
     justify-content center
     align-items center
+    +xs()
+      height: 200px;
+    +land()
+      height: 248px;
     img
       height 100%
       flex-shrink 0
@@ -38,10 +44,10 @@
       width auto
       +land()
         height auto
-      +mob()
-        min-height: 100%;
-        min-width: 100%;
-    +mob()
-      height 210px
-    +land()
-      height 257px
+        width 100%
+      //+mob()
+      //  height: 100%;
+      //  width auto
+
+    //+land()
+    //  height 257px

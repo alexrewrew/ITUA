@@ -7,6 +7,13 @@ header
     pt(r(59))
   +port()
     pt(8.75rem)
+  h1
+    +mob()
+      letter-spacing 0
+      mb(r(11))
+  h6
+    +mob()
+      fs(e(14))
   &.header-index
     bg($blue-light4)
     mb(r(90))
@@ -49,7 +56,7 @@ header
     z-index 40
     overflow visible
     +mob()
-      pb(r(46))
+      pb(r(51))
       height auto
     &:after
       pseudo(block, absolute)
@@ -59,6 +66,8 @@ header
       height 73px
       bg($blue-light9)
       z-index -1
+      +mob()
+        height 80px
     p
       mt(r(6))
 
@@ -119,6 +128,8 @@ header
     h1
       co($blue-dark)
       mb(r(51))
+      +mob()
+        mb(r(17))
 
   &.header-events-year
     height auto
@@ -130,7 +141,7 @@ header
       pb(r(45))
     +mob()
       mb(r(25))
-
+      pb(r(35))
     h1
       position absolute
       left 15px
@@ -139,17 +150,19 @@ header
       z-index 50
       +mmax(991px)
         position static
+      +mob()
+        mb(r(41))
 
   &.header-article
     height 391px
     overflow visible
     bg(#f7f8f9)
     position relative
-    //mb(r(90))
     mb(r(47))
     +mob()
-      height 313px
-      mb(r(94))
+      height 300px
+      mb(r(32))
+
     h1
       color #053a78
       mb(r(2))
@@ -158,7 +171,7 @@ header
       +mob()
         mb(r(22))
         line-height: 1.33;
-        fs(e(20))
+        //fs(e(20))
     &--row
       height: 184px;
       .col-12
@@ -166,15 +179,24 @@ header
     &.header-article-report
       height 457px
       mb(r(47))
+      +land()
+        height 350px
       .header-article--row
         height: 186px
+        +land()
+          height auto
       .header-article--container
         top calc(100% - 98px)
+        +xs()
+          top: calc(100% - 185px);
     &.header-article-events
       height 471px
       mb(r(60))
+      +mob()
+        h1
+          mb(0)
       +xs()
-        mb(r(180))
+        mb(r(206))
       .header-article--container
         top: calc(100% - 180px)
         left: calc(50% - (1101px / 2))
@@ -185,12 +207,29 @@ header
           top: calc(100% - 150px)
         +land()
           left calc(50% - (471px / 2))
+          top: calc(100% - 210px)
+          .header-article--author.header-article--author-event
+            pt(r(31))
+            pl(r(24))
+            pr(r(24))
+            width auto
+          .header-article--author.header-article--author-event .header-article--author-date
+            mr(r(20))
         +mob()
           left 0
         +xs()
-          top: calc(100% - 220px);
+          top: calc(100% - 216px);
+          .header-article--author.header-article--author-event
+            pt(r(31))
+            width auto
+
     &.header-article-initiative
       mb(r(90))
+      +mob()
+        height 374px
+      h1
+        +xs()
+          fs(e(24))
 
     &.header-contacts
       bg($tr)
@@ -200,6 +239,7 @@ header
         mb(r(450))
       +xs()
         mb(r(620))
+        height: 320px;
       h1
         co($wt)
         +mob()
@@ -239,6 +279,8 @@ header
         letter-spacing: 0.8px;
         line-height: 1.53;
         mb(r(19))
+        +mob()
+          fs(e(30))
       .header-article--row
         img
           max-width 100%
@@ -268,6 +310,10 @@ header
         +mob()
           pl(r(24))
           pr(r(24))
+          width auto
+          pt(r(35))
+          .ul-article-share
+            mb(r(7))
         +xs()
           flex-wrap wrap
 
@@ -424,8 +470,10 @@ header
       pr(0)
 
 .header-text
-  +mob()
+  +xs()
     pb(r(50))
+  +land()
+    pb(r(15))
 
 
 

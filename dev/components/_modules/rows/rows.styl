@@ -4,6 +4,7 @@
       &:last-child
         display none
   +mob()
+    margin-bottom: r(22)
     .blog
       width 263px
       mb(0)
@@ -19,6 +20,9 @@
     +mob()
       .slick-track
         left 0
+  +mob()
+    .calendar.calendar-report .calendar--block
+      mb(r(1))
 
 .slider-progressbar-reports1, .slider-progressbar-reports2
   display none

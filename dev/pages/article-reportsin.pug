@@ -73,14 +73,19 @@ block content
             .row
                 .col-12
                     h2.text-center.mb-71 Перегляньте також
-                .col-sm-6.col-md-4.col-lg-3
-                    +calendar-item-report-year('2017', 'Річний звіт')
-                .col-sm-6.col-md-4.col-lg-3
-                    +calendar-item-report-year('2016', 'Річний звіт')
-                .col-sm-6.col-md-4.col-lg-3
-                    +calendar-item-report-year('2015', 'Річний звіт')
-                .col-sm-6.col-md-4.col-lg-3
-                    +calendar-item-report-year('2014', 'Річний звіт')
+                .col-12
+                    .row.row-reports.slider-reports2
+                        .col-md-4.col-lg-3
+                            +calendar-item-report-year('2017', 'Річний звіт')
+                        .col-md-4.col-lg-3
+                            +calendar-item-report-year('2016', 'Річний звіт')
+                        .col-md-4.col-lg-3
+                            +calendar-item-report-year('2015', 'Річний звіт')
+                        .col-md-4.col-lg-3
+                            +calendar-item-report-year('2014', 'Річний звіт')
+
+                    .slider-progressbar.slider-progressbar-reports2
+                        .slider-progressbar--track
 
 
 

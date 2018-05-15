@@ -82,7 +82,7 @@ ol
   pt(r(3))
   mb(r(40))
   +mob()
-    mt(r(43))
+    mt(r(37))
   li
     width 100%
     display flex
@@ -94,8 +94,14 @@ ol
       align-items center
       co($wt)
       fs(e(14))
+      +mob()
+        fs(e(16))
       svg
         mr(r(12))
+        +mob()
+          width 24px
+          height auto
+          mr(r(17))
         g
           fill $wt
       &:hover
@@ -291,6 +297,8 @@ ol
     mb(r(30))
   +xs()
     mb(r(48))
+    justify-content space-between
+    width 90%
   li
     &:first-child
       co($wt)
@@ -298,10 +306,15 @@ ol
       fw(700)
       mr(r(46))
       font-family $a-font, sans-serif
+      +xs()
+        fs(e(26))
+
     &:last-child
       fs(e(16))
       line-height: 1.43;
       co($blue-light4)
+      +xs()
+        fs(e(14))
 
 
 .ul-project
@@ -343,6 +356,8 @@ ol
   display flex
   +mob()
     flex-wrap wrap
+    pt(r(23))
+    justify-content center
   +xs()
     mb(r(12))
   li
@@ -357,7 +372,7 @@ ol
       pr(r(20))
     +mob()
       pr(r(20))
-      pt(r(100))
+      pt(r(81))
     +land()
       width 50%
     +xs()
@@ -418,6 +433,8 @@ ol
           left: -30px;
 
 .ul-schedule
+  +xs()
+    mb(r(74))
   li
     &:before
       width: 8px;
@@ -431,6 +448,7 @@ ol
   mb(r(30))
   +mob()
     flex-wrap wrap
+    mb(0)
   li
     +mob()
       max-width 50%
@@ -443,6 +461,8 @@ ol
       img
         max-height 48px
         +port()
+          max-width calc(100% - 15px)
+        +mob()
           max-width calc(100% - 15px)
         +xs()
           max-height 35px

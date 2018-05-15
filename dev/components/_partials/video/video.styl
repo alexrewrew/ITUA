@@ -17,6 +17,10 @@
   position relative
   mt(r(10))
   mb(r(23))
+  +xs()
+    margin-right -15px
+    margin-left -15px
+    width calc(100% + 30px)
   &--play
     position absolute
     width: 90px;
@@ -31,13 +35,13 @@
     z-index 30
     box-shadow: 0px 0px 34px 5px rgba(20, 114, 255, 0.7)
     trans()
-    +xs()
-      width 45px
-      height 45px
+    +mob()
+      width 55px
+      height 55px
       pl(r(5))
       pb(r(1))
     svg
-      +xs()
+      +mob()
         width 15px
   img
     trans()

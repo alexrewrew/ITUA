@@ -26,6 +26,7 @@
       width 65px
     svg
       trans()
+      width: 22px;
       g
         fill $blue
         trans()
@@ -33,16 +34,21 @@
       background $blue-light6
       svg g
         fill $wt
+
   .arrow.left
     left calc(1186px - 50%)
     &:hover
       svg
         transform translate3d(-10px, 0, 0)
+        +mob()
+          transform none
   .arrow.right
     left calc(1186px - 50% + 82px)
     &:hover
       svg
         transform translate3d(10px, 0, 0)
+        +mob()
+          transform none
 
 //.slide
 //  display flex !important

@@ -1,45 +1,52 @@
-.blog
-  &.blog-advantage
-    mb(r(64))
-    &:hover
-      .blog--image
-        img
-          opacity 1
-    .blog--image
-      height 225px
-      mb(r(39))
+  .blog
+    &.blog-advantage
+      mb(r(64))
       +mob()
-        height 181px
-        mb(r(37))
-        align-items flex-end
-      img
-        flex 0 0 auto
-    .blog--description
-      mb(0)
-      h3
-        line-height: 1.3;
-        co($blue-dark2)
-        fs(e(20))
-        mb(r(27))
+        mb(r(79))
+      &:hover
+        .blog--image
+          img
+            opacity 1
+      .blog--image
+        height 225px
+        mb(r(39))
         +mob()
-          mb(r(19))
+          height 181px
+          mb(r(37))
+          align-items flex-end
+        img
+          flex 0 0 auto
+      .blog--description
+        mb(0)
+        h3
+          line-height: 1.3;
+          co($blue-dark2)
+          fs(e(20))
+          mb(r(27))
+          +mob()
+            mb(r(25))
 
 
 .ul-advantage-contacts
   display flex
   justify-content space-between
   max-width 376px
-  +xs()
+  +mob()
     flex-direction column
   li
-    +xs()
+    +mob()
       mb(r(20))
     a
       fs(e(14))
       display flex
       align-items center
       fw(700)
+      font-family $a-font, sans-serif
+      +mob()
+        fs(e(16))
       svg
         mr(r(13))
+        +mob()
+          mr(r(20))
       span
         text-decoration underline

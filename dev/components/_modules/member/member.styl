@@ -13,6 +13,8 @@
   trans()
   +mob()
     max-width 263px
+    pl(r(24))
+    pr(r(24))
   &--image
     height 90px
     margin-bottom r(25)
@@ -43,7 +45,14 @@
     bottom -1px
     left -1px
     pl(r(38))
-
+    +mob()
+      pl(r(24))
+      max-width 100%
+      svg
+        opacity 1
+        right 24px
+        g
+          fill $blue
 
   &:hover
     box-shadow: 0 10px 30px 0 rgba(94, 107, 126, 0.3);
@@ -58,10 +67,19 @@
       pl(r(38))
       svg
         opacity 1
+      +mob()
+        bg($tr)
+        co($blue)
+        pl(r(24))
 
 .member.member-regular
   padding r(24) r(33)
   height: 194px;
+  +mob()
+    pl(r(20))
+    pr(r(20))
+    height 178px
+    //pb(r(20))
   .member--image
     height 54px
     margin-bottom r(21)
@@ -70,16 +88,18 @@
     left: 6px
     fs(e(14))
     co($wt)
+    //+land()
+    //  bg($tr)
+    //  co($blue)
+    //  max-width calc(100% - 19px)
+    //  pl(r(30))
+    //  bottom 0
+    //  svg
+    //    opacity 1
+    //    g
+    //      fill $blue
     +mob()
-      bg($tr)
-      co($blue)
-      max-width calc(100% - 19px)
-      pl(r(30))
-      bottom 0
-      svg
-        opacity 1
-        g
-          fill $blue
+      display none
 
   &:hover
     .btn-more

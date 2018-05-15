@@ -27,6 +27,9 @@
     font-weight: bold;
     color: $blue-light
     font-family $a-font, sans-serif
+    +mob()
+      right 50px
+      bottom 18px
   &--description
     mb(r(35))
     +mob()
@@ -39,6 +42,8 @@
     .blog--image
       img
         opacity .4
+        +mob()
+          opacity 1
     .btn-more
       background $blue
       co($wt)
@@ -46,3 +51,7 @@
       pl(r(30))
       svg
         opacity 1
+      +mob()
+        bg($tr)
+        co($blue)
+        pl(0)
