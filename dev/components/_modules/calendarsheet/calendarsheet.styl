@@ -24,7 +24,7 @@ header.header-events-year.header-events-world
   top 0
   right 0
   left 0
-  +xs()
+  +mob()
     display none
   &--prev, &--next
     font-size: e(20)
@@ -50,7 +50,9 @@ body .fc
   pt(r(35))
   mb(r(100))
   +xs()
-    margin: 0 -15px;
+    margin: 0 -15px r(80);
+  +mob()
+    padding-top: r(15)
 
 .fc-unthemed td.fc-today
   bg($tr)
@@ -92,6 +94,7 @@ body .fc
   +mob()
     pt(r(8))
     pb(r(8))
+    margin-bottom: r(26)
 
 .fc-today-button
   display none
@@ -133,6 +136,9 @@ body .fc
   border-color $tr
   border-bottom-color #c8d1de
   pb(r(10))
+  +mob()
+    padding-bottom: r(13)
+
 
 .fc-day-top
   position relative
@@ -347,6 +353,8 @@ body .fc
     +tab()
       top 2px
       left 6px
+    +mob()
+      display none
   &.fc-event-container
     &:before
       display none
@@ -360,11 +368,19 @@ body .fc
   letter-spacing: 1px;
   +port()
     pl(r(33))
+  +mob()
+    pl(r(39))
+    fs(e(16))
+    letter-spacing 1.5px
+    pt(r(22))
   svg
     right: 64px;
     top 25px
     height: auto;
     +port()
       right 32px
+    +mob()
+      right 30px
+
 
 

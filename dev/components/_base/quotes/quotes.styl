@@ -7,8 +7,10 @@ blockquote
   mb(r(100))
   +xs()
     pl(r(25))
-    pr(r(25))
-    pb(r(100))
+    pb(r(115))
+    pt(r(112))
+    pr(r(3))
+    padding r(112) r(3) r(141) r(25)
   +land()
     margin: 0 65px;
   &:after
@@ -27,6 +29,8 @@ blockquote
     line-height 1.63
     fs(e(16))
     position relative
+    //+xs()
+    //  mb(r(49))
     &:before, &:after
       position absolute
       display block
@@ -40,16 +44,16 @@ blockquote
       top -23px
       z-index 10
       +xs()
-        top -60px
-        left -25px
+        top: -67px;
+        left: -27px;
     &:after
       content '»'
       right -68px
       bottom -23px
       z-index 10
       +xs()
-        bottom -60px
-        right -25px
+        bottom: -62px;
+        right: -5px;
 
   .blockquote-author
     position absolute
@@ -61,6 +65,7 @@ blockquote
     mb(r(13))
     +xs()
       left 25px
+      mb(r(28))
 
 
 

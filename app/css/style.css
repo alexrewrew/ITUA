@@ -524,8 +524,10 @@ blockquote {
 @media (max-width: 567px) {
 	blockquote {
 		padding-left: 1.5625rem;
-		padding-right: 1.5625rem;
-		padding-bottom: 6.25rem;
+		padding-bottom: 7.1875rem;
+		padding-top: 7rem;
+		padding-right: .1875rem;
+		padding: 7rem .1875rem 8.8125rem 1.5625rem;
 	}
 }
 @media (min-width: 568px) and (max-width: 767px) {
@@ -567,8 +569,8 @@ blockquote p:before {
 }
 @media (max-width: 567px) {
 	blockquote p:before {
-		top: -60px;
-		left: -25px;
+		top: -67px;
+		left: -27px;
 	}
 }
 blockquote p:after {
@@ -579,8 +581,8 @@ blockquote p:after {
 }
 @media (max-width: 567px) {
 	blockquote p:after {
-		bottom: -60px;
-		right: -25px;
+		bottom: -62px;
+		right: -5px;
 	}
 }
 blockquote .blockquote-author {
@@ -595,6 +597,7 @@ blockquote .blockquote-author {
 @media (max-width: 567px) {
 	blockquote .blockquote-author {
 		left: 25px;
+		margin-bottom: 1.75rem;
 	}
 }
 .spacer-61 {
@@ -3815,6 +3818,11 @@ header.header-newsin {
 }
 header.header-newsin .breadcrumbs {
 	margin-bottom: .8125rem;
+}
+@media (max-width: 767px) {
+	header.header-newsin .breadcrumbs {
+		margin-bottom: .25rem;
+	}
 }
 header.header-newsin h1 {
 	text-align: center;
@@ -8524,7 +8532,7 @@ header.header-events-year.header-events-world {
 	right: 0;
 	left: 0;
 }
-@media (max-width: 567px) {
+@media (max-width: 767px) {
 	.calendar-month {
 		display: none;
 	}
@@ -8557,7 +8565,12 @@ body .fc {
 }
 @media (max-width: 567px) {
 	body .fc {
-		margin: 0 -15px;
+		margin: 0 -15px 5rem;
+	}
+}
+@media (max-width: 767px) {
+	body .fc {
+		padding-top: .9375rem;
 	}
 }
 .fc-unthemed td.fc-today {
@@ -8605,6 +8618,7 @@ body .fc {
 	.fc-toolbar.fc-header-toolbar {
 		padding-top: .5rem;
 		padding-bottom: .5rem;
+		margin-bottom: 1.625rem;
 	}
 }
 .fc-today-button {
@@ -8655,6 +8669,11 @@ body .fc {
 	border-color: transparent;
 	border-bottom-color: #c8d1de;
 	padding-bottom: .625rem;
+}
+@media (max-width: 767px) {
+	.fc-head .fc-head-container {
+		padding-bottom: .8125rem;
+	}
 }
 .fc-day-top {
 	position: relative;
@@ -8990,6 +9009,11 @@ body .fc {
 		left: 6px;
 	}
 }
+@media (max-width: 767px) {
+	.fc-content-skeleton tbody td:before {
+		display: none;
+	}
+}
 .fc-content-skeleton tbody td.fc-event-container:before {
 	display: none;
 }
@@ -9005,6 +9029,14 @@ body .fc {
 		padding-left: 2.0625rem;
 	}
 }
+@media (max-width: 767px) {
+	#to-next-month {
+		padding-left: 2.4375rem;
+		font-size: 1em;
+		letter-spacing: 1.5px;
+		padding-top: 1.375rem;
+	}
+}
 #to-next-month svg {
 	right: 64px;
 	top: 25px;
@@ -9013,6 +9045,11 @@ body .fc {
 @media (min-width: 768px) and (max-width: 991px) {
 	#to-next-month svg {
 		right: 32px;
+	}
+}
+@media (max-width: 767px) {
+	#to-next-month svg {
+		right: 30px;
 	}
 }
 #modal-event {
@@ -9055,10 +9092,14 @@ body.brow-safari .member:hover {
 	-webkit-box-shadow: 0 10px 15px 0 rgba(94,107,126,.3);
 	        box-shadow: 0 10px 15px 0 rgba(94,107,126,.3);
 }
-body.brow-safari .btn:after {
+body.brow-safari .btn:after, body.brow-safari .comment--right .btn-more:after {
 	bottom: 12px;
+	background: transparent;
+	-webkit-filter: none;
+	        filter: none;
+	height: 0;
 	left: 26px;
 	right: 26px;
-	-webkit-box-shadow: 0 0 24px 16px #1472ff;
-	        box-shadow: 0 0 24px 16px #1472ff;
+	-webkit-box-shadow: 0 0 20px 12px #1472ff;
+	        box-shadow: 0 0 20px 12px #1472ff;
 }
