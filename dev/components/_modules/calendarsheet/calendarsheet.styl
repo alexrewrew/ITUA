@@ -339,6 +339,14 @@ body .fc
     top 16px
     left 14px
     z-index 100
+    +port()
+      top 0
+      left 0
+      width 40px
+      height 35px
+    +tab()
+      top 2px
+      left 6px
   &.fc-event-container
     &:before
       display none
@@ -350,9 +358,13 @@ body .fc
   pt(r(19))
   pb(r(23))
   letter-spacing: 1px;
+  +port()
+    pl(r(33))
   svg
     right: 64px;
     top 25px
     height: auto;
+    +port()
+      right 32px
 
 

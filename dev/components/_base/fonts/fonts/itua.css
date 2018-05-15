@@ -1,13 +1,13 @@
-@font-face {
-    font-family: 'Circular Std';
-    src: url('../fonts/CircularStd/CircularStd-Bold.eot');
-    src: url('../fonts/CircularStd/CircularStd-Bold.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/CircularStd/CircularStd-Bold.woff2') format('woff2'),
-    url('../fonts/CircularStd/CircularStd-Bold.woff') format('woff'),
-    url('../fonts/CircularStd/CircularStd-Bold.ttf') format('truetype');
-    font-weight: bold;
-    font-style: normal;
-}
+/*@font-face {*/
+    /*font-family: 'Circular Std';*/
+    /*src: url('../fonts/CircularStd/CircularStd-Bold.eot');*/
+    /*src: url('../fonts/CircularStd/CircularStd-Bold.eot?#iefix') format('embedded-opentype'),*/
+    /*url('../fonts/CircularStd/CircularStd-Bold.woff2') format('woff2'),*/
+    /*url('../fonts/CircularStd/CircularStd-Bold.woff') format('woff'),*/
+    /*url('../fonts/CircularStd/CircularStd-Bold.ttf') format('truetype');*/
+    /*font-weight: bold;*/
+    /*font-style: normal;*/
+/*}*/
 
 @font-face {
     font-family: 'Apercu Pro';

@@ -1,13 +1,13 @@
-@font-face {
-	font-family: 'Circular Std';
-	src: url('../fonts/CircularStd/CircularStd-Bold.eot');
-	src: url('../fonts/CircularStd/CircularStd-Bold.eot?#iefix') format('embedded-opentype'),
-	url('../fonts/CircularStd/CircularStd-Bold.woff2') format('woff2'),
-	url('../fonts/CircularStd/CircularStd-Bold.woff') format('woff'),
-	url('../fonts/CircularStd/CircularStd-Bold.ttf') format('truetype');
-	font-weight: bold;
-	font-style: normal;
-}
+/*@font-face {*/
+/*font-family: 'Circular Std';*/
+/*src: url('../fonts/CircularStd/CircularStd-Bold.eot');*/
+/*src: url('../fonts/CircularStd/CircularStd-Bold.eot?#iefix') format('embedded-opentype'),*/
+/*url('../fonts/CircularStd/CircularStd-Bold.woff2') format('woff2'),*/
+/*url('../fonts/CircularStd/CircularStd-Bold.woff') format('woff'),*/
+/*url('../fonts/CircularStd/CircularStd-Bold.ttf') format('truetype');*/
+/*font-weight: bold;*/
+/*font-style: normal;*/
+/*}*/
 
 @font-face {
 	font-family: 'Apercu Pro';
@@ -156,6 +156,11 @@ body {
 }
 .container.container-slider {
 	max-width: 100%;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+	.container.container-slider {
+		padding: 0;
+	}
 }
 @media (min-width: 568px) and (max-width: 767px) {
 	.container {
@@ -1405,6 +1410,11 @@ ol li ol {
 .ul-clients li a img {
 	max-height: 48px;
 }
+@media (min-width: 768px) and (max-width: 991px) {
+	.ul-clients li a img {
+		max-width: calc(100% - 15px);
+	}
+}
 @media (max-width: 567px) {
 	.ul-clients li a img {
 		max-height: 35px;
@@ -1795,6 +1805,11 @@ table td {
 	font-size: .875em;
 	color: #768190;
 	padding: .125rem .625rem .125rem 3.125rem;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+	table td {
+		padding-left: 1.875rem;
+	}
 }
 @media (max-width: 767px) {
 	table td {
@@ -3865,6 +3880,11 @@ footer {
 	margin-top: 6.938rem;
 	padding-top: 2.9375rem;
 }
+@media (min-width: 768px) and (max-width: 991px) {
+	footer {
+		margin-top: 1.875rem;
+	}
+}
 @media (max-width: 767px) {
 	footer {
 		padding-top: 4.375rem;
@@ -5107,6 +5127,7 @@ audio {
 	-ms-flex-negative: 0;
 	flex-shrink: 0;
 	margin: 0;
+	width: auto;
 }
 @media (min-width: 568px) and (max-width: 767px) {
 	.slider-middle .slide img {
@@ -5335,6 +5356,11 @@ audio {
 @media (max-width: 767px) {
 	.slider-partner-eventsin .col-md-4 {
 		padding: 0;
+	}
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+	.slider-partner-eventsin .member {
+		max-width: 100%;
 	}
 }
 .blog.blog-advantage {
@@ -6292,6 +6318,7 @@ audio {
 		padding-left: 1.5625rem;
 		padding-right: 1.5625rem;
 		margin-left: 0;
+		padding-bottom: 4.125rem;
 	}
 }
 @media (max-width: 767px) {
@@ -6839,6 +6866,16 @@ audio {
 @media (min-width: 768px) and (max-width: 991px) {
 	.row-members .member {
 		height: 194px;
+	}
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+	.row-calendar .calendar {
+		max-width: 100%;
+	}
+}
+@media (min-width: 768px) and (max-width: 991px) {
+	.row-calendar .calendar {
+		max-width: 100%;
 	}
 }
 @media (min-width: 768px) {
@@ -8014,8 +8051,8 @@ audio {
 }
 .h1-404 span:nth-child(2) {
 	z-index: 10;
-	-webkit-animation: swim 2s ease-in-out 2s infinite alternate;
-	        animation: swim 2s ease-in-out 2s infinite alternate;
+	-webkit-animation: swim 2s ease-in-out infinite alternate;
+	        animation: swim 2s ease-in-out infinite alternate;
 	-webkit-transform-origin: center;
 	    -ms-transform-origin: center;
 	        transform-origin: center;
@@ -8546,6 +8583,20 @@ body .fc {
 	left: 14px;
 	z-index: 100;
 }
+@media (min-width: 768px) and (max-width: 991px) {
+	.fc-content-skeleton tbody td:before {
+		top: 0;
+		left: 0;
+		width: 40px;
+		height: 35px;
+	}
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+	.fc-content-skeleton tbody td:before {
+		top: 2px;
+		left: 6px;
+	}
+}
 .fc-content-skeleton tbody td.fc-event-container:before {
 	display: none;
 }
@@ -8556,10 +8607,20 @@ body .fc {
 	padding-bottom: 1.4375rem;
 	letter-spacing: 1px;
 }
+@media (min-width: 768px) and (max-width: 991px) {
+	#to-next-month {
+		padding-left: 2.0625rem;
+	}
+}
 #to-next-month svg {
 	right: 64px;
 	top: 25px;
 	height: auto;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+	#to-next-month svg {
+		right: 32px;
+	}
 }
 #modal-event {
 	width: calc(100vw - 30px);
@@ -8600,4 +8661,11 @@ body.brow-firefox .member:hover {
 body.brow-safari .member:hover {
 	-webkit-box-shadow: 0 10px 15px 0 rgba(94,107,126,.3);
 	        box-shadow: 0 10px 15px 0 rgba(94,107,126,.3);
+}
+body.brow-safari .btn:after {
+	bottom: 12px;
+	left: 26px;
+	right: 26px;
+	-webkit-box-shadow: 0 0 24px 16px #1472ff;
+	        box-shadow: 0 0 24px 16px #1472ff;
 }
