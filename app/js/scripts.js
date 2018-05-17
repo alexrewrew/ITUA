@@ -162,7 +162,7 @@
             prevArrow: DOMs.sliderArrowLeft,
             nextArrow: DOMs.sliderArrowRight,
             dots: false,
-            infinite: false,
+            infinite: true,
             swipeToSlide: true,
             rows: 2,
             variableWidth: true,
@@ -204,7 +204,7 @@
             dots: false,
             slidesToScroll: 1,
             swipeToSlide: true,
-            infinite: false,
+            infinite: true,
             speed: 250,
             variableWidth: true
         }).on('beforeChange', function (event, slick, currentSlide, nextSlide) {
@@ -219,7 +219,7 @@
             slidesToScroll: 1,
             slidesToShow: 2,
             swipeToSlide: true,
-            infinite: false,
+            infinite: true,
             // variableWidth: true,
             speed: 250,
             responsive: [
@@ -241,7 +241,7 @@
             dots: false,
             slidesToScroll: 1,
             swipeToSlide: true,
-            infinite: false,
+            infinite: true,
             speed: 250
         }).on('beforeChange', function (event, slick, currentSlide, nextSlide) {
             sliderProgressbar(nextSlide, slick, DOMs.sliderProjectSync);
@@ -251,7 +251,7 @@
         DOMs.sliderReports1.slick({
             dots: false,
             slidesToScroll: 1,
-            infinite: false,
+            infinite: true,
             prevArrow: DOMs.sliderArrowLeft,
             nextArrow: DOMs.sliderArrowRight,
             swipeToSlide: true,
@@ -267,7 +267,7 @@
                     setting: {
                         dots: false,
                         slidesToScroll: 1,
-                        infinite: false,
+                        infinite: true,
                         prevArrow: DOMs.sliderArrowLeft,
                         nextArrow: DOMs.sliderArrowRight,
                         swipeToSlide: true,
@@ -283,7 +283,7 @@
         DOMs.sliderReports2.slick({
             dots: false,
             slidesToScroll: 1,
-            infinite: false,
+            infinite: true,
             prevArrow: DOMs.sliderArrowLeft,
             nextArrow: DOMs.sliderArrowRight,
             swipeToSlide: true,
@@ -299,7 +299,7 @@
                     setting: {
                         dots: false,
                         slidesToScroll: 1,
-                        infinite: false,
+                        infinite: true,
                         prevArrow: DOMs.sliderArrowLeft,
                         nextArrow: DOMs.sliderArrowRight,
                         swipeToSlide: true,
@@ -315,7 +315,7 @@
         DOMs.sliderPartnerEve.slick({
             dots: false,
             slidesToScroll: 1,
-            infinite: false,
+            infinite: true,
             prevArrow: DOMs.sliderArrowLeft,
             nextArrow: DOMs.sliderArrowRight,
             swipeToSlide: true,
@@ -331,7 +331,7 @@
                     setting: {
                         dots: false,
                         slidesToScroll: 1,
-                        infinite: false,
+                        infinite: true,
                         prevArrow: DOMs.sliderArrowLeft,
                         nextArrow: DOMs.sliderArrowRight,
                         swipeToSlide: true,
@@ -347,7 +347,7 @@
         DOMs.sliderCalendarEve.slick({
             dots: false,
             slidesToScroll: 1,
-            infinite: false,
+            infinite: true,
             prevArrow: DOMs.sliderArrowLeft,
             nextArrow: DOMs.sliderArrowRight,
             swipeToSlide: true,
@@ -363,7 +363,7 @@
                     setting: {
                         dots: false,
                         slidesToScroll: 1,
-                        infinite: false,
+                        infinite: true,
                         prevArrow: DOMs.sliderArrowLeft,
                         nextArrow: DOMs.sliderArrowRight,
                         swipeToSlide: true,
@@ -379,7 +379,7 @@
         DOMs.sliderTabs.slick({
             dots: false,
             slidesToScroll: 1,
-            infinite: false,
+            infinite: true,
             arrows: false,
             variableWidth: true,
             swipeToSlide: true,
@@ -394,7 +394,7 @@
                     setting: {
                         dots: false,
                         slidesToScroll: 1,
-                        infinite: false,
+                        infinite: true,
                         arrows: false,
                         swipeToSlide: true,
                         variableWidth: true
@@ -406,7 +406,7 @@
         DOMs.sliderPublications.slick({
             dots: false,
             slidesToScroll: 1,
-            infinite: false,
+            infinite: true,
             arrows: false,
             variableWidth: true,
             swipeToSlide: true,
@@ -421,7 +421,7 @@
                     setting: {
                         dots: false,
                         slidesToScroll: 1,
-                        infinite: false,
+                        infinite: true,
                         swipeToSlide: true,
                         arrows: false,
                         variableWidth: true
@@ -433,7 +433,7 @@
         DOMs.sliderCommittees.slick({
             dots: false,
             slidesToScroll: 1,
-            infinite: false,
+            infinite: true,
             arrows: false,
             variableWidth: true,
             swipeToSlide: true,
@@ -448,7 +448,7 @@
                     setting: {
                         dots: false,
                         slidesToScroll: 1,
-                        infinite: false,
+                        infinite: true,
                         swipeToSlide: true,
                         arrows: false,
                         variableWidth: true
@@ -459,7 +459,7 @@
         DOMs.sliderFilter.slick({
             dots: false,
             slidesToScroll: 1,
-            infinite: false,
+            infinite: true,
             arrows: false,
             variableWidth: true,
             speed: 250,
@@ -475,7 +475,7 @@
                         dots: false,
                         slidesToScroll: 1,
                         swipeToSlide: true,
-                        infinite: false,
+                        infinite: true,
                         arrows: false,
                         variableWidth: true
                     }
@@ -629,7 +629,7 @@
                         displayEventTime: true
                     }
                 ],
-                timeFormat: 'H:mm',
+                timeFormat: 'Початок о H:mm',
 
                 eventRender: function (event, element) {
                     if (window.matchMedia("(max-width: 567px)").matches) {

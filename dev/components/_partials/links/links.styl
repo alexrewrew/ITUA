@@ -52,7 +52,7 @@ a
         fill $blue4
 
 .link-back
-  display flex
+  display inline-flex
   align-items center
   line-height: 1.67;
   color $blue
@@ -62,10 +62,13 @@ a
   +mob()
     mb(r(43))
   svg
+    trans()
     mr(r(14))
   &:hover
-    svg g
-      fill #0056b3
+    svg
+      transform translateX(-5px)
+      g
+        fill #0056b3
 
 .link-phone
   co(#053a78)

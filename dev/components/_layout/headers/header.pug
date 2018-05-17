@@ -7,10 +7,10 @@ mixin header-about-business(heading, text)
                 .col-md-6
                     +breadcrumbs(heading)
             .row
-                .col-sm-6.col-lg-5.col-xl-4
+                .col-sm-6
                     h1= heading
 
-                .col-sm-6.offset-md-1.col-md-5.col-lg-4.offset-xl-2
+                .col-sm-6.col-md-5.col-lg-4
                     p= text
 
 
@@ -84,10 +84,10 @@ mixin header-part(heading, text)
             .col-md-6
                 +breadcrumbs(heading)
         .row
-            .col-sm-6.col-lg-5
+            .col-sm-6
                 h1= heading
 
-            .col-sm-6.offset-md-1.col-md-5.col-lg-4
+            .col-sm-6.col-md-5.col-lg-4
                 p= text
 
 mixin header-search(heading, text)

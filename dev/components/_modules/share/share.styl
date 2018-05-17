@@ -26,11 +26,12 @@
     g
       fill $blue
   &:hover
-    color $wt
-    bg($blue)
-    box-shadow none
-    svg g
-      fill $wt
+    color $blue
+    //bg($blue)
+    //box-shadow none
+    box-shadow 0 4px 10px 0 rgba(94, 107, 126, 0.3)
+    //svg g
+    //  fill $wt
 
   &.hide
     display none
@@ -54,19 +55,19 @@
       &.share-fb
         bg($fb)
         &:hover
-          box-shadow: 0 4px 18px 0 $fb;
+          box-shadow: 0 4px 24px 0 $fb;
 
       &.share-tw
         bg($tw)
         &:hover
-          box-shadow: 0 4px 18px 0 $tw
+          box-shadow: 0 4px 24px 0 $tw
 
       &.share-li
         bg($li)
         &:hover
-          box-shadow: 0 4px 18px 0 $li
+          box-shadow: 0 4px 24px 0 $li
 
       &.share-go
         bg($go)
         &:hover
-          box-shadow: 0 4px 18px 0 $go
+          box-shadow: 0 4px 24px 0 $go

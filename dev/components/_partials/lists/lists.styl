@@ -440,6 +440,7 @@ ol
       width: 8px;
       height: 8px;
       border-radius 50%
+      top 6px
 
 .ul-clients
   display flex
@@ -455,11 +456,16 @@ ol
       flex 1 1 50%
       mb(r(50))
     a
-      display block
+      display flex
+      align-items center
+      max-width 185px
+      height 70px
       +mob()
         text-align center
       img
-        max-height 48px
+        max-height 100%
+        max-width 100%
+        display block
         +port()
           max-width calc(100% - 15px)
         +mob()

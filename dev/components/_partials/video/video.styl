@@ -35,6 +35,8 @@
     z-index 30
     box-shadow: 0px 0px 34px 5px rgba(20, 114, 255, 0.7)
     trans()
+    svg g
+      transition .1s all ease
     +mob()
       width 55px
       height 55px
@@ -49,6 +51,8 @@
   &:hover
     .video-block--play
       box-shadow: 0px 0px 34px 1px rgba(24, 110, 240, .7)
-      transform rotate(360deg)
+      bg(#0057db)
+      svg g
+        fill #abcdff
     img
       opacity .6

@@ -261,7 +261,7 @@
                 }
                 function displayCount(count) {
                     var res = count / 100;
-                    document.getElementById("value").innerHTML = res.toPrecision(count.toString().length);
+                    document.getElementById("value").innerHTML = ('0000' + res.toPrecision(count.toString().length));
                 }
                 displayCount(initial);
                 
