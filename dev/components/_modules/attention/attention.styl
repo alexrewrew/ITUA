@@ -14,23 +14,16 @@
   &--mark
     color: $blue-light
     text-align center
-  .btn
+  .btn-arrow
     position absolute
     bottom -32px
     left calc(50% - (292px / 2))
     max-width 292px
-    font-size: e(20)
-    padding-top: r(19)
-    padding-bottom: r(23)
-    letter-spacing: 1px;
-    +xs()
-      left 15px
-      right 15px
-      max-width 100%
-      width calc(100% - 30px)
-      text-align center
-      svg
-        display none
+    .btn--text
+      font-size: e(20)
+      padding-top: r(19)
+      padding-bottom: r(23)
+      letter-spacing: 1px;
   h2
     +mob()
       fs(e(28))

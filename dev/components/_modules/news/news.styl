@@ -44,20 +44,31 @@
     p
       max-height 90px
       overflow hidden
-  &:hover
-    .blog--image
-      img
-        opacity .4
-        +mob()
-          opacity 1
-    .btn-more
-      background $blue
-      co($wt)
-      max-width 100%
-      pl(r(30))
-      svg
-        opacity 1
+
+  .btn-more
+    position relative
+    .btn--text
+      +port()
+        padding-left 0
       +mob()
-        bg($tr)
-        co($blue)
-        pl(0)
+        padding-left 0
+        padding-bottom r(19)
+      svg
+        +mob()
+          opacity 0 !important
+
+  +mmin(768px)
+    &:hover
+      .blog--image
+        img
+          opacity .4
+      .btn-more
+        max-width 100%
+        .btn--text
+          co($wt)
+          background $blue
+          pl(r(30))
+          svg
+            opacity 1
+
+

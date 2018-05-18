@@ -1,4 +1,8 @@
-<!DOCTYPE html>
+
+<!--mixin btn-new(text)-->
+<!--    a(href='' title='').btn-new-->
+<!--        .btn-new--text= text-->
+<!--        .btn-new--shadow--><!DOCTYPE html>
 <html>
   <head>
     <!-- meta tags-->
@@ -324,7 +328,11 @@
                   <div class="input-group-shadow--shade"></div>
                   <div class="input-error"> Введено неіснуючий e-mail</div>
                 </div>
-                <button class="btn">ПІДПИСАТИСЬ</button>
+                <button class="btn btn-footer" type="submit">
+                  <div class="btn--text">ПІДПИСАТИСЬ
+                  </div>
+                  <div class="btn--shadow"></div>
+                </button>
               </form>
             </div>
             <address class="col-sm-4 offset-lg-1 col-lg-3 col-xl-2">

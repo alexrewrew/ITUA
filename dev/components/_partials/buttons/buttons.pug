@@ -1,20 +1,78 @@
 mixin btn(text)
-    a(href='' title='').btn= text
+    a(href='' title='').btn
+        .btn--text= text
+        .btn--shadow
 
 mixin btn-small(text)
-    a(href='' title='').btn.btn-small= text
+    a(href='' title='').btn.btn-small
+        .btn--text= text
+        .btn--shadow
 
 mixin btn-arrow(text)
     a(href='' title='').btn.btn-arrow
-        = text
-        include ../../_svgs/arrow-right.svg
+        .btn--text
+            = text
+            include ../../_svgs/arrow-right.svg
+        .btn--shadow
+
+mixin btn-arrow-r(text)
+    .btn.btn-arrow
+        .btn--text
+            = text
+            include ../../_svgs/arrow-right.svg
+        .btn--shadow
 
 mixin btn-slider(text)
     a(href='' title='').btn.btn-arrow.btn-arrow-slider
-        = text
-        include ../../_svgs/arrow-right.svg
+        .btn--text
+            = text
+            include ../../_svgs/arrow-right.svg
+        .btn--shadow
 
 mixin btn-more(text)
-    .btn-more
+    .btn.btn-more
+        .btn--text
+            = text
+            include ../../_svgs/arrow-right.svg
+        .btn--shadow
+
+mixin btn-calendar(text)
+    a(href='#calendar-block' title='').btn.btn-arrow#to-next-month
+        .btn--text
+            = text
+            include ../../_svgs/arrow-right.svg
+        .btn--shadow
+
+
+mixin btn-submit(text)
+    button(type='submit').btn.btn-plane.btn-center
+        .btn--text
+            = text
+            include ../../_svgs/arrow-plane.svg
+        .btn--shadow
+
+
+mixin btn-submit-f(text)
+    button(type='submit').btn.btn-footer
+        .btn--text
+            = text
+        .btn--shadow
+
+
+
+mixin btn-share(text)
+    a(href='' title='').btn-share
+        include ../../_svgs/share-big.svg
         = text
-        include ../../_svgs/arrow-right.svg
+
+mixin btn-pdf(text)
+    a(href='' title='').btn.btn-pdf
+        .btn--text
+            include ../../_svgs/pdf.svg
+            = text
+        .btn--shadow
+
+//mixin btn-new(text)
+//    a(href='' title='').btn-new
+//        .btn-new--text= text
+//        .btn-new--shadow

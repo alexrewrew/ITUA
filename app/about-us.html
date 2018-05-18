@@ -1,4 +1,8 @@
-<!DOCTYPE html>
+
+<!--mixin btn-new(text)-->
+<!--    a(href='' title='').btn-new-->
+<!--        .btn-new--text= text-->
+<!--        .btn-new--shadow--><!DOCTYPE html>
 <html>
   <head>
     <!-- meta tags-->
@@ -230,7 +234,7 @@
       <header class="header-about-us">
         <div class="container">
           <div class="row justify-content-between">
-            <div class="col-sm-5 col-lg-4 col-xl-3 header-col left">
+            <div class="col-sm-5 col-lg-4 header-col left">
               <ul class="breadcrumbs">
                 <li><a href="" title="">Головна</a></li>
                 <li><a href="" title="">Про нас</a></li>
@@ -263,7 +267,10 @@
             </div>
             <div class="col-md-7 col-lg-6">
               <p>Асоціацію «ІТ України» було засновано у 2004 році провідними компаніями сфери інформаційних технологій - Miratech, Mirasoft, ProFIX, SoftLine, SoftServe та Ukrsoft. За роки своєї діяльності Асоціація стала найбільшою спільнотою компаній-розробників програмного забезпечення в Україні.</p>
-              <p>На сьогодні до складу Асоціації входить 58 провідних ІТ-компаній, які сукупно формують 50% всієї виручки галузі в Україні.</p><a class="btn btn-margin btn-small" href="" title="">Приєднатись</a>
+              <p>На сьогодні до складу Асоціації входить 58 провідних ІТ-компаній, які сукупно формують 50% всієї виручки галузі в Україні.</p>
+              <div class="spacer-36"></div><a class="btn" href="" title="">
+                <div class="btn--text">Приєднатись</div>
+                <div class="btn--shadow"></div></a>
             </div>
           </div>
         </div>
@@ -497,7 +504,7 @@
                   <div class="input-error"> Заповніть це поле</div>
                 </div>
                 <button class="btn btn-plane btn-center" type="submit">
-                  Відправити<svg width="19px" height="17px" viewBox="0 0 19 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <div class="btn--text">Відправити<svg width="19px" height="17px" viewBox="0 0 19 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.300000012">
         <g transform="translate(-707.000000, -5248.000000)" fill="#FFFFFF" fill-rule="nonzero">
             <g transform="translate(470.000000, 5233.000000)">
@@ -512,6 +519,8 @@
         </g>
     </g>
 </svg>
+                  </div>
+                  <div class="btn--shadow"></div>
                 </button>
               </form>
             </div>
@@ -529,7 +538,11 @@
                   <div class="input-group-shadow--shade"></div>
                   <div class="input-error"> Введено неіснуючий e-mail</div>
                 </div>
-                <button class="btn">ПІДПИСАТИСЬ</button>
+                <button class="btn btn-footer" type="submit">
+                  <div class="btn--text">ПІДПИСАТИСЬ
+                  </div>
+                  <div class="btn--shadow"></div>
+                </button>
               </form>
             </div>
             <address class="col-sm-4 offset-lg-1 col-lg-3 col-xl-2">

@@ -176,17 +176,14 @@ ol
         width 1px
         bg($blue)
         left 0
-
-      &:hover
-        bg($blue)
-        co($wt)
-        box-shadow: 0 10px 30px 0 rgba(24, 111, 240, 0.5);
-        width: calc(100% + 1px);
-        pr(1px)
-        z-index: 20;
-        +mob()
-          pr(r(10))
-          co($blue)
+      +mmin(768px)
+        &:hover
+          bg($blue)
+          co($wt)
+          box-shadow: 0 10px 30px 0 rgba(24, 111, 240, 0.5);
+          width: calc(100% + 1px);
+          pr(1px)
+          z-index: 20;
       &.active
         bg($black-text4)
         co($wt)

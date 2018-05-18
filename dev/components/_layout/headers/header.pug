@@ -20,7 +20,7 @@ mixin header-about-us(heading, text)
         .container
             .row.justify-content-between
 
-                .col-sm-5.col-lg-4.col-xl-3.header-col.left
+                .col-sm-5.col-lg-4.header-col.left
                     +breadcrumbs(heading)
 
                     .header-text
@@ -43,7 +43,7 @@ mixin header-article(img, heading, company, type)
                 .col-12
                     h1= heading
                     h6= type
-                        span.company= company
+                        a(href='' title='').company= company
 
 
 

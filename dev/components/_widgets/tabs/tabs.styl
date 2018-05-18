@@ -95,11 +95,12 @@
           +mob()
             &:after
               display block
+          +mmin(768px)
+            &:hover
+              co($blue)
+        +mmin(768px)
           &:hover
-            co($blue)
-
-        &:hover
-          co($blue-dark3)
+            co($blue-dark3)
   &--line
     width: 183px;
     height: 3px;

@@ -58,24 +58,26 @@
     +mob()
       mb(r(35))
   .btn-arrow
-    padding r(14) r(29) r(15)
-    letter-spacing: 0.5px;
     max-width 263px
-    fs(e(16))
-    svg
-      max-width 20px
-      top 13px
-      right 30px
-      +xs()
-        right 38px
-        max-width 25px
-        top 20px
     +xs()
       max-width 100%
-      fs(e(18))
-      pl(r(38))
-      pt(r(21))
-      pb(r(23))
+    .btn--text
+      padding r(14) r(29) r(15)
+      letter-spacing: 0.5px;
+      fs(e(16))
+      svg
+        max-width 20px
+        top 13px
+        right 30px
+        +xs()
+          right 38px
+          max-width 25px
+          top 20px
+      +xs()
+        fs(e(18))
+        pl(r(38))
+        pt(r(21))
+        pb(r(23))
   &--image
     position absolute
     display flex

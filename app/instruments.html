@@ -1,4 +1,8 @@
-<!DOCTYPE html>
+
+<!--mixin btn-new(text)-->
+<!--    a(href='' title='').btn-new-->
+<!--        .btn-new--text= text-->
+<!--        .btn-new--shadow--><!DOCTYPE html>
 <html>
   <head>
     <!-- meta tags-->
@@ -310,7 +314,7 @@
                   <div class="input-error"> Заповніть це поле</div>
                 </div>
                 <button class="btn btn-plane btn-center" type="submit">
-                  Відправити<svg width="19px" height="17px" viewBox="0 0 19 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <div class="btn--text">Відправити<svg width="19px" height="17px" viewBox="0 0 19 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.300000012">
         <g transform="translate(-707.000000, -5248.000000)" fill="#FFFFFF" fill-rule="nonzero">
             <g transform="translate(470.000000, 5233.000000)">
@@ -325,6 +329,8 @@
         </g>
     </g>
 </svg>
+                  </div>
+                  <div class="btn--shadow"></div>
                 </button>
               </form>
             </div>
@@ -342,7 +348,11 @@
                   <div class="input-group-shadow--shade"></div>
                   <div class="input-error"> Введено неіснуючий e-mail</div>
                 </div>
-                <button class="btn">ПІДПИСАТИСЬ</button>
+                <button class="btn btn-footer" type="submit">
+                  <div class="btn--text">ПІДПИСАТИСЬ
+                  </div>
+                  <div class="btn--shadow"></div>
+                </button>
               </form>
             </div>
             <address class="col-sm-4 offset-lg-1 col-lg-3 col-xl-2">

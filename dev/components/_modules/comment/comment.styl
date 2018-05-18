@@ -61,11 +61,12 @@
         mr(r(13))
         g
           fill $blue
-      &:hover
-        bg($blue)
-        co($wt)
-        svg g
-          fill $wt
+      +mmin(768px)
+        &:hover
+          bg($blue)
+          co($wt)
+          svg g
+            fill $wt
       +mmax(991px)
         padding-left r(25)
         padding-right r(25)
@@ -112,57 +113,47 @@
       right 0
       top 36px
       display none
-    .btn-more
-      position absolute
-      bottom 0
-      max-width 50%
-      &:after
-        pseudo(block, absolute)
-        bottom -6px
-        left 6px
-        right 6px
-        height: 34px;
-        opacity: 0
-        filter: blur(12px);
-        background-color: $blue2
-        z-index -1
-        trans()
+    //.btn-more
+    //  position absolute
+    //  bottom 0
+    //  max-width 50%
+    //  &:after
+    //    pseudo(block, absolute)
+    //    bottom -6px
+    //    left 6px
+    //    right 6px
+    //    height: 34px;
+    //    opacity: 0
+    //    filter: blur(12px);
+    //    background-color: $blue2
+    //    z-index -1
+    //    trans()
+    //
+    //    visibility hidden
+    //
+    //    +mob()
+    //      display none
+    //  +port()
+    //    left 0
+    //    pl(r(25))
+    //    min-width 50%
+    //  +mob()
+    //    left 0
+    //    pl(r(25))
+    //    min-width 100%
+    //    bg($wt)
+    //    co($blue)
+    //    svg
+    //      opacity 1
+    //      right 85px
+    //      g
+    //        fill $blue
+  +mmin(768px)
+    &:hover
+      box-shadow 0 4px 10px 0 rgba(94, 107, 126, 0.3)
+      btn-more-hover()
 
-        visibility hidden
+  &.comment-lector
+    &:hover
+      box-shadow: 0 10px 30px 0 rgba(94, 107, 126, 0.3);
 
-        +mob()
-          display none
-      +port()
-        left 0
-        pl(r(25))
-        min-width 50%
-      +mob()
-        left 0
-        pl(r(25))
-        min-width 100%
-        bg($wt)
-        co($blue)
-        svg
-          opacity 1
-          right 85px
-          g
-            fill $blue
-
-  &:hover
-    box-shadow 0 4px 10px 0 rgba(94, 107, 126, 0.3)
-    .btn-more
-      background $blue
-      co($wt)
-      max-width 100%
-      pl(r(30))
-      svg
-        opacity 1
-      &:after
-        visibility visible
-        opacity .7
-      +mob()
-        pl(r(25))
-        bg($wt)
-        co($blue)
-        &:after
-          display none

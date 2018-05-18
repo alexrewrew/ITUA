@@ -32,31 +32,56 @@
     position absolute
     left 15px
     bottom 0
-    &:hover
-      max-width 263px
-    +mob()
+    max-width 263px
+    .btn--text
       bg($blue)
       co($wt)
       pl(r(30))
-      max-width 263px
-      position relative
-      left auto
+      +land()
+        pb(r(16))
+      +xs()
+        pt(r(22))
+        pb(r(23))
       svg
         opacity 1
         g
           fill $wt
+    .btn--shadow
+      opacity 1
+      bottom 3px
+    +mob()
+      position relative
+      left auto
     +xs()
       max-width 100%
+      mb(r(9))
       fs(e(18))
-      pl(r(38))
-      pt(r(21))
-      pb(r(23))
-      &:hover
-        max-width 100%
-      svg
-        right 38px
-        width 25px
-        top 25px
+
+
+
+    //+mob()
+    //  bg($blue)
+    //  co($wt)
+    //  pl(r(30))
+    //  max-width 263px
+    //  position relative
+    //  left auto
+    //  svg
+    //    opacity 1
+    //    g
+    //      fill $wt
+    //+xs()
+    //  max-width 100%
+    //  fs(e(18))
+    //  pl(r(38))
+    //  pt(r(21))
+    //  pb(r(23))
+    //  &:hover
+    //    max-width 100%
+    //  svg
+    //    right 38px
+    //    width 25px
+    //    top 25px
 
 .slider-project--slide
   .ul-project--done

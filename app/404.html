@@ -1,4 +1,8 @@
-<!DOCTYPE html>
+
+<!--mixin btn-new(text)-->
+<!--    a(href='' title='').btn-new-->
+<!--        .btn-new--text= text-->
+<!--        .btn-new--shadow--><!DOCTYPE html>
 <html>
   <head>
     <!-- meta tags-->
@@ -247,7 +251,7 @@
                 <div class="h1-404--block"></div>
               </h1>
               <script>
-                var initial = 500;
+                var initial = 800;
                 var count = initial;
                 var counter = setInterval(timer, 10);
                 function timer() {
@@ -270,7 +274,9 @@
             <div class="col-md-5 col-lg-4">
               <h2 class="h2-404">Сторінка не знайдена</h2>
               <p class="p-404">Для економії вашого часу, перехід на головну відбудеться автоматично через декілька секунд:</p>
-              <div class="counter-404" id="value"></div><a class="btn btn-small" href="./" title="" id="to-index">На головну</a>
+              <div class="counter-404" id="value"></div><a class="btn btn-small" href="./" title="" id="to-index">
+                <div class="btn--text">На головну</div>
+                <div class="btn--shadow"></div></a>
             </div>
           </div>
         </div>
@@ -286,7 +292,11 @@
                   <div class="input-group-shadow--shade"></div>
                   <div class="input-error"> Введено неіснуючий e-mail</div>
                 </div>
-                <button class="btn">ПІДПИСАТИСЬ</button>
+                <button class="btn btn-footer" type="submit">
+                  <div class="btn--text">ПІДПИСАТИСЬ
+                  </div>
+                  <div class="btn--shadow"></div>
+                </button>
               </form>
             </div>
             <address class="col-sm-4 offset-lg-1 col-lg-3 col-xl-2">

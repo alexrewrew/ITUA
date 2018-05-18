@@ -9,5 +9,4 @@ mixin search(img, heading, text, date, route)
                 .search-block--description-data--date= date
                 .search-block--description-data--route= route
         .search-block--button
-            span.btn.btn-arrow Читати більше
-                include ../../_svgs/arrow-right.svg
+            +btn-more('Читати більше')

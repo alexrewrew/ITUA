@@ -43,37 +43,40 @@
       margin-top: -1px
       margin-left: -1px
 
-  .btn-more
-    position absolute
-    bottom -1px
-    left -1px
-    pl(r(38))
-    +mob()
-      pl(r(24))
-      max-width 100%
-      svg
-        opacity 1
-        right 24px
-        g
-          fill $blue
+  btn-more-member()
 
-  &:hover
-    box-shadow: 0 10px 30px 0 rgba(94, 107, 126, 0.3);
-    bg($wt)
-    border-color $tr
-    z-index: 30;
-    .btn-more
-      bg($blue)
-      co($wt)
-      max-width calc(100% + 1px)
-      width calc(100% + 1px)
-      pl(r(38))
-      svg
-        opacity 1
-      +mob()
-        bg($tr)
-        co($blue)
-        pl(r(24))
+  //.btn-more
+  //  position absolute
+  //  bottom -1px
+  //  left -1px
+  //  pl(r(38))
+  //  +mob()
+  //    pl(r(24))
+  //    max-width 100%
+  //    svg
+  //      opacity 1
+  //      right 24px
+  //      g
+  //        fill $blue
+  +mmin(768px)
+    &:hover
+      box-shadow: 0 10px 30px 0 rgba(94, 107, 126, 0.3);
+      bg($wt)
+      border-color $tr
+      z-index: 30;
+      btn-more-member-hover()
+      //.btn-more
+      //  bg($blue)
+      //  co($wt)
+      //  max-width calc(100% + 1px)
+      //  width calc(100% + 1px)
+      //  pl(r(38))
+      //  svg
+      //    opacity 1
+      //  +mob()
+      //    bg($tr)
+      //    co($blue)
+      //    pl(r(24))
 
 .member.member-regular
   padding r(24) r(33)
@@ -90,20 +93,15 @@
     height 54px
     margin-bottom r(21)
   .btn-more
-    bottom: 2px;
-    left: 6px
-    fs(e(14))
-    co($wt)
     +mob()
       display none
-
-  &:hover
-    .btn-more
-      bg($tr)
-      co($blue)
-      max-width calc(100% - 19px)
-      pl(r(30))
-      svg
-        opacity 1
-        g
-          fill $blue
+  +mmin(768px)
+    &:hover
+      .btn-more
+        .btn--text
+          bg($tr)
+          co($blue)
+          svg g
+            fill $blue
+        .btn--shadow
+          display none

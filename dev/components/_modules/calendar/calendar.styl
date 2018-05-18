@@ -97,21 +97,21 @@
         width: 20px
         g
           fill $wt
-
-    &:hover
-      box-shadow: 0 3px 8px 0 rgba(94, 107, 126, 0.3);
-      &:after
-        opacity 1
-      .calendar--block-button
-        opacity 1
-      .calendar--block-date--date
-        co($wt)
-      .calendar--block-date--text
-        opacity 0
-      .calendar--block-button
-        right 23px
-      h3
-        opacity 0
+    +mmin(768px)
+      &:hover
+        box-shadow: 0 3px 8px 0 rgba(94, 107, 126, 0.3);
+        &:after
+          opacity 1
+        .calendar--block-button
+          opacity 1
+        .calendar--block-date--date
+          co($wt)
+        .calendar--block-date--text
+          opacity 0
+        .calendar--block-button
+          right 23px
+        h3
+          opacity 0
 
 
   &.calendar-event
@@ -132,19 +132,30 @@
       margin-bottom r(50)
       &:after
         display none
+      .btn-more
+        opacity 0
+        .btn--text
+          pt(r(17))
+          pb(r(19))
+
       &:hover
-        .calendar--block-date--date
-          color $blue
-        h3
-          opacity 1
-        .btn-more
-          opacity 1
-          bg($blue)
-          co($wt)
-          max-width 100%
-          pl(r(30))
-          svg
+        +mmin(768px)
+          .calendar--block-date--date
+            color $blue
+          h3
             opacity 1
+          .btn-more
+            opacity 1
+            max-width 100%
+            .btn--text
+              pl(r(32))
+              co($wt)
+              bg($blue)
+              svg
+                opacity 1
+                g
+                  fill $wt
+
     .calendar--block-date
       mb(0)
       line-height: .8;
@@ -160,17 +171,7 @@
       left: 31px;
 
       fs(e(16))
-      line-height: 1.25;
-    .btn-more
-      position absolute
-      bottom 0
-      left 0
-      opacity 0
-      pt(r(17))
-      pb(r(19))
-
-      svg
-        top 20px
+      line-height: 1.25
     &.calendar-report-year
       .calendar--block
         box-shadow: 0 10px 28px 0 rgba(94, 107, 126, 0.3);
@@ -183,11 +184,13 @@
           left 0
           right 0
           bottom 0
-        &:hover
-          .calendar--block-date--date
-            co($wt)
-          .btn-more
-            bg($tr)
+        +mmin(768px)
+          &:hover
+            .calendar--block-date--date
+              co($wt)
+            .btn-more
+              .btn--text
+                bg($tr)
       .calendar--block-date--text
         left 27px
 

@@ -14,7 +14,6 @@
 header.header-events-year.header-events-world
   margin-bottom 0
 
-
 .calendar-container
   position relative
 
@@ -42,9 +41,6 @@ header.header-events-year.header-events-world
     left 50px
   &--next
     right 50px
-
-
-
 
 body .fc
   pt(r(35))
@@ -108,11 +104,26 @@ body .fc
   +mob()
     pt(r(9))
 
+.fc-prev-button, .fc-next-button
+  .arrow
+    trans()
+    svg g
+      transition .1s all ease
+    &:hover
+      svg g
+        fill $blue
+
 .fc-prev-button
   float left !important
+  .arrow
+    &:hover
+      transform translateX(-5px)
 
 .fc-next-button
   float right !important
+  .arrow
+    &:hover
+      transform translateX(5px)
 
 .fc-state-default
   background none
@@ -138,7 +149,6 @@ body .fc
   pb(r(10))
   +mob()
     padding-bottom: r(13)
-
 
 .fc-day-top
   position relative
@@ -180,7 +190,12 @@ body .fc
 
 .fc-event-container
   position relative
-  height 100%
+  height 160px
+  background $wt !important
+  +tab()
+    height 132px
+  +port()
+    height 99px
   .fc-day-grid-event
     margin 0 !important
     position absolute
@@ -188,7 +203,7 @@ body .fc
     left 0
     right 0
     height 160px
-    bg($wt)
+    background $tr
     border-radius 0
     border none
     transition box-shadow .2s ease
@@ -223,7 +238,7 @@ body .fc
       right -1px
       top -1px
       bottom -1px
-      z-index 50
+      z-index 500
       .fc-content
         padding r(25) r(19)
         +tab()
@@ -286,9 +301,11 @@ body .fc
   +tab()
     right 0
     pb(r(20))
+    fs(r(9))
   +port()
     right 0
     pb(r(10))
+    fs(r(7))
   +land()
     right 0
     pb(r(5))
@@ -326,10 +343,9 @@ body .fc
     +mob()
       padding (r(1))
   &:hover
-      &:after
-        top 4px
-        right 4px
-
+    &:after
+      top 4px
+      right 4px
 
 .fc-content-skeleton tbody td
   position relative
@@ -358,28 +374,29 @@ body .fc
     &:before
       display none
 
-
 #to-next-month
-  font-size: e(20)
-  pl(r(66))
-  pt(r(19))
-  pb(r(23))
-  letter-spacing: 1px;
-  +port()
-    pl(r(33))
-  +mob()
-    pl(r(39))
-    fs(e(16))
-    letter-spacing 1.5px
-    pt(r(22))
-  svg
-    right: 64px;
-    top 25px
-    height: auto;
+  mc()
+  max-width 360px
+  .btn--text
+    font-size: e(20)
+    pl(r(66))
+    pt(r(19))
+    pb(r(23))
+    letter-spacing: 1px;
     +port()
-      right 32px
+      pl(r(33))
     +mob()
-      right 30px
+      pl(r(39))
+      fs(e(16))
+      letter-spacing 1.5px
+      pt(r(22))
+    svg
+      right: 64px;
+      height: auto;
+      +port()
+        right 32px
+      +mob()
+        right 30px
 
 
 

@@ -509,7 +509,15 @@
         DOMs.selectSelect2.select2({
             placeholder: "Оберіть компанію",
             allowClear: true,
-            dropdownParent: $('#select-author')
+            dropdownParent: $('#select-author'),
+            "language": {
+                "noResults": function(){
+                    return "Немає результатів";
+                }
+            },
+            escapeMarkup: function (markup) {
+                return markup;
+            }
             // minimumResultsForSearch: Infinity
         });
 
@@ -632,6 +640,7 @@
                 timeFormat: 'Початок о H:mm',
 
                 eventRender: function (event, element) {
+                    // DOMs.eventDate.html(moment(event.start).format('DD.MM')),
                     if (window.matchMedia("(max-width: 567px)").matches) {
                         element.attr('data-fancybox', '');
                         element.attr('data-src', '#modal-event');

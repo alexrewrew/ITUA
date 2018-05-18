@@ -1,4 +1,8 @@
-<!DOCTYPE html>
+
+<!--mixin btn-new(text)-->
+<!--    a(href='' title='').btn-new-->
+<!--        .btn-new--text= text-->
+<!--        .btn-new--shadow--><!DOCTYPE html>
 <html>
   <head>
     <!-- meta tags-->
@@ -230,7 +234,7 @@
       <header class="header-about-us">
         <div class="container">
           <div class="row justify-content-between">
-            <div class="col-sm-5 col-lg-4 col-xl-3 header-col left">
+            <div class="col-sm-5 col-lg-4 header-col left">
               <ul class="breadcrumbs">
                 <li><a href="" title="">Головна</a></li>
                 <li><a href="" title="">Про напрям</a></li>
@@ -315,7 +319,11 @@
                   <div class="input-group-shadow--shade"></div>
                   <div class="input-error"> Введено неіснуючий e-mail</div>
                 </div>
-                <button class="btn">ПІДПИСАТИСЬ</button>
+                <button class="btn btn-footer" type="submit">
+                  <div class="btn--text">ПІДПИСАТИСЬ
+                  </div>
+                  <div class="btn--shadow"></div>
+                </button>
               </form>
             </div>
             <address class="col-sm-4 offset-lg-1 col-lg-3 col-xl-2">

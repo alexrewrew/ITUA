@@ -16,6 +16,4 @@ section.section-question
                         textarea(placeholder='Введіть повідомлення').error
                         .input-error  Заповніть це поле
 
-                    button(type='submit').btn.btn-plane.btn-center
-                        | Відправити
-                        include ../../_svgs/arrow-plane.svg
+                    +btn-submit('Відправити')

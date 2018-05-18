@@ -8,9 +8,7 @@ mixin share()
                 include ../../_svgs/share.svg
                 | 53
     .col-sm-7.col-md-5.col-lg-4
-        a(href='' title='').btn-share
-            include ../../_svgs/share-big.svg
-            | Поділитись
+        +btn-share('Поділитись')
         ul.ul-article-share.ul-article-share-main.hide
             li
                 a(href='' title='').share-fb

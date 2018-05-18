@@ -28,8 +28,9 @@
       left 0
 
   .arrow
-    &:hover
-      background $blue
+    +mmin(768px)
+      &:hover
+        background $blue
 
   .slick-list
     &:after, &:before

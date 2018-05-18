@@ -16,7 +16,7 @@ mixin comment-item-regular(img, date, name, profession, company, text)
             +btn-more('Читати більше')
 
 mixin comment-item-lector(img, name, profession, company, text)
-    .comment
+    .comment.comment-lector
 
         .comment--left
             .comment--left-image
@@ -29,5 +29,5 @@ mixin comment-item-lector(img, name, profession, company, text)
             h3= name
             h6= profession
                 | &nbsp;
-                span.company= company
+                a(href='' title='').company= company
             p= text
