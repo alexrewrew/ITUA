@@ -144,7 +144,11 @@
       right: 15px
       left auto
 
-  .slick-slide.slick-current.slick-active
-    .slider-color--col
-      &:before
-        width 0%
+
+  .slick-slide
+    transition-delay: .4s !important;
+    &.slick-current.slick-active
+      .slider-color--col
+        &:before
+          transition-delay: .4s
+          width: 0

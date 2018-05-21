@@ -153,9 +153,9 @@
             nextArrow: DOMs.sliderArrowRight,
             dots: false,
             slidesToScroll: 1,
-            swipeToSlide: true,
             infinite: true,
-            speed: 250
+            fade: true,
+            speed: 0
         });
 
         // SLIDER MEMBER

@@ -10,6 +10,8 @@ module.exports = function () {
             'node_modules/moment/moment.js',
             'node_modules/fullcalendar/dist/fullcalendar.js',
             'node_modules/fullcalendar/dist/locale/uk.js',
+            // 'node_modules/lottie-web/build/player/lottie.js',
+            // 'node_modules/lottie-web/build/player/lottie_light.js',
             // 'node_modules/jquery.maskedinput/src/jquery.maskedinput.js',
             'node_modules/bowser/bowser.js',
             // 'node_modules/flatpickr/dist/flatpickr.js',

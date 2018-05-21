@@ -24,6 +24,20 @@
         right calc(50% + 15px + 64px)
       +mob()
         right 79px
+  .slider-color--col
+
+      &:before
+        bg(#d6dce4)
+        bottom: -100px;
+        z-index: 100;
+
+  .slick-slide
+    transition-delay: .4s !important;
+    &.slick-current.slick-active
+      .slider-color--col
+        &:before
+          transition-delay: .4s
+          width: 0
 
 .slider-events-slide
   +xs()

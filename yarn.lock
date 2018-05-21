@@ -3458,6 +3458,10 @@ longest@^1.0.0, longest@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/longest/-/longest-1.0.1.tgz#30a0b2da38f73770e8294a0d22e6625ed77d0097"
 
+lottie-web@^5.1.15:
+  version "5.1.15"
+  resolved "https://registry.yarnpkg.com/lottie-web/-/lottie-web-5.1.15.tgz#d52073a93238175e36038055abf651a966d71a11"
+
 loud-rejection@^1.0.0:
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/loud-rejection/-/loud-rejection-1.6.0.tgz#5b46f80147edee578870f086d04821cf998e551f"
