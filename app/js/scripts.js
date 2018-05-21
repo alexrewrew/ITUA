@@ -70,6 +70,7 @@
         tabsArr: $('.tabs-publication--ul li a'),
         tabsSlider: $('.tabs-publication--line'),
 
+
         tabsFilterLink: $('.ul-tablist-filter li a'),
         tabsFilterSlider: $('.ul-tablist-filter--slider'),
 
@@ -523,11 +524,19 @@
 
         // ========== TABS PUBLICATIONS ==========
         (function () {
+
+            var tabsActiveWidth = $(DOMs.tabsArr[0]).width();
+            DOMs.tabsSlider.css({
+                'width' : tabsActiveWidth
+            });
+
             $(DOMs.tabsArr).click(function (e) {
                 e.preventDefault();
 
+
                 var tabsIndex = DOMs.tabsArr.index(this);
                 var tabsLeft = 0;
+
 
                 for (var i = 0; i < tabsIndex; i++) {
                     tabsLeft += $(DOMs.tabsArr[i]).parent().outerWidth(true);
@@ -536,9 +545,19 @@
                 DOMs.tabsArr.removeClass('active');
                 $(this).addClass('active');
 
-                DOMs.tabsSlider.css('transform', 'translate3d(' + (tabsLeft - 8) + 'px,0,0)');
+                tabsActiveWidth = $(this).width();
+
+                DOMs.tabsSlider.css({
+                    'width' : tabsActiveWidth,
+                    'transform' : 'translate3d(' + (tabsLeft - 8) + 'px,0,0)'
+                });
+
             });
         })();
+
+
+        // .tabs-publication--line
+
 
         // ========== TABS FILTER ==========
         (function () {
@@ -781,6 +800,48 @@
                 e.preventDefault();
                 DOMs.btnShare.removeClass('hide');
                 DOMs.ulShare.addClass('hide');
+            });
+
+            // FORM ANIMATIONS
+
+            var FORMs = {
+                footerForm : $('.form-footer--form'),
+                footerSuccess : $('.form-footer--success'),
+                questionForm : $('.form-questions'),
+                questionSuccess : $('.form-questions-success'),
+                btnFooter : $('#btn-footer'),
+                btnFooterOk : $('#btn-footer-ok'),
+
+                btnQuestion : $('#btn-question'),
+                btnQuestionOk : $('#btn-question-ok')
+            }
+
+            var formFooter = function() {
+                FORMs.footerForm.toggleClass('hidden');
+                FORMs.footerSuccess.toggleClass('hidden');
+            }
+
+            var formQuestion = function() {
+                FORMs.questionForm.toggleClass('hidden');
+                FORMs.questionSuccess.toggleClass('hidden');
+            }
+
+            FORMs.btnFooter.click(function(e){
+                e.preventDefault();
+                formFooter();
+            });
+            FORMs.btnFooterOk.click(function(e){
+                e.preventDefault();
+                formFooter();
+            });
+
+            FORMs.btnQuestion.click(function(e){
+                e.preventDefault();
+                formQuestion();
+            });
+            FORMs.btnQuestionOk.click(function(e){
+                e.preventDefault();
+                formQuestion();
             });
 
         })();

@@ -15,11 +15,21 @@ block content
         .container
             .row
                 .col-12
-                    ul.ul-tablist.slider-tablist
-                        +li-a('Всі Події', 'active')
-                        +li-a('Зустрічі комітетів')
-                        +li-a('Від Асоціації')
-                        +li-a('Від партнерів')
+                    .tablist-filter
+                        ul.ul-tablist.ul-tablist-filter.slider-tablist-filter
+                            li
+                                +a('Всі Події', 'active')
+                                //span 431
+                            li
+                                +a('Зустрічі комітетів')
+                                //span 56
+                            li
+                                +a('Від Асоціації')
+                                //span 56
+                            li
+                                +a('Від партнерів')
+                                //span 56
+                        .ul-tablist-filter--slider
 
     section.section-calendarsheet.section-calendarsheet-small
         .container

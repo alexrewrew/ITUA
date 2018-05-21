@@ -681,8 +681,8 @@
         <div class="container">
           <div class="row justify-content-center">
             <div class="col-sm-10 col-lg-8 col-xl-6">
-              <h2>Залишились запитання ?</h2>
               <form class="form-questions">
+                <h2 class="text-center">Залишились запитання ?</h2>
                 <div class="input-group">
                   <input class="error" type="" placeholder="Ваше ім’я">
                   <div class="input-error">Неправильно введені дані</div>
@@ -695,7 +695,7 @@
                   <textarea class="error" placeholder="Введіть повідомлення"></textarea>
                   <div class="input-error"> Заповніть це поле</div>
                 </div>
-                <button class="btn btn-plane btn-center" type="submit">
+                <button class="btn btn-plane btn-center" type="submit" id="btn-question">
                   <div class="btn--text">Відправити<svg width="19px" height="17px" viewBox="0 0 19 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.300000012">
         <g transform="translate(-707.000000, -5248.000000)" fill="#FFFFFF" fill-rule="nonzero">
@@ -715,6 +715,12 @@
                   <div class="btn--shadow"></div>
                 </button>
               </form>
+              <div class="form-questions-success hidden"><img src="img/illus/mail-success.svg" title="" alt=""/>
+                <h2 class="text-center">Ваш лист успішно відправлено</h2>
+                <p class="text-center">Дякуємо, що звернулись до нас. Наш менеджер відповість на ваше запитання в найкоротший термін</p><a class="btn btn-center" href="" title="" id="btn-question-ok">
+                  <div class="btn--text">Добре</div>
+                  <div class="btn--shadow"></div></a>
+              </div>
             </div>
           </div>
         </div>
@@ -725,16 +731,28 @@
             <div class="col-sm-8 col-lg-7">
               <h5>Підпишіться на наші оновлення</h5>
               <form class="form-footer">
-                <div class="input-group input-group-shadow">
-                  <input class="error" type="email" placeholder="Введіть ваш e-mail">
-                  <div class="input-group-shadow--shade"></div>
-                  <div class="input-error"> Введено неіснуючий e-mail</div>
-                </div>
-                <button class="btn btn-footer" type="submit">
-                  <div class="btn--text">ПІДПИСАТИСЬ
+                <div class="form-footer--form">
+                  <div class="form-footer--form-flex">
+                    <div class="input-group input-group-shadow">
+                      <input class="error" type="email" placeholder="Введіть ваш e-mail">
+                      <div class="input-group-shadow--shade"></div>
+                      <div class="input-error"> Введено неіснуючий e-mail</div>
+                    </div>
+                    <button class="btn btn-footer" type="submit" id="btn-footer">
+                      <div class="btn--text">ПІДПИСАТИСЬ
+                      </div>
+                      <div class="btn--shadow"></div>
+                    </button>
                   </div>
-                  <div class="btn--shadow"></div>
-                </button>
+                </div>
+                <div class="form-footer--success hidden">
+                  <div class="form-footer--success-flex">
+                    <div class="form-footer--success-text"><img src="img/illus/checked.svg" title="" alt=""/>Ви успішно підписані на оновлення ІТ Асоціації
+                    </div><a class="btn btn-footer" href="" title="" id="btn-footer-ok">
+                      <div class="btn--text">ОК</div>
+                      <div class="btn--shadow"></div></a>
+                  </div>
+                </div>
               </form>
             </div>
             <address class="col-sm-4 offset-lg-1 col-lg-3 col-xl-2">

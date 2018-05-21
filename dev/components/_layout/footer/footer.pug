@@ -4,12 +4,23 @@ footer
             .col-sm-8.col-lg-7
                 h5 Підпишіться на наші оновлення
                 form.form-footer
-                    .input-group.input-group-shadow
-                        input(type='email' placeholder='Введіть ваш e-mail').error
-                        .input-group-shadow--shade
-                        .input-error  Введено неіснуючий e-mail
+                    .form-footer--form
+                        .form-footer--form-flex
+                            .input-group.input-group-shadow
+                                input(type='email' placeholder='Введіть ваш e-mail').error
+                                .input-group-shadow--shade
+                                .input-error  Введено неіснуючий e-mail
+                            +btn-submit-f('ПІДПИСАТИСЬ')
 
-                    +btn-submit-f('ПІДПИСАТИСЬ')
+                    .form-footer--success.hidden
+                        .form-footer--success-flex
+                            .form-footer--success-text
+                                +img('img/illus/checked.svg')
+                                | Ви успішно підписані на оновлення ІТ Асоціації
+                            a(href='' title='').btn.btn-footer#btn-footer-ok
+                                .btn--text ОК
+                                .btn--shadow
+
 
 
             address.col-sm-4.offset-lg-1.col-lg-3.col-xl-2

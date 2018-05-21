@@ -547,16 +547,28 @@
             <div class="col-sm-8 col-lg-7">
               <h5>Підпишіться на наші оновлення</h5>
               <form class="form-footer">
-                <div class="input-group input-group-shadow">
-                  <input class="error" type="email" placeholder="Введіть ваш e-mail">
-                  <div class="input-group-shadow--shade"></div>
-                  <div class="input-error"> Введено неіснуючий e-mail</div>
-                </div>
-                <button class="btn btn-footer" type="submit">
-                  <div class="btn--text">ПІДПИСАТИСЬ
+                <div class="form-footer--form">
+                  <div class="form-footer--form-flex">
+                    <div class="input-group input-group-shadow">
+                      <input class="error" type="email" placeholder="Введіть ваш e-mail">
+                      <div class="input-group-shadow--shade"></div>
+                      <div class="input-error"> Введено неіснуючий e-mail</div>
+                    </div>
+                    <button class="btn btn-footer" type="submit" id="btn-footer">
+                      <div class="btn--text">ПІДПИСАТИСЬ
+                      </div>
+                      <div class="btn--shadow"></div>
+                    </button>
                   </div>
-                  <div class="btn--shadow"></div>
-                </button>
+                </div>
+                <div class="form-footer--success hidden">
+                  <div class="form-footer--success-flex">
+                    <div class="form-footer--success-text"><img src="img/illus/checked.svg" title="" alt=""/>Ви успішно підписані на оновлення ІТ Асоціації
+                    </div><a class="btn btn-footer" href="" title="" id="btn-footer-ok">
+                      <div class="btn--text">ОК</div>
+                      <div class="btn--shadow"></div></a>
+                  </div>
+                </div>
               </form>
             </div>
             <address class="col-sm-4 offset-lg-1 col-lg-3 col-xl-2">

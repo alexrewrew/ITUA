@@ -17,10 +17,23 @@ block content
                 .col-12
                     .spacer-36
 
-                    ul.ul-tablist.slider-tablist
-                        +li-a('Всі ініціативи', 'active')
-                        +li-a('Вирішені')
-                        +li-a('В процесі')
+                    //ul.ul-tablist.slider-tablist
+                    //    +li-a('Всі ініціативи', 'active')
+                    //    +li-a('Вирішені')
+                    //    +li-a('В процесі')
+
+                    .tablist-filter
+                        ul.ul-tablist.ul-tablist-filter.slider-tablist-filter
+                            li
+                                +a('Всі ініціативи', 'active')
+                                //span 431
+                            li
+                                +a('Вирішені')
+                                //span 56
+                            li
+                                +a('В процесі')
+                                //span 56
+                        .ul-tablist-filter--slider
 
     include ../components/_sliders/slider-project/slider-project
 

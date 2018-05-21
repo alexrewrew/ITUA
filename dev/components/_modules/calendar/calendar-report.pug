@@ -11,6 +11,19 @@ mixin calendar-item-report-quat(date, heading, name)
 
             +btn-more('Детальніше')
 
+mixin calendar-item-report-quat-disabled(date, heading, name)
+
+    a(href='' title='').calendar.calendar-report.calendar-report-quart.disabled
+        .calendar--block
+            .calendar--block-date
+                .calendar--block-date--date= date
+
+            h3= heading
+
+            .calendar--block-date--text= name
+
+            +btn-more('Детальніше')
+
 mixin calendar-item-report-year(date, name)
     a(href='' title='').calendar.calendar-report.calendar-report-year
         .calendar--block
